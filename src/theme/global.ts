@@ -2,6 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 
 /**
  * The global styles.
+ * @param {{}} p - The props.
  */
 const GlobalStyles = createGlobalStyle`
 	html, body {
@@ -14,8 +15,8 @@ const GlobalStyles = createGlobalStyle`
 		margin: 0;
 		padding: 0;
 		font-size: 16px;
-		color: #181e1f;
-		background: #f6fbfc;
+		color: ${(p): string => p.theme.global.color};
+		background: ${(p): string => p.theme.global.background};
 		letter-spacing: 0px;
 	}
 
