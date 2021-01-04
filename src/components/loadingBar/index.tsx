@@ -10,14 +10,12 @@ const LoadingBar = (): ReactElement => {
     const ref = useRef(null);
 	
     const handleStart = (): void => {
-        const div = ref.current as unknown as HTMLDivElement;
-        resetLoadingBar(div);
-        changeWidthLoadingBar(div, '50%', '2s');
+        resetLoadingBar(ref.current as unknown as HTMLDivElement);
+        changeWidthLoadingBar(ref.current as unknown as HTMLDivElement, '50%', '2s');
     };
 	
     const handleComplete = (): void => {
-        const div = ref.current as unknown as HTMLDivElement;
-        changeWidthLoadingBar(div, '100%', '.5s');	
+        changeWidthLoadingBar(ref.current as unknown as HTMLDivElement, '100%', '.5s');	
     };
 	
     useEffect(() => {
