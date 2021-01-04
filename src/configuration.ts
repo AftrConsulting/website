@@ -1,4 +1,4 @@
-import { IConfiguration } from 'src/configuration/interfaces/IConfiguration';
+import { IConfiguration } from 'src/interfaces/IConfiguration';
 
 /**
  * The configuration file.
@@ -8,7 +8,7 @@ const configuration: IConfiguration = {
         theme: 'theme'
     },
     defaults: {
-        theme: 'light'
+        theme: 'dark'
     }
 };
 

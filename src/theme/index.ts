@@ -13,24 +13,23 @@ const themes = {
 };
 
 /**
- * Returns the default theme name.
+ * Returns the theme name.
+ * @param {string} theme - The theme. 
  */
-const getDefaultThemeName = (): MyTheme => {
-    const theme = null;
-
+const getThemeName = (theme?: string): MyTheme => {
     if (!theme || !themes[theme]) {
         return configuration.defaults.theme;
     }
-	
+
     return theme as MyTheme;
 };
 
 /**
  * Returns the theme.
- * @param {MyTheme} theme - The theme. 
+ * @param {string} theme - The theme. 
  */
-const getTheme = (theme: MyTheme): ITheme => {
-    if (!themes[theme]) {
+const getTheme = (theme?: string): ITheme => {
+    if (!theme || !themes[theme]) {
         return themes[configuration.defaults.theme];
     }
 
@@ -38,7 +37,7 @@ const getTheme = (theme: MyTheme): ITheme => {
 };
 
 export {
-    getDefaultThemeName,
+    getThemeName,
     getTheme,
     themes
 };

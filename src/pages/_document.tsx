@@ -15,7 +15,7 @@ class MyDocument extends Document<IMyDocumentProps> {
     public static getInitialProps (ctx: DocumentContext): Promise<DocumentInitialProps> {
         const sheet = new ServerStyleSheet();
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const page = ctx.renderPage((App): any => (props: {}): any =>
+        const page = ctx.renderPage((App): any => (props: {}): unknown =>
             sheet.collectStyles(<App {...props} />)
         );
         const styleTags = sheet.getStyleElement();
@@ -29,17 +29,19 @@ class MyDocument extends Document<IMyDocumentProps> {
     /**
      * The render method.
      */
-    public render = (): ReactElement => (
-        <Html>
-            <Head>
-                {this.props.styleTags}
-            </Head>
-            <body>
-                <Main />
-                <NextScript />
-            </body>
-        </Html>
-    );
+    public render = (): ReactElement => {
+        return (
+            <Html>
+                <Head>
+                    {this.props.styleTags}
+                </Head>
+                <body>
+                    <Main />
+                    <NextScript />
+                </body>
+            </Html>
+        );
+    }
 
 }
 

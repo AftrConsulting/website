@@ -1,26 +1,54 @@
-import App from 'next/app';
-import React, { ReactElement } from 'react';
+import Cookie from 'js-cookie';
+import { parseCookies } from 'nookies';
+import App, { AppContext } from 'next/app';
 import { ThemeProvider } from 'styled-components';
+import React, { ReactElement, useState } from 'react';
 import { GlobalStyles } from 'src/theme/global';
-import { getTheme, getDefaultThemeName } from 'src/theme';
+import { getTheme, getThemeName } from 'src/theme';
+import { configuration } from 'src/configuration';
+import { MyTheme } from 'src/theme/types/MyTheme';
 
-class ReactApp extends App {
-
-    /**
-     * The render method.
-     */
-    public render (): ReactElement {
-        const { Component, pageProps } = this.props;
-        const theme = getTheme(getDefaultThemeName());
-
-        return (
-            <ThemeProvider theme={theme}>
-                <GlobalStyles />
-                <Component {...pageProps}/>
-            </ThemeProvider>
-        );
-    }
-
+interface IAppProps {
+	Component: () => ReactElement;
+	pageProps: {};
+	theme: MyTheme;
 }
 
-export default ReactApp;
+/**
+ * The MyApp component.
+ * @param {IAppProps} props - The props.
+ */
+const MyApp = (props: IAppProps): ReactElement => {
+    const [ theme, setTheme ] = useState(props.theme);
+	
+    const toggleTheme = (): void => {
+        const newTheme = theme === 'dark' ? 'light' : 'dark';
+        Cookie.set(configuration.cookies.theme, newTheme);
+        setTheme(newTheme);
+    };
+	
+    return (
+        <ThemeProvider theme={getTheme(theme)}>
+            <GlobalStyles />
+            <button onClick={toggleTheme}>send</button>
+            <props.Component {...props.pageProps} />
+        </ThemeProvider>
+    );
+};
+
+/**
+ * Returns the initial props.
+ * @param {DocumentContext} appContext - The app context. 
+ */
+MyApp.getInitialProps = async (appContext: AppContext): Promise<{}> => {
+    const appProps = await App.getInitialProps(appContext);
+    const themeName = parseCookies(appContext.ctx)[configuration.cookies.theme];
+    const theme = getThemeName(themeName);
+	
+    return { 
+        ...appProps,
+        theme
+    };
+};
+
+export default MyApp;
