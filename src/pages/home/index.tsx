@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react';
 import { NextSeo } from 'next-seo';
+import Link from 'next/link';
 import { Row } from 'src/components/row';
 
 /**
@@ -12,6 +13,7 @@ const Home = (): ReactElement => (
             description="A short description goes here."
         />
         <h1>My First Next.js Page</h1>
+        <Link href="/about">link</Link>
     </Row>
 );
 

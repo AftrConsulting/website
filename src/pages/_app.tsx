@@ -3,10 +3,11 @@ import { parseCookies } from 'nookies';
 import App, { AppContext } from 'next/app';
 import { ThemeProvider } from 'styled-components';
 import React, { ReactElement, useState } from 'react';
-import { GlobalStyles } from 'src/theme/global';
+import { LoadingBar } from 'src/components/loadingBar';
 import { getTheme, getThemeName } from 'src/theme';
 import { configuration } from 'src/configuration';
 import { MyTheme } from 'src/theme/types/MyTheme';
+import { GlobalStyles } from 'src/theme/global';
 
 interface IAppProps {
 	Component: () => ReactElement;
@@ -30,6 +31,7 @@ const MyApp = (props: IAppProps): ReactElement => {
     return (
         <ThemeProvider theme={getTheme(theme)}>
             <GlobalStyles />
+            <LoadingBar />
             <button onClick={toggleTheme}>send</button>
             <props.Component {...props.pageProps} />
         </ThemeProvider>
