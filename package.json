@@ -7,6 +7,7 @@
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"build": "next build",
 		"dev": "next dev -p 3001",
+		"start": "next start",
 		"verify:typescript": "tsc --noEmit",
 		"verify:eslint": "eslint src --ext .tsx --ext .ts",
 		"verify": "npm run verify:typescript && npm run verify:eslint"
