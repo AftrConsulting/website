@@ -20,9 +20,9 @@ interface IConfiguration {
 	defaults: {
 		
 		/**
-		 * The theme.
+		 * The theme name.
 		 */
-		theme: MyTheme;
+		themeName: MyTheme;
 	
 	}
 

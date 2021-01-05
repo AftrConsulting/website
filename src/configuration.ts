@@ -8,7 +8,7 @@ const configuration: IConfiguration = {
         theme: 'theme'
     },
     defaults: {
-        theme: 'dark'
+        themeName: 'dark'
     },
     env: {
         name: 'dev'

@@ -8,7 +8,7 @@ import { IState } from 'src/context/interfaces/IState';
 import { configuration } from 'src/configuration';
 import { MyTheme } from 'src/theme/types/MyTheme';
 import { getGlobalStyles } from 'src/theme/global';
-import { getThemeName } from 'src/theme';
+import { getThemeName, getTheme } from 'src/theme';
 import { getStore } from 'src/context';
 
 interface IAppProps {
@@ -50,12 +50,13 @@ MyApp.getInitialProps = async (appContext: AppContext): Promise<{}> => {
 };
 
 /**
- * The MyApp component.
+ * The MyAppWithTheme component.
  * @param {IAppProps} props - The props.
  */
 const MyAppWithTheme = (props: IAppProps): ReactElement => {
-    const theme = useSelector((state: IState) => state.theme.theme);
-	
+    const themeName = useSelector((state: IState) => state.theme.name);
+    const theme = getTheme(themeName);
+
     return (
         <ThemeProvider theme={theme}>
             <style>

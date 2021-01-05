@@ -18,7 +18,7 @@ const themes = {
  */
 const getThemeName = (theme?: string): MyTheme => {
     if (!theme || !themes[theme]) {
-        return configuration.defaults.theme;
+        return configuration.defaults.themeName;
     }
 
     return theme as MyTheme;
@@ -30,7 +30,7 @@ const getThemeName = (theme?: string): MyTheme => {
  */
 const getTheme = (theme?: string): ITheme => {
     if (!theme || !themes[theme]) {
-        return themes[configuration.defaults.theme];
+        return themes[configuration.defaults.themeName];
     }
 
     return themes[theme];

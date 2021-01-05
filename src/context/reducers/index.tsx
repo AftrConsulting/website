@@ -8,7 +8,7 @@ import { getThemeReducer } from 'src/context/reducers/theme';
  */
 const getRootReducers = (initialState: IStoreInitialState): never => {
     return combineReducers({
-        theme: getThemeReducer(initialState)
+        theme: getThemeReducer(initialState.theme)
     }) as never;
 };
 
