@@ -1,56 +1,70 @@
-import Cookie from 'js-cookie';
 import { parseCookies } from 'nookies';
 import App, { AppContext } from 'next/app';
 import { ThemeProvider } from 'styled-components';
-import React, { ReactElement, useState } from 'react';
+import React, { ReactElement } from 'react';
+import { Provider, useSelector } from 'react-redux';
 import { LoadingBar } from 'src/components/loadingBar';
-import { getTheme, getThemeName } from 'src/theme';
+import { IState } from 'src/context/interfaces/IState';
 import { configuration } from 'src/configuration';
 import { MyTheme } from 'src/theme/types/MyTheme';
-import { GlobalStyles } from 'src/theme/global';
+import { getGlobalStyles } from 'src/theme/global';
+import { getThemeName } from 'src/theme';
+import { getStore } from 'src/context';
 
 interface IAppProps {
 	Component: () => ReactElement;
 	pageProps: {};
-	theme: MyTheme;
+	themeName: MyTheme;
 }
 
 /**
  * The MyApp component.
  * @param {IAppProps} props - The props.
  */
-const MyApp = (props: IAppProps): ReactElement => {
-    const [ theme, setTheme ] = useState(props.theme);
-	
-    const toggleTheme = (): void => {
-        const newTheme = theme === 'dark' ? 'light' : 'dark';
-        Cookie.set(configuration.cookies.theme, newTheme);
-        setTheme(newTheme);
-    };
-	
+const MyApp = (props: IAppProps): ReactElement => {	
+    const store = getStore({
+        theme: {
+            name: props.themeName
+        }
+    });
+
     return (
-        <ThemeProvider theme={getTheme(theme)}>
-            <GlobalStyles />
-            <LoadingBar />
-            <button onClick={toggleTheme}>send</button>
-            <props.Component {...props.pageProps} />
-        </ThemeProvider>
+        <Provider store={store}>
+            <MyAppWithTheme {...props} />
+        </Provider>
     );
 };
 
 /**
  * Returns the initial props.
- * @param {DocumentContext} appContext - The app context. 
+ * @param {DocumentContext} appContext - The app context.
  */
 MyApp.getInitialProps = async (appContext: AppContext): Promise<{}> => {
     const appProps = await App.getInitialProps(appContext);
     const themeName = parseCookies(appContext.ctx)[configuration.cookies.theme];
-    const theme = getThemeName(themeName);
 	
     return { 
         ...appProps,
-        theme
+        themeName: getThemeName(themeName)
     };
+};
+
+/**
+ * The MyApp component.
+ * @param {IAppProps} props - The props.
+ */
+const MyAppWithTheme = (props: IAppProps): ReactElement => {
+    const theme = useSelector((state: IState) => state.theme.theme);
+	
+    return (
+        <ThemeProvider theme={theme}>
+            <style>
+                {getGlobalStyles(theme)}
+            </style>
+            <LoadingBar />
+            <props.Component {...props.pageProps} />
+        </ThemeProvider>
+    );
 };
 
 export default MyApp;

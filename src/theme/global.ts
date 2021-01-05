@@ -1,10 +1,11 @@
-import { createGlobalStyle } from 'styled-components';
+/* eslint-disable max-lines-per-function */
+import { ITheme } from 'src/theme/interfaces/ITheme';
 
 /**
  * The global styles.
- * @param {{}} p - The props.
+ * @param {ITheme} theme - The theme.
  */
-const GlobalStyles = createGlobalStyle`
+const getGlobalStyles = (theme: ITheme): string => (`
 	html, body {
 		font-family: -apple-system, system-ui, BlinkMacSystemFont, 
 					  Segoe UI, Roboto,Oxygen-Sans, Ubuntu, Cantarell, 
@@ -15,8 +16,8 @@ const GlobalStyles = createGlobalStyle`
 		margin: 0;
 		padding: 0;
 		font-size: 16px;
-		color: ${(p): string => p.theme.global.color};
-		background: ${(p): string => p.theme.global.background};
+		color: ${theme.global.color};
+		background: ${theme.global.background};
 		letter-spacing: 0px;
 	}
 
@@ -50,8 +51,8 @@ const GlobalStyles = createGlobalStyle`
 	img { 
 		display: block;
 	}
-`;
+`);
 
 export {
-    GlobalStyles
+    getGlobalStyles
 };

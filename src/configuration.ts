@@ -9,6 +9,9 @@ const configuration: IConfiguration = {
     },
     defaults: {
         theme: 'dark'
+    },
+    env: {
+        name: 'dev'
     }
 };
 

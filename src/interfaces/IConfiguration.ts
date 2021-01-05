@@ -26,6 +26,18 @@ interface IConfiguration {
 	
 	}
 
+	/**
+	 * The environment.
+	 */
+	env: {
+
+		/**
+		 * The name.
+		 */
+        name: string;
+	
+	}
+
 }
 
 export type {
