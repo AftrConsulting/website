@@ -7,7 +7,7 @@ import { configuration } from 'src/configuration';
  * If has redux dev tools.
  */
 const hasReduxDevTools = (): boolean => {
-    return configuration.env.name === 'dev'
+    return configuration.env.name === 'development'
 		&& typeof window !== 'undefined'
 	    && typeof window.__REDUX_DEVTOOLS_EXTENSION__ === 'function';
 };

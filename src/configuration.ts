@@ -11,7 +11,7 @@ const configuration: IConfiguration = {
         themeName: 'dark'
     },
     env: {
-        name: 'dev'
+        name: process.env.NODE_ENV
     }
 };
 
