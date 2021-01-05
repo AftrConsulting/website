@@ -10,7 +10,7 @@ import { IState } from 'src/context/interfaces/IState';
  * The Home component. 
  */
 const Home = (): ReactElement => {
-    const themeName = useSelector((state: IState) => state.theme.name);
+    const { themeName } = useSelector((state: IState) => state.theme);
     const dispatch = useDispatch();
 	
     const toggleTheme = (): void => {

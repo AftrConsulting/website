@@ -31,7 +31,7 @@ const LoadingBar = (): ReactElement => {
 };
 
 /**
- * Changes the width loading bar.
+ * Changes the width of the loading bar.
  * @param {HTMLDivElement} loadingBar - The loading bar.
  * @param {string} width - The width property.
  * @param {string} speed - The speed property.
@@ -47,7 +47,7 @@ const changeWidthLoadingBar = (loadingBar: HTMLDivElement, width: string, speed:
 };
 
 /**
- * Changes the width loading bar.
+ * Changes the width of the loading bar.
  * @param {HTMLDivElement} loadingBar - The loading bar.
  */
 const resetLoadingBar = (loadingBar: HTMLDivElement): void => {

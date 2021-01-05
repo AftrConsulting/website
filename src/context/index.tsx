@@ -14,7 +14,7 @@ const hasReduxDevTools = (): boolean => {
 
 /**
  * Returns the store.
- * @param {IStoreInitialState} initialState - The initial state. 
+ * @param {IStoreInitialState} initialState - The initial state.
  */
 const getStore = (initialState: IStoreInitialState): Store => {
     const rootReducers = getRootReducers(initialState);

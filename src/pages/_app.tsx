@@ -3,29 +3,27 @@ import App, { AppContext } from 'next/app';
 import { ThemeProvider } from 'styled-components';
 import React, { ReactElement } from 'react';
 import { Provider, useSelector } from 'react-redux';
+import { IStoreInitialThemeState } from 'src/context/interfaces/theme/IStoreInitialThemeState';
 import { LoadingBar } from 'src/components/loadingBar';
 import { IState } from 'src/context/interfaces/IState';
 import { configuration } from 'src/configuration';
-import { MyTheme } from 'src/theme/types/MyTheme';
 import { getGlobalStyles } from 'src/theme/global';
 import { getThemeName, getTheme } from 'src/theme';
 import { getStore } from 'src/context';
 
 interface IAppProps {
-	Component: () => ReactElement;
 	pageProps: {};
-	themeName: MyTheme;
+	Component: () => ReactElement;
+	theme: IStoreInitialThemeState;
 }
 
 /**
  * The MyApp component.
- * @param {IAppProps} props - The props.
+ * @param {IAppProps} props - The app props.
  */
 const MyApp = (props: IAppProps): ReactElement => {	
     const store = getStore({
-        theme: {
-            name: props.themeName
-        }
+        theme: props.theme
     });
 
     return (
@@ -41,11 +39,15 @@ const MyApp = (props: IAppProps): ReactElement => {
  */
 MyApp.getInitialProps = async (appContext: AppContext): Promise<{}> => {
     const appProps = await App.getInitialProps(appContext);
-    const themeName = parseCookies(appContext.ctx)[configuration.cookies.theme];
-	
+    let themeName = parseCookies(appContext.ctx)[configuration.cookies.theme];
+    themeName = getThemeName(themeName);
+
     return { 
         ...appProps,
-        themeName: getThemeName(themeName)
+        theme: {
+            theme: getTheme(themeName),
+            themeName
+        }
     };
 };
 
@@ -54,8 +56,7 @@ MyApp.getInitialProps = async (appContext: AppContext): Promise<{}> => {
  * @param {IAppProps} props - The props.
  */
 const MyAppWithTheme = (props: IAppProps): ReactElement => {
-    const themeName = useSelector((state: IState) => state.theme.name);
-    const theme = getTheme(themeName);
+    const { theme } = useSelector((state: IState) => state.theme);
 
     return (
         <ThemeProvider theme={theme}>

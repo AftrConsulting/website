@@ -1,19 +1,26 @@
+import Cookies from 'js-cookie';
+import { IStoreInitialThemeState } from 'src/context/interfaces/theme/IStoreInitialThemeState';
 import { IActionResponse } from 'src/context/interfaces/IActionResponse';
 import { ThemeAction } from 'src/context/enums/theme';
 import { MyTheme } from 'src/theme/types/MyTheme';
-import { themes } from 'src/theme';
+import { configuration } from 'src/configuration';
+import { themes, getTheme } from 'src/theme';
 
 /**
  * Returns the theme reducer.
- * @param {{}} initialState - The initial state.
+ * @param {IStoreInitialThemeState} initialState - The initial state.
  */
-const getThemeReducer = (initialState: {}) => (state = initialState, action: IActionResponse): unknown => {
+const getThemeReducer = (initialState: IStoreInitialThemeState) => (state = initialState, action: IActionResponse): unknown => {
+    const themeName = action.value as MyTheme;
     let newState = state;
 	
-    if (action.type === ThemeAction.setTheme && action.value && themes[action.value as MyTheme]) {
+    if (action.type === ThemeAction.setTheme && themeName && themes[themeName]) {
         newState = {
-			 name: action.value
+            theme: getTheme(themeName),
+            themeName
         };
+		
+        Cookies.set(configuration.cookies.theme, themeName);
     }
 	
     return newState;

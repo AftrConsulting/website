@@ -1,9 +1,7 @@
-import { MyTheme } from 'src/theme/types/MyTheme';
+import { IStoreInitialThemeState } from 'src/context/interfaces/theme/IStoreInitialThemeState';
 
 interface IStoreInitialState {
-	theme: {
-		name: MyTheme;
-	}
+	theme: IStoreInitialThemeState;
 }
 
 export type {
