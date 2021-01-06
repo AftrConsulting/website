@@ -10,8 +10,4 @@ const NotFound = (): ReactElement => (
     </Row>
 );
 
-NotFound.getInitialProps = (): {} => ({
-    namespacesRequired: [ 'common' ]
-});
-
 export default NotFound;
