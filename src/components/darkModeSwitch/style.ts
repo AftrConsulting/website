@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Icon } from 'src/components/icon';
 
 const SwitchContainerAll = styled.div`
 	display: inline-block;
@@ -7,18 +8,18 @@ const SwitchContainerAll = styled.div`
 const SwitchContainer = styled.div`
 	position: relative;
 	display: flex;
+	margin: 3px;
 `;
 
 const SwitchTrack = styled.div<{ checked: boolean }>`
-	width: 34px;
-	height: 14px;
-	margin: 3px;
+	width: 50px;
+	height: 24px;
 	background: ${'#ccc'};
-	border-radius: 7px;
+	border-radius: 10px;
 	transition: all 150ms;
 
 	${(p): string => p.checked ? `
-		background: ${'red'};
+		background: ${'#ccc'};
 	` : ''}
 `;
 
@@ -30,6 +31,7 @@ const SwitchInput = styled.input`
 	width: 100%;
 	height: 100%;
 	margin: 0px;
+	cursor: pointer;
 
 	&:focus,
 	&:active,
@@ -43,16 +45,28 @@ const SwitchButton = styled.div<{ checked: boolean }>`
 	width: 20px;
 	height: 20px;
 	border-radius: 50%;
-	background: ${'black'};
+	background: ${(p): string => p.theme.global.color};
 	position: absolute;
-	top: 0px;
-	left: 0px;
+	top: 2px;
+	left: 2px;
 	transition: all 150ms;
 
 	${(p): string => p.checked ? `
-		left: 100%;
+		left: calc(100% - 2px);
 		transform: translateX(-100%);
-		background: ${'yellow'};
+		background: ${p.theme.global.color};
+	` : ''}
+`;
+
+const SwitchIcon = styled(Icon)<{ checked: boolean }>`
+	position: absolute;
+	font-size: 14px;
+	top: 5px;
+	right: 5px;
+
+	${(p): string => p.checked ? `
+		left: 5px;
+		right: auto;
 	` : ''}
 `;
 
@@ -61,5 +75,6 @@ export {
     SwitchContainer,
     SwitchTrack,
     SwitchInput,
-    SwitchButton
+    SwitchButton,
+    SwitchIcon
 };
