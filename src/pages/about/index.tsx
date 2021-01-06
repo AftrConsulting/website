@@ -10,4 +10,8 @@ const About = (): ReactElement => (
     </Row>
 );
 
+About.getInitialProps = (): {} => ({
+    namespacesRequired: [ 'common' ]
+});
+
 export default About;

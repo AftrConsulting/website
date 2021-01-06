@@ -4,10 +4,13 @@ import Path from 'path';
 /**
  * The next I18 next.
  */
-const { withTranslation, Link, Router, useTranslation, appWithTranslation } = new NextI18Next({
+const { withTranslation, Link, Router, useTranslation, appWithTranslation, i18n } = new NextI18Next({
     defaultLanguage: 'en',
     localePath: Path.resolve('./public/static/locales') as string,
-    otherLanguages: []
+    localeSubpaths: {
+        fr: 'fr'
+    },
+    otherLanguages: [ 'fr' ]
 });
 
 export {
@@ -15,5 +18,6 @@ export {
     Link, 
     Router, 
     useTranslation,
-    appWithTranslation
+    appWithTranslation,
+    i18n
 };
