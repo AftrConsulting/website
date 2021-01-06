@@ -28,6 +28,6 @@ interface IIconDefinition {
     ];
 }
 
-export {
+export type {
     IIconDefinition
 };
