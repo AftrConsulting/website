@@ -9,6 +9,7 @@ import { IState } from 'src/context/interfaces/IState';
 import { configuration } from 'src/configuration';
 import { getGlobalStyles } from 'src/theme/global';
 import { getThemeName, getTheme } from 'src/theme';
+import { appWithTranslation } from 'src/i18n';
 import { getStore } from 'src/context';
 
 interface IAppProps {
@@ -69,4 +70,4 @@ const MyAppWithTheme = (props: IAppProps): ReactElement => {
     );
 };
 
-export default MyApp;
+export default appWithTranslation(MyApp);
