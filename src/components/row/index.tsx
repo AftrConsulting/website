@@ -3,6 +3,7 @@ import { StyledRow } from './style';
 
 interface IRowProps {
 	children?: JSX.Element[] | JSX.Element;
+	className?: string;
 }
 
 /**
@@ -11,7 +12,7 @@ interface IRowProps {
  */
 const Row = (props: IRowProps): ReactElement => {
     return (
-        <StyledRow>
+        <StyledRow className={props.className}>
             {props.children}
         </StyledRow>
     );

@@ -1,8 +1,8 @@
 import { NextSeo } from 'next-seo';
 import React, { ReactElement } from 'react';
-import { Row } from 'src/components/row';
 import { useTranslation, Link } from 'src/i18n';
 import { DarkModeSwitch } from 'src/components/darkModeSwitch';
+import { Header } from 'src/components/header';
 
 /**
  * The Home component.
@@ -15,7 +15,8 @@ const Home = (): ReactElement => {
     };
 	
     return (
-        <Row>
+        <>
+            <Header />
             <NextSeo
                 title={t('title')}
                 description={t('description')}
@@ -24,7 +25,7 @@ const Home = (): ReactElement => {
             <button onClick={toggleLanguage}>change language</button>
             <h1>{t('h1')}</h1>
             <Link href="/about">link</Link>
-        </Row>
+        </>
     );
 };
 
