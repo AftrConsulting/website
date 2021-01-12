@@ -1,11 +1,10 @@
 import styled from 'styled-components';
-import { lighten } from 'polished';
 import { Row } from 'src/components/row';
 
 const StyledHeader = styled.div`
 	width: 100%;
 	height: 60px;
-	border-bottom: 1px solid #eaeaea;
+	border-bottom: 1px solid ${(p): string => p.theme.global.borderColor};
 `;
 
 const StyledHeaderRow = styled(Row)`
@@ -26,9 +25,9 @@ const StyledButton = styled.button`
 	padding: 0px 20px;
 	cursor: pointer;
 	font-size: 20px;
-	border-left: 1px solid #eaeaea;
-	border-right: 1px solid #eaeaea;
-	color: ${(p): string => lighten(.5, p.theme.global.color)};
+	border-left: 1px solid ${(p): string => p.theme.global.borderColor};
+	border-right: 1px solid ${(p): string => p.theme.global.borderColor};
+	color: ${(p): string => p.theme.global.header.iconColor};
 `;
 
 export {

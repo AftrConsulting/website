@@ -1,12 +1,22 @@
+import { darken } from 'polished';
 import { ITheme } from 'src/theme/interfaces/ITheme';
+
+const colors = {
+    background: '#fafafa',
+    color: '#181e1f'
+};
 
 /**
  * The lightTheme.
  */
 const lightTheme: ITheme = {
     global: {
-        background: '#f6fbfc',
-        color: '#181e1f'
+        background: colors.background,
+        borderColor: darken(.05, colors.background),
+        color: colors.color,
+        header: {
+            iconColor: darken(.5, colors.background)
+        }
     }
 };
 

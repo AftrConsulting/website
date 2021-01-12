@@ -1,7 +1,11 @@
 interface ITheme {
 	global: {
         background: string;
-        color: string;
+		color: string;
+		borderColor: string;
+		header: {
+            iconColor: string;
+        }
     }
 }
 

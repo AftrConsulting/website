@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import { faBars, faCog } from '@fortawesome/free-solid-svg-icons';
-import { Icon } from '../icon';
 import { StyledHeader, StyledButton, StyledHeaderRow } from './style';
+import { Icon } from 'src/components/icon';
 
 /**
  * The Header component.

@@ -3,6 +3,7 @@ import React, { ReactElement } from 'react';
 import { useTranslation, Link } from 'src/i18n';
 import { DarkModeSwitch } from 'src/components/darkModeSwitch';
 import { Header } from 'src/components/header';
+import { Row } from 'src/components/row';
 
 /**
  * The Home component.
@@ -17,14 +18,16 @@ const Home = (): ReactElement => {
     return (
         <>
             <Header />
-            <NextSeo
-                title={t('title')}
-                description={t('description')}
-            />
-            <DarkModeSwitch />
-            <button onClick={toggleLanguage}>change language</button>
-            <h1>{t('h1')}</h1>
-            <Link href="/about">link</Link>
+            <Row>
+                <NextSeo
+                    title={t('title')}
+                    description={t('description')}
+                />
+                <DarkModeSwitch />
+                <button onClick={toggleLanguage}>change language</button>
+                <h1>{t('h1')}</h1>
+                <Link href="/about">link</Link>
+            </Row>
         </>
     );
 };
