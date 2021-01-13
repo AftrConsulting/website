@@ -4,7 +4,11 @@ interface ITheme {
 		color: string;
 		borderColor: string;
 		header: {
-            iconColor: string;
+			iconColor: string;
+			sideMenu: {
+                background: string;
+                borderColor: string;
+            }
         }
     }
 }

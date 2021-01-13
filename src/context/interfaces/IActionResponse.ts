@@ -1,6 +1,7 @@
 interface IActionResponse {
     type: string;
-    value: unknown;
+	value: unknown;
+	other?: unknown;
 }
 
 export type {

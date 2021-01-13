@@ -15,7 +15,11 @@ const lightTheme: ITheme = {
         borderColor: darken(.05, colors.background),
         color: colors.color,
         header: {
-            iconColor: darken(.5, colors.background)
+            iconColor: darken(.5, colors.background),
+            sideMenu: {
+                background: 'rgba(255,255,255,.4)',
+                borderColor: darken(.1, colors.background)
+            }
         }
     }
 };
