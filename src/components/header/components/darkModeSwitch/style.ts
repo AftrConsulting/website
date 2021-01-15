@@ -8,18 +8,17 @@ const SwitchContainerAll = styled.div`
 const SwitchContainer = styled.div`
 	position: relative;
 	display: flex;
-	margin: 3px;
 `;
 
 const SwitchTrack = styled.div<{ checked: boolean }>`
 	width: 50px;
 	height: 24px;
-	background: ${'#ccc'};
+	background: ${(p): string => p.theme.global.darkModeSwitch.background};
 	border-radius: 10px;
 	transition: all 150ms;
 
 	${(p): string => p.checked ? `
-		background: ${'#ccc'};
+		background: ${p.theme.global.darkModeSwitch.onColor};
 	` : ''}
 `;
 
@@ -54,7 +53,6 @@ const SwitchButton = styled.div<{ checked: boolean }>`
 	${(p): string => p.checked ? `
 		left: calc(100% - 2px);
 		transform: translateX(-100%);
-		background: ${p.theme.global.color};
 	` : ''}
 `;
 

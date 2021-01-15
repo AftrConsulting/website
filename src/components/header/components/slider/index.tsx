@@ -6,7 +6,7 @@ import { setHeader } from 'src/context/actions/header';
 import { HeaderType } from 'src/types/headerType';
 
 interface ISliderProps {
-	children: React.ReactElement;
+	children: React.ReactElement | ReactElement[];
 	header: HeaderType;
 	rightDirection?: boolean;
 }

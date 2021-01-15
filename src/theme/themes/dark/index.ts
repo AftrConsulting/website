@@ -1,9 +1,10 @@
-import { lighten } from 'polished';
+import { lighten, darken } from 'polished';
 import { ITheme } from 'src/theme/interfaces/ITheme';
 
 const colors = {
     background: '#181e1f',
-    color: '#f6fbfc'
+    color: '#f6fbfc',
+    primary: '#d64541'
 };
 
 /**
@@ -14,8 +15,18 @@ const darkTheme: ITheme = {
         background: colors.background,
         borderColor: lighten(.1, colors.background),
         color: colors.color,
+        darkModeSwitch: {
+            background: darken(.1, '#fafafa'),
+            onColor: colors.primary
+        },
         header: {
             iconColor: lighten(.6, colors.background),
+            options: {
+                languages: {
+                    activeBackground: colors.primary,
+                    activeColor: colors.color
+                }
+            },
             sideMenu: {
                 background: 'rgba(0,0,0,.5)',
                 borderColor: lighten(.1, colors.background)

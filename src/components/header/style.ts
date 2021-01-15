@@ -18,7 +18,7 @@ const StyledHeaderRow = styled(Row)`
 	}
 `;
 
-const StyledButton = styled.button`
+const StyledButton = styled.button<{ open: boolean; }>`
 	margin-right: auto;
 	background: transparent;
 	border: none;
@@ -28,6 +28,18 @@ const StyledButton = styled.button`
 	border-left: 1px solid ${(p): string => p.theme.global.borderColor};
 	border-right: 1px solid ${(p): string => p.theme.global.borderColor};
 	color: ${(p): string => p.theme.global.header.iconColor};
+
+	svg {
+		animation-fill-mode: forwards;
+		transition: transform .1s ease-out;
+		will-change: transform;
+	}
+
+	${(p): string => p.open ? `
+		svg {
+			transform: rotate(90deg);
+		}
+	` : ''}
 `;
 
 export {

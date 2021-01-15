@@ -13,11 +13,14 @@ const { withTranslation, Link, Router, useTranslation, appWithTranslation, i18n 
     otherLanguages: [ 'fr' ]
 });
 
+const allLanguages = [ 'en', 'fr' ];
+
 export {
     withTranslation, 
     Link, 
     Router, 
     useTranslation,
     appWithTranslation,
-    i18n
+    i18n,
+    allLanguages
 };

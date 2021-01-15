@@ -12,7 +12,6 @@ const StyledSliderContainer = styled.div<{ rightDirection?: boolean, open: boole
 	z-index: 11;
 	overflow: hidden;
 	top: 0;
-	width: 200px;
 
 	${(p): string => {
         let x = p.rightDirection ? '100%' : '-100%';
