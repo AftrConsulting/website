@@ -32,7 +32,8 @@ const lightTheme: ITheme = {
                 background: 'rgba(255,255,255,.4)',
                 borderColor: darken(.1, colors.background)
             }
-        }
+        },
+        loadingBackground: colors.primary
     }
 };
 

@@ -20,7 +20,8 @@ interface ITheme {
                 background: string;
                 borderColor: string;
             }
-        }
+		}
+		loadingBackground: string;
     }
 }
 

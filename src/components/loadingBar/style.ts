@@ -5,7 +5,7 @@ const StyledLoadingBar = styled.div`
 	width: 0%;
 	z-index: 999999999;
 	position: absolute;
-	background: #299cb1;
+	background: ${(p): string => p.theme.global.loadingBackground};
 	top: 0px;
 `;
 
