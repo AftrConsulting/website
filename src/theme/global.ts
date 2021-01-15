@@ -25,6 +25,7 @@ const getGlobalStyles = (theme: ITheme): string => (`
 		appearance: none;
 		-webkit-font-smoothing: antialiased;
   		-moz-osx-font-smoothing: grayscale;
+		-webkit-tap-highlight-color: transparent;
 	}
 	
 	*,
