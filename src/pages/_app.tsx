@@ -22,7 +22,7 @@ interface IAppProps {
  * The MyApp component.
  * @param {IAppProps} props - The app props.
  */
-const MyApp = (props: IAppProps): ReactElement => {	
+const MyApp = (props: IAppProps): ReactElement => {
     const store = getStore({
         theme: props.theme
     });

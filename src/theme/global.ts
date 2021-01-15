@@ -1,10 +1,10 @@
-/* eslint-disable max-lines-per-function */
 import { ITheme } from 'src/theme/interfaces/ITheme';
 
 /**
  * The global styles.
  * @param {ITheme} theme - The theme.
  */
+// eslint-disable-next-line max-lines-per-function
 const getGlobalStyles = (theme: ITheme): string => (`
 	html, body {
 		font-family: -apple-system, system-ui, BlinkMacSystemFont, 

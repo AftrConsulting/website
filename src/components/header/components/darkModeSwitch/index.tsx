@@ -16,7 +16,9 @@ const DarkModeSwitch = (): ReactElement => {
     const icon = checked ? faMoon : faSun;
 	
     const toggleTheme = (): void => {
-        const action = setTheme(themeName === 'light' ? 'dark' : 'light');
+        const newTheme = themeName === 'light' ? 
+            'dark' : 'light';
+        const action = setTheme(newTheme);
         dispatch(action);
     };
 	

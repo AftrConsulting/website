@@ -1,26 +1,35 @@
 import React, { ReactElement } from 'react';
+import { useSelector } from 'react-redux';
 import { StyledTitle, StyledContainer, StyledSubTitle, StyledButton } from './style';
 import { DarkModeSwitch } from 'src/components/header/components/darkModeSwitch';
 import { Slider } from 'src/components/header/components/slider';
 import { useTranslation, allLanguages } from 'src/i18n';
+import { IState } from 'src/context/interfaces/IState';
+import { context } from 'src/context';
 
 /**
  * The Options component.
  */
 const Options = (): ReactElement => {
-    const { i18n } = useTranslation([ 'common' ]);
+    const header = useSelector((state: IState) => state.header);
+    const { i18n, t } = useTranslation([ 'options' ]);
 	
     const toggleLanguage = (language: string) => (): void => {
+        context.header = header;
         i18n.changeLanguage(language);
     };
 	
+    const onClose = (): void => {
+        context.header = null;
+    };
+	
     return (
-        <Slider header={'options'} rightDirection>
-            <StyledTitle>Options</StyledTitle>
+        <Slider header={'options'} rightDirection onClose={onClose}>
+            <StyledTitle>{t('title')}</StyledTitle>
             <StyledContainer>
-                <StyledSubTitle>Dark mode</StyledSubTitle>
+                <StyledSubTitle>{t('darkMode')}</StyledSubTitle>
                 <DarkModeSwitch />
-                <StyledSubTitle>Languages</StyledSubTitle>
+                <StyledSubTitle>{t('languages')}</StyledSubTitle>
                 {allLanguages.map((x: string, key: number): ReactElement => (
                     <StyledButton 
                         onClick={toggleLanguage(x)} 

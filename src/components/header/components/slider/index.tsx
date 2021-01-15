@@ -9,6 +9,7 @@ interface ISliderProps {
 	children: React.ReactElement | ReactElement[];
 	header: HeaderType;
 	rightDirection?: boolean;
+	onClose?: () => void;
 }
 
 /**
@@ -26,8 +27,9 @@ const Slider = (props: ISliderProps): ReactElement => {
         toggleVisibility(opacityRef.current, true);
     }, [ open ]);
 	
-    const onToggle = (): void => {
+    const onClose = (): void => {
         dispatch(setHeader(!open, props.header));
+        props.onClose?.();
     };
 	
     const onTransitionEnd = (): void => {
@@ -44,7 +46,7 @@ const Slider = (props: ISliderProps): ReactElement => {
             <StyledSliderOpacity 
                 open={open}
                 ref={opacityRef}
-                onClick={onToggle}
+                onClick={onClose}
                 onTransitionEnd={onTransitionEnd} />
         </>
     );

@@ -24,6 +24,7 @@ const StyledButton = styled.button<{ active: boolean; }>`
 	border-radius: 4px;
 	margin-right: 10px;
 	cursor: pointer;
+	text-transform: uppercase;
 
 	${(p): string => p.active ? 
         `background: ${p.theme.global.header.options.languages.activeBackground};

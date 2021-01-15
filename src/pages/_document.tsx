@@ -29,19 +29,17 @@ class MyDocument extends Document<IMyDocumentProps> {
     /**
      * The render method.
      */
-    public render = (): ReactElement => {
-        return (
-            <Html>
-                <Head>
-                    {this.props.styleTags}
-                </Head>
-                <body>
-                    <Main />
-                    <NextScript />
-                </body>
-            </Html>
-        );
-    }
+    public render = (): ReactElement => (
+        <Html>
+            <Head>
+                {this.props.styleTags}
+            </Head>
+            <body>
+                <Main />
+                <NextScript />
+            </body>
+        </Html>
+    );
 
 }
 

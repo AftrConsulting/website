@@ -13,6 +13,9 @@ const { withTranslation, Link, Router, useTranslation, appWithTranslation, i18n 
     otherLanguages: [ 'fr' ]
 });
 
+/**
+ * All languages.
+ */
 const allLanguages = [ 'en', 'fr' ];
 
 export {

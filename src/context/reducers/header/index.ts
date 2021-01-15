@@ -1,6 +1,7 @@
 import { IStoreInitialHeaderState } from 'src/context/interfaces/header/IStoreInitialHeaderState';
 import { IActionResponse } from 'src/context/interfaces/IActionResponse';
 import { HeaderAction } from 'src/context/enums/header';
+import { context } from 'src/context';
 
 const initialState = {
     options: false,
@@ -8,11 +9,19 @@ const initialState = {
 };
 
 /**
+ * Returns the initial state.
+ */
+const getInitialState = (): IStoreInitialHeaderState => {
+    return context.header ? 
+        context.header : initialState;
+};
+
+/**
  * Returns the theme reducer.
  * @param {IStoreInitialHeaderState} state - The state.
  * @param {IActionResponse} action - The action.
  */
-const getHeaderReducer = (state: IStoreInitialHeaderState = initialState, action: IActionResponse): unknown => {
+const getHeaderReducer = (state: IStoreInitialHeaderState = getInitialState(), action: IActionResponse): unknown => {
     const newState = { ...state };
 
     if (action.type === HeaderAction.toggleSideMenu) {
