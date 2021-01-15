@@ -31,6 +31,7 @@ const SwitchInput = styled.input`
 	height: 100%;
 	margin: 0px;
 	cursor: pointer;
+	border: none;
 
 	&:focus,
 	&:active,

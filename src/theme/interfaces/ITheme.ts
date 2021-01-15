@@ -13,6 +13,7 @@ interface ITheme {
                 languages: {
 					activeBackground: string;
 					activeColor: string;
+					background: string;
                 };
             }
 			sideMenu: {

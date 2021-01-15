@@ -24,7 +24,8 @@ const darkTheme: ITheme = {
             options: {
                 languages: {
                     activeBackground: colors.primary,
-                    activeColor: colors.color
+                    activeColor: colors.color,
+                    background: lighten(.1, colors.background)
                 }
             },
             sideMenu: {

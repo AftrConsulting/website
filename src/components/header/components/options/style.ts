@@ -23,6 +23,8 @@ const StyledButton = styled.button<{ active: boolean; }>`
 	padding: 7px 10px;
 	border-radius: 4px;
 	margin-right: 10px;
+	color: ${(p): string => p.theme.global.color};
+	background: ${(p): string => p.theme.global.header.options.languages.background};
 	cursor: pointer;
 	text-transform: uppercase;
 
