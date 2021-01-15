@@ -13,6 +13,14 @@ const themes = {
 };
 
 /**
+ * The devices.
+ */
+const devices = {
+    mobile: '700px',
+    tablet: '1200px'
+};
+
+/**
  * Returns the theme name.
  * @param {string} theme - The theme. 
  */
@@ -39,5 +47,6 @@ const getTheme = (theme?: string): ITheme => {
 export {
     getThemeName,
     getTheme,
-    themes
+    themes,
+    devices
 };

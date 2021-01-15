@@ -1,10 +1,18 @@
 import styled from 'styled-components';
 import { Row } from 'src/components/row';
+import { devices } from 'src/theme';
 
 const StyledHeader = styled.div`
+	border-bottom: 1px solid ${(p): string => p.theme.global.borderColor};
+	background: ${(p): string => p.theme.global.background};
 	width: 100%;
 	height: 60px;
-	border-bottom: 1px solid ${(p): string => p.theme.global.borderColor};
+	position: fixed;
+	z-index: 1;
+
+	@media screen and (max-width: ${devices.mobile}) {
+		height: 50px;
+	}
 `;
 
 const StyledHeaderRow = styled(Row)`
@@ -16,13 +24,17 @@ const StyledHeaderRow = styled(Row)`
 	& > div {
 		flex: 1;
 	}
+
+	@media screen and (max-width: ${devices.tablet}) {
+		padding: 0px;
+	}
 `;
 
 const StyledButton = styled.button<{ open: boolean; }>`
 	margin-right: auto;
 	background: transparent;
 	border: none;
-	padding: 0px 20px;
+	padding: 0px 1em;
 	cursor: pointer;
 	font-size: 20px;
 	border-left: 1px solid ${(p): string => p.theme.global.borderColor};
@@ -40,6 +52,15 @@ const StyledButton = styled.button<{ open: boolean; }>`
 			transform: rotate(90deg);
 		}
 	` : ''}
+
+	@media screen and (max-width: ${devices.tablet}) {
+		&:first-of-type {
+			border-left: 0px;
+		}
+		&:last-of-type {
+			border-right: 0px;
+		}
+	}
 `;
 
 export {

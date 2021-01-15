@@ -1,5 +1,8 @@
 {
 	"title": "Le Français - Simple Usage Example",
 	"description": "Le Français - A short description goes here.",
-	"h1": "Le Français - Lorem 3 ipsum dolor sit amet, consectetur adipiscing elit."
+	"h1": "Le Français - Lorem 3 ipsum dolor sit amet, consectetur adipiscing elit.",
+	"optionsTitle": "Options",
+	"optionsDarkMode": "Mode Sombre",
+	"optionsLanguages": "Langues"
 }

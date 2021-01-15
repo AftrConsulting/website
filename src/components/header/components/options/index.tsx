@@ -12,7 +12,7 @@ import { context } from 'src/context';
  */
 const Options = (): ReactElement => {
     const header = useSelector((state: IState) => state.header);
-    const { i18n, t } = useTranslation([ 'options' ]);
+    const { i18n, t } = useTranslation([ 'common' ]);
 	
     const toggleLanguage = (language: string) => (): void => {
         context.header = header;
@@ -25,11 +25,11 @@ const Options = (): ReactElement => {
 	
     return (
         <Slider header={'options'} rightDirection onClose={onClose}>
-            <StyledTitle>{t('title')}</StyledTitle>
+            <StyledTitle>{t('optionsTitle')}</StyledTitle>
             <StyledContainer>
-                <StyledSubTitle>{t('darkMode')}</StyledSubTitle>
+                <StyledSubTitle>{t('optionsDarkMode')}</StyledSubTitle>
                 <DarkModeSwitch />
-                <StyledSubTitle>{t('languages')}</StyledSubTitle>
+                <StyledSubTitle>{t('optionsLanguages')}</StyledSubTitle>
                 {allLanguages.map((x: string, key: number): ReactElement => (
                     <StyledButton 
                         onClick={toggleLanguage(x)} 
