@@ -25,7 +25,7 @@ interface ITheme {
             };
 		};
 		primaryColors: {
-			borderColor: string;
+			color: string;
 		}
     }
 }

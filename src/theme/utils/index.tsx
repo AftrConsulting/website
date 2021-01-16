@@ -40,7 +40,7 @@ const getTheme = (primaryColor: string, themeName?: string): ITheme => {
  */
 const getPrimaryColor = (color?: string): string => {
     if (!color || allColors.indexOf(color) === -1) {
-        return allColors[0];
+        return configuration.defaults.primaryColor;
     }
 	
     return color;

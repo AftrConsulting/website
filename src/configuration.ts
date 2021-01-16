@@ -1,4 +1,5 @@
 import { IConfiguration } from 'src/interfaces/IConfiguration';
+import { allColors } from 'src/theme';
 
 /**
  * The configuration file.
@@ -9,6 +10,7 @@ const configuration: IConfiguration = {
         theme: 'theme'
     },
     defaults: {
+        primaryColor: allColors[0],
         themeName: 'dark'
     },
     env: {

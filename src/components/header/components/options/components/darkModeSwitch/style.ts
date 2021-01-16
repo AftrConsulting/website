@@ -11,10 +11,10 @@ const SwitchContainer = styled.div`
 `;
 
 const SwitchTrack = styled.div<{ checked: boolean }>`
-	width: 50px;
-	height: 24px;
+	width: 60px;
+	height: 30px;
 	background: ${(p): string => p.theme.global.darkModeSwitch.background};
-	border-radius: 10px;
+	border-radius: 15px;
 	transition: all 150ms;
 
 	${(p): string => p.checked ? `
@@ -42,29 +42,29 @@ const SwitchInput = styled.input`
 `;
 
 const SwitchButton = styled.div<{ checked: boolean }>`
-	width: 20px;
-	height: 20px;
+	width: 23px;
+	height: 23px;
 	border-radius: 50%;
 	background: ${(p): string => p.theme.global.color};
 	position: absolute;
-	top: 2px;
-	left: 2px;
+	top: 3px;
+	left: 3px;
 	transition: all 150ms;
 
 	${(p): string => p.checked ? `
-		left: calc(100% - 2px);
+		left: calc(100% - 3px);
 		transform: translateX(-100%);
 	` : ''}
 `;
 
 const SwitchIcon = styled(Icon)<{ checked: boolean }>`
 	position: absolute;
-	font-size: 14px;
-	top: 5px;
-	right: 5px;
+	font-size: 16px;
+	top: 7px;
+	right: 7px;
 
 	${(p): string => p.checked ? `
-		left: 5px;
+		left: 7px;
 		right: auto;
 	` : ''}
 `;

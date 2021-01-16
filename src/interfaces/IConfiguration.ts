@@ -25,6 +25,11 @@ interface IConfiguration {
 	defaults: {
 		
 		/**
+		 * The primary colors.
+		 */
+		primaryColor: string;
+
+		/**
 		 * The theme name.
 		 */
 		themeName: MyTheme;

@@ -4,7 +4,7 @@ import { ITheme } from 'src/theme/interfaces/ITheme';
 const colors = {
     background: '#181e1f',
     color: '#f6fbfc',
-    primary: '#d64541'
+    primary: '' // Set by the store.
 };
 
 /**
@@ -33,7 +33,7 @@ const darkTheme: ITheme = {
             }
         },
         primaryColors: {
-            borderColor: darken(.1, '#fafafa')
+            color: '#fafafa'
         }
     }
 };

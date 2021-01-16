@@ -1,9 +1,11 @@
 import React, { ReactElement } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { StyledPrimaryColor } from './style';
-import { allColors } from 'src/theme';
 import { setPrimaryColor } from 'src/context/actions/theme';
 import { IState } from 'src/context/interfaces/IState';
+import { Icon } from 'src/components/icon';
+import { allColors } from 'src/theme';
 
 /**
  * The primary colors switch component.
@@ -26,7 +28,9 @@ const PrimaryColorsSwitch = (): ReactElement => {
                     onClick={changeColor(color)}
                     active={color === primaryColor}
                     primaryColor={color} 
-                    key={key} />
+                    key={key}>
+                    <Icon icon={faCheck} />
+                </StyledPrimaryColor>
             ))}
         </div>
     );
