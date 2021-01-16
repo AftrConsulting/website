@@ -1,6 +1,6 @@
+/* eslint-disable max-len */
 import { NextSeo } from 'next-seo';
 import React, { ReactElement } from 'react';
-import { LoremIpsum } from 'react-lorem-ipsum';
 import { Container } from 'src/components/container';
 import { useTranslation, Link } from 'src/i18n';
 import { Row } from 'src/components/row';
@@ -18,7 +18,9 @@ const Home = (): ReactElement => {
                     description={t('description')}
                 />
                 <h1>{t('h1')}</h1>
-                <LoremIpsum p={20} />
+                <div>
+					Lorem ipsum odor amet, consectetuer adipiscing elit. 
+                </div>
                 <Link href="/about">link</Link>
             </Row>
         </Container>
