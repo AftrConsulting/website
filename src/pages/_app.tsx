@@ -4,11 +4,11 @@ import { ThemeProvider } from 'styled-components';
 import React, { ReactElement } from 'react';
 import { Provider, useSelector } from 'react-redux';
 import { IStoreInitialThemeState } from 'src/context/interfaces/theme/IStoreInitialThemeState';
+import { getThemeName, getTheme, getPrimaryColor } from 'src/theme/utils';
 import { LoadingBar } from 'src/components/loadingBar';
 import { IState } from 'src/context/interfaces/IState';
-import { configuration } from 'src/configuration';
 import { getGlobalStyles } from 'src/theme/global';
-import { getThemeName, getTheme } from 'src/theme';
+import { configuration } from 'src/configuration';
 import { appWithTranslation } from 'src/i18n';
 import { getStore } from 'src/context';
 
@@ -40,13 +40,16 @@ const MyApp = (props: IAppProps): ReactElement => {
  */
 MyApp.getInitialProps = async (appContext: AppContext): Promise<{}> => {
     const appProps = await App.getInitialProps(appContext);
-    let themeName = parseCookies(appContext.ctx)[configuration.cookies.theme];
-    themeName = getThemeName(themeName);
+    const cookies = parseCookies(appContext.ctx);
+	
+    const themeName = getThemeName(cookies[configuration.cookies.theme]);
+    const primaryColor = getPrimaryColor(cookies[configuration.cookies.primaryColor]);
 
     return { 
         ...appProps,
         theme: {
-            theme: getTheme(themeName),
+            primaryColor,
+            theme: getTheme(primaryColor, themeName),
             themeName
         }
     };

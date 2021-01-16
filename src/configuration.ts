@@ -5,6 +5,7 @@ import { IConfiguration } from 'src/interfaces/IConfiguration';
  */
 const configuration: IConfiguration = {
     cookies: {
+        primaryColor: 'primaryColor',
         theme: 'theme'
     },
     defaults: {

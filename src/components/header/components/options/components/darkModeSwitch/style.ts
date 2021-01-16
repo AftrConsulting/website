@@ -18,7 +18,7 @@ const SwitchTrack = styled.div<{ checked: boolean }>`
 	transition: all 150ms;
 
 	${(p): string => p.checked ? `
-		background: ${p.theme.global.darkModeSwitch.onColor};
+		background: ${p.theme.colors.primary};
 	` : ''}
 `;
 

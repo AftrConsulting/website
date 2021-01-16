@@ -1,8 +1,5 @@
 import { lightTheme } from 'src/theme/themes/light';
 import { darkTheme } from 'src/theme/themes/dark';
-import { MyTheme } from 'src/theme/types/MyTheme';
-import { configuration } from 'src/configuration';
-import { ITheme } from 'src/theme/interfaces/ITheme';
 
 /**
  * The themes.
@@ -21,32 +18,18 @@ const devices = {
 };
 
 /**
- * Returns the theme name.
- * @param {string} theme - The theme. 
+ * All colors.
  */
-const getThemeName = (theme?: string): MyTheme => {
-    if (!theme || !themes[theme]) {
-        return configuration.defaults.themeName;
-    }
+const allColors = [ 
+    '#d64541',
+    '#794bc4',
+    '#f45d22',
+    '#17bf63'
+];
 
-    return theme as MyTheme;
-};
-
-/**
- * Returns the theme.
- * @param {string} theme - The theme. 
- */
-const getTheme = (theme?: string): ITheme => {
-    if (!theme || !themes[theme]) {
-        return themes[configuration.defaults.themeName];
-    }
-
-    return themes[theme];
-};
 
 export {
-    getThemeName,
-    getTheme,
     themes,
-    devices
+    devices,
+    allColors
 };

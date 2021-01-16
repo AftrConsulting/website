@@ -11,6 +11,16 @@ const setTheme = (themeName?: MyTheme): IActionResponse => ({
     value: themeName
 });
 
+/**
+ * Sets the primaryColor.
+ * @param {string} primaryColor - The primary color. 
+ */
+const setPrimaryColor = (primaryColor?: string): IActionResponse => ({
+    type: ThemeAction.setPrimaryColor,
+    value: primaryColor
+});
+
 export {
+    setPrimaryColor,
     setTheme
 };

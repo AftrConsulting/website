@@ -29,7 +29,7 @@ const StyledButton = styled.button<{ active: boolean; }>`
 	text-transform: uppercase;
 
 	${(p): string => p.active ? 
-        `background: ${p.theme.global.header.options.languages.activeBackground};
+        `background: ${p.theme.colors.primary};
 		 color: ${p.theme.global.header.options.languages.activeColor};` 
 		 : ''}
 `;

@@ -1,5 +1,6 @@
 enum ThemeAction {
-	setTheme = 'SET_THEME'
+	setTheme = 'SET_THEME',
+	setPrimaryColor = 'SET_PRIMARY_COLOR'
 }
 
 export {

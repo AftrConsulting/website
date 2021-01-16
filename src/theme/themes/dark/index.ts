@@ -11,19 +11,18 @@ const colors = {
  * The darkTheme.
  */
 const darkTheme: ITheme = {
+    colors,
     global: {
         background: colors.background,
         borderColor: lighten(.1, colors.background),
         color: colors.color,
         darkModeSwitch: {
-            background: darken(.1, '#fafafa'),
-            onColor: colors.primary
+            background: darken(.1, '#fafafa')
         },
         header: {
             iconColor: lighten(.6, colors.background),
             options: {
                 languages: {
-                    activeBackground: colors.primary,
                     activeColor: colors.color,
                     background: lighten(.1, colors.background)
                 }
@@ -33,7 +32,9 @@ const darkTheme: ITheme = {
                 borderColor: lighten(.1, colors.background)
             }
         },
-        loadingBackground: colors.primary
+        primaryColors: {
+            borderColor: darken(.1, '#fafafa')
+        }
     }
 };
 

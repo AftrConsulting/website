@@ -1,7 +1,8 @@
 import React, { ReactElement } from 'react';
 import { useSelector } from 'react-redux';
 import { StyledTitle, StyledContainer, StyledSubTitle, StyledButton } from './style';
-import { DarkModeSwitch } from 'src/components/header/components/darkModeSwitch';
+import { PrimaryColorsSwitch } from 'src/components/header/components/options/components/primaryColorsSwitch';
+import { DarkModeSwitch } from 'src/components/header/components/options/components/darkModeSwitch';
 import { Slider } from 'src/components/header/components/slider';
 import { useTranslation, allLanguages } from 'src/i18n';
 import { IState } from 'src/context/interfaces/IState';
@@ -29,6 +30,8 @@ const Options = (): ReactElement => {
             <StyledContainer>
                 <StyledSubTitle>{t('optionsDarkMode')}</StyledSubTitle>
                 <DarkModeSwitch />
+                <StyledSubTitle>{t('optionsColor')}</StyledSubTitle>
+                <PrimaryColorsSwitch />
                 <StyledSubTitle>{t('optionsLanguages')}</StyledSubTitle>
                 {allLanguages.map((x: string, key: number): ReactElement => (
                     <StyledButton 

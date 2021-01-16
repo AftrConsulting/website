@@ -11,6 +11,11 @@ interface IConfiguration {
 		 * The theme cookie.
 		 */
 		theme: string;
+
+		/**
+		 * The primary color.
+		 */
+		primaryColor: string;
 	
 	}
 	
