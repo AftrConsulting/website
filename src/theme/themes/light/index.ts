@@ -17,14 +17,14 @@ const lightTheme: ITheme = {
         borderColor: darken(.05, colors.background),
         color: colors.color,
         darkModeSwitch: {
-            background: darken(.1, colors.background)
+            background: darken(.15, colors.background)
         },
         header: {
             iconColor: darken(.5, colors.background),
             options: {
                 languages: {
                     activeColor: colors.background,
-                    background: darken(.1, colors.background)
+                    background: darken(.15, colors.background)
                 }
             },
             sideMenu: {
