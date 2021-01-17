@@ -18,12 +18,9 @@ const StyledHeader = styled.div`
 const StyledHeaderRow = styled(Row)`
 	justify-content: space-between;
 	flex-direction: row;
+	align-items: center;
 	display: flex;
 	height: 100%;
-
-	& > div {
-		flex: 1;
-	}
 
 	@media screen and (max-width: ${devices.tablet}) {
 		padding: 0px;
@@ -31,6 +28,7 @@ const StyledHeaderRow = styled(Row)`
 `;
 
 const StyledButton = styled.button<{ open: boolean; }>`
+	height: 100%;
 	margin-right: auto;
 	background: transparent;
 	border: none;

@@ -15,6 +15,9 @@ const configuration: IConfiguration = {
     },
     env: {
         name: process.env.NODE_ENV
+    },
+    urls: {
+        consultation: 'https://calendly.com/t-mouskhelichvili/30min'
     }
 };
 

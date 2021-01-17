@@ -48,6 +48,18 @@ interface IConfiguration {
 	
 	}
 
+	/**
+	 * The urls.
+	 */
+	urls: {
+
+		/**
+		 * The consultation.
+		 */
+		consultation: string;
+
+    }
+
 }
 
 export type {
