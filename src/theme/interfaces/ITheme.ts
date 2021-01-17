@@ -8,11 +8,15 @@ interface ITheme {
         background: string;
 		color: string;
 		borderColor: string;
+		borderRadius: string;
 		darkModeSwitch: {
 			background: string;
 		};
 		header: {
 			iconColor: string;
+			logo: {
+				background: string;
+			};
 			options: {
                 languages: {
 					activeColor: string;

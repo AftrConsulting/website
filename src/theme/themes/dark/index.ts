@@ -15,12 +15,16 @@ const darkTheme: ITheme = {
     global: {
         background: colors.background,
         borderColor: lighten(.1, colors.background),
+        borderRadius: '7px',
         color: colors.color,
         darkModeSwitch: {
             background: darken(.1, '#fafafa')
         },
         header: {
             iconColor: lighten(.6, colors.background),
+            logo: {
+                background: lighten(.2, colors.background)
+            },
             options: {
                 languages: {
                     activeColor: colors.color,

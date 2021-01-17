@@ -1,9 +1,9 @@
-/* eslint-disable max-len */
 import { NextSeo } from 'next-seo';
 import React, { ReactElement } from 'react';
 import { Container } from 'src/components/container';
-import { useTranslation, Link } from 'src/i18n';
+import { useTranslation } from 'src/i18n';
 import { Row } from 'src/components/row';
+
 /**
  * The Home component.
  */
@@ -21,7 +21,6 @@ const Home = (): ReactElement => {
                 <div>
 					Lorem ipsum odor amet, consectetuer adipiscing elit. 
                 </div>
-                <Link href="/about">link</Link>
             </Row>
         </Container>
     );

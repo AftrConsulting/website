@@ -1,7 +1,10 @@
 import React, { ReactElement } from 'react';
-import { StyledLogoContainer, StyledSubHeaderContainer, StyledButtonContainer } from './style';
-import { Button } from 'src/components/button';
+import { StyledLogoContainer, StyledSubHeaderContainer, StyledButtonContainer, StyledLogo } from './style';
+import { SubHeaderItem } from 'src/components/header/components/subHeader/components/subHeaderItem';
+import { subHeaderItems } from 'src/data/subHeaderItems';
 import { configuration } from 'src/configuration';
+import { Button } from 'src/components/button';
+import { Link } from 'src/i18n';
 
 /**
  * The SubHeader Component.
@@ -9,13 +12,14 @@ import { configuration } from 'src/configuration';
 const SubHeader = (): ReactElement => (
     <>
         <StyledLogoContainer>
-				logo
+            <Link href={'/'}>
+                <StyledLogo />
+            </Link>
         </StyledLogoContainer>
         <StyledSubHeaderContainer>
-            <div>Services</div>
-            <div>Portfolio</div>	
-            <div>About Us</div>	
-            <div>Blog</div>	
+            {subHeaderItems.map((x, key) => (
+                <SubHeaderItem key={key} element={x} />
+            ))}
         </StyledSubHeaderContainer>
         <StyledButtonContainer>
             <Button 

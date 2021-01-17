@@ -15,12 +15,16 @@ const lightTheme: ITheme = {
     global: {
         background: colors.background,
         borderColor: darken(.05, colors.background),
+        borderRadius: '7px',
         color: colors.color,
         darkModeSwitch: {
             background: darken(.15, colors.background)
         },
         header: {
             iconColor: darken(.5, colors.background),
+            logo: {
+                background: darken(.2, colors.background)
+            },
             options: {
                 languages: {
                     activeColor: colors.background,

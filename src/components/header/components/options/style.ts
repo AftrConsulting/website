@@ -21,7 +21,7 @@ const StyledButton = styled.button<{ active: boolean; }>`
 	border: none;
 	display: inline-block;
 	padding: 7px 10px;
-	border-radius: 4px;
+	border-radius: ${(p): string => p.theme.global.borderRadius};
 	margin-right: 10px;
 	color: ${(p): string => p.theme.global.color};
 	background: ${(p): string => p.theme.global.header.options.languages.background};

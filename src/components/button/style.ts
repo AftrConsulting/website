@@ -6,7 +6,7 @@ const StyledButton = styled.button`
 	border: none;
 	color: white;
 	background: ${(p): string => p.theme.colors.primary};
-	border-radius: 7px;
+	border-radius: ${(p): string => p.theme.global.borderRadius};
 	cursor: pointer;
 
 	&:hover {
@@ -15,14 +15,16 @@ const StyledButton = styled.button`
 `;
 
 const StyledLink = styled.a`
-	padding: 10px 15px;
+	padding: 0px 15px;
 	border: none;
 	color: white;
 	background: ${(p): string => p.theme.colors.primary};
-	border-radius: 7px;
+	border-radius: ${(p): string => p.theme.global.borderRadius};
 	cursor: pointer;
 	display: inline-block;
 	text-decoration: none;
+	height: 40px;
+	line-height: 40px;
 
 	&:hover {
 		background: ${(p): string => darken(.1, p.theme.colors.primary)};
