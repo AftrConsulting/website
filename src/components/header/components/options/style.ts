@@ -26,7 +26,6 @@ const StyledButton = styled.button<{ active: boolean; }>`
 	color: ${(p): string => p.theme.global.color};
 	background: ${(p): string => p.theme.global.header.options.languages.background};
 	cursor: pointer;
-	text-transform: uppercase;
 
 	${(p): string => p.active ? 
         `background: ${p.theme.colors.primary};

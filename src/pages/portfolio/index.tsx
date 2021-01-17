@@ -3,18 +3,18 @@ import { Container } from 'src/components/container';
 import { Row } from 'src/components/row';
 
 /**
- * The About component. 
+ * The Portfolio component. 
  */
-const About = (): ReactElement => (
+const Portfolio = (): ReactElement => (
     <Container>
         <Row>
-            <h1>About</h1>
+            <h1>Portfolio</h1>
         </Row>
     </Container>
 );
 
-About.getInitialProps = (): {} => ({
+Portfolio.getInitialProps = (): {} => ({
     namespacesRequired: [ 'common' ]
 });
 
-export default About;
+export default Portfolio;

@@ -20,10 +20,10 @@ const SubHeader = (): ReactElement => {
         <>
             <StyledLogoContainer>
                 <Link href={'/'}>
-                    <>
-                        <StyledLogo />
-                        <StyledName>LOREM</StyledName>
-                    </>
+                    <StyledLogo />
+                </Link>
+                <Link href={'/'}>
+                    <StyledName>LOREM</StyledName>
                 </Link>
                 <StyledLanguage onClick={toggleLanguage}>
                     {i18n.language}

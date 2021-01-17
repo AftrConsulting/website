@@ -2,16 +2,33 @@ import { ISubHeaderItem } from 'src/data/interfaces/ISubHeaderItem';
 
 const subHeaderItems: ISubHeaderItem[] = [ 
     { 
-        'title': 'Services' 
+        subItems: [
+            {
+                title: 'Service 1'
+            },
+            {
+                title: 'Service 2'
+            },
+            {
+                title: 'Service 3'
+            },
+            {
+                title: 'Service 4'
+            }
+        ],
+        title: 'Services'
+    },
+    {
+        href: '/portfolio',
+        title: 'Portfolio' 
     },
     { 
-        'title': 'Portfolio' 
-    },
-    { 
-        'title': 'About' 
+        href: '/about',
+        title: 'About'
     }, 
     { 
-        'title': 'Blog'
+        href: '/blog',
+        title: 'Blog'
     } 
 ];
 

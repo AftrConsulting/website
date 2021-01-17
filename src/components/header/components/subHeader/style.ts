@@ -21,6 +21,7 @@ const StyledLogo = styled.div`
 	width: 40px;
 	vertical-align: top;
 	display: inline-block;
+	cursor: pointer;
 `;
 
 const StyledName = styled.div`
@@ -29,6 +30,7 @@ const StyledName = styled.div`
 	padding-right: 5px;
 	vertical-align: top;
 	line-height: 40px;
+	cursor: pointer;
 `;
 
 const StyledLanguage = styled.button`

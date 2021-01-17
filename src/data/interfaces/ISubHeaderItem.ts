@@ -1,6 +1,10 @@
 interface ISubHeaderItem {
 	title: string;
-	src?: string;
+	href?: string;
+	subItems?: {
+		title: string;
+		href?: string;
+	}[];
 }
 
 export type {
