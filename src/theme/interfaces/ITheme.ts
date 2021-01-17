@@ -16,6 +16,11 @@ interface ITheme {
 			iconColor: string;
 			logo: {
 				background: string;
+                language: {
+                    color: string;
+                    background: string;
+                    backgroundHover: string;
+                };
 			};
 			options: {
                 languages: {

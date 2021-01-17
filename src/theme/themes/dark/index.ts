@@ -23,7 +23,12 @@ const darkTheme: ITheme = {
         header: {
             iconColor: lighten(.6, colors.background),
             logo: {
-                background: lighten(.2, colors.background)
+                background: lighten(.2, colors.background),
+                language: {
+                    background: lighten(.3, colors.background),
+                    backgroundHover: lighten(.4, colors.background),
+                    color: colors.color
+                }
             },
             options: {
                 languages: {

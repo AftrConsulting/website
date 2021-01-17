@@ -1,4 +1,4 @@
-import { darken } from 'polished';
+import { darken, lighten } from 'polished';
 import { ITheme } from 'src/theme/interfaces/ITheme';
 
 const colors = {
@@ -23,7 +23,12 @@ const lightTheme: ITheme = {
         header: {
             iconColor: darken(.5, colors.background),
             logo: {
-                background: darken(.2, colors.background)
+                background: darken(.1, colors.background),
+                language: {
+                    background: darken(.05, colors.background),
+                    backgroundHover: darken(.08, colors.background),
+                    color: lighten(.2, colors.color)
+                }
             },
             options: {
                 languages: {
