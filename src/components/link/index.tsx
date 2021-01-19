@@ -6,6 +6,7 @@ interface IMyLinkProps {
 	href: string;
 	children: ReactElement | ReactElement[] | string;
 	className?: string;
+	onClick?: () => void;
 }
 
 /**
@@ -22,7 +23,7 @@ const MyLink = (props: IMyLinkProps): ReactElement => {
 
     return (
         <Link href={props.href} passHref>
-            <a className={className}>{props.children}</a>
+            <a className={className} onClick={props.onClick}>{props.children}</a>
         </Link>
     );
 };

@@ -5,6 +5,7 @@ interface IButtonProps {
 	title: string
 	href?: string;
 	target?: '_blank';
+	children?: ReactElement[] | ReactElement;
 }
 
 /**
@@ -15,14 +16,14 @@ const Button = (props: IButtonProps): ReactElement => {
     if (props.href) {
         return (
             <StyledLink href={props.href} title={props.title} target={props.target}>
-                {props.title}
+                {props.children}
             </StyledLink>
         );
     }
 
     return (
         <StyledButton title={props.title}>
-            {props.title}
+            {props.children}
         </StyledButton>
     );
 };

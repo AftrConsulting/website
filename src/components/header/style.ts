@@ -12,7 +12,7 @@ const StyledHeader = styled.div`
 	user-select: none;
 
 	@media screen and (max-width: ${devices.mobile}) {
-		height: 50px;
+		height: 51px;
 	}
 `;
 
@@ -25,6 +25,12 @@ const StyledHeaderRow = styled(Row)`
 
 	@media screen and (max-width: ${devices.tablet}) {
 		padding: 0px;
+	}
+
+	@media screen and (max-width: ${devices.mobile}) {
+		[data-lang='true'] {
+			display: none;
+		}
 	}
 `;
 

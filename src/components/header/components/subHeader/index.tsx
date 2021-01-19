@@ -22,7 +22,9 @@ const SubHeader = (): ReactElement => {
                 <Button 
                     href={configuration.urls.consultation}
                     target={'_blank'}
-                    title={'Book a Free Call'} />
+                    title={'Book a Free Call'}>
+                    <span>Book a Free Call</span>
+                </Button>
             </StyledButtonContainer>
         </>
     );

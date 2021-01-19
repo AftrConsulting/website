@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { devices } from 'src/theme';
 
 const StyledLogoContainer = styled.div`
 	text-align: center;
@@ -13,6 +14,11 @@ const StyledLogo = styled.div`
 	vertical-align: top;
 	display: inline-block;
 	cursor: pointer;
+
+	@media screen and (max-width: ${devices.mobile}) {
+		height: 30px;
+		width: 30px;
+	}
 `;
 
 const StyledName = styled.div`
@@ -23,6 +29,10 @@ const StyledName = styled.div`
 	line-height: 40px;
 	cursor: pointer;
 	color: ${(p): string => p.theme.global.color};
+
+	@media screen and (max-width: ${devices.mobile}) {
+		line-height: 30px;
+	}
 `;
 
 const StyledLanguage = styled.button`
