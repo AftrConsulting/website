@@ -2,8 +2,8 @@ import React, { ReactElement } from 'react';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { StyledSubHeaderItemContainer } from './style';
 import { ISubHeaderItem } from 'src/data/interfaces/ISubHeaderItem';
+import { MyLink } from 'src/components/link';
 import { Icon } from 'src/components/icon';
-import { Link } from 'src/i18n';
 
 interface ISubHeaderItemProps {
 	element: ISubHeaderItem;
@@ -28,9 +28,9 @@ const SubHeaderItem = (props: ISubHeaderItemProps): ReactElement => {
     return (
         <StyledSubHeaderItemContainer>
             {props.element.href ? (
-                <Link href={props.element.href}>
+                <MyLink href={props.element.href}>
                     {props.element.title}
-                </Link>
+                </MyLink>
             ) : <div>{props.element.title}</div>}
         </StyledSubHeaderItemContainer>
     );

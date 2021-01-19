@@ -6,7 +6,7 @@ const StyledHeader = styled.div`
 	border-bottom: 1px solid ${(p): string => p.theme.global.borderColor};
 	background: ${(p): string => p.theme.global.background};
 	width: 100%;
-	height: 60px;
+	height: 61px;
 	position: fixed;
 	z-index: 1;
 	user-select: none;

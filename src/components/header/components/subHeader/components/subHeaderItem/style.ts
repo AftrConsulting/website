@@ -15,6 +15,11 @@ const StyledSubHeaderItemContainer = styled.div`
 		&:hover {
 			color: ${(p): string => p.theme.colors.primary};
 		}
+
+		&.active {
+			pointer-events: none;
+			text-decoration: underline;
+		}
 	}
 
 	svg {
