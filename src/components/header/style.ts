@@ -66,6 +66,10 @@ const StyledButton = styled.button<{ open: boolean; }>`
 			border-right: 0px;
 		}
 	}
+
+	@media screen and (max-width: ${devices.smallMobile}) {
+		padding: 0px 10px;
+	}
 `;
 
 export {

@@ -22,10 +22,6 @@ const StyledButtonContainer = styled.div`
 			line-height: 30px;
 			height: 30px;
 		}
-
-		@media screen and (max-width: 400px) {
-			display: none;
-		}
 	}
 `;
 
