@@ -7,6 +7,7 @@ import { IStoreInitialThemeState } from 'src/context/interfaces/theme/IStoreInit
 import { getThemeName, getTheme, getPrimaryColor } from 'src/theme/utils';
 import { LoadingBar } from 'src/components/loadingBar';
 import { IState } from 'src/context/interfaces/IState';
+import { Container } from 'src/components/container';
 import { getGlobalStyles } from 'src/theme/global';
 import { configuration } from 'src/configuration';
 import { appWithTranslation } from 'src/i18n';
@@ -68,7 +69,9 @@ const MyAppWithTheme = (props: IAppProps): ReactElement => {
                 {getGlobalStyles(theme)}
             </style>
             <LoadingBar />
-            <props.Component {...props.pageProps} />
+            <Container>
+                <props.Component {...props.pageProps} />
+            </Container>
         </ThemeProvider>
     );
 };
