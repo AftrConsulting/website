@@ -4,7 +4,7 @@ import { Link } from 'src/i18n';
 import { context } from 'src/context';
 
 interface IMyLinkProps {
-	href: string;
+	href?: string;
 	children: ReactElement | ReactElement[] | string;
 	className?: string;
 	onClick?: () => void;
@@ -26,6 +26,10 @@ const MyLink = (props: IMyLinkProps): ReactElement => {
         context.header = null;
         props.onClick?.();
     };
+	
+    if (!props.href) {
+        return <a className={className} onClick={onClick}>{props.children}</a>;
+    }
 
     return (
         <Link href={props.href} passHref>

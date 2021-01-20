@@ -4,7 +4,7 @@ const StyledSubHeaderItemContainer = styled.div`
 	display: inline-block;
 	height: 100%;
 
-	div, a {
+	> div, > a {
 		padding: 0px 1em;
 		line-height: 60px;
 		display: block;
