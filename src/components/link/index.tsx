@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react';
 import { useRouter } from 'next/router';
 import { Link } from 'src/i18n';
+import { context } from 'src/context';
 
 interface IMyLinkProps {
 	href: string;
@@ -20,10 +21,15 @@ const MyLink = (props: IMyLinkProps): ReactElement => {
     if (router.pathname === props.href) { 
         className += ' active';
     }
+	
+    const onClick = (): void => {
+        context.header = null;
+        props.onClick?.();
+    };
 
     return (
         <Link href={props.href} passHref>
-            <a className={className} onClick={props.onClick}>{props.children}</a>
+            <a className={className} onClick={onClick}>{props.children}</a>
         </Link>
     );
 };

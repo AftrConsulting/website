@@ -3,7 +3,6 @@ import styled from 'styled-components';
 const StyledSubHeaderItemContainer = styled.div`
 	display: inline-block;
 	height: 100%;
-	cursor: pointer;
 
 	div, a {
 		padding: 0px 1em;
@@ -11,7 +10,8 @@ const StyledSubHeaderItemContainer = styled.div`
 		display: block;
 		color: ${(p): string => p.theme.colors.color};
 		text-decoration: none;
-
+		cursor: pointer;
+		
 		&:hover {
 			color: ${(p): string => p.theme.colors.primary};
 		}
