@@ -3,7 +3,6 @@ import { faBars, faCog } from '@fortawesome/free-solid-svg-icons';
 import { useDispatch, useSelector } from 'react-redux';
 import { StyledHeader, StyledButton, StyledHeaderRow } from './style';
 import { SubHeader } from 'src/components/header//components/subHeader';
-import { SideMenu } from 'src/components/header/components/sideMenu';
 import { Options } from 'src/components/header/components/options';
 import { IState } from 'src/context/interfaces/IState';
 import { setHeader } from 'src/context/actions/header';
@@ -37,7 +36,6 @@ const Header = (): ReactElement => {
                     </StyledButton>
                 </StyledHeaderRow>
             </StyledHeader>
-            <SideMenu />
             <Options />
         </>
     );

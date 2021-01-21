@@ -5,6 +5,7 @@ import React, { ReactElement } from 'react';
 import { Provider, useSelector } from 'react-redux';
 import { IStoreInitialThemeState } from 'src/context/interfaces/theme/IStoreInitialThemeState';
 import { getThemeName, getTheme, getPrimaryColor } from 'src/theme/utils';
+import { SideMenu } from 'src/components/header/components/sideMenu';
 import { LoadingBar } from 'src/components/loadingBar';
 import { IState } from 'src/context/interfaces/IState';
 import { getGlobalStyles } from 'src/theme/global';
@@ -68,6 +69,7 @@ const MyAppWithTheme = (props: IAppProps): ReactElement => {
                 {getGlobalStyles(theme)}
             </style>
             <LoadingBar />
+            <SideMenu />
             <props.Component {...props.pageProps} />
         </ThemeProvider>
     );
