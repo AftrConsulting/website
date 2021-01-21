@@ -40,6 +40,7 @@ const Slider = (props: ISliderProps): ReactElement => {
         <>
             <StyledSliderContainer 
                 open={open}
+                data-slider={'true'}
                 rightDirection={props.rightDirection}>
                 {props.children}
             </StyledSliderContainer>
@@ -47,6 +48,7 @@ const Slider = (props: ISliderProps): ReactElement => {
                 open={open}
                 ref={opacityRef}
                 onClick={onClose}
+                data-slider={'true'}
                 onTransitionEnd={onTransitionEnd} />
         </>
     );

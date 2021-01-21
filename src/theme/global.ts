@@ -52,6 +52,10 @@ const getGlobalStyles = (theme: ITheme): string => (`
 	img { 
 		display: block;
 	}
+
+	[data-slider] {
+		display: none;
+	}
 `);
 
 export {

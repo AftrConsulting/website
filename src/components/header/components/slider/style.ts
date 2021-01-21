@@ -9,6 +9,7 @@ const StyledSliderContainer = styled.div<{ rightDirection?: boolean, open: boole
 	perspective: 1000;
 	height: 100%;
 	position: fixed;
+	display: block !important;
 	z-index: 11;
 	overflow: hidden;
 	top: 0;
@@ -41,6 +42,7 @@ const StyledSliderOpacity = styled.div<{ open: boolean }>`
     z-index: 10;
 	cursor: pointer;
 	visibility: hidden;
+	display: block !important;
 
 	${(p): string => p.open ? `
 		opacity: 1;
