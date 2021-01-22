@@ -7,6 +7,8 @@ const StyledSideMenuItemContainer = styled.div`
 		display: block;
 		padding: 15px;
 		text-decoration: none;
+		cursor: pointer;
+		position: relative;
 		color: ${(p): string => p.theme.global.color};
 
 		&:hover {
@@ -16,6 +18,11 @@ const StyledSideMenuItemContainer = styled.div`
 		&.active {
 			pointer-events: none;
 			text-decoration: underline;
+		}
+
+		svg {
+			position: absolute;
+			right: 15px;
 		}
 	}
 `;

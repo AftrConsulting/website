@@ -1,7 +1,6 @@
 import React, { ReactElement } from 'react';
 import { useRouter } from 'next/router';
 import { Link } from 'src/i18n';
-import { context } from 'src/context';
 
 interface IMyLinkProps {
 	href?: string;
@@ -23,7 +22,6 @@ const MyLink = (props: IMyLinkProps): ReactElement => {
     }
 	
     const onClick = (): void => {
-        context.header = null;
         props.onClick?.();
     };
 	

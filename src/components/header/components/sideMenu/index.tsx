@@ -1,10 +1,9 @@
 import React, { ReactElement } from 'react';
 import { useSelector } from 'react-redux';
-import { StyledLogoContainer, StyledSideMenuItemContainer, StyledSideMenuItemFooterContainer } from './style';
-import { SideMenuItem } from 'src/components/header/components/sideMenu/components/sideMenuItem';
+import { StyledLogoContainer, StyledSideMenuItemFooterContainer } from './style';
+import { SideMenuItemContainer } from 'src/components/header/components/sideMenu/components/sideMenuItemContainer';
 import { Slider } from 'src/components/header/components/slider';
 import { Logo } from 'src/components/header/components/logo';
-import { subHeaderItems } from 'src/data/subHeaderItems';
 import { IState } from 'src/context/interfaces/IState';
 import { configuration } from 'src/configuration';
 import { Button } from 'src/components/button';
@@ -31,11 +30,7 @@ const SideMenu = (): ReactElement => {
             <StyledLogoContainer>
                 <Logo onBeforeLanguageChange={toggleLanguage} />
             </StyledLogoContainer>
-            <StyledSideMenuItemContainer>
-                {subHeaderItems.map((x, key) => (
-                    <SideMenuItem element={x} key={key} />
-                ))}
-            </StyledSideMenuItemContainer>
+            <SideMenuItemContainer />
             <StyledSideMenuItemFooterContainer>
                 <Button 
                     href={configuration.urls.consultation}

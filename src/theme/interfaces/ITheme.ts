@@ -30,7 +30,8 @@ interface ITheme {
             };
 			sideMenu: {
                 background: string;
-                borderColor: string;
+				borderColor: string;
+				goBackBackground: string;
             };
 		};
 		primaryColors: {

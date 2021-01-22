@@ -38,7 +38,8 @@ const lightTheme: ITheme = {
             },
             sideMenu: {
                 background: 'rgba(255,255,255,.4)',
-                borderColor: darken(.1, colors.background)
+                borderColor: darken(.1, colors.background),
+                goBackBackground: darken(.05, colors.background)
             }
         },
         primaryColors: {

@@ -9,17 +9,12 @@ const StyledLogoContainer = styled.div`
 	}
 `;
 
-const StyledSideMenuItemContainer = styled.div`
-	margin-bottom: 10px;
-`;
-
 const StyledSideMenuItemFooterContainer = styled.div`
 	margin-top: 20px;
 	text-align: center;
 `;
 
 export {
-    StyledSideMenuItemContainer,
     StyledLogoContainer,
     StyledSideMenuItemFooterContainer
 };
