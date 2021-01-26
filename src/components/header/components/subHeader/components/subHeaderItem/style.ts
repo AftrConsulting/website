@@ -12,8 +12,10 @@ const StyledSubHeaderItemContainer = styled.div`
 		text-decoration: none;
 		cursor: pointer;
 		
-		&:hover {
-			color: ${(p): string => p.theme.colors.primary};
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				color: ${(p): string => p.theme.colors.primary};
+			}
 		}
 
 		&.active {

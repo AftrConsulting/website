@@ -11,8 +11,10 @@ const StyledSideMenuItemContainer = styled.div`
 		position: relative;
 		color: ${(p): string => p.theme.global.color};
 
-		&:hover {
-			color: ${(p): string => p.theme.colors.primary};
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				color: ${(p): string => p.theme.colors.primary};
+			}
 		}
 
 		&.active {

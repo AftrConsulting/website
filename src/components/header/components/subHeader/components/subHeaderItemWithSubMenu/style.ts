@@ -18,8 +18,10 @@ const SubHeaderItemWithSubMenuContainer = styled.div`
 			border-bottom: 0px;
 		}
 
-		&:hover {
-			color: ${(p): string => p.theme.colors.primary};
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				color: ${(p): string => p.theme.colors.primary};
+			}
 		}
 
 		&.active {
