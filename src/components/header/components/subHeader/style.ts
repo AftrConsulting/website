@@ -23,6 +23,10 @@ const StyledButtonContainer = styled.div`
 			height: 30px;
 		}
 	}
+
+	@media screen and (max-width: ${devices.smallMobile}) {
+		display: none;
+	}
 `;
 
 export {

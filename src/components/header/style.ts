@@ -26,12 +26,6 @@ const StyledHeaderRow = styled(Row)`
 	@media screen and (max-width: ${devices.tablet}) {
 		padding: 0px;
 	}
-
-	@media screen and (max-width: ${devices.mobile}) {
-		[data-lang='true'] {
-			display: none;
-		}
-	}
 `;
 
 const StyledButton = styled.button<{ open: boolean; }>`
@@ -65,10 +59,6 @@ const StyledButton = styled.button<{ open: boolean; }>`
 		&:last-of-type {
 			border-right: 0px;
 		}
-	}
-
-	@media screen and (max-width: ${devices.smallMobile}) {
-		padding: 0px 10px;
 	}
 `;
 

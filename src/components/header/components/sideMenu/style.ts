@@ -5,7 +5,7 @@ const StyledLogoContainer = styled.div`
 	padding: 10px;
 
 	& > div {
-		width: 200px;
+		width: 220px;
 	}
 `;
 

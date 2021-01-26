@@ -32,7 +32,7 @@ const Logo = (props: ILogoProps): ReactElement => {
                 <StyledLogo />
                 <StyledName>LOREM</StyledName>
             </MyLink>
-            <StyledLanguage onClick={toggleLanguage} data-lang={'true'}>
+            <StyledLanguage onClick={toggleLanguage}>
                 {i18n.language}
             </StyledLanguage>
         </StyledLogoContainer>
