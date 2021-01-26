@@ -9,6 +9,12 @@ module.exports = {
     publicRuntimeConfig: {
         localeSubpaths
     },
-    // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-    rewrites: async () => nextI18NextRewrites(localeSubpaths)
+    rewrites: async () => nextI18NextRewrites(localeSubpaths),
+    webpack: (config, { isServer }) => {
+        if (isServer) {
+			require('./utils/generateSiteMap');
+        }
+	
+		return config;
+    }
 };
