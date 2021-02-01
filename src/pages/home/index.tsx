@@ -8,7 +8,7 @@ import { useTranslation } from 'src/i18n';
  * The Home component.
  */
 const Home = (): ReactElement => {
-    const { t } = useTranslation([ 'common' ]);
+    const { t } = useTranslation([ 'common', 'home' ]);
 	
     return (
         <Container>
@@ -17,7 +17,7 @@ const Home = (): ReactElement => {
                     title={t('title')}
                     description={t('description')}
                 />
-                <h1>{t('h1')}</h1>
+                <h1>{t('home:h1')}</h1>
                 <div>
 				Lorem ipsum odor amet, consectetuer adipiscing elit. 
                 </div>

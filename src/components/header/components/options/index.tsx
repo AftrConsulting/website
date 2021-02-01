@@ -4,8 +4,9 @@ import { StyledTitle, StyledContainer, StyledSubTitle, StyledButton } from './st
 import { PrimaryColorsSwitch } from 'src/components/header/components/options/components/primaryColorsSwitch';
 import { DarkModeSwitch } from 'src/components/header/components/options/components/darkModeSwitch';
 import { Slider } from 'src/components/header/components/slider';
-import { useTranslation, allLanguages } from 'src/i18n';
 import { IState } from 'src/context/interfaces/IState';
+import { configuration } from 'src/configuration';
+import { useTranslation } from 'src/i18n';
 import { context } from 'src/context';
 
 /**
@@ -33,7 +34,7 @@ const Options = (): ReactElement => {
                 <StyledSubTitle>{t('optionsColor')}</StyledSubTitle>
                 <PrimaryColorsSwitch />
                 <StyledSubTitle>{t('optionsLanguages')}</StyledSubTitle>
-                {allLanguages.map((x: string, key: number): ReactElement => (
+                {configuration.languages.map((x: string, key: number): ReactElement => (
                     <StyledButton 
                         onClick={toggleLanguage(x)} 
                         active={i18n.language === x} 

@@ -49,6 +49,11 @@ interface IConfiguration {
 	}
 
 	/**
+	 * The languages.
+	 */
+	languages: string[]
+
+	/**
 	 * The urls.
 	 */
 	urls: {

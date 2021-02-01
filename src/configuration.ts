@@ -16,6 +16,7 @@ const configuration: IConfiguration = {
     env: {
         name: process.env.NODE_ENV
     },
+    languages: [ 'en, fr' ],
     urls: {
         consultation: 'https://calendly.com/t-mouskhelichvili/30min'
     }
