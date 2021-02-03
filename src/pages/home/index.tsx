@@ -1,8 +1,8 @@
 import { NextSeo } from 'next-seo';
 import React, { ReactElement } from 'react';
 import { Container } from 'src/components/container';
-import { Row } from 'src/components/row';
 import { useTranslation } from 'src/i18n';
+import { Row } from 'src/components/row';
 
 /**
  * The Home component.
@@ -27,7 +27,7 @@ const Home = (): ReactElement => {
 };
 
 Home.getInitialProps = (): {} => ({
-    namespacesRequired: [ 'common' ]
+    namespacesRequired: [ 'common', 'home' ]
 });
 
 export default Home;
