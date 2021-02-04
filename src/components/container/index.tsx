@@ -1,23 +1,45 @@
 import React, { ReactElement } from 'react';
 import { StyledContainer } from './style';
+import { Analytics } from 'src/components/container/components/analytics';
+import { Chat } from 'src/components/container/components/chat';
 import { Header } from 'src/components/header';
+import { isProduction } from 'src/utils';
 
 interface IContainerProps {
 	children: ReactElement | ReactElement[]
 }
 
 /**
- * The container component.
+ * The Container component.
  * @param {IContainerProps} props - The props. 
  */
-const Container = (props: IContainerProps): ReactElement => (
-    <>
-        <Header />
-        <StyledContainer>
-            {props.children}
-        </StyledContainer>
-    </>
-);
+const Container = (props: IContainerProps): ReactElement => {
+    const externals = getExternals();
+	
+    return (
+        <>	
+            {externals}
+            <Header />
+            <StyledContainer>
+                {props.children}
+            </StyledContainer>
+        </>
+    );
+};
+
+/**
+ * Returns the externals.
+ */
+const getExternals = (): ReactElement | null => {
+    if (!isProduction()) return null;
+	
+    return (
+        <> 
+            <Analytics />
+            <Chat />
+        </>
+    );
+};
 
 export {
     Container
