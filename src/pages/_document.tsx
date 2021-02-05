@@ -32,6 +32,7 @@ class MyDocument extends Document<IMyDocumentProps> {
     public render = (): ReactElement => (
         <Html>
             <Head>
+                <link rel="shortcut icon" href="/static/images/logo.png" />
                 {this.props.styleTags}
             </Head>
             <body>

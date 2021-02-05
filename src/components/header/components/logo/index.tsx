@@ -29,8 +29,9 @@ const Logo = (props: ILogoProps): ReactElement => {
     return (
         <StyledLogoContainer>
             <MyLink href={'/'} onClick={close}> 
-                <StyledLogo />
-                <StyledName>LOREM</StyledName>
+                <StyledName>
+					AFTR Consulting
+                </StyledName>
             </MyLink>
             <StyledLanguage onClick={toggleLanguage}>
                 {i18n.language}
