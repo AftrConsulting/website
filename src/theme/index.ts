@@ -14,7 +14,7 @@ const themes = {
  */
 const devices = {
     mobile: '700px',
-    smallMobile: '540px',
+    smallMobile: '480px',
     smallTablet: '1000px',
     tablet: '1200px'
 };
