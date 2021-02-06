@@ -1,27 +1,23 @@
-import React, { ReactElement } from 'react';
-import { configuration } from 'src/configuration';
+import { useEffect } from 'react';
 
 /**
  * The Analytics component.
  */
-const Analytics = (): ReactElement => {
-    const { trackingID } = configuration.google;
-	
-    return (
-        <>
-            <script async src={`https://www.googletagmanager.com/gtag/js?id=${trackingID}`}></script>
-            <script
-                async
-                dangerouslySetInnerHTML={{
-                    __html: `window.dataLayer = window.dataLayer || [];
-					function gtag(){dataLayer.push(arguments);}
-					gtag('js', new Date());
-	
-					gtag('config', '${trackingID}');`
-                }}
-            />
-        </>
-    );
+const Analytics = (): null => {
+    useEffect(() => {
+        const script = document.createElement('script');
+		
+        script.src = 'https://getinsights.io/js/insights.js';
+        script.async = true;
+        script.onload = (): void => {
+            window.insights.init('G67tEIKtrLrKNpSK');
+            window.insights.trackPages();
+        };
+
+        document.body.appendChild(script);
+    }, []);
+
+    return null;
 };
 
 export {

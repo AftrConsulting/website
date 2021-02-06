@@ -51,19 +51,7 @@ interface IConfiguration {
 	/**
 	 * The languages.
 	 */
-	languages: string[]
-
-	/**
-	 * The google.
-	 */
-	google: {
-
-		/**
-		 * The tracking ID.
-		 */
-		trackingID: string;
-
-	};
+	languages: string[];
 	
 	/**
 	 * The urls.

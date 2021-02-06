@@ -7,6 +7,14 @@ declare global {
 		 */
 		__REDUX_DEVTOOLS_EXTENSION__: () => never;
 
+		/**
+		 * The getinsights.io global object.
+		 */
+		insights: {
+			init: (id: string) => void;
+			trackPages: () => void;
+		}
+
 	}
 
 }
