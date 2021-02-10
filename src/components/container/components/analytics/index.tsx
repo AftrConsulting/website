@@ -1,23 +1,21 @@
-import { useEffect } from 'react';
+import React, { ReactElement } from 'react';
 
 /**
  * The Analytics component.
  */
-const Analytics = (): null => {
-    useEffect(() => {
-        const script = document.createElement('script');
-		
-        script.src = 'https://getinsights.io/js/insights.js';
-        script.async = true;
-        script.onload = (): void => {
-            window.insights.init('G67tEIKtrLrKNpSK');
-            window.insights.trackPages();
-        };
-
-        document.body.appendChild(script);
-    }, []);
-
-    return null;
+const Analytics = (): ReactElement => {
+    return (
+        <>
+            <script async src={'https://www.googletagmanager.com/gtag/js?id=G-8YV0T0KY6S'}></script>
+            <script dangerouslySetInnerHTML={{ __html: `
+				window.dataLayer = window.dataLayer || [];
+				function gtag(){dataLayer.push(arguments);}
+				gtag('js', new Date());
+	
+				gtag('config', 'G-8YV0T0KY6S');
+			` }} />
+        </>
+    );
 };
 
 export {

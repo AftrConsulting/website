@@ -18,9 +18,9 @@ const Home = (): ReactElement => {
                     description={t('description')}
                 />
                 <h1>{t('home:h1')}</h1>
-                <div>
+                <h2>
 				Lorem ipsum odor amet, consectetuer adipiscing elit. 
-                </div>
+                </h2>
             </Row>
         </Container>
     );
