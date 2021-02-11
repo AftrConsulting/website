@@ -6,21 +6,6 @@ const StyledLogoContainer = styled.div`
 	padding: 0px 10px;
 `;
 
-const StyledLogo = styled.div`
-	border-radius: ${(p): string => p.theme.global.borderRadius};
-	background: ${(p): string => p.theme.global.header.logo.background};
-	height: 40px;
-	width: 40px;
-	vertical-align: top;
-	display: inline-block;
-	cursor: pointer;
-
-	@media screen and (max-width: ${devices.mobile}) {
-		height: 30px;
-		width: 30px;
-	}
-`;
-
 const StyledName = styled.div`
 	background: ${(p): string => p.theme.colors.primary};
 	display: inline-block;
@@ -55,7 +40,6 @@ const StyledLanguage = styled.button`
 
 export {
     StyledLogoContainer,
-    StyledLogo,
     StyledName,
     StyledLanguage
 };

@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import { useDispatch } from 'react-redux';
-import { StyledLogo, StyledName, StyledLanguage, StyledLogoContainer } from './style';
+import { StyledName, StyledLanguage, StyledLogoContainer } from './style';
 import { setHeader } from 'src/context/actions/header';
 import { MyLink } from 'src/components/link';
 import { useTranslation } from 'src/i18n';
