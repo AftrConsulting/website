@@ -1,10 +1,9 @@
 import React, { ReactElement } from 'react';
-import { StyledSeparator, StyledRow, StyledDescription, StyledH2, StyledSubTitle, StyledIconContainer } from './style';
+import { StyledSeparator, StyledRow, StyledDescription, StyledH2, StyledSubTitle, StyledIconContainer, StyledSection } from './style';
 import { DescriptionTypeScript } from 'src/componentsImg/descriptionTypeScript';
 import { DescriptionNodeJS } from 'src/componentsImg/descriptionNodeJS';
 import { DescriptionDocker } from 'src/componentsImg/descriptionDocker';
 import { DescriptionReact } from 'src/componentsImg/descriptionReact';
-import { Section } from 'src/componentsByPage/home/section';
 import { useTranslation } from 'src/i18n';
 
 /**
@@ -14,7 +13,7 @@ const DescriptionSection = (): ReactElement => {
     const { t } = useTranslation([ 'home' ]);
 
     return (
-        <Section>
+        <StyledSection>
             <StyledRow>
                 <div>
                     <StyledSubTitle>{t('home:descriptionSubTitle')}</StyledSubTitle>
@@ -30,7 +29,7 @@ const DescriptionSection = (): ReactElement => {
                     <div>{t('home:descriptionText2')}</div>
                 </StyledDescription>
             </StyledRow>
-        </Section>
+        </StyledSection>
     );
 };
 

@@ -1,6 +1,11 @@
 import styled from 'styled-components';
+import { Section } from 'src/componentsByPage/home/section';
 import { Row } from 'src/components/row';
 import { devices } from 'src/theme';
+
+const StyledSection = styled(Section)`
+	background: ${(p): string => p.theme.global.home.descriptionBackground};
+`;
 
 const StyledRow = styled(Row)`
 	display: flex;
@@ -108,6 +113,7 @@ const StyledIconContainer = styled.div<{ size: string; }>`
 `;
 
 export {
+    StyledSection,
     StyledIconContainer,
     StyledSeparator,
     StyledDescription,

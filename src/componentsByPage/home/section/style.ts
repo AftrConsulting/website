@@ -3,7 +3,6 @@ import { devices } from 'src/theme';
 
 const StyledContainer = styled.div`
 	padding: 120px 0px;
-	border-bottom: 1px solid ${(p): string => p.theme.global.borderColor};
 
 	@media screen and (max-width: ${devices.smallTablet}) {
 		padding: 80px 0px;

@@ -42,6 +42,9 @@ const lightTheme: ITheme = {
                 goBackBackground: darken(.05, colors.background)
             }
         },
+        home: {
+            descriptionBackground: darken(.05, colors.background)
+        },
         primaryColors: {
             color: '#fafafa'
         }

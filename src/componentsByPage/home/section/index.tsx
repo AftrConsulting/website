@@ -2,6 +2,7 @@ import React, { ReactElement } from 'react';
 import { StyledContainer } from './style';
 
 interface IPropsSection {
+	className?: string;
 	children?: {};
 }
 
@@ -10,7 +11,7 @@ interface IPropsSection {
  * @param {IPropsSection} props - The section.
  */
 const Section = (props: IPropsSection): ReactElement => (
-    <StyledContainer>
+    <StyledContainer className={props.className}>
         {props.children}
     </StyledContainer>
 );

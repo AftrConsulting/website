@@ -34,6 +34,9 @@ interface ITheme {
 				goBackBackground: string;
             };
 		};
+		home: {
+            descriptionBackground: string;
+        };
 		primaryColors: {
 			color: string;
 		}

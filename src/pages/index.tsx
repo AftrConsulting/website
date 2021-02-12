@@ -1,6 +1,7 @@
 import { NextSeo } from 'next-seo';
 import React, { ReactElement } from 'react';
 import { DescriptionSection } from 'src/componentsByPage/home/descriptionSection';
+import { ServiceSection } from 'src/componentsByPage/home/serviceSection';
 import { FirstSection } from 'src/componentsByPage/home/firstSection';
 import { Container } from 'src/components/container';
 import { useTranslation } from 'src/i18n';
@@ -19,6 +20,7 @@ const Home = (): ReactElement => {
             />
             <FirstSection />
             <DescriptionSection />
+            <ServiceSection />
         </Container>
     );
 };
