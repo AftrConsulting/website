@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react';
 import { StyledRow } from './style';
 
 interface IRowProps {
-	children?: JSX.Element[] | JSX.Element;
+	children?: {};
 	className?: string;
 }
 

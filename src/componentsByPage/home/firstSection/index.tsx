@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react';
-import { StyledContainer, StyledButton, StyledH1, StyledH1Span, StyledRow, StyleImgContainer } from './style';
-import { FirstSectionSVG } from 'src/svgImages/firstSectionSVG';
+import { StyledButton, StyledH1, StyledH1Span, StyledRow, StyleImgContainer } from './style';
+import { FirstSectionSVG } from 'src/componentsImg/firstSectionSVG';
+import { Section } from 'src/componentsByPage/home/section';
 import { useTranslation } from 'src/i18n';
 
 /**
@@ -10,7 +11,7 @@ const FirstSection = (): ReactElement => {
     const { t } = useTranslation([ 'home' ]);
 
     return (
-        <StyledContainer>
+        <Section>
             <StyledRow>
                 <div>
                     <StyledH1>
@@ -23,7 +24,7 @@ const FirstSection = (): ReactElement => {
                     <FirstSectionSVG />
                 </StyleImgContainer>
             </StyledRow>
-        </StyledContainer>
+        </Section>
     );
 };
 

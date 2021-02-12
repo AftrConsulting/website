@@ -1,5 +1,6 @@
 import { NextSeo } from 'next-seo';
 import React, { ReactElement } from 'react';
+import { DescriptionSection } from 'src/componentsByPage/home/descriptionSection';
 import { FirstSection } from 'src/componentsByPage/home/firstSection';
 import { Container } from 'src/components/container';
 import { useTranslation } from 'src/i18n';
@@ -17,6 +18,7 @@ const Home = (): ReactElement => {
                 description={t('description')}
             />
             <FirstSection />
+            <DescriptionSection />
         </Container>
     );
 };
