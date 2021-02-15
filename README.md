@@ -3,3 +3,6 @@
 
 #### We believe in Open Source.
 Here is the full source code of the [AFTR Consulting](https://aftrconsulting.com) website.
+
+docker build -t aftrconsulting .
+docker run --restart=always -dp 3000:3000 aftrconsulting
