@@ -9,7 +9,7 @@ const ServiceSection = (): ReactElement => {
     return (
         <Section>
             <Row>
-                asdasd
+                asdasd bababaew
             </Row>
         </Section>
     );
