@@ -10,7 +10,6 @@ const About = (): ReactElement => (
         <Row>
             <h1>About</h1>
         </Row>
-    </Container>
 );
 
 About.getInitialProps = (): {} => ({
