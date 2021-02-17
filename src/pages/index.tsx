@@ -1,8 +1,8 @@
 import { NextSeo } from 'next-seo';
 import React, { ReactElement } from 'react';
-import { DescriptionSection } from 'src/componentsByPage/home/descriptionSection';
-import { ServiceSection } from 'src/componentsByPage/home/serviceSection';
-import { FirstSection } from 'src/componentsByPage/home/firstSection';
+import { SectionDescription } from 'src/componentsByPage/home/sectionDescription';
+import { SectionServices } from 'src/componentsByPage/home/sectionServices';
+import { SectionFirst } from 'src/componentsByPage/home/sectionFirst';
 import { Container } from 'src/components/container';
 import { useTranslation } from 'src/i18n';
 
@@ -18,9 +18,9 @@ const Home = (): ReactElement => {
                 title={t('title')}
                 description={t('description')}
             />
-            <FirstSection />
-            <DescriptionSection />
-            <ServiceSection />
+            <SectionFirst />
+            <SectionDescription />
+            <SectionServices />
         </Container>
     );
 };

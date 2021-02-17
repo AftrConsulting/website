@@ -8,9 +8,9 @@ import { Section } from 'src/componentsByPage/home/section';
 import { Title } from 'src/componentsByPage/home/title';
 import { useTranslation } from 'src/i18n';
 /**
- * The ServiceSection component.
+ * The SectionServices component.
  */
-const ServiceSection = (): ReactElement => {
+const SectionServices = (): ReactElement => {
     const { t } = useTranslation([ 'home' ]);
 	
     return (
@@ -30,5 +30,5 @@ const ServiceSection = (): ReactElement => {
 };
 
 export {
-    ServiceSection
+    SectionServices
 };

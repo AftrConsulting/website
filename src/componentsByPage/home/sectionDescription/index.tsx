@@ -11,9 +11,9 @@ import { Title } from 'src/componentsByPage/home/title';
 import { useTranslation } from 'src/i18n';
 
 /**
- * The DescriptionSection component.
+ * The SectionDescription component.
  */
-const DescriptionSection = (): ReactElement => {
+const SectionDescription = (): ReactElement => {
     const { t } = useTranslation([ 'home' ]);
 
     return (
@@ -49,5 +49,5 @@ const getIcon = (icon: {}, size = '40px'): ReactElement => (
 );
 
 export {
-    DescriptionSection
+    SectionDescription
 };

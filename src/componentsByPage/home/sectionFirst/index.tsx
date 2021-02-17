@@ -5,9 +5,9 @@ import { Section } from 'src/componentsByPage/home/section';
 import { useTranslation } from 'src/i18n';
 
 /**
- * The FirstSection component.
+ * The SectionFirst component.
  */
-const FirstSection = (): ReactElement => {
+const SectionFirst = (): ReactElement => {
     const { t } = useTranslation([ 'home' ]);
 
     return (
@@ -29,5 +29,5 @@ const FirstSection = (): ReactElement => {
 };
 
 export {
-    FirstSection
+    SectionFirst
 };
