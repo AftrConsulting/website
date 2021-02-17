@@ -1,9 +1,13 @@
 import React, { ReactElement } from 'react';
-import { StyledSeparator, StyledRow, StyledDescription, StyledH2, StyledSubTitle, StyledIconContainer, StyledSection } from './style';
+import { StyledSeparator, StyledIconContainer, StyledSection, StyledItalicText } from './style';
 import { DescriptionTypeScript } from 'src/componentsImg/descriptionTypeScript';
 import { DescriptionNodeJS } from 'src/componentsImg/descriptionNodeJS';
 import { DescriptionDocker } from 'src/componentsImg/descriptionDocker';
 import { DescriptionReact } from 'src/componentsImg/descriptionReact';
+import { SideBySide } from 'src/componentsByPage/home/sideBySide';
+import { Paragraph } from 'src/componentsByPage/home/paragraph';
+import { SubTitle } from 'src/componentsByPage/home/subTitle';
+import { Title } from 'src/componentsByPage/home/title';
 import { useTranslation } from 'src/i18n';
 
 /**
@@ -14,21 +18,21 @@ const DescriptionSection = (): ReactElement => {
 
     return (
         <StyledSection>
-            <StyledRow>
+            <SideBySide>
                 <div>
-                    <StyledSubTitle>{t('home:descriptionSubTitle')}</StyledSubTitle>
-                    <StyledH2>{t('home:descriptionTitle')}</StyledH2>
+                    <SubTitle>{t('home:descriptionSubTitle')}</SubTitle>
+                    <Title>{t('home:descriptionTitle')}</Title>
                     {getIcon(<DescriptionTypeScript />, '60px')}
                     {getIcon(<DescriptionReact />)}
                     {getIcon(<DescriptionNodeJS />)}
                     {getIcon(<DescriptionDocker />)}
                 </div>
-                <StyledDescription>
+                <Paragraph>
                     <div>{t('home:descriptionText1')}</div>
                     <StyledSeparator />
-                    <div>{t('home:descriptionText2')}</div>
-                </StyledDescription>
-            </StyledRow>
+                    <StyledItalicText>{t('home:descriptionText2')}</StyledItalicText>
+                </Paragraph>
+            </SideBySide>
         </StyledSection>
     );
 };

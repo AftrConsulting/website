@@ -8,7 +8,7 @@ interface IPropsSection {
 
 /**
  * The Section component.
- * @param {IPropsSection} props - The section.
+ * @param {IPropsSection} props - The props.
  */
 const Section = (props: IPropsSection): ReactElement => (
     <StyledContainer className={props.className}>
