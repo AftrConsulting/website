@@ -6,6 +6,17 @@ const StyledSection = styled(Section)`
 	color: ${(p): string => p.theme.global.home.expertise.color};
 `;
 
+const StyledExpertiseContainer = styled.div`
+	> div {
+		width: 25%;
+	}
+
+	svg {
+		margin-right: 5px;
+	}
+`;
+
 export {
+    StyledExpertiseContainer,
     StyledSection
 };

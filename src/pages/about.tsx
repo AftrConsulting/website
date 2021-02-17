@@ -13,8 +13,4 @@ const About = (): ReactElement => (
     </Container>
 );
 
-About.getInitialProps = (): {} => ({
-    namespacesRequired: [ 'common' ]
-});
-
 export default About;
