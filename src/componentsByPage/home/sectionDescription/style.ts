@@ -47,7 +47,12 @@ const StyledIconContainer = styled.div<{ size: string; }>`
 	}
 `;
 
+const StyledIconAllContainer = styled.div`
+	margin-bottom: 40px;
+`;
+
 export {
+    StyledIconAllContainer,
     StyledSection,
     StyledIconContainer,
     StyledSeparator,

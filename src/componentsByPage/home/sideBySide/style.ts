@@ -33,7 +33,6 @@ const StyledSideBySide = styled(Row)`
 		> div {
 			&:first-of-type {
 				padding-right: 0px;
-				margin-bottom: 40px;
 			}
 	
 			&:last-of-type {

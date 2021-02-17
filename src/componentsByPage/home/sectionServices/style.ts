@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { SideBySide } from 'src/componentsByPage/home/sideBySide';
 import { devices } from 'src/theme';
 
 const StyleImgContainer = styled.div`
@@ -15,6 +16,15 @@ const StyleImgContainer = styled.div`
 	}
 `;
 
+const StyledSideBySide = styled(SideBySide)`
+	padding-bottom: 40px;
+
+	&:last-of-type {
+		padding-bottom: 0px;
+	}
+`;
+
 export {
+    StyledSideBySide,
     StyleImgContainer
 };

@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import { StyledSeparator, StyledIconContainer, StyledSection, StyledItalicText } from './style';
+import { StyledSeparator, StyledIconContainer, StyledSection, StyledItalicText, StyledIconAllContainer } from './style';
 import { DescriptionTypeScript } from 'src/componentsImg/descriptionTypeScript';
 import { DescriptionNodeJS } from 'src/componentsImg/descriptionNodeJS';
 import { DescriptionDocker } from 'src/componentsImg/descriptionDocker';
@@ -22,10 +22,12 @@ const SectionDescription = (): ReactElement => {
                 <div>
                     <SubTitle>{t('home:descriptionSubTitle')}</SubTitle>
                     <Title>{t('home:descriptionTitle')}</Title>
-                    {getIcon(<DescriptionTypeScript />, '60px')}
-                    {getIcon(<DescriptionReact />)}
-                    {getIcon(<DescriptionNodeJS />)}
-                    {getIcon(<DescriptionDocker />)}
+                    <StyledIconAllContainer>
+                        {getIcon(<DescriptionTypeScript />, '60px')}
+                        {getIcon(<DescriptionReact />)}
+                        {getIcon(<DescriptionNodeJS />)}
+                        {getIcon(<DescriptionDocker />)}
+                    </StyledIconAllContainer>
                 </div>
                 <Paragraph>
                     <div>{t('home:descriptionText1')}</div>
