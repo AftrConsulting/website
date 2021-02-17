@@ -5,20 +5,21 @@ import { Paragraph } from 'src/componentsByPage/home/paragraph';
 import { SubTitle } from 'src/componentsByPage/home/subTitle';
 import { Section } from 'src/componentsByPage/home/section';
 import { Title } from 'src/componentsByPage/home/title';
-import { useTranslation } from 'src/i18n';
+import { useLocale } from 'src/localizations';
+
 /**
  * The SectionServices component.
  */
 const SectionServices = (): ReactElement => {
-    const { t } = useTranslation([ 'home' ]);
+    const locale = useLocale();
 	
     return (
         <Section>
             <StyledSideBySide>
                 <div>
-                    <SubTitle>{t('home:section1SubTitle')}</SubTitle>
-                    <Title>{t('home:section1Title')}</Title>
-                    <Paragraph>{t('home:section1Description')}</Paragraph>
+                    <SubTitle>{locale.pages.home.services.step1.subTitle}</SubTitle>
+                    <Title>{locale.pages.home.services.step1.title}</Title>
+                    <Paragraph>{locale.pages.home.services.step1.description}</Paragraph>
                 </div>
                 <StyleImgContainer>
                     <FirstSectionSVG />
@@ -30,17 +31,17 @@ const SectionServices = (): ReactElement => {
                     <FirstSectionSVG />
                 </StyleImgContainer>
                 <div>
-                    <SubTitle>{t('home:section2SubTitle')}</SubTitle>
-                    <Title>{t('home:section2Title')}</Title>
-                    <Paragraph>{t('home:section2Description')}</Paragraph>
+                    <SubTitle>{locale.pages.home.services.step2.subTitle}</SubTitle>
+                    <Title>{locale.pages.home.services.step2.title}</Title>
+                    <Paragraph>{locale.pages.home.services.step2.description}</Paragraph>
                 </div>
             </StyledSideBySide>
             <StyledSeparator />
             <StyledSideBySide>
                 <div>
-                    <SubTitle>{t('home:section3SubTitle')}</SubTitle>
-                    <Title>{t('home:section3Title')}</Title>
-                    <Paragraph>{t('home:section3Description')}</Paragraph>
+                    <SubTitle>{locale.pages.home.services.step3.subTitle}</SubTitle>
+                    <Title>{locale.pages.home.services.step3.title}</Title>
+                    <Paragraph>{locale.pages.home.services.step3.description}</Paragraph>
                 </div>
                 <StyleImgContainer>
                     <FirstSectionSVG />

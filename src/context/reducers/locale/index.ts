@@ -4,7 +4,8 @@ import { LocaleAction } from 'src/context/enums/locale';
 import { locale } from 'src/localizations';
 
 const defaultState: IStoreInitialLocaleState = {
-    language: 'en'
+    language: 'en',
+    locale: locale.en
 };
 
 /**
@@ -14,9 +15,11 @@ const defaultState: IStoreInitialLocaleState = {
  */
 const getLocaleReducer = (state = defaultState, action: IActionResponse): unknown => {
     const newState = { ...state };
+    const newLocale = locale[action.value as string];
 
-    if (action.type === LocaleAction.changeLanguage && locale[action.value as string]) {
+    if (action.type === LocaleAction.changeLanguage && newLocale) {
         newState.language = action.value as keyof typeof locale;
+        newState.locale = newLocale;
     }
 	
     return newState;

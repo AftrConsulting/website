@@ -3,22 +3,21 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { StyledSection, StyledExpertiseContainer } from './style';
 import { SubTitle } from 'src/componentsByPage/home/subTitle';
 import { Title } from 'src/componentsByPage/home/title';
-import { useTranslation } from 'src/i18n';
-import { Row } from 'src/components/row';
+import { useLocale } from 'src/localizations';
 import { Icon } from 'src/components/icon';
+import { Row } from 'src/components/row';
 
 /**
  * The SectionExpertise component.
  */
 const SectionExpertise = (): ReactElement => {
-    const { t } = useTranslation([ 'home' ]);
-    const expertises = getExpertises(t('home:expertises'));
+    const locale = useLocale();
 
     return (
         <StyledSection>
             <Row>
-                <SubTitle>{t('home:expertiseSubTitle')}</SubTitle>
-                <Title>{t('home:expertiseTitle')}</Title>
+                <SubTitle>{locale.pages.home.expertises.subTitle}</SubTitle>
+                <Title>{locale.pages.home.expertises.title}</Title>
                 <StyledExpertiseContainer>
                     <div>
                         <Icon icon={faCheck} /> asdasd
@@ -29,18 +28,18 @@ const SectionExpertise = (): ReactElement => {
     );
 };
 
-/**
- * Returns the expertises.
- * @param {string[]} expertises - The expertises. 
- */
-const getExpertises = (expertises: []): ReactElement => {
-    console.log(expertises);
-    return (
-        <div>
-            <Icon icon={faCheck} /> asdasd
-        </div>
-    );
-};
+// /**
+//  * Returns the expertises.
+//  * @param {string[]} expertises - The expertises. 
+//  */
+// const getExpertises = (): ReactElement => {
+//     console.log(expertises);
+//     return (
+//         <div>
+//             <Icon icon={faCheck} /> asdasd
+//         </div>
+//     );
+// };
 
 export {
     SectionExpertise

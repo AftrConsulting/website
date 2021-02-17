@@ -5,15 +5,15 @@ import { StyledSideMenuItemContainer, SideMenuItemClose } from './style';
 import { SideMenuItem } from 'src/components/header/components/sideMenu/components/sideMenuItem';
 import { subHeaderItems } from 'src/data/subHeaderItems';
 import { IState } from 'src/context/interfaces/IState';
+import { useLocale } from 'src/localizations';
 import { Icon } from 'src/components/icon';
-import { useTranslation } from 'src/i18n';
 import { context } from 'src/context';
 
 /**
  * The SideMenu Item container.
  */
 const SideMenuItemContainer = (): ReactElement => {
-    const { t } = useTranslation([ 'common' ]);
+    const locale = useLocale();
     const [ items, setItemsState ] = useState([]);
     const sideMenu = useSelector((state: IState) => state.header.sideMenu);
     const setItems = (newItems: []): void => setItemsState(newItems);
@@ -31,7 +31,7 @@ const SideMenuItemContainer = (): ReactElement => {
             <StyledSideMenuItemContainer>
                 <SideMenuItemClose onClick={clear}>
                     <Icon icon={faChevronLeft} />
-                    {t('goBack')}
+                    {locale.global.goBack}
                 </SideMenuItemClose>
                 {items.map((x, key) => (
                     <SideMenuItem element={x} key={key} />

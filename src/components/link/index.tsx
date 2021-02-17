@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import { useRouter } from 'next/router';
-import { Link } from 'src/i18n';
+import Link from 'next/link';
 
 interface IMyLinkProps {
 	href?: string;
