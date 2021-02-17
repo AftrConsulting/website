@@ -28,7 +28,7 @@ const StyledSeparator = styled.div`
 	width: 40%;
 	max-width: 250px;
 	height: 5px;
-	background: ${(p): string => p.theme.global.home.services.background};
+	background: ${(p): string => p.theme.colors.primary};
 	margin:0px auto;
 	margin-bottom: 40px;
 	border-radius: 10px;
