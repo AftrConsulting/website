@@ -43,7 +43,13 @@ const lightTheme: ITheme = {
             }
         },
         home: {
-            descriptionBackground: darken(.05, colors.background)
+            descriptionBackground: darken(.05, colors.background),
+            expertise: {
+                color: colors.background
+            },
+            services: {
+                background: colors.color
+            }
         },
         primaryColors: {
             color: '#fafafa'

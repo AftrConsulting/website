@@ -35,7 +35,13 @@ interface ITheme {
             };
 		};
 		home: {
-            descriptionBackground: string;
+			descriptionBackground: string;
+			expertise: {
+				color: string; 
+			};
+			services: {
+                background: string;
+            };
         };
 		primaryColors: {
 			color: string;

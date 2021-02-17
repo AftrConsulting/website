@@ -24,7 +24,23 @@ const StyledSideBySide = styled(SideBySide)`
 	}
 `;
 
+const StyledSeparator = styled.div`
+	width: 40%;
+	max-width: 250px;
+	height: 5px;
+	background: ${(p): string => p.theme.global.home.services.background};
+	margin:0px auto;
+	margin-bottom: 40px;
+	border-radius: 10px;
+	display: none;
+
+	@media screen and (max-width: ${devices.smallTablet}) {
+		display: block;
+	}
+`;
+
 export {
     StyledSideBySide,
-    StyleImgContainer
+    StyleImgContainer,
+    StyledSeparator
 };

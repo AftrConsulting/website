@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import { StyleImgContainer, StyledSideBySide } from './style';
+import { StyleImgContainer, StyledSideBySide, StyledSeparator } from './style';
 import { FirstSectionSVG } from 'src/componentsImg/firstSectionSVG';
 import { Paragraph } from 'src/componentsByPage/home/paragraph';
 import { SubTitle } from 'src/componentsByPage/home/subTitle';
@@ -24,6 +24,7 @@ const SectionServices = (): ReactElement => {
                     <FirstSectionSVG />
                 </StyleImgContainer>
             </StyledSideBySide>
+            <StyledSeparator />
             <StyledSideBySide>
                 <StyleImgContainer>
                     <FirstSectionSVG />
@@ -34,6 +35,7 @@ const SectionServices = (): ReactElement => {
                     <Paragraph>{t('home:section2Description')}</Paragraph>
                 </div>
             </StyledSideBySide>
+            <StyledSeparator />
             <StyledSideBySide>
                 <div>
                     <SubTitle>{t('home:section3SubTitle')}</SubTitle>

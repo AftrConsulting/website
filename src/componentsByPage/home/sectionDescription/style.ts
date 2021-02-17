@@ -11,7 +11,8 @@ const StyledItalicText = styled.div`
 `;
 
 const StyledSeparator = styled.div`
-	width: 120px;
+	width: 40%;
+	max-width: 250px;
 	height: 5px;
 	background: ${(p): string => p.theme.colors.primary};
 	margin: 40px auto;
