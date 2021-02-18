@@ -29,31 +29,9 @@ const getLocaleReducerWithState = (initialState: IStoreInitialLocaleState) => (s
     if (action.type === LocaleAction.changeLanguage && newLocale) {
         newState.language = action.value as keyof typeof locale;
         newState.locale = newLocale;
-        changeHistoryLanguage(action.value as string);
     }
 	
     return newState;
-};
-
-/**
- * Changes the history language.
- * @param {string} language - The language. 
- */
-const changeHistoryLanguage = (language: string): void => {
-    const isEnglish = language === 'en'; 
-	
-    let part = location.pathname + location.search;
-    if (isEnglish && part.startsWith('/fr')) {
-        part = part.substring(3);
-    }
-    if (part === '/') {
-        part = '';
-    }
-	
-    const newLang = isEnglish ? '' : `/${language}`;
-    const url = `${newLang}${part}`;
-	
-    history.pushState({}, '', !url ? '/' : url);
 };
 
 export {

@@ -6,6 +6,7 @@ import { SideMenuItem } from 'src/components/header/components/sideMenu/componen
 import { IState } from 'src/context/interfaces/IState';
 import { useLocale } from 'src/localizations';
 import { Icon } from 'src/components/icon';
+import { context } from 'src/context';
 
 /**
  * The SideMenu Item container.
@@ -21,6 +22,7 @@ const SideMenuItemContainer = (): ReactElement => {
         if (sideMenu) return;
 
         setTimeout(clear, 150);
+        context.header = null;
     }, [ sideMenu ]);
 	
     if (items.length) {
