@@ -1,4 +1,4 @@
-interface ISubHeaderItem {
+interface IMenuItem {
 	title: string;
 	href?: string;
 	subItems?: {
@@ -8,5 +8,5 @@ interface ISubHeaderItem {
 }
 
 export type {
-    ISubHeaderItem
+    IMenuItem
 };

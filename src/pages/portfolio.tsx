@@ -13,8 +13,4 @@ const Portfolio = (): ReactElement => (
     </Container>
 );
 
-Portfolio.getInitialProps = (): {} => ({
-    namespacesRequired: [ 'common' ]
-});
-
 export default Portfolio;

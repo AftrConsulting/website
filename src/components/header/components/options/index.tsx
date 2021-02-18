@@ -1,43 +1,37 @@
 import React, { ReactElement } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { StyledTitle, StyledContainer, StyledSubTitle, StyledButton } from './style';
 import { PrimaryColorsSwitch } from 'src/components/header/components/options/components/primaryColorsSwitch';
 import { DarkModeSwitch } from 'src/components/header/components/options/components/darkModeSwitch';
 import { Slider } from 'src/components/header/components/slider';
+import { setLanguage } from 'src/context/actions/locale';
 import { IState } from 'src/context/interfaces/IState';
 import { configuration } from 'src/configuration';
-import { useTranslation } from 'src/i18n';
-import { context } from 'src/context';
 
 /**
  * The Options component.
  */
 const Options = (): ReactElement => {
-    const header = useSelector((state: IState) => state.header);
-    const { i18n, t } = useTranslation([ 'common' ]);
+    const { locale, language } = useSelector((state: IState) => state.locale);
+    const dispatch = useDispatch();
 	
-    const toggleLanguage = (language: string) => (): void => {
-        context.header = header;
-        i18n.changeLanguage(language);
-    };
-	
-    const onClose = (): void => {
-        context.header = null;
+    const toggleLanguage = (newLanguage: string) => (): void => {
+        dispatch(setLanguage(newLanguage as never));
     };
 	
     return (
-        <Slider header={'options'} rightDirection onClose={onClose}>
-            <StyledTitle>{t('optionsTitle')}</StyledTitle>
+        <Slider header={'options'} rightDirection>
+            <StyledTitle>{locale.global.options.title}</StyledTitle>
             <StyledContainer>
-                <StyledSubTitle>{t('optionsDarkMode')}</StyledSubTitle>
+                <StyledSubTitle>{locale.global.options.darkMode}</StyledSubTitle>
                 <DarkModeSwitch />
-                <StyledSubTitle>{t('optionsColor')}</StyledSubTitle>
+                <StyledSubTitle>{locale.global.options.color}</StyledSubTitle>
                 <PrimaryColorsSwitch />
-                <StyledSubTitle>{t('optionsLanguages')}</StyledSubTitle>
+                <StyledSubTitle>{locale.global.options.languages}</StyledSubTitle>
                 {configuration.languages.map((x: string, key: number): ReactElement => (
                     <StyledButton 
                         onClick={toggleLanguage(x)} 
-                        active={i18n.language === x} 
+                        active={language === x} 
                         key={key}>
                         {x}
                     </StyledButton>

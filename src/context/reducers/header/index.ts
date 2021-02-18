@@ -1,19 +1,10 @@
 import { IStoreInitialHeaderState } from 'src/context/interfaces/header/IStoreInitialHeaderState';
 import { IActionResponse } from 'src/context/interfaces/IActionResponse';
 import { HeaderAction } from 'src/context/enums/header';
-import { context } from 'src/context';
 
-const initialState = {
+const initialState: IStoreInitialHeaderState = {
     options: false,
     sideMenu: false
-};
-
-/**
- * Returns the initial state.
- */
-const getInitialState = (): IStoreInitialHeaderState => {
-    return context.header ? 
-        context.header : initialState;
 };
 
 /**
@@ -21,7 +12,7 @@ const getInitialState = (): IStoreInitialHeaderState => {
  * @param {IStoreInitialHeaderState} state - The state.
  * @param {IActionResponse} action - The action.
  */
-const getHeaderReducer = (state: IStoreInitialHeaderState = getInitialState(), action: IActionResponse): unknown => {
+const getHeaderReducer = (state = initialState, action: IActionResponse): unknown => {
     const newState = { ...state };
 
     if (action.type === HeaderAction.toggleSideMenu) {

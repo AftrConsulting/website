@@ -3,7 +3,7 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { StyledIcon } from './style';
 import { configuration } from 'src/configuration';
 import { Button } from 'src/components/button';
-import { useTranslation } from 'src/i18n';
+import { useLocale } from 'src/localizations';
 
 interface ICTAProps {
 	className?: string;
@@ -15,15 +15,15 @@ interface ICTAProps {
  * @param {ICTAProps} props - The props.
  */
 const CTA = (props: ICTAProps): ReactElement => {
-    const { t } = useTranslation([ 'common' ]);
+    const locale = useLocale();
 	
     return (
         <Button
             href={configuration.urls.consultation}
             target={'_blank'}
             className={props.className}
-            title={t('bookConsultation')}>
-            <span>{t('bookConsultation')}</span>
+            title={locale.global.bookConsultation}>
+            <span>{locale.global.bookConsultation}</span>
             {props.withIcon && 
 				<StyledIcon icon={faArrowRight} />}
         </Button>

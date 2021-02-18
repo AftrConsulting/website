@@ -8,20 +8,20 @@ import { SideBySide } from 'src/componentsByPage/home/sideBySide';
 import { Paragraph } from 'src/componentsByPage/home/paragraph';
 import { SubTitle } from 'src/componentsByPage/home/subTitle';
 import { Title } from 'src/componentsByPage/home/title';
-import { useTranslation } from 'src/i18n';
+import { useLocale } from 'src/localizations';
 
 /**
  * The SectionDescription component.
  */
 const SectionDescription = (): ReactElement => {
-    const { t } = useTranslation([ 'home' ]);
+    const locale = useLocale();
 
     return (
         <StyledSection>
             <SideBySide>
                 <div>
-                    <SubTitle>{t('home:descriptionSubTitle')}</SubTitle>
-                    <Title>{t('home:descriptionTitle')}</Title>
+                    <SubTitle>{locale.pages.home.description.subTitle}</SubTitle>
+                    <Title>{locale.pages.home.description.title}</Title>
                     <StyledIconAllContainer>
                         {getIcon(<DescriptionTypeScript />, '60px')}
                         {getIcon(<DescriptionReact />)}
@@ -30,9 +30,9 @@ const SectionDescription = (): ReactElement => {
                     </StyledIconAllContainer>
                 </div>
                 <Paragraph>
-                    <div>{t('home:descriptionText1')}</div>
+                    <div>{locale.pages.home.description.text1}</div>
                     <StyledSeparator />
-                    <StyledItalicText>{t('home:descriptionText2')}</StyledItalicText>
+                    <StyledItalicText>{locale.pages.home.description.text2}</StyledItalicText>
                 </Paragraph>
             </SideBySide>
         </StyledSection>

@@ -1,11 +1,11 @@
 import React, { ReactElement } from 'react';
 import { StyledSubHeaderItemContainer } from './style';
 import { SubHeaderItemWithSubMenu } from 'src/components/header/components/subHeader/components/subHeaderItemWithSubMenu';
-import { ISubHeaderItem } from 'src/data/interfaces/ISubHeaderItem';
+import { IMenuItem } from 'src/interfaces/IMenuItem';
 import { MyLink } from 'src/components/link';
 
 interface ISubHeaderItemProps {
-	element: ISubHeaderItem;
+	element: IMenuItem;
 }
 
 /**

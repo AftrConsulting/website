@@ -1,12 +1,12 @@
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import React, { ReactElement, useState } from 'react';
 import { SubHeaderItemWithSubMenuContainer } from './style';
-import { ISubHeaderItem } from 'src/data/interfaces/ISubHeaderItem';
+import { IMenuItem } from 'src/interfaces/IMenuItem';
 import { MyLink } from 'src/components/link';
 import { Icon } from 'src/components/icon';
 
 interface ISubHeaderItemWithSubMenuProps {
-	element: ISubHeaderItem;
+	element: IMenuItem;
 }
 
 /**

@@ -3,6 +3,7 @@ import App, { AppContext } from 'next/app';
 import { ThemeProvider } from 'styled-components';
 import React, { ReactElement } from 'react';
 import { Provider, useSelector } from 'react-redux';
+import { useRouter } from 'next/router';
 import { IStoreInitialThemeState } from 'src/context/interfaces/theme/IStoreInitialThemeState';
 import { getThemeName, getTheme, getPrimaryColor } from 'src/theme/utils';
 import { SideMenu } from 'src/components/header/components/sideMenu';
@@ -10,7 +11,6 @@ import { LoadingBar } from 'src/components/loadingBar';
 import { IState } from 'src/context/interfaces/IState';
 import { getGlobalStyles } from 'src/theme/global';
 import { configuration } from 'src/configuration';
-import { appWithTranslation } from 'src/i18n';
 import { getStore } from 'src/context';
 
 interface IAppProps {
@@ -24,7 +24,9 @@ interface IAppProps {
  * @param {IAppProps} props - The app props.
  */
 const MyApp = (props: IAppProps): ReactElement => {
+    const router = useRouter();
     const store = getStore({
+        language: router.locale,
         theme: props.theme
     });
 
@@ -75,4 +77,4 @@ const MyAppWithTheme = (props: IAppProps): ReactElement => {
     );
 };
 
-export default appWithTranslation(MyApp);
+export default MyApp;

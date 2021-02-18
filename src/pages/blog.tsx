@@ -13,8 +13,4 @@ const Blog = (): ReactElement => (
     </Container>
 );
 
-Blog.getInitialProps = (): {} => ({
-    namespacesRequired: [ 'common' ]
-});
-
 export default Blog;

@@ -2,6 +2,7 @@ import { IStoreInitialThemeState } from 'src/context/interfaces/theme/IStoreInit
 
 interface IStoreInitialState {
 	theme: IStoreInitialThemeState;
+	language?: string;
 }
 
 export type {

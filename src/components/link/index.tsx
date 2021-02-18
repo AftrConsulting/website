@@ -1,6 +1,8 @@
 import React, { ReactElement } from 'react';
 import { useRouter } from 'next/router';
-import { Link } from 'src/i18n';
+import Link from 'next/link';
+import { useSelector } from 'react-redux';
+import { IState } from 'src/context/interfaces/IState';
 
 interface IMyLinkProps {
 	href?: string;
@@ -14,6 +16,7 @@ interface IMyLinkProps {
  * @param {IMyLinkProps} props - The props.
  */
 const MyLink = (props: IMyLinkProps): ReactElement => {
+    const { language } = useSelector((state: IState) => state.locale);
     const router = useRouter();
 	
     let className = props.className || '';
@@ -30,7 +33,7 @@ const MyLink = (props: IMyLinkProps): ReactElement => {
     }
 
     return (
-        <Link href={props.href} passHref>
+        <Link href={props.href} passHref locale={language}>
             <a className={className} onClick={onClick}>{props.children}</a>
         </Link>
     );

@@ -5,19 +5,19 @@ import { SectionServices } from 'src/componentsByPage/home/sectionServices';
 import { SectionExpertise } from 'src/componentsByPage/home/sectionExpertise';
 import { SectionFirst } from 'src/componentsByPage/home/sectionFirst';
 import { Container } from 'src/components/container';
-import { useTranslation } from 'src/i18n';
+import { useLocale } from 'src/localizations';
 
 /**
  * The Home component.
  */
 const Home = (): ReactElement => {
-    const { t } = useTranslation([ 'common', 'home' ]);
+    const locale = useLocale();
 	
     return (
         <Container>
             <NextSeo
-                title={t('title')}
-                description={t('description')}
+                title={locale.global.seo.title}
+                description={locale.global.seo.description}
             />
             <SectionFirst />
             <SectionDescription />
@@ -26,9 +26,5 @@ const Home = (): ReactElement => {
         </Container>
     );
 };
-
-Home.getInitialProps = (): {} => ({
-    namespacesRequired: [ 'common', 'home' ]
-});
 
 export default Home;
