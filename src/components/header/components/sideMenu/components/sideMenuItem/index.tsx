@@ -2,13 +2,13 @@ import React, { ReactElement } from 'react';
 import { useDispatch } from 'react-redux';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { StyledSideMenuItemContainer } from './style';
-import { ISubHeaderItem } from 'src/data/interfaces/ISubHeaderItem';
+import { IMenuItem } from 'src/interfaces/IMenuItem';
 import { setHeader } from 'src/context/actions/header';
 import { MyLink } from 'src/components/link';
 import { Icon } from 'src/components/icon';
 
 interface ISideMenuProps {
-	element: ISubHeaderItem;
+	element: IMenuItem;
 	setItems?: (newItems: []) => void;
 }
 

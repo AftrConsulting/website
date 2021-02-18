@@ -1,6 +1,6 @@
-import { ISubHeaderItem } from 'src/data/interfaces/ISubHeaderItem';
+import { IMenuItem } from 'src/interfaces/IMenuItem';
 
-const subHeaderItems: ISubHeaderItem[] = [ 
+const enMenu: IMenuItem[] = [ 
     { 
         subItems: [
             {
@@ -33,5 +33,5 @@ const subHeaderItems: ISubHeaderItem[] = [
 ];
 
 export {
-    subHeaderItems
+    enMenu
 };

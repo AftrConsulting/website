@@ -1,4 +1,5 @@
 import { enHomeLocale } from 'src/localizations/en/home';
+import { enMenu } from 'src/localizations/en/menu';
 
 const enLocale = {
     global: {
@@ -15,6 +16,7 @@ const enLocale = {
             title: 'Simple Usage Example'
         }
     },
+    menu: enMenu,
     pages: {
         home: enHomeLocale
     }

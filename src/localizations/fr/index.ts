@@ -1,4 +1,5 @@
 import { frHomeLocale } from 'src/localizations/fr/home';
+import { frMenu } from 'src/localizations/fr/menu';
 import { enLocale } from 'src/localizations/en';
 
 const frLocale: typeof enLocale = {
@@ -16,6 +17,7 @@ const frLocale: typeof enLocale = {
             title: 'Le Français - Simple Usage Example'
         }
     },
+    menu: frMenu,
     pages: {
         home: frHomeLocale
     }

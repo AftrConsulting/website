@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import { StyledSideMenuItemContainer, SideMenuItemClose } from './style';
 import { SideMenuItem } from 'src/components/header/components/sideMenu/components/sideMenuItem';
-import { subHeaderItems } from 'src/data/subHeaderItems';
 import { IState } from 'src/context/interfaces/IState';
 import { useLocale } from 'src/localizations';
 import { Icon } from 'src/components/icon';
@@ -40,7 +39,7 @@ const SideMenuItemContainer = (): ReactElement => {
 
     return (
         <StyledSideMenuItemContainer>
-            {subHeaderItems.map((x, key) => (
+            {locale.menu.map((x, key) => (
                 <SideMenuItem key={key} element={x} setItems={setItems} />
             ))}
         </StyledSideMenuItemContainer>
