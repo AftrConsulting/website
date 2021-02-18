@@ -6,20 +6,14 @@ import { MyLink } from 'src/components/link';
 import { IState } from 'src/context/interfaces/IState';
 import { setLanguage } from 'src/context/actions/locale';
 
-interface ILogoProps {
-	onBeforeLanguageChange?: () => void;
-}
-
 /**
  * The logo component.
- * @param {ILogoProps} props - The props.
  */
-const Logo = (props: ILogoProps): ReactElement => {
+const Logo = (): ReactElement => {
     const { language } = useSelector((state: IState) => state.locale);
     const dispatch = useDispatch();
 	
     const toggleLanguage = (): void => {
-        props.onBeforeLanguageChange?.();
         dispatch(
             setLanguage(language === 'en' ? 'fr' : 'en' as never)
         );

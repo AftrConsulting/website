@@ -4,30 +4,23 @@ import { StyledTitle, StyledContainer, StyledSubTitle, StyledButton } from './st
 import { PrimaryColorsSwitch } from 'src/components/header/components/options/components/primaryColorsSwitch';
 import { DarkModeSwitch } from 'src/components/header/components/options/components/darkModeSwitch';
 import { Slider } from 'src/components/header/components/slider';
-import { IState } from 'src/context/interfaces/IState';
 import { setLanguage } from 'src/context/actions/locale';
+import { IState } from 'src/context/interfaces/IState';
 import { configuration } from 'src/configuration';
-import { context } from 'src/context';
 
 /**
  * The Options component.
  */
 const Options = (): ReactElement => {
-    const header = useSelector((state: IState) => state.header);
     const { locale, language } = useSelector((state: IState) => state.locale);
     const dispatch = useDispatch();
 	
     const toggleLanguage = (newLanguage: string) => (): void => {
-        context.header = header;
         dispatch(setLanguage(newLanguage as never));
     };
 	
-    const onClose = (): void => {
-        context.header = null;
-    };
-	
     return (
-        <Slider header={'options'} rightDirection onClose={onClose}>
+        <Slider header={'options'} rightDirection>
             <StyledTitle>{locale.global.options.title}</StyledTitle>
             <StyledContainer>
                 <StyledSubTitle>{locale.global.options.darkMode}</StyledSubTitle>

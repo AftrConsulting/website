@@ -1,6 +1,5 @@
 import { createStore, Store } from 'redux';
 import { IStoreInitialState } from 'src/context/interfaces/IStoreInitialState';
-import { IContext } from 'src/context/interfaces/IContext';
 import { getRootReducers } from 'src/context/reducers';
 import { configuration } from 'src/configuration';
 
@@ -30,12 +29,6 @@ const getStore = (initialState: IStoreInitialState): Store => {
     );
 };
 
-/**
- * The context.
- */
-const context: IContext = {};
-
 export {
-    getStore,
-    context
+    getStore
 };
