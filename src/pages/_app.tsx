@@ -3,6 +3,7 @@ import App, { AppContext } from 'next/app';
 import { ThemeProvider } from 'styled-components';
 import React, { ReactElement } from 'react';
 import { Provider, useSelector } from 'react-redux';
+import { useRouter } from 'next/router';
 import { IStoreInitialThemeState } from 'src/context/interfaces/theme/IStoreInitialThemeState';
 import { getThemeName, getTheme, getPrimaryColor } from 'src/theme/utils';
 import { SideMenu } from 'src/components/header/components/sideMenu';
@@ -23,7 +24,9 @@ interface IAppProps {
  * @param {IAppProps} props - The app props.
  */
 const MyApp = (props: IAppProps): ReactElement => {
+    const router = useRouter();
     const store = getStore({
+        language: router.locale,
         theme: props.theme
     });
 

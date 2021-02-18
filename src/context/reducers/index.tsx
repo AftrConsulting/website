@@ -11,7 +11,7 @@ import { getThemeReducer } from 'src/context/reducers/theme';
 const getRootReducers = (initialState: IStoreInitialState): never => {
     return combineReducers({
         header: getHeaderReducer,
-        locale: getLocaleReducer,
+        locale: getLocaleReducer(initialState.language),
         theme: getThemeReducer(initialState.theme)
     }) as never;
 };
