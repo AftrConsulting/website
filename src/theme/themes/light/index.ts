@@ -45,7 +45,7 @@ const lightTheme: ITheme = {
         home: {
             descriptionBackground: darken(.05, colors.background),
             expertise: {
-                color: colors.background
+                color: colors.color
             },
             services: {
                 background: colors.color
