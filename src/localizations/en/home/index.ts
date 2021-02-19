@@ -13,7 +13,7 @@ const enHomeLocale = {
     },
     expertises: {
         list: [
-            'lorem ipsum lorem ipsum lorem ipsum',
+            'lorem ipsum',
             'lorem ipsum',
             'lorem ipsum',
             'lorem ipsum',

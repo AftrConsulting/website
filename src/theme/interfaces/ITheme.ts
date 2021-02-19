@@ -35,10 +35,12 @@ interface ITheme {
             };
 		};
 		home: {
-			descriptionBackground: string;
-			expertise: {
-				color: string; 
-			};
+			bookConsultation: {
+                background: string;
+            };
+			description: {
+                background: string;
+            };
 			services: {
                 background: string;
             };

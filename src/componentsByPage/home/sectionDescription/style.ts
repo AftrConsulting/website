@@ -3,7 +3,7 @@ import { Section } from 'src/componentsByPage/home/section';
 import { devices } from 'src/theme';
 
 const StyledSection = styled(Section)`
-	background: ${(p): string => p.theme.global.home.descriptionBackground};
+	background: ${(p): string => p.theme.global.home.description.background};
 `;
 
 const StyledItalicText = styled.div`

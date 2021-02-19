@@ -1,4 +1,4 @@
-import React, { ReactElement, useState } from 'react';
+import React, { ReactElement } from 'react';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { StyledSection, StyledExpertiseContainer } from './style';
 import { SubTitle } from 'src/componentsByPage/home/subTitle';

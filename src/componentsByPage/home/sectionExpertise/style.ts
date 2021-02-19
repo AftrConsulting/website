@@ -3,8 +3,7 @@ import { Section } from 'src/componentsByPage/home/section';
 import { devices } from 'src/theme';
 
 const StyledSection = styled(Section)`
-	border: 1px solid ${(p): string => p.theme.global.borderColor};
-	color: ${(p): string => p.theme.global.home.expertise.color};
+	border-top: 1px solid ${(p): string => p.theme.global.borderColor};
 `;
 
 const StyledExpertiseContainer = styled.ul`
@@ -18,18 +17,19 @@ const StyledExpertiseContainer = styled.ul`
 	max-height: 180px;
 	
 	li {
-		margin-top: 10px;
+		margin-top: 15px;
 		margin-bottom: 10px;
 		display: flex;
 		width: 25%;
-		margin-right: 10px;
+		margin-right: 15px;
 
 		div {
 			flex: 1;
 		}
 
 		svg {
-			margin-right: 10px;
+			margin-right: 15px;
+			color: ${(p): string => p.theme.colors.primary};
 		}
 	}
 

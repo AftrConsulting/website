@@ -43,9 +43,11 @@ const darkTheme: ITheme = {
             }
         },
         home: {
-            descriptionBackground: lighten(.05, colors.background),
-            expertise: {
-                color: colors.color
+            bookConsultation: {
+                background: lighten(.05, colors.background)
+            },
+            description: {
+                background: lighten(.05, colors.background)
             },
             services: {
                 background: colors.color
