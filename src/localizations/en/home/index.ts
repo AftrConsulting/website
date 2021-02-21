@@ -13,22 +13,56 @@ const enHomeLocale = {
     },
     expertises: {
         list: [
-            'lorem ipsum',
-            'lorem ipsum',
-            'lorem ipsum',
-            'lorem ipsum',
-            'lorem ipsum',
-            'lorem ipsum',
-            'lorem ipsum',
-            'lorem ipsum',
-            'lorem ipsum',
-            'lorem ipsum',
-            'lorem ipsum',
-            'lorem ipsum',
-            'lorem ipsum',
-            'lorem ipsum',
-            'lorem ipsum'
+            {
+                description: 'Pellentesque laoreet nunc non enim rhoncus tristique. Nullam erat tortor, hendrerit.',
+                title: 'Lorem Ipsum'
+            },
+            {
+                description: 'Pellentesque laoreet nunc non enim rhoncus tristique. Nullam erat tortor, hendrerit.',
+                title: 'Lorem Ipsum'
+            },
+            {
+                description: 'Pellentesque laoreet nunc non enim rhoncus tristique. Nullam erat tortor, hendrerit.',
+                title: 'Lorem Ipsum'
+            },
+            {
+                description: 'Pellentesque laoreet nunc non enim rhoncus tristique. Nullam erat tortor, hendrerit.',
+                title: 'Lorem Ipsum'
+            },
+            {
+                description: 'Pellentesque laoreet nunc non enim rhoncus tristique. Nullam erat tortor, hendrerit.',
+                title: 'Lorem Ipsum'
+            },
+            {
+                description: 'Pellentesque laoreet nunc non enim rhoncus tristique. Nullam erat tortor, hendrerit.',
+                title: 'Lorem Ipsum'
+            },
+            {
+                description: 'Pellentesque laoreet nunc non enim rhoncus tristique. Nullam erat tortor, hendrerit.',
+                title: 'Lorem Ipsum'
+            },
+            {
+                description: 'Pellentesque laoreet nunc non enim rhoncus tristique. Nullam erat tortor, hendrerit.',
+                title: 'Lorem Ipsum'
+            },
+            {
+                description: 'Pellentesque laoreet nunc non enim rhoncus tristique. Nullam erat tortor, hendrerit.',
+                title: 'Lorem Ipsum'
+            },
+            {
+                description: 'Pellentesque laoreet nunc non enim rhoncus tristique. Nullam erat tortor, hendrerit.',
+                title: 'Lorem Ipsum'
+            },
+            {
+                description: 'Pellentesque laoreet nunc non enim rhoncus tristique. Nullam erat tortor, hendrerit.',
+                title: 'Lorem Ipsum'
+            },
+            {
+                description: 'Pellentesque laoreet nunc non enim rhoncus tristique. Nullam erat tortor, hendrerit.',
+                title: 'Lorem Ipsum'
+            }
         ],
+        ps: 'Nulla dictum lacinia diam. Phasellus et pretium ligula. Ut elementum est quis congue eleifend.',
         subTitle: 'Our Expertise',
         title: 'Quisque suscipit tincidunt elit, ut ornare tortor.'
     },

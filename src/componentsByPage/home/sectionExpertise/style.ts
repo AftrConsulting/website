@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Paragraph } from 'src/componentsByPage/home/paragraph';
 import { Section } from 'src/componentsByPage/home/section';
 import { devices } from 'src/theme';
 
@@ -6,51 +7,58 @@ const StyledSection = styled(Section)`
 	border-top: 1px solid ${(p): string => p.theme.global.borderColor};
 `;
 
-const StyledExpertiseContainer = styled.ul`
-	padding: 0px;
-	margin: 0px;
-	display: flex;
-	flex-direction: column;
-	list-style: none;
-	flex-wrap: wrap;
-	width: auto;
-	max-height: 180px;
-	
-	li {
-		margin-top: 15px;
-		margin-bottom: 10px;
-		display: flex;
-		width: 25%;
-		margin-right: 15px;
+const StyledExpertiseContainer = styled.div`
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: 1fr 1fr 1fr;
 
-		div {
-			flex: 1;
-		}
-
-		svg {
-			margin-right: 15px;
-			color: ${(p): string => p.theme.colors.primary};
-		}
+	> div {
+		border-radius: ${(p): string => p.theme.global.borderRadius};
+		background: ${(p): string => p.theme.pages.home.expertises.cardBackground};
+		padding: 20px;
 	}
 
 	@media screen and (max-width: ${devices.smallTablet}) {
-		max-height: 220px;
-		
-		li {
-			width: 33.33%;
-		}
+		grid-template-columns: 1fr 1fr;
 	}
 
 	@media screen and (max-width: ${devices.mobile}) {
-		max-height: 320px;
-
-		li {
-			width: 50%;
-		}
+		grid-template-columns: 1fr;
 	}
+`;
+
+const StyledTitle = styled.div`
+	font-size: 1.3em;
+	font-weight: bold;
+	margin-bottom: 10px;
+`;
+
+const StyledSeparator = styled.div`
+	height: 4px;
+	width: 40%;
+    max-width: 250px;
+	margin-top: 40px;
+	margin-bottom: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	background: ${(p): string => p.theme.colors.primary};
+	border-radius: ${(p): string => p.theme.global.borderRadius};
+`;
+
+const StyledParagraph = styled(Paragraph)`
+	font-size: .95em !important;
+`;
+
+const StyledPS = styled.div`
+	font-style: italic;
+	text-align: center;
 `;
 
 export {
     StyledExpertiseContainer,
-    StyledSection
+    StyledParagraph,
+    StyledSeparator,
+    StyledSection,
+    StyledTitle,
+    StyledPS
 };

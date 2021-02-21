@@ -42,6 +42,11 @@ const darkTheme: ITheme = {
                 goBackBackground: darken(.05, colors.background)
             }
         },
+        primaryColors: {
+            color: '#fafafa'
+        }
+    },
+    pages: {
         home: {
             bookConsultation: {
                 background: lighten(.05, colors.background)
@@ -49,12 +54,9 @@ const darkTheme: ITheme = {
             description: {
                 background: lighten(.05, colors.background)
             },
-            services: {
-                background: colors.color
+            expertises: {
+                cardBackground: lighten(.05, colors.background)
             }
-        },
-        primaryColors: {
-            color: '#fafafa'
         }
     }
 };

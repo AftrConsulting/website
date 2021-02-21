@@ -34,6 +34,11 @@ interface ITheme {
 				goBackBackground: string;
             };
 		};
+		primaryColors: {
+			color: string;
+		}
+	};
+	pages: {
 		home: {
 			bookConsultation: {
                 background: string;
@@ -41,14 +46,11 @@ interface ITheme {
 			description: {
                 background: string;
             };
-			services: {
-                background: string;
-            };
+            expertises: {
+                cardBackground: string;
+            }
         };
-		primaryColors: {
-			color: string;
-		}
-    }
+	};
 }
 
 export type {

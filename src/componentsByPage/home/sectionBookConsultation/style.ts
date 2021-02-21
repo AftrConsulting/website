@@ -6,7 +6,7 @@ import { CTA } from 'src/components/cta';
 import { devices } from 'src/theme';
 
 const StyledSection = styled(Section)`
-	background: ${(p): string => p.theme.global.home.description.background};	
+	background: ${(p): string => p.theme.pages.home.description.background};	
 `;
 
 const StyledRow = styled(Row)`
