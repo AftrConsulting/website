@@ -4,7 +4,6 @@ import { CTA } from 'src/components/cta';
 import { devices } from 'src/theme';
 
 const StyledContainer = styled.div`
-	background: ${(p): string => p.theme.pages.home.bookConsultation.background};
 	border-radius: ${(p): string => p.theme.global.borderRadius};
 	border: 4px solid ${(p): string => p.theme.colors.primary};
 	padding: 40px;
@@ -45,7 +44,7 @@ const StyledContainer = styled.div`
 `;
 
 const StyledCTA = styled(CTA)`
-	font-size: 1.4em;
+	font-size: 1.3em;
 	height: auto;
 	line-height: auto;
 	padding: 10px 25px;

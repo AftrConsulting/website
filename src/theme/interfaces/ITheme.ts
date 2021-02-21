@@ -40,9 +40,6 @@ interface ITheme {
 	};
 	pages: {
 		home: {
-			bookConsultation: {
-                background: string;
-            };
 			description: {
                 background: string;
             };

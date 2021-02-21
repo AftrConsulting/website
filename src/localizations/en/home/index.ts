@@ -76,6 +76,10 @@ const enHomeLocale = {
         text1: 'Lorem 3 ipsum dolor sit amet, consectetur adipiscing elit, consectetur adipiscing elit,',
         text2: ' adipiscing elit dolor sit amet.'
     },
+    quotes: {
+        subTitle: 'what our clients are saying',
+        title: 'Pellentesque laoreet nunc non enim rhoncus tristique.'
+    },
     services: {
         step1: {
             description: `Suspendisse mauris odio, commodo vitae sagittis a, feugiat quis quam. Donec orci metus, tempor vitae varius in,

@@ -48,9 +48,6 @@ const lightTheme: ITheme = {
     },
     pages: {
         home: {
-            bookConsultation: {
-                background: darken(.05, colors.background)
-            },
             description: {
                 background: darken(.05, colors.background)
             },
