@@ -12,7 +12,7 @@ const StyleImgContainer = styled.div`
 	}
 
 	@media screen and (max-width: ${devices.smallTablet}) {
-		display: none;
+		margin-top: 40px;
 	}
 `;
 
@@ -22,25 +22,19 @@ const StyledSideBySide = styled(SideBySide)`
 	&:last-of-type {
 		padding-bottom: 0px;
 	}
-`;
 
-const StyledSeparator = styled.div`
-	width: 40%;
-	max-width: 250px;
-	height: 5px;
-	background: ${(p): string => p.theme.colors.primary};
-	margin:0px auto;
-	margin-bottom: 40px;
-	border-radius: 10px;
-	display: none;
+	&:nth-child(odd) {
+		flex-direction: row-reverse;
+	}
 
 	@media screen and (max-width: ${devices.smallTablet}) {
-		display: block;
+		&:nth-child(odd) {
+			flex-direction: row;
+		}
 	}
 `;
 
 export {
     StyledSideBySide,
-    StyleImgContainer,
-    StyledSeparator
+    StyleImgContainer
 };
