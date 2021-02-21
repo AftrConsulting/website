@@ -14,7 +14,25 @@ const frHomeLocale: typeof enHomeLocale = {
         title: 'In hac habitasse platea dictumst. Ut posuere ante in est dapibus lacinia.'
     },
     expertises: {
+        bookConsultation: {
+            description: `Donec rhoncus sodales purus, vitae mollis dui interdum vitae. 
+						  Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+						  Donec rhoncus sodales purus, vitae mollis dui interdum vitae.`,
+            title: 'Duis suscipit risus ut justo iaculis tempus.'
+        },
         list: [
+            {
+                description: 'Pellentesque laoreet nunc non enim rhoncus tristique. Nullam erat tortor, hendrerit.',
+                title: 'Lorem Ipsum'
+            },
+            {
+                description: 'Pellentesque laoreet nunc non enim rhoncus tristique. Nullam erat tortor, hendrerit.',
+                title: 'Lorem Ipsum'
+            },
+            {
+                description: 'Pellentesque laoreet nunc non enim rhoncus tristique. Nullam erat tortor, hendrerit.',
+                title: 'Lorem Ipsum'
+            },
             {
                 description: 'Pellentesque laoreet nunc non enim rhoncus tristique. Nullam erat tortor, hendrerit.',
                 title: 'Lorem Ipsum'

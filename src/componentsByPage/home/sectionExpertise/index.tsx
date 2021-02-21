@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react';
 import { StyledSection, StyledExpertiseContainer, StyledTitle, StyledParagraph, StyledSeparator, StyledPS } from './style';
+import { SectionBookConsultation } from 'src/componentsByPage/home/sectionBookConsultation';
 import { SubTitle } from 'src/componentsByPage/home/subTitle';
 import { Title } from 'src/componentsByPage/home/title';
 import { useLocale } from 'src/localizations';
@@ -26,6 +27,7 @@ const SectionExpertise = (): ReactElement => {
                 </StyledExpertiseContainer>
                 <StyledSeparator/>
                 <StyledPS>{locale.pages.home.expertises.ps}</StyledPS>
+                <SectionBookConsultation />
             </Row>
         </StyledSection>
     );

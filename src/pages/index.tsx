@@ -1,6 +1,5 @@
 import { NextSeo } from 'next-seo';
 import React, { ReactElement } from 'react';
-import { SectionBookConsultation } from 'src/componentsByPage/home/sectionBookConsultation';
 import { SectionDescription } from 'src/componentsByPage/home/sectionDescription';
 import { SectionServices } from 'src/componentsByPage/home/sectionServices';
 import { SectionExpertise } from 'src/componentsByPage/home/sectionExpertise';
@@ -23,7 +22,6 @@ const Home = (): ReactElement => {
             <SectionDescription />
             <SectionServices />
             <SectionExpertise />
-            <SectionBookConsultation />
         </Container>
     );
 };
