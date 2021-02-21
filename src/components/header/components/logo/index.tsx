@@ -25,7 +25,7 @@ const Logo = (props: ILogoProps): ReactElement => {
         const newLanguage = language === 'en' ? 'fr' : 'en' as never; 
         dispatch(setLanguage(newLanguage));
 
-        router.push(router.route, router.route, { locale: newLanguage });
+        router.push(router.route, router.route, { locale: newLanguage, shallow: true });
     };
 	
     const close = (): void => {

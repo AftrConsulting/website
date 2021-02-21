@@ -22,7 +22,7 @@ const Options = (): ReactElement => {
     const toggleLanguage = (newLanguage: string) => (): void => {
         context.header = header;
         dispatch(setLanguage(newLanguage as never));
-        router.push(router.route, router.route, { locale: newLanguage });
+        router.push(router.route, router.route, { locale: newLanguage, shallow: true });
     };
 	
     const onClose = (): void => {
