@@ -3,10 +3,10 @@ import { useSelector } from 'react-redux';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import { StyledSideMenuItemContainer, SideMenuItemClose } from './style';
 import { SideMenuItem } from 'src/components/header/components/sideMenu/components/sideMenuItem';
+import { clearSavedState } from 'src/components/header/utils/hook';
 import { IState } from 'src/context/interfaces/IState';
 import { useLocale } from 'src/localizations';
 import { Icon } from 'src/components/icon';
-import { context } from 'src/context';
 
 /**
  * The SideMenu Item container.
@@ -22,7 +22,7 @@ const SideMenuItemContainer = (): ReactElement => {
         if (sideMenu) return;
 
         setTimeout(clear, 150);
-        context.header = null;
+        clearSavedState();
     }, [ sideMenu ]);
 	
     if (items.length) {

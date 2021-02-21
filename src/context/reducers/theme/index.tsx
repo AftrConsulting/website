@@ -4,14 +4,26 @@ import { IActionResponse } from 'src/context/interfaces/IActionResponse';
 import { ThemeAction } from 'src/context/enums/theme';
 import { MyTheme } from 'src/theme/types/MyTheme';
 import { configuration } from 'src/configuration';
-import { getTheme } from 'src/theme/utils';
 import { allColors, themes } from 'src/theme';
+import { getTheme } from 'src/theme/utils';
+import { context } from 'src/context';
+
+/**
+ * Returns the initial state.
+ * @param {IStoreInitialThemeState} initialState - The initial state.
+ */
+const getThemeReducer = (initialState: IStoreInitialThemeState): (state: IStoreInitialThemeState, action: IActionResponse) => unknown => {
+    const initialTheme = context.theme ? 
+        context.theme : initialState;
+		
+    return getThemeReducerWithState(initialTheme);
+};
 
 /**
  * Returns the theme reducer.
  * @param {IStoreInitialThemeState} initialState - The initial state.
  */
-const getThemeReducer = (initialState: IStoreInitialThemeState) => (state = initialState, action: IActionResponse): unknown => {
+const getThemeReducerWithState = (initialState: IStoreInitialThemeState) => (state = initialState, action: IActionResponse): unknown => {
     let newState = state;
 	
     if (action.type === ThemeAction.setTheme && themes[action.value as MyTheme]) {

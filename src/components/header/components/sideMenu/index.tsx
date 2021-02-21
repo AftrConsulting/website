@@ -1,31 +1,21 @@
 import React, { ReactElement } from 'react';
-import { useSelector } from 'react-redux';
 import { StyledLogoContainer, StyledSideMenuItemFooterContainer } from './style';
 import { SideMenuItemContainer } from 'src/components/header/components/sideMenu/components/sideMenuItemContainer';
+import { useSaveStateBeforeLanguageChange } from 'src/components/header/utils/hook';
 import { Slider } from 'src/components/header/components/slider';
 import { Logo } from 'src/components/header/components/logo';
-import { IState } from 'src/context/interfaces/IState';
 import { CTA } from 'src/components/cta';
-import { context } from 'src/context';
 
 /**
  * The SideMenu component.
  */
 const SideMenu = (): ReactElement => {
-    const header = useSelector((state: IState) => state.header);
-
-    const toggleLanguage = (): void => {
-        context.header = header;
-    };
-
-    const onClose = (): void => {
-        context.header = null;
-    };
+    const [ saveState, removeState ] = useSaveStateBeforeLanguageChange();
 	
     return (
-        <Slider header={'sideMenu'} onClose={onClose}>
+        <Slider header={'sideMenu'} onClose={removeState}>
             <StyledLogoContainer>
-                <Logo onBeforeLanguageChange={toggleLanguage} />
+                <Logo onBeforeLanguageChange={saveState} />
             </StyledLogoContainer>
             <SideMenuItemContainer />
             <StyledSideMenuItemFooterContainer>

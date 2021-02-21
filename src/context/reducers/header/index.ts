@@ -12,7 +12,8 @@ const initialState: IStoreInitialHeaderState = {
  * Returns the initial state.
  */
 const getInitialState = (): IStoreInitialHeaderState => {
-    return context.header ? context.header : initialState;
+    return context.header ? 
+        context.header : initialState;
 };
 
 /**
