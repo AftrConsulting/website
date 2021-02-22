@@ -10,12 +10,12 @@ import { CTA } from 'src/components/cta';
  * The SideMenu component.
  */
 const SideMenu = (): ReactElement => {
-    const [ saveState, removeState ] = useSaveStateBeforeLanguageChange();
+    const [ , removeState ] = useSaveStateBeforeLanguageChange();
 	
     return (
         <Slider header={'sideMenu'} onClose={removeState}>
             <StyledLogoContainer>
-                <Logo onBeforeLanguageChange={saveState} />
+                <Logo />
             </StyledLogoContainer>
             <SideMenuItemContainer />
             <StyledSideMenuItemFooterContainer>

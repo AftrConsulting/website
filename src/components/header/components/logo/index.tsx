@@ -2,26 +2,23 @@ import React, { ReactElement } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useRouter } from 'next/router';
 import { StyledName, StyledLanguage, StyledLogoContainer } from './style';
+import { useSaveStateBeforeLanguageChange } from 'src/components/header/utils/hook';
 import { setLanguage } from 'src/context/actions/locale';
 import { IState } from 'src/context/interfaces/IState';
 import { setHeader } from 'src/context/actions/header';
 import { MyLink } from 'src/components/link';
 
-interface ILogoProps {
-	onBeforeLanguageChange?: () => void;
-}
-
 /**
  * The logo component.
- * @param {ILogoProps} props - The props.
  */
-const Logo = (props: ILogoProps): ReactElement => {
+const Logo = (): ReactElement => {
     const router = useRouter();
     const dispatch = useDispatch();
     const { language } = useSelector((state: IState) => state.locale);
+    const [ saveState ] = useSaveStateBeforeLanguageChange();
 	
     const toggleLanguage = (): void => {
-        props.onBeforeLanguageChange?.();
+        saveState();
         const newLanguage = language === 'en' ? 'fr' : 'en' as never; 
         dispatch(setLanguage(newLanguage));
 
