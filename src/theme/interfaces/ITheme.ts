@@ -45,6 +45,9 @@ interface ITheme {
             };
             expertises: {
                 cardBackground: string;
+			}
+			quotes: {
+                background: string;
             }
         };
 	};

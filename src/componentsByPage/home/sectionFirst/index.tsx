@@ -1,7 +1,6 @@
 import React, { ReactElement } from 'react';
-import { StyledButton, StyledH1, StyledH1Span, StyledRow, StyleImgContainer } from './style';
+import { StyledButton, StyledH1, StyledH1Span, StyledRow, StyleImgContainer, StyledSection } from './style';
 import { FirstSectionSVG } from 'src/componentsImg/firstSectionSVG';
-import { Section } from 'src/componentsByPage/home/section';
 import { useLocale } from 'src/localizations';
 
 /**
@@ -11,7 +10,7 @@ const SectionFirst = (): ReactElement => {
     const locale = useLocale();
 
     return (
-        <Section>
+        <StyledSection>
             <StyledRow>
                 <div>
                     <StyledH1>
@@ -24,7 +23,7 @@ const SectionFirst = (): ReactElement => {
                     <FirstSectionSVG />
                 </StyleImgContainer>
             </StyledRow>
-        </Section>
+        </StyledSection>
     );
 };
 

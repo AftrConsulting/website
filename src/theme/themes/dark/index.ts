@@ -53,6 +53,9 @@ const darkTheme: ITheme = {
             },
             expertises: {
                 cardBackground: lighten(.05, colors.background)
+            },
+            quotes: {
+                background: lighten(.2, colors.background)
             }
         }
     }

@@ -21,24 +21,24 @@ const StyledContainer = styled.div`
 	}
 
 	@media screen and (max-width: ${devices.tablet}) {
+		margin-top: 60px;
+		display: block;
+
 		> div:first-of-type {
 			padding-bottom: 40px;
 			padding-right: 0px;
 		}
-
-		display: block;
 	}
 
 
 	@media screen and (max-width: ${devices.smallTablet}) {
-		margin-top: 40px;
-
 		> div:first-of-type {
 			padding-bottom: 20px;
 		}
 	}
 
 	@media screen and (max-width: ${devices.mobile}) {
+		margin-top: 40px;
 		padding: 20px;
 	}
 `;
@@ -62,6 +62,10 @@ const StyledTitle = styled.div`
 
 	@media screen and (max-width: ${devices.smallTablet}) {
 		font-size: 1.5em;
+	}
+
+	@media screen and (max-width: ${devices.mobile}) {
+		margin-bottom: 10px;
 	}
 `;
 

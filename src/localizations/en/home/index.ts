@@ -77,6 +77,39 @@ const enHomeLocale = {
         text2: ' adipiscing elit dolor sit amet.'
     },
     quotes: {
+        from: ', of ',
+        reviews: [
+            {
+                company: 'Company A',
+                description: `Suspendisse mauris odio, commodo vitae sagittis a, feugiat quis quam.
+							  Donec orci metus, tempor vitae varius in, porttitor 
+							  sed ex. Proin et interdum nisl. Nullam ut lorem ut mauris dictum finibus.
+							  Suspendisse mauris odio, commodo vitae sagittis a, feugiat quis quam.
+							  Donec orci metus, tempor vitae varius in, porttitor 
+							  sed ex. Proin et interdum nisl. Nullam ut lorem ut mauris dictum finibus.`,
+                name: 'Alex Alexson'
+            },            
+            {
+                company: 'Company B',
+                description: `Suspendisse mauris odio, commodo vitae sagittis a, feugiat quis quam.
+							  Donec orci metus, tempor vitae varius in, porttitor 
+							  sed ex. Proin et interdum nisl. Nullam ut lorem ut mauris dictum finibus.
+							  Suspendisse mauris odio, commodo vitae sagittis a, feugiat quis quam.
+							  Donec orci metus, tempor vitae varius in, porttitor 
+							  sed ex. Proin et interdum nisl. Nullam ut lorem ut mauris dictum finibus.`,
+                name: 'Alex Alexson'
+            },
+            {
+                company: 'Company C',
+                description: `Suspendisse mauris odio, commodo vitae sagittis a, feugiat quis quam.
+							  Donec orci metus, tempor vitae varius in, porttitor 
+							  sed ex. Proin et interdum nisl. Nullam ut lorem ut mauris dictum finibus.
+							  Suspendisse mauris odio, commodo vitae sagittis a, feugiat quis quam.
+							  Donec orci metus, tempor vitae varius in, porttitor 
+							  sed ex. Proin et interdum nisl. Nullam ut lorem ut mauris dictum finibus.`,
+                name: 'Alex Alexson'
+            }
+        ],
         subTitle: 'what our clients are saying',
         title: 'Pellentesque laoreet nunc non enim rhoncus tristique.'
     },

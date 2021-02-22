@@ -1,7 +1,20 @@
 import styled from 'styled-components';
+import { Section } from 'src/componentsByPage/home/section';
 import { CTA } from 'src/components/cta';
 import { Row } from 'src/components/row';
 import { devices } from 'src/theme';
+
+const StyledSection = styled(Section)`
+	padding: 140px 0px;
+
+	@media screen and (max-width: ${devices.smallTablet}) {
+		padding: 80px 0px;
+	}
+
+	@media screen and (max-width: ${devices.mobile}) {
+		padding: 50px 0px;
+	}
+`;
 
 const StyledRow = styled(Row)`
 	display: flex;
@@ -34,7 +47,7 @@ const StyledH1 = styled.h1`
 	}
 
 	@media screen and (max-width: ${devices.mobile}) {
-		line-height: 35px;
+		line-height: 30px;
 		font-size: 1.6em;
 	}
 `;
@@ -73,6 +86,7 @@ const StyledButton = styled(CTA)`
 `;
 
 export {
+    StyledSection,
     StyleImgContainer,
     StyledRow,
     StyledH1Span,
