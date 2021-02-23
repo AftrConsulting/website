@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Paragraph } from 'src/componentsByPage/home/paragraph';
-import { Section } from 'src/componentsByPage/home/section';
+import { Section } from 'src/components/section';
 import { devices } from 'src/theme';
 
 const StyledSection = styled(Section)`

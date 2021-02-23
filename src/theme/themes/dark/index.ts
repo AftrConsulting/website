@@ -20,6 +20,10 @@ const darkTheme: ITheme = {
         darkModeSwitch: {
             background: darken(.1, '#fafafa')
         },
+        footer: {
+            color: 'white',
+            logoBackground: colors.background
+        },
         header: {
             iconColor: lighten(.6, colors.background),
             logo: {

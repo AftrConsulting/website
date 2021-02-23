@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Paragraph } from 'src/componentsByPage/home/paragraph';
-import { Section } from 'src/componentsByPage/home/section';
+import { Section } from 'src/components/section';
 import { Icon } from 'src/components/icon';
 import { devices } from 'src/theme';
 

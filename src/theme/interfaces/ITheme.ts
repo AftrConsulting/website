@@ -12,6 +12,10 @@ interface ITheme {
 		darkModeSwitch: {
 			background: string;
 		};
+		footer: {
+			color: string;
+			logoBackground: string;
+		};
 		header: {
 			iconColor: string;
 			logo: {
@@ -45,10 +49,10 @@ interface ITheme {
             };
             expertises: {
                 cardBackground: string;
-			}
+			};
 			quotes: {
                 background: string;
-            }
+			};
         };
 	};
 }

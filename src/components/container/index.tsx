@@ -3,6 +3,7 @@ import { StyledContainer } from './style';
 import { Analytics } from 'src/components/container/components/analytics';
 import { Chat } from 'src/components/container/components/chat';
 import { Header } from 'src/components/header';
+import { Footer } from 'src/components/footer';
 import { isProduction } from 'src/utils';
 
 interface IContainerProps {
@@ -23,6 +24,7 @@ const Container = (props: IContainerProps): ReactElement => {
             <StyledContainer>
                 {props.children}
             </StyledContainer>
+            <Footer />
         </>
     );
 };

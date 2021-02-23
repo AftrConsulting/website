@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Section } from 'src/componentsByPage/home/section';
+import { Section } from 'src/components/section';
 import { CTA } from 'src/components/cta';
 import { Row } from 'src/components/row';
 import { devices } from 'src/theme';

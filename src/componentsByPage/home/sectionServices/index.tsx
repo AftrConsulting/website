@@ -4,8 +4,8 @@ import { ISectionStep } from 'src/componentsByPage/home/sectionServices/interfac
 import { FirstSectionSVG } from 'src/componentsImg/firstSectionSVG';
 import { Paragraph } from 'src/componentsByPage/home/paragraph';
 import { SubTitle } from 'src/componentsByPage/home/subTitle';
-import { Section } from 'src/componentsByPage/home/section';
 import { Title } from 'src/componentsByPage/home/title';
+import { Section } from 'src/components/section';
 import { useLocale } from 'src/localizations';
 
 /**
