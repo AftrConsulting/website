@@ -31,7 +31,7 @@ const StyledSeparator = styled.div`
 	width: 40%;
 	max-width: 250px;
 	height: 5px;
-	background: ${(p): string => 'white'};
+	background: 'white';
 	margin: 40px auto;
 	border-radius: 10px;
 `;
