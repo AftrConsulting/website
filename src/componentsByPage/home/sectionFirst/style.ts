@@ -78,9 +78,7 @@ const StyledButton = styled(CTA)`
 	}
 
 	@media screen and (max-width: ${devices.mobile}) {
-		border-width: 2px;
-		font-size: 1em;
-		padding: 2.5px 10px;
+		padding: 2.5px 15px;
 		margin-top: 30px;
 	}
 `;

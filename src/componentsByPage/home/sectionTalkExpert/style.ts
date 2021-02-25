@@ -56,11 +56,7 @@ const StyledButton = styled.button`
 	@media screen and (max-width: ${devices.smallTablet}) {
 		border-width: 3px;
 		font-size: 1.2em;
-	}
-
-	@media screen and (max-width: ${devices.mobile}) {
-		border-width: 2px;
-		font-size: 1em;
+		padding: 10px 15px;
 	}
 `;
 

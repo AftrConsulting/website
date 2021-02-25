@@ -52,6 +52,7 @@ const StyledCTA = styled(CTA)`
 
 	@media screen and (max-width: ${devices.smallTablet}) {
 		font-size: 1.2em;
+		padding: 10px 15px;
 	}
 `;
 
