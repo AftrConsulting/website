@@ -15,6 +15,18 @@ declare global {
 			trackPages: () => void;
 		}
 
+		/**
+		 * The tawk.to api object.
+		 */
+		Tawk_API: {
+
+			/**
+			 * Maximizes the chat.
+			 */
+			maximize: () => void;
+
+		}
+
 	}
 
 }

@@ -21,8 +21,9 @@ const darkTheme: ITheme = {
             background: darken(.1, '#fafafa')
         },
         footer: {
-            color: 'white',
-            logoBackground: colors.background
+            background: darken(.05, colors.background),
+            borderColor: darken(.07, colors.background),
+            color: 'white'
         },
         header: {
             iconColor: lighten(.6, colors.background),

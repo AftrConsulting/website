@@ -13,8 +13,9 @@ interface ITheme {
 			background: string;
 		};
 		footer: {
+			background: string;
+			borderColor: string;
 			color: string;
-			logoBackground: string;
 		};
 		header: {
 			iconColor: string;

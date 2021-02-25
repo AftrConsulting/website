@@ -33,7 +33,7 @@ const getSection = (step: ISectionStep, element: ReactElement): ReactElement => 
     <StyledSideBySide>
         <div>
             <SubTitle>{step.subTitle}</SubTitle>
-            <Title>{step.title}</Title>
+            <Title marginBottom={'20px'}>{step.title}</Title>
             <Paragraph>{step.description}</Paragraph>
         </div>
         <StyleImgContainer>

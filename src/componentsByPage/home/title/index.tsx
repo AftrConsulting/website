@@ -4,6 +4,7 @@ import { StyledTitle } from './style';
 interface ITitleProps {
 	className?: string;
 	children?: {};
+	marginBottom?: string;
 }
 
 /**
@@ -11,7 +12,9 @@ interface ITitleProps {
  * @param {ITitleProps} props - The props.
  */
 const Title = (props: ITitleProps): ReactElement => (
-    <StyledTitle className={props.className}>
+    <StyledTitle 
+        className={props.className} 
+        marginBottom={props.marginBottom}>
         {props.children}
     </StyledTitle>
 );

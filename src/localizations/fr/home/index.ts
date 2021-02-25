@@ -134,6 +134,13 @@ const frHomeLocale: typeof enHomeLocale = {
             subTitle: '3. Optimizations',
             title: 'Quisque suscipit tincidunt elit, ut ornare tortor.'
         }
+    },
+    talkExpert: {
+        button: 'Get A Free Quote Now',
+        description: `Suspendisse mauris odio, commodo vitae sagittis a, feugiat quis quam. Donec orci metus, tempor vitae varius in,
+					  porttitor sed ex. Proin et interdum nisl. Nullam ut lorem ut mauris dictum finibus.`,
+        subTitle: 'Talk to our experts',
+        title: 'Quisque suscipit tincidunt elit, ut ornare tortor.'
     }
 };
 
