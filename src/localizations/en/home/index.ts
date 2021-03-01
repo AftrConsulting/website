@@ -53,15 +53,15 @@ const enHomeLocale = {
             },
             {
                 description: 'Pellentesque laoreet nunc non enim rhoncus tristique. Nullam erat tortor, hendrerit.',
-                title: 'Databases'
-            },
-            {
-                description: 'Pellentesque laoreet nunc non enim rhoncus tristique. Nullam erat tortor, hendrerit.',
                 title: 'WordPress'
             },
             {
                 description: 'Pellentesque laoreet nunc non enim rhoncus tristique. Nullam erat tortor, hendrerit.',
-                title: 'laoreet laoreet'
+                title: 'Project Management'
+            },
+            {
+                description: 'Pellentesque laoreet nunc non enim rhoncus tristique. Nullam erat tortor, hendrerit.',
+                title: 'Databases'
             },
             {
                 description: 'Pellentesque laoreet nunc non enim rhoncus tristique. Nullam erat tortor, hendrerit.',
