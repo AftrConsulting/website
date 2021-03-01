@@ -20,52 +20,52 @@ const enHomeLocale = {
         },
         list: [
             {
-                description: 'Pellentesque laoreet nunc non enim rhoncus tristique. Nullam erat tortor, hendrerit.',
-                title: 'Lorem Ipsum'
+                description: 'Some tools that we use: React, TypeScript, Webpack, JavaScript.',
+                title: 'Front-End Development'
+            },
+            {
+                description: 'Our skills include: Mobile-First Design, Responsive Design, Branding, HTML/CSS.',
+                title: 'UX/UI Design'
             },
             {
                 description: 'Pellentesque laoreet nunc non enim rhoncus tristique. Nullam erat tortor, hendrerit.',
-                title: 'Lorem Ipsum'
+                title: 'Web Performance/Optimization'
+            },
+            {
+                description: 'We can help you improve your code quality by implemening various tools like Eslint.',
+                title: 'Code Standards'
             },
             {
                 description: 'Pellentesque laoreet nunc non enim rhoncus tristique. Nullam erat tortor, hendrerit.',
-                title: 'Lorem Ipsum'
+                title: 'Code Refactoring'
             },
             {
                 description: 'Pellentesque laoreet nunc non enim rhoncus tristique. Nullam erat tortor, hendrerit.',
-                title: 'Lorem Ipsum'
+                title: 'Unit Tests'
+            },
+            {
+                description: 'Do you have a nasty bug that you can\'t fix? We will help you.',
+                title: 'Debugging'
             },
             {
                 description: 'Pellentesque laoreet nunc non enim rhoncus tristique. Nullam erat tortor, hendrerit.',
-                title: 'Lorem Ipsum'
+                title: 'Search Engine Optimization'
             },
             {
                 description: 'Pellentesque laoreet nunc non enim rhoncus tristique. Nullam erat tortor, hendrerit.',
-                title: 'Lorem Ipsum'
+                title: 'Databases'
             },
             {
                 description: 'Pellentesque laoreet nunc non enim rhoncus tristique. Nullam erat tortor, hendrerit.',
-                title: 'Lorem Ipsum'
+                title: 'WordPress'
             },
             {
                 description: 'Pellentesque laoreet nunc non enim rhoncus tristique. Nullam erat tortor, hendrerit.',
-                title: 'Lorem Ipsum'
+                title: 'laoreet laoreet'
             },
             {
                 description: 'Pellentesque laoreet nunc non enim rhoncus tristique. Nullam erat tortor, hendrerit.',
-                title: 'Lorem Ipsum'
-            },
-            {
-                description: 'Pellentesque laoreet nunc non enim rhoncus tristique. Nullam erat tortor, hendrerit.',
-                title: 'Lorem Ipsum'
-            },
-            {
-                description: 'Pellentesque laoreet nunc non enim rhoncus tristique. Nullam erat tortor, hendrerit.',
-                title: 'Lorem Ipsum'
-            },
-            {
-                description: 'Pellentesque laoreet nunc non enim rhoncus tristique. Nullam erat tortor, hendrerit.',
-                title: 'Lorem Ipsum'
+                title: 'Back-End Development'
             }
         ],
         ps: 'Nulla dictum lacinia diam. Phasellus et pretium ligula. Ut elementum est quis congue eleifend.',
