@@ -111,7 +111,7 @@ const enHomeLocale = {
             }
         ],
         subTitle: 'what our clients are saying',
-        title: 'Pellentesque laoreet nunc non enim rhoncus tristique.'
+        title: 'We offer 100% of satisfaction to our clients.\u00A0🤩'
     },
     services: {
         step1: {
@@ -135,10 +135,10 @@ const enHomeLocale = {
     },
     talkExpert: {
         button: 'Get A Free Quote Now',
-        description: `Suspendisse mauris odio, commodo vitae sagittis a, feugiat quis quam. Donec orci metus, tempor vitae varius in,
-					  porttitor sed ex. Proin et interdum nisl. Nullam ut lorem ut mauris dictum finibus.`,
+        description: `We will provide you with all of the information, answer all your questions, 
+					  and even get you a free quote directly through our chat.`,
         subTitle: 'Talk to our experts',
-        title: 'Quisque suscipit tincidunt elit, ut ornare tortor.'
+        title: 'Shy? 🙈 Talk with an expert online.'
     }
 };
 
