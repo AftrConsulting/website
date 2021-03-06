@@ -14,6 +14,7 @@
 	"author": "Tim Mouskhelichvili",
 	"license": "ISC",
 	"dependencies": {
+		"@commitlint/config-conventional": "^12.0.1",
 		"@fortawesome/free-solid-svg-icons": "^5.15.2",
 		"cookie": "^0.4.1",
 		"js-cookie": "^2.2.1",
@@ -39,7 +40,6 @@
 		"@types/styled-components": "^5.1.7",
 		"@typescript-eslint/eslint-plugin": "^4.15.1",
 		"@typescript-eslint/parser": "^4.15.1",
-		"conventional-changelog-conventionalcommits": "^4.5.0",
 		"eslint": "^7.20.0",
 		"eslint-import-resolver-typescript": "^2.4.0",
 		"eslint-plugin-import": "^2.22.1",
