@@ -50,6 +50,7 @@
 	},
 	"husky": {
 		"hooks": {
+			"pre-commit": "npm test",
 			"commit-msg": "npm run verify"
 		}
 	}
