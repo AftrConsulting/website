@@ -16,11 +16,11 @@ const enHomeLocale = {
             description: `Schedule a free call to discuss what we can do for your project.
 						  We'll be able to share ideas, challenges and questions.
 						  We'll get back to you within two business days.`,
-            title: 'AFTRConsulting makes it happen. 🤝'
+            title: 'AFTRConsulting makes it happen.\u00A0🤝'
         },
         list: [
             {
-                description: 'Some tools that we use: React, TypeScript, Webpack, JavaScript.',
+                description: 'Some tools that we use: React, TypeScript, Webpack, JavaScript, GraphQL.',
                 title: 'Front-End Development'
             },
             {
@@ -32,45 +32,45 @@ const enHomeLocale = {
                 title: 'Web Performance/Optimization'
             },
             {
-                description: 'We can help you improve your code quality by implementing various tools and standards.',
+                description: 'We\'ll help you improve your code quality by implementing various tools and standards.',
                 title: 'Code Standards'
             },
             {
-                description: 'Pellentesque laoreet nunc non enim rhoncus tristique. Nullam erat tortor, hendrerit.',
+                description: 'Spaghetti code is hard to read and hard to maintain. We\'ll help you clean it up.',
                 title: 'Code Refactoring'
             },
             {
-                description: 'Pellentesque laoreet nunc non enim rhoncus tristique. Nullam erat tortor, hendrerit.',
+                description: 'We\'ll help you find bugs earlier and save time and money by implementing unit tests.',
                 title: 'Unit Tests'
             },
             {
-                description: 'Do you have a nasty bug that you can\'t fix? We will help you.',
+                description: 'Do you have a nasty bug that you cannot fix? We\'ll help you find the cause and solve it.',
                 title: 'Debugging'
             },
             {
-                description: 'Pellentesque laoreet nunc non enim rhoncus tristique. Nullam erat tortor, hendrerit.',
+                description: 'We\'ll help you improve the quantity and quality of your website traffic from Google.',
                 title: 'Search Engine Optimization'
             },
             {
-                description: 'Pellentesque laoreet nunc non enim rhoncus tristique. Nullam erat tortor, hendrerit.',
+                description: 'We\'ll help develop, improve and maintain a WordPress website.',
                 title: 'WordPress'
             },
             {
-                description: 'Pellentesque laoreet nunc non enim rhoncus tristique. Nullam erat tortor, hendrerit.',
-                title: 'Project Management'
+                description: 'We\'ll help you generate more leads and customers from your website.',
+                title: 'Conversion Rate Optimization'
             },
             {
-                description: 'Pellentesque laoreet nunc non enim rhoncus tristique. Nullam erat tortor, hendrerit.',
+                description: 'Our skills include: data modeling, database design, schema creation, MySQL',
                 title: 'Databases'
             },
             {
-                description: 'Pellentesque laoreet nunc non enim rhoncus tristique. Nullam erat tortor, hendrerit.',
+                description: 'Some tools and languages that we use: PHP, Node.js, Nginx, Docker, Kubernetes.',
                 title: 'Back-End Development'
             }
         ],
         ps: 'This list is not exhaustive, contact us if you need something special. We\'ll help you.',
         subTitle: 'Our Expertise',
-        title: 'We have all the skills for building great and modern web apps and sites.'
+        title: 'We have all the skills for building great modern web apps and sites.\u00A0🙏'
     },
     first: {
         text1: 'Hello 👋, do you want to transform your ideas into high performance modern web apps? ',
