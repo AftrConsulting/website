@@ -13,10 +13,10 @@ const enHomeLocale = {
     },
     expertises: {
         bookConsultation: {
-            description: `Donec rhoncus sodales purus, vitae mollis dui interdum vitae. 
-						  Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-						  Donec rhoncus sodales purus, vitae mollis dui interdum vitae.`,
-            title: 'Duis suscipit risus ut justo iaculis tempus.'
+            description: `Schedule a free call to discuss what we can do for your project.
+						  We'll be able to share ideas, challenges and questions.
+						  We'll get back to you within two business days.`,
+            title: 'AFTRConsulting makes it happen. 🤝'
         },
         list: [
             {
@@ -28,11 +28,11 @@ const enHomeLocale = {
                 title: 'UX/UI Design'
             },
             {
-                description: 'Pellentesque laoreet nunc non enim rhoncus tristique. Nullam erat tortor, hendrerit.',
+                description: 'We\'ll optimize your site to 100% in PageSpeed Insights and fix other performance issues.',
                 title: 'Web Performance/Optimization'
             },
             {
-                description: 'We can help you improve your code quality by implemening various tools like Eslint.',
+                description: 'We can help you improve your code quality by implementing various tools and standards.',
                 title: 'Code Standards'
             },
             {
@@ -68,13 +68,13 @@ const enHomeLocale = {
                 title: 'Back-End Development'
             }
         ],
-        ps: 'Nulla dictum lacinia diam. Phasellus et pretium ligula. Ut elementum est quis congue eleifend.',
+        ps: 'This list is not exhaustive, contact us if you need something special. We\'ll help you.',
         subTitle: 'Our Expertise',
-        title: 'Quisque suscipit tincidunt elit, ut ornare tortor.'
+        title: 'We have all the skills for building great and modern web apps and sites.'
     },
     first: {
-        text1: 'Lorem 3 ipsum dolor sit amet, consectetur adipiscing elit, consectetur adipiscing elit,',
-        text2: ' adipiscing elit dolor sit amet.'
+        text1: 'Hello 👋, do you want to transform your ideas into high performance modern web apps? ',
+        text2: 'We will help you.'
     },
     quotes: {
         from: ', of ',
