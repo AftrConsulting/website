@@ -137,7 +137,7 @@ const enHomeLocale = {
         button: 'Get A Free Quote Now',
         description: `We will provide you with all of the information, answer all your questions, 
 					  and even get you a free quote directly through our chat.`,
-        subTitle: 'Talk to our experts',
+        subTitle: 'Talk to us',
         title: 'Shy? 🙈 Talk with an expert online.'
     }
 };
