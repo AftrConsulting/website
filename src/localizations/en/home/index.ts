@@ -115,22 +115,22 @@ const enHomeLocale = {
     },
     services: {
         step1: {
-            description: `Suspendisse mauris odio, commodo vitae sagittis a, feugiat quis quam. Donec orci metus, tempor vitae varius in,
-			              porttitor sed ex. Proin et interdum nisl. Nullam ut lorem ut mauris dictum finibus.`,
+            description: `Everything starts here. We will together, create a custom-tailored flexible plan that will take
+			              all your requirements and questions into account. Also, you will get a quote adjusted to your budget.`,
             subTitle: '1. Consultation',
-            title: 'Quisque suscipit tincidunt elit, ut ornare tortor.'
+            title: 'We will evaluate your needs and create the best plan for YOU.\u00A0🥳'
         },
         step2: {
-            description: `Suspendisse mauris odio, commodo vitae sagittis a, feugiat quis quam. Donec orci metus, tempor vitae varius in,
-						  porttitor sed ex. Proin et interdum nisl. Nullam ut lorem ut mauris dictum finibus.`,
+            description: `We develop using the agile methodology, so you will be able to observe the progress in real-time. If needed, 
+			              we can make adjustments on the fly so the final product better reflects your vision.`,
             subTitle: '2. Development',
-            title: 'Quisque suscipit tincidunt elit, ut ornare tortor.'
+            title: 'We will develop the best modern web app or site for YOU.\u00A0😎'
         },
         step3: {
-            description: `Suspendisse mauris odio, commodo vitae sagittis a, feugiat quis quam. Donec orci metus, tempor vitae varius in,
-						  porttitor sed ex. Proin et interdum nisl. Nullam ut lorem ut mauris dictum finibus.`,
-            subTitle: '3. Optimizations',
-            title: 'Quisque suscipit tincidunt elit, ut ornare tortor.'
+            description: `Once the web app or site is up and running, we will make various optimizations to improve the website speed
+			              and conversion rate. Also, we will provide maintenance for your website.`,
+            subTitle: '3. Optimizations & Maintenance',
+            title: 'We will provide maintenance and optimizations for YOUR website.\u00A0😊'
         }
     },
     talkExpert: {

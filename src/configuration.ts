@@ -11,7 +11,7 @@ const configuration: IConfiguration = {
     },
     defaults: {
         primaryColor: allColors[0],
-        themeName: 'dark'
+        themeName: 'light'
     },
     env: {
         name: process.env.NODE_ENV
