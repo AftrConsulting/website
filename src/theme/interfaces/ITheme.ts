@@ -13,10 +13,8 @@ interface ITheme {
 			background: string;
 		};
 		footer: {
-			background: string;
-			borderColor: string;
-			color: string;
-		};
+            background: string;
+        };
 		header: {
 			iconColor: string;
 			logo: {
