@@ -1,9 +1,14 @@
 import React, { ReactElement } from 'react';
-import { MyLink } from '../link';
-import { StyledSection, StyledCopyright, StyledName, StyledMailLink, StyledMenu } from './style';
+import { StyledSection, StyledCopyright, StyledName, StyledMailLink, StyledMenu, StyledIcons } from './style';
+import { IIconDefinition } from 'src/components/icon/interfaces/IIconDefinition';
+import { iconLinkedIn } from 'src/componentsImg/footerLinkedIn';
+import { iconFacebook } from 'src/componentsImg/footerFacebook';
 import { IMenuLinkItem } from 'src/interfaces/IMenuLinkItem';
+import { iconGithub } from 'src/componentsImg/footerGithub';
 import { configuration } from 'src/configuration';
 import { useLocale } from 'src/localizations';
+import { MyLink } from 'src/components/link';
+import { Icon } from 'src/components/icon';
 import { Row } from 'src/components/row';
 
 /**
@@ -20,14 +25,17 @@ const Footer = (): ReactElement => {
                     <StyledName>
                         <img src={configuration.general.logo} />
                     </StyledName>
-                    <StyledMenu>
-                        {getMenu(locale.global.footer.menu)}
-                    </StyledMenu>
-                    <div>
+                    {getMenu(locale.global.footer.menu)}
+                    {getIcons([
+                        { href: configuration.general.github, icon: iconGithub },
+                        { href: configuration.general.linkedIn, icon: iconLinkedIn },
+                        { href: configuration.general.facebook, icon: iconFacebook }
+                    ])}
+                    {/* <div>
                         <StyledMailLink href={`mailto:${configuration.general.email}`}>
                             {configuration.general.email}
                         </StyledMailLink>
-                    </div>
+                    </div> */}
                 </Row>
             </StyledSection>
             <StyledCopyright>
@@ -38,20 +46,34 @@ const Footer = (): ReactElement => {
 };
 
 /**
+ * Returns the icons.
+ * @param {{ icon: IIconDefinition, href: string }[]} icons - The icons. 
+ */
+const getIcons = (icons: { icon: IIconDefinition, href: string }[]): ReactElement => (
+    <StyledIcons>
+        {icons.map((x, key): ReactElement => (
+            <a href={x.href} target={'_blank'} rel={'noreferrer'} key={key}>
+                <div>
+                    <Icon icon={x.icon} />
+                </div>
+            </a>
+        ))}
+    </StyledIcons>
+);
+
+/**
  * Returns the menu.
  * @param {IMenuLinkItem[]} menu - The menu. 
  */
-const getMenu = (menu: IMenuLinkItem[]): ReactElement => {
-    return (
-        <>
-            {menu.map((x, key): ReactElement => (
-                <MyLink href={x.href} key={key}>
-                    {x.title}
-                </MyLink>
-            ))}
-        </>
-    );
-};
+const getMenu = (menu: IMenuLinkItem[]): ReactElement => (
+    <StyledMenu>
+        {menu.map((x, key): ReactElement => (
+            <MyLink href={x.href} key={key}>
+                {x.title}
+            </MyLink>
+        ))}
+    </StyledMenu>
+);
 
 export {
     Footer

@@ -22,6 +22,10 @@ const darkTheme: ITheme = {
         },
         footer: {
             background: lighten(.05, colors.background),
+            icon: {
+                background: darken(.05, colors.background),
+                color: 'white'
+            },
             menuColor: lighten(.6, colors.background)
         },
         header: {

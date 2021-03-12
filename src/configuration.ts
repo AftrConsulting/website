@@ -19,6 +19,9 @@ const configuration: IConfiguration = {
     general: {
         consultation: 'https://calendly.com/t-mouskhelichvili/30min',
         email: 'info@aftrconsulting.com',
+        facebook: '',
+        github: 'https://github.com/AftrConsulting',
+        linkedIn: '',
         logo: '/static/images/headerLogo.png'
     },
     languages: [ 'en', 'fr' ]

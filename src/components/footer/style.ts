@@ -41,10 +41,35 @@ const StyledMenu = styled.div`
 	}
 `;
 
+const StyledIcons = styled.div`
+	a {
+		display: inline-block;
+		background: ${(p): string => p.theme.global.footer.icon.background};
+		height: 40px;
+		width: 40px;
+		margin: 0px 7.5px;
+		border-radius: ${(p): string => p.theme.global.borderRadius};
+
+		div {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 40px;
+			width: 40px;
+		}
+
+		svg {
+			font-size: 1.5em;
+			color: ${(p): string => p.theme.global.footer.icon.color};
+		}
+	}
+`;
+
 export {
     StyledCopyright,
     StyledSection,
     StyledName,
     StyledMailLink,
-    StyledMenu
+    StyledMenu,
+    StyledIcons
 };

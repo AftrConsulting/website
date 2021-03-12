@@ -15,6 +15,10 @@ interface ITheme {
 		footer: {
 			background: string;
 			menuColor: string;
+			icon: {
+                background: string;
+                color: string;
+            };
         };
 		header: {
 			iconColor: string;

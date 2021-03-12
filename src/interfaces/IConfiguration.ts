@@ -69,6 +69,21 @@ interface IConfiguration {
 		email: string;
 
 		/**
+		 * The github.
+		 */
+		github: string;
+
+		/**
+		 * The facebook.
+		 */
+		facebook: string;
+
+		/**
+		 * The linkedIn.
+		 */
+		linkedIn: string;
+
+		/**
 		 * The logo.
 		 */
 		logo: string;
