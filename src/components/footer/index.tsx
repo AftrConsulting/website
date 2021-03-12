@@ -23,7 +23,7 @@ const Footer = (): ReactElement => {
             <StyledSection>
                 <Row>
                     <StyledName>
-                        <img src={configuration.general.logo} />
+                        <img src={configuration.general.logo} height={'40px'} width={'100px'} />
                     </StyledName>
                     <StyledQuote>{locale.global.footer.quote}</StyledQuote>
                     {getMenu(locale.global.footer.menu)}

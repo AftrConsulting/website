@@ -26,7 +26,7 @@ const darkTheme: ITheme = {
                 background: colors.background,
                 color: 'white'
             },
-            menuColor: lighten(.6, colors.background)
+            menuColor: lighten(.8, colors.background)
         },
         header: {
             iconColor: lighten(.6, colors.background),

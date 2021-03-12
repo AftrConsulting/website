@@ -15,6 +15,7 @@ const StyledName = styled.div`
 
 		@media screen and (max-width: ${devices.mobile}) {
 			height: 30px;
+			width: 75px;
 		}
 	}
 `;
