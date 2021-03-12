@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import { StyledSection, StyledCopyright, StyledName, StyledMailLink, StyledMenu, StyledIcons } from './style';
+import { StyledSection, StyledCopyright, StyledName, StyledMailLink, StyledMenu, StyledIcons, StyledQuote } from './style';
 import { IIconDefinition } from 'src/components/icon/interfaces/IIconDefinition';
 import { iconLinkedIn } from 'src/componentsImg/footerLinkedIn';
 import { iconFacebook } from 'src/componentsImg/footerFacebook';
@@ -25,17 +25,18 @@ const Footer = (): ReactElement => {
                     <StyledName>
                         <img src={configuration.general.logo} />
                     </StyledName>
+                    <StyledQuote>{locale.global.footer.quote}</StyledQuote>
                     {getMenu(locale.global.footer.menu)}
+                    <div>
+                        <StyledMailLink href={`mailto:${configuration.general.email}`}>
+                            {configuration.general.email}
+                        </StyledMailLink>
+                    </div>
                     {getIcons([
                         { href: configuration.general.github, icon: iconGithub },
                         { href: configuration.general.linkedIn, icon: iconLinkedIn },
                         { href: configuration.general.facebook, icon: iconFacebook }
                     ])}
-                    {/* <div>
-                        <StyledMailLink href={`mailto:${configuration.general.email}`}>
-                            {configuration.general.email}
-                        </StyledMailLink>
-                    </div> */}
                 </Row>
             </StyledSection>
             <StyledCopyright>

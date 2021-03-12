@@ -6,7 +6,8 @@ const enLocale = {
         bookConsultation: 'Book a Free Call',
         footer: {
             copyright: 'All rights reserved. © {0}',
-            menu: enMenuFooter
+            menu: enMenuFooter,
+            quote: 'We transform your ideas into high performance modern web apps.'
         },
         goBack: 'Go Back',
         options: {

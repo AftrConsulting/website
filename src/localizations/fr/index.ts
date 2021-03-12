@@ -7,7 +7,8 @@ const frLocale: typeof enLocale = {
         bookConsultation: 'Prendre un rendez-vous',
         footer: {
             copyright: 'Tous droits réservés. © {0}',
-            menu: frMenuFooter
+            menu: frMenuFooter,
+            quote: 'Nous transformons vos idées en applications web modernes et performantes.'
         },
         goBack: 'Retourner',
         options: {

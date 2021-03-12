@@ -6,6 +6,7 @@ import { useSaveStateBeforeLanguageChange } from 'src/components/header/utils/ho
 import { setLanguage } from 'src/context/actions/locale';
 import { IState } from 'src/context/interfaces/IState';
 import { setHeader } from 'src/context/actions/header';
+import { configuration } from 'src/configuration';
 import { MyLink } from 'src/components/link';
 
 /**
@@ -33,7 +34,7 @@ const Logo = (): ReactElement => {
         <StyledLogoContainer>
             <MyLink href={'/'} onClick={close}>
                 <StyledName>
-                    <img src={'/static/images/headerLogo.png'} />
+                    <img src={configuration.general.logo} />
                 </StyledName>
             </MyLink>
             <StyledLanguage onClick={toggleLanguage}>
