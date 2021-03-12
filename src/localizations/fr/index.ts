@@ -1,10 +1,14 @@
+import { frMenuTop, frMenuFooter } from 'src/localizations/fr/menus';
 import { frHomeLocale } from 'src/localizations/fr/home';
-import { frMenu } from 'src/localizations/fr/menu';
 import { enLocale } from 'src/localizations/en';
 
 const frLocale: typeof enLocale = {
     global: {
         bookConsultation: 'Prendre un rendez-vous',
+        footer: {
+            copyright: 'Tous droits réservés. © {0}',
+            menu: frMenuFooter
+        },
         goBack: 'Retourner',
         options: {
             color: 'Couleurs',
@@ -17,7 +21,7 @@ const frLocale: typeof enLocale = {
             title: 'Le Français - Simple Usage Example'
         }
     },
-    menu: frMenu,
+    menu: frMenuTop,
     pages: {
         home: frHomeLocale
     }

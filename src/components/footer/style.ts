@@ -22,18 +22,29 @@ const StyledName = styled.div`
 	}
 `;
 
-const StyledSeparator = styled.div`
-	width: 40%;
-	max-width: 250px;
-	height: 5px;
-	background: 'white';
-	margin: 40px auto;
-	border-radius: 10px;
+const StyledMailLink = styled.a`
+	color: ${(p): string => p.theme.colors.primary};
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+`;
+
+const StyledMenu = styled.div`
+	margin-bottom: 20px;
+
+	a {
+		color: ${(p): string => p.theme.global.footer.menuColor};
+		display: inline-block;
+		padding: 0px 7.5px;
+	}
 `;
 
 export {
-    StyledSeparator,
     StyledCopyright,
     StyledSection,
-    StyledName
+    StyledName,
+    StyledMailLink,
+    StyledMenu
 };

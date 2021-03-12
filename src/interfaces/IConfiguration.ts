@@ -54,14 +54,24 @@ interface IConfiguration {
 	languages: string[];
 	
 	/**
-	 * The urls.
+	 * The general.
 	 */
-	urls: {
+	general: {
 
 		/**
 		 * The consultation.
 		 */
 		consultation: string;
+
+		/**
+		 * The email.
+		 */
+		email: string;
+
+		/**
+		 * The logo.
+		 */
+		logo: string;
 
     }
 

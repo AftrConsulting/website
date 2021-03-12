@@ -1,9 +1,13 @@
 import { enHomeLocale } from 'src/localizations/en/home';
-import { enMenu } from 'src/localizations/en/menu';
+import { enMenuTop, enMenuFooter } from 'src/localizations/en/menus';
 
 const enLocale = {
     global: {
         bookConsultation: 'Book a Free Call',
+        footer: {
+            copyright: 'All rights reserved. © {0}',
+            menu: enMenuFooter
+        },
         goBack: 'Go Back',
         options: {
             color: 'Colors',
@@ -16,7 +20,7 @@ const enLocale = {
             title: 'Simple Usage Example'
         }
     },
-    menu: enMenu,
+    menu: enMenuTop,
     pages: {
         home: enHomeLocale
     }
