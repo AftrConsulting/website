@@ -1,5 +1,6 @@
-import { enHomeLocale } from 'src/localizations/en/home';
 import { enMenuTop, enMenuFooter } from 'src/localizations/en/menus';
+import { enSitemapLocale } from 'src/localizations/en/sitemap';
+import { enHomeLocale } from 'src/localizations/en/home';
 
 const enLocale = {
     global: {
@@ -23,7 +24,8 @@ const enLocale = {
     },
     menu: enMenuTop,
     pages: {
-        home: enHomeLocale
+        home: enHomeLocale,
+        sitemap: enSitemapLocale
     }
 };
 

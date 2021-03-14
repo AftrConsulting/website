@@ -1,7 +1,9 @@
 const frSitemap = {
     home: {
         href: '/',
-        title: 'Home'
+        title: 'Home',
+        exclude: true,
+        home: true
     },
     about: { 
         href: '/about',
@@ -35,7 +37,8 @@ const frSitemap = {
     },
     sitemap: {
         href: '/sitemap',
-        title: 'Sitemap'
+        title: 'Sitemap',
+        exclude: true
     },
     termsOfUse: {
         href: '/conditions-dutilisation',
