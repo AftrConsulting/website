@@ -6,7 +6,7 @@ import { enLocale } from 'src/localizations/en';
 /**
  * The locales.
  */
-const locale = {
+const locales = {
     en: enLocale,
     fr: frLocale
 };
@@ -20,5 +20,5 @@ const useLocale = (): typeof enLocale => {
 
 export {
     useLocale,
-    locale
+    locales
 };

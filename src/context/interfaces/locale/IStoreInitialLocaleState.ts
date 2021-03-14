@@ -1,8 +1,8 @@
 import { enLocale } from 'src/localizations/en';
-import { locale } from 'src/localizations';
+import { locales } from 'src/localizations';
 
 interface IStoreInitialLocaleState {
-	language: keyof typeof locale;
+	language: keyof typeof locales;
 	locale: typeof enLocale;
 }
 

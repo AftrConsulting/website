@@ -1,5 +1,5 @@
 import { IMenuItem } from 'src/interfaces/IMenuItem';
-import { enSitemap } from 'src/sitemap/en';
+import { enSitemap } from 'config/sitemap/en';
 
 const enMenuTop: IMenuItem[] = [ 
     { 

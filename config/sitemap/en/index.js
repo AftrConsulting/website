@@ -1,4 +1,8 @@
 const enSitemap = {
+    home: {
+        href: '/',
+        title: 'Accueil'
+    },
     about: { 
         href: '/about',
         title: 'About'
@@ -39,6 +43,6 @@ const enSitemap = {
     }
 };
 
-export {
+module.exports = {
     enSitemap
 };

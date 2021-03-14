@@ -8,7 +8,7 @@ import { useSaveStateBeforeLanguageChange } from 'src/components/header/utils/ho
 import { Slider } from 'src/components/header/components/slider';
 import { setLanguage } from 'src/context/actions/locale';
 import { IState } from 'src/context/interfaces/IState';
-import { configuration } from 'src/configuration';
+import { locales } from 'src/localizations';
 
 /**
  * The Options component.
@@ -34,7 +34,7 @@ const Options = (): ReactElement => {
                 <StyledSubTitle>{locale.global.options.color}</StyledSubTitle>
                 <PrimaryColorsSwitch />
                 <StyledSubTitle>{locale.global.options.languages}</StyledSubTitle>
-                {configuration.languages.map((x: string, key: number): ReactElement => (
+                {Object.keys(locales).map((x: string, key: number): ReactElement => (
                     <StyledButton 
                         onClick={toggleLanguage(x)} 
                         active={language === x} 

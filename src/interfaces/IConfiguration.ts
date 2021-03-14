@@ -47,11 +47,6 @@ interface IConfiguration {
         name: string;
 	
 	}
-
-	/**
-	 * The languages.
-	 */
-	languages: string[];
 	
 	/**
 	 * The general.

@@ -23,8 +23,7 @@ const configuration: IConfiguration = {
         github: 'https://github.com/AftrConsulting',
         linkedIn: '',
         logo: '/static/images/headerLogo.png'
-    },
-    languages: [ 'en', 'fr' ]
+    }
 };
 
 export {

@@ -1,4 +1,8 @@
 const frSitemap = {
+    home: {
+        href: '/',
+        title: 'Home'
+    },
     about: { 
         href: '/about',
         title: 'À propos'
@@ -12,7 +16,7 @@ const frSitemap = {
         title: 'Portfolio' 
     },
     privacyPolicy: {
-        href: '/privacy-policy',
+        href: '/politique-de-confidentialite',
         title: 'Politique de confidentialité'
     },
     services: {
@@ -34,11 +38,11 @@ const frSitemap = {
         title: 'Sitemap'
     },
     termsOfUse: {
-        href: '/terms-and-condition',
+        href: '/conditions-dutilisation',
         title: 'Conditions d’utilisation'
     }
 };
 
-export {
+module.exports = {
     frSitemap
 };
