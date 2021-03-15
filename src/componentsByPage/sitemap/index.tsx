@@ -9,21 +9,19 @@ const routes = getSitemapRoutes(sitemapLocales);
  * The Sitemap routes.
  */
 const SitemapRoutes = (): ReactElement => (
-    <>
-        <StyledContainer>
-            {routes.map((x, key) => {
-                if (x.exclude) return null;
+    <StyledContainer>
+        {routes.map((x, key) => {
+            if (x.exclude) return null;
 					
-                return (
-                    <div key={key}>
-                        <StyledLink href={x.href}>
-                            {x.title}
-                        </StyledLink>
-                    </div>
-                );
-            })}
-        </StyledContainer>
-    </>
+            return (
+                <div key={key}>
+                    <StyledLink href={x.href}>
+                        {x.title}
+                    </StyledLink>
+                </div>
+            );
+        })}
+    </StyledContainer>
 );
 
 export {

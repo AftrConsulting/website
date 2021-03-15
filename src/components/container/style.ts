@@ -3,9 +3,14 @@ import { devices } from 'src/theme';
 
 const StyledContainer = styled.div`
 	padding-top: 60px;
+	min-height: 540px;
 
 	@media screen and (max-width: ${devices.mobile}) {
 		padding-top: 50px;
+	}
+
+	@media screen and (max-width: ${devices.smallTablet}) {
+		min-height: auto;
 	}
 `;
 

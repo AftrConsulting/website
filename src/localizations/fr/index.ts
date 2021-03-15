@@ -1,4 +1,5 @@
 import { frMenuTop, frMenuFooter } from 'src/localizations/fr/menus';
+import { frNotFoundLocale } from 'src/localizations/fr/notFound';
 import { frSitemapLocale } from 'src/localizations/fr/sitemap';
 import { frHomeLocale } from 'src/localizations/fr/home';
 import { enLocale } from 'src/localizations/en';
@@ -26,6 +27,7 @@ const frLocale: typeof enLocale = {
     menu: frMenuTop,
     pages: {
         home: frHomeLocale,
+        notFound: frNotFoundLocale,
         sitemap: frSitemapLocale
     }
 };
