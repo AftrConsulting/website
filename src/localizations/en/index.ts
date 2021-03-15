@@ -1,6 +1,4 @@
-import { enPrivacyPolicyLocale } from 'src/localizations/en/privacyPolicy';
 import { enMenuTop, enMenuFooter } from 'src/localizations/en/menus';
-import { enTermsOfUseLocale } from 'src/localizations/en/termsOfUse';
 import { enNotFoundLocale } from 'src/localizations/en/notFound';
 import { enSitemapLocale } from 'src/localizations/en/sitemap';
 import { enHomeLocale } from 'src/localizations/en/home';
@@ -29,9 +27,7 @@ const enLocale = {
     pages: {
         home: enHomeLocale,
         notFound: enNotFoundLocale,
-        privacyPolicy: enPrivacyPolicyLocale,
-        sitemap: enSitemapLocale,
-        termsOfUse: enTermsOfUseLocale
+        sitemap: enSitemapLocale
     }
 };
 

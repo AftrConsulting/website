@@ -1,3 +1,5 @@
+# Terms of Use
+
 The AFTRConsulting website located at [aftrconsulting.com](https://aftrconsulting.com) is a copyrighted work belonging to AFTRConsulting. Certain features of the Site may be subject to additional guidelines, terms, or rules, which will be posted on the Site in connection with such features.
 
 All such additional terms, guidelines, and rules are incorporated by reference into these Terms.
@@ -7,6 +9,7 @@ These Terms of Use described the legally binding terms and conditions that overs
 These terms require the use of arbitration Section 10.2 on an individual basis to resolve disputes and also limit the remedies available to you in the event of a dispute. These Terms of Use were created with the help of the Terms Of Use Generator and the Privacy Policy Generator.
 
 ### Access to the Site
+
 **Subject to these Terms.** Company grants you a non-transferable, non-exclusive, revocable, limited license to access the Site solely for your own personal, noncommercial use.
 
 **Certain Restrictions.** The rights approved to you in these Terms are subject to the following restrictions: (a) you shall not sell, rent, lease, transfer, assign, distribute, host, or otherwise commercially exploit the Site; (b) you shall not change, make derivative works of, disassemble, reverse compile or reverse engineer any part of the Site; (c) you shall not access the Site in order to build a similar or competitive website; and (d) except as expressly stated herein, no part of the Site may be copied, reproduced, distributed, republished, downloaded, displayed, posted or transmitted in any form or by any means unless otherwise indicated, any future release, update, or other addition to functionality of the Site shall be subject to these Terms.  All copyright and other proprietary notices on the Site must be retained on all copies thereof.
