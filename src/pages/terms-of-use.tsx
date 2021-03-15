@@ -1,21 +1,21 @@
 import React, { ReactElement } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { MarkdownContainer } from 'src/components/markdownContainer';
-import markdown from 'src/docs/pages/privacyPolicy.md';
+import markdown from 'src/docs/pages/termsOfUse.md';
 import { Container } from 'src/components/container';
 import { useLocale } from 'src/localizations';
 import { Row } from 'src/components/row';
 
 /**
- * The PrivacyPolicy component. 
+ * The TermsOfUse component. 
  */
-const PrivacyPolicy = (): ReactElement => {
+const TermsOfUse = (): ReactElement => {
     const locale = useLocale();
 	
     return (
         <Container>
             <Row>
-                <h1>{locale.pages.privacyPolicy.title}</h1>
+                <h1>{locale.pages.termsOfUse.title}</h1>
                 <MarkdownContainer>
                     <ReactMarkdown source={markdown} />
                 </MarkdownContainer>
@@ -24,4 +24,4 @@ const PrivacyPolicy = (): ReactElement => {
     );
 };
 
-export default PrivacyPolicy;
+export default TermsOfUse;
