@@ -6,6 +6,11 @@ const StyledMarkdownContainer = styled.div`
 
 	a {
 		color: ${(p): string => p.theme.colors.primary};
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 
 	p {
