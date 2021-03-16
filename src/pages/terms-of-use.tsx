@@ -5,9 +5,9 @@ import { Container } from 'src/components/container';
 import markdown from 'src/docs/pages/termsOfUse.md';
 import { Row } from 'src/components/row';
 
-export const config = { 
-    amp: 'hybrid' 
-};
+// export const config = { 
+//     amp: 'hybrid' 
+// };
 
 /**
  * The TermsOfUse component. 
