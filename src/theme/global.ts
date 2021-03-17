@@ -1,11 +1,12 @@
-import { ITheme } from 'src/theme/interfaces/ITheme';
+import { getGlobalThemes } from 'src/theme/utils';
+import { themes } from 'src/theme';
 
 /**
  * The global styles.
- * @param {ITheme} theme - The theme.
  */
-// eslint-disable-next-line max-lines-per-function
-const getGlobalStyles = (theme: ITheme): string => (`
+const globalStyles = `
+	${getGlobalThemes(themes)}
+
 	html, body {
 		font-family: -apple-system, system-ui, BlinkMacSystemFont, 
 					  Segoe UI, Roboto,Oxygen-Sans, Ubuntu, Cantarell, 
@@ -16,8 +17,8 @@ const getGlobalStyles = (theme: ITheme): string => (`
 		margin: 0;
 		padding: 0;
 		font-size: 16px;
-		color: ${theme.global.color};
-		background: ${theme.global.background};
+		color: var(--colors-color);
+		background: var(--colors-background);
 		letter-spacing: 0px;
 	}
 
@@ -56,8 +57,8 @@ const getGlobalStyles = (theme: ITheme): string => (`
 	[data-slider] {
 		display: none;
 	}
-`);
+`;
 
 export {
-    getGlobalStyles
+    globalStyles
 };

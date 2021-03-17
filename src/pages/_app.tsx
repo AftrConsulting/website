@@ -9,8 +9,7 @@ import { getThemeName, getTheme, getPrimaryColor } from 'src/theme/utils';
 import { SideMenu } from 'src/components/header/components/sideMenu';
 import { LoadingBar } from 'src/components/loadingBar';
 import { IState } from 'src/context/interfaces/IState';
-import { getGlobalStyles } from 'src/theme/global';
-import { configuration } from 'src/configuration';
+import { globalStyles } from 'src/theme/global';
 import { getStore } from 'src/context';
 
 interface IAppProps {
@@ -27,7 +26,11 @@ const MyApp = (props: IAppProps): ReactElement => {
     const router = useRouter();
     const store = getStore({
         language: router.locale,
-        theme: props.theme
+        theme: {
+            primaryColor: '#d64541',
+            theme: getTheme('#d64541', 'light'),
+            themeName: 'light'
+        }
     });
 
     return (
@@ -37,26 +40,26 @@ const MyApp = (props: IAppProps): ReactElement => {
     );
 };
 
-/**
- * Returns the initial props.
- * @param {DocumentContext} appContext - The app context.
- */
-MyApp.getInitialProps = async (appContext: AppContext): Promise<{}> => {
-    const appProps = await App.getInitialProps(appContext);
-    const cookies = parseCookies(appContext.ctx);
+// /**
+//  * Returns the initial props.
+//  * @param {DocumentContext} appContext - The app context.
+//  */
+// MyApp.getInitialProps = async (appContext: AppContext): Promise<{}> => {
+//     const appProps = await App.getInitialProps(appContext);
+//     const cookies = parseCookies(appContext.ctx);
 	
-    const themeName = getThemeName(cookies[configuration.cookies.theme]);
-    const primaryColor = getPrimaryColor(cookies[configuration.cookies.primaryColor]);
+//     const themeName = getThemeName(cookies[configuration.cookies.theme]);
+//     const primaryColor = getPrimaryColor(cookies[configuration.cookies.primaryColor]);
 
-    return { 
-        ...appProps,
-        theme: {
-            primaryColor,
-            theme: getTheme(primaryColor, themeName),
-            themeName
-        }
-    };
-};
+//     return { 
+//         ...appProps,
+//         theme: {
+//             primaryColor,
+//             theme: getTheme(primaryColor, themeName),
+//             themeName
+//         }
+//     };
+// };
 
 /**
  * The MyAppWithTheme component.
@@ -67,9 +70,7 @@ const MyAppWithTheme = (props: IAppProps): ReactElement => {
 
     return (
         <ThemeProvider theme={theme}>
-            <style>
-                {getGlobalStyles(theme)}
-            </style>
+            <style dangerouslySetInnerHTML={{ __html: globalStyles }} />
             <LoadingBar />
             <SideMenu />
             <props.Component {...props.pageProps} />

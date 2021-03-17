@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react';
 import Document, { Html, Head, Main, NextScript, DocumentContext, DocumentInitialProps } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
+import { configuration } from 'src/configuration';
 
 interface IMyDocumentProps {
     styleTags: string;
@@ -25,6 +26,21 @@ class MyDocument extends Document<IMyDocumentProps> {
             styleTags
         } as unknown as Promise<DocumentInitialProps>;
     }
+	
+	/**
+	 * Returns the theme HTML.
+	 */
+	private getThemeHTML = (): string => (
+	    `(function() {
+			var theme = localStorage.getItem('theme');
+
+			if (theme !== 'dark' && theme !== 'light') {
+				theme = '${configuration.defaults.themeName}';
+			}
+
+			document.documentElement.setAttribute('data-theme', theme);
+		})();`
+	);
 
     /**
      * The render method.
@@ -32,6 +48,11 @@ class MyDocument extends Document<IMyDocumentProps> {
     public render = (): ReactElement => (
         <Html>
             <Head>
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: this.getThemeHTML()
+                    }}
+                />
                 <link rel="shortcut icon" href="/static/images/logo.png" />
                 {this.props.styleTags}
             </Head>

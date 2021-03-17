@@ -46,7 +46,48 @@ const getPrimaryColor = (color?: string): string => {
     return color;
 };
 
+/**
+ * Returns the global theme.
+ * @param {{}} theme - The theme. 
+ * @param {{}} obj - The obj. 
+ * @param {string} stack - The stack. 
+ */
+const getGlobalTheme = (theme: {}, obj = {}, stack = '-'): {} => {
+    for (const i in theme) {
+        const name = `${stack}-${i}`;
+		
+        if (typeof theme[i] === 'string' && theme[i]) {
+            obj[name] = theme[i];
+        } else {
+            getGlobalTheme(theme[i], obj, name);
+        }
+    }
+	
+    return obj;
+};
+
+/**
+ * Returns the global themes.
+ * @param {{}} themes - The themes. 
+ */
+const getGlobalThemes = (themes: {}): string => {
+	let html = '';
+
+	for (let i in themes) {
+		const theme = getGlobalTheme(themes[i]);
+		html += `[data-theme="${i}"] {\n`;
+		for (let a in theme) {
+			html += `${a}: ${theme[a]};\n`;
+		}
+		html += '}\n';
+	}
+
+	return html;
+}
+
 export {
+	getGlobalThemes,
+	getGlobalTheme,
     getThemeName,
     getPrimaryColor,
     getTheme
