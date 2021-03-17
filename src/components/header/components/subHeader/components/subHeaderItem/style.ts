@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { getThemeVariable } from 'src/theme/utils';
 
 const StyledSubHeaderItemContainer = styled.div`
 	display: inline-block;
@@ -8,13 +9,13 @@ const StyledSubHeaderItemContainer = styled.div`
 		padding: 0px 1em;
 		line-height: 60px;
 		display: block;
-		color: ${(p): string => p.theme.colors.color};
+		color: ${getThemeVariable('colors.color')};
 		text-decoration: none;
 		cursor: pointer;
 		
 		@media (hover: hover) and (pointer: fine) {
 			&:hover {
-				color: ${(p): string => p.theme.colors.primary};
+				color: ${getThemeVariable('colors.primary')};
 			}
 		}
 

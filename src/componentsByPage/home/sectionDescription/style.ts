@@ -1,9 +1,10 @@
 import styled from 'styled-components';
+import { getThemeVariable } from 'src/theme/utils';
 import { Section } from 'src/components/section';
 import { devices } from 'src/theme';
 
 const StyledSection = styled(Section)`
-	background: ${(p): string => p.theme.pages.home.description.background};
+	background: ${getThemeVariable('pages.home.description.background')};
 `;
 
 const StyledItalicText = styled.div`
@@ -14,7 +15,7 @@ const StyledSeparator = styled.div`
 	width: 40%;
 	max-width: 250px;
 	height: 5px;
-	background: ${(p): string => p.theme.colors.primary};
+	background: ${getThemeVariable('colors.primary')};
 	margin: 40px auto;
 	border-radius: 10px;
 `;
@@ -25,10 +26,10 @@ const StyledIconContainer = styled.div<{ size: string; }>`
 	margin-right: 20px;
 
 	div {
-		background: ${(p): string => p.theme.colors.primary};
+		background: ${getThemeVariable('colors.primary')};
 		height: 60px;
 		width: 60px;
-		border-radius: ${(p): string => p.theme.global.borderRadius};
+		border-radius: ${getThemeVariable('global.borderRadius')};
 		display: flex;
 		align-items: center;
 		justify-content: center;

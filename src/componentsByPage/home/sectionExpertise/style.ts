@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 import { Paragraph } from 'src/componentsByPage/home/paragraph';
+import { getThemeVariable } from 'src/theme/utils';
 import { Section } from 'src/components/section';
 import { devices } from 'src/theme';
 
 const StyledSection = styled(Section)`
-	border-top: 1px solid ${(p): string => p.theme.global.borderColor};
+	border-top: 1px solid ${getThemeVariable('global.borderColor')};
 `;
 
 const StyledExpertiseContainer = styled.div`
@@ -13,8 +14,8 @@ const StyledExpertiseContainer = styled.div`
 	grid-template-columns: 1fr 1fr 1fr;
 
 	> div {
-		border-radius: ${(p): string => p.theme.global.borderRadius};
-		background: ${(p): string => p.theme.pages.home.expertises.cardBackground};
+		border-radius: ${getThemeVariable('global.borderRadius')};
+		background: ${getThemeVariable('pages.home.expertises.cardBackground')};
 		padding: 20px;
 	}
 
@@ -41,8 +42,8 @@ const StyledSeparator = styled.div`
 	margin-bottom: 30px;
 	margin-left: auto;
 	margin-right: auto;
-	background: ${(p): string => p.theme.colors.primary};
-	border-radius: ${(p): string => p.theme.global.borderRadius};
+	background: ${getThemeVariable('colors.primary')};
+	border-radius: ${getThemeVariable('global.borderRadius')};
 `;
 
 const StyledParagraph = styled(Paragraph)`

@@ -1,4 +1,4 @@
-import { getGlobalThemes } from 'src/theme/utils';
+import { getGlobalThemes, getThemeVariable } from 'src/theme/utils';
 import { themes } from 'src/theme';
 
 /**
@@ -17,8 +17,8 @@ const globalStyles = `
 		margin: 0;
 		padding: 0;
 		font-size: 16px;
-		color: var(--colors-color);
-		background: var(--colors-background);
+		color: ${getThemeVariable('colors.color')};
+		background: ${getThemeVariable('colors.background')};
 		letter-spacing: 0px;
 	}
 

@@ -1,18 +1,19 @@
 import styled from 'styled-components';
+import { getThemeVariable } from 'src/theme/utils';
 
 const SubHeaderItemWithSubMenuContainer = styled.div`
 	position: absolute;
-	background: ${(p): string => p.theme.colors.background};
-	border: 1px solid ${(p): string => p.theme.global.borderColor};
+	background: ${getThemeVariable('colors.background')};
+	border: 1px solid ${getThemeVariable('global.borderColor')};
 	top: 45px;
 	padding: 0px;
 
 	a {
 		display: block;
-		color: ${(p): string => p.theme.colors.color};
+		color: ${getThemeVariable('colors.color')};
 		padding: 10px 20px;
 		line-height: normal;
-		border-bottom: 1px solid ${(p): string => p.theme.global.borderColor};
+		border-bottom: 1px solid ${getThemeVariable('global.borderColor')};
 
 		&:last-of-type {
 			border-bottom: 0px;
@@ -20,7 +21,7 @@ const SubHeaderItemWithSubMenuContainer = styled.div`
 
 		@media (hover: hover) and (pointer: fine) {
 			&:hover {
-				color: ${(p): string => p.theme.colors.primary};
+				color: ${getThemeVariable('colors.primary')};
 			}
 		}
 

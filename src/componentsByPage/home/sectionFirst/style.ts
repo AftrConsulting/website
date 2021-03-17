@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { getThemeVariable } from 'src/theme/utils';
 import { Section } from 'src/components/section';
 import { CTA } from 'src/components/cta';
 import { Row } from 'src/components/row';
@@ -53,12 +54,12 @@ const StyledH1 = styled.h1`
 `;
 
 const StyledH1Span = styled.span`
-	color: ${(p): string => p.theme.colors.primary};
+	color: ${getThemeVariable('colors.primary')};
 `;
 
 const StyledButton = styled(CTA)`
-	border: 4px solid ${(p): string => p.theme.colors.primary};
-	color: ${(p): string => p.theme.colors.primary};
+	border: 4px solid ${getThemeVariable('colors.primary')};
+	color: ${getThemeVariable('colors.primary')};
 	font-size: 1.4em;
 	height: auto;
 	line-height: auto;

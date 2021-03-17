@@ -3,6 +3,7 @@ interface ITheme {
 		background: string;
 		color: string;
 		primary: string;
+		primaryHovered: string;
 	};
 	global: {
         background: string;

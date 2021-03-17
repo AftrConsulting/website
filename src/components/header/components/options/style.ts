@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { getThemeVariable } from 'src/theme/utils';
 
 const StyledTitle = styled.div`
 	padding: 20px 80px;
@@ -21,15 +22,15 @@ const StyledButton = styled.button<{ active: boolean; }>`
 	border: none;
 	display: inline-block;
 	padding: 7px 10px;
-	border-radius: ${(p): string => p.theme.global.borderRadius};
+	border-radius: ${getThemeVariable('global.borderRadius')};
 	margin-right: 10px;
-	color: ${(p): string => p.theme.global.color};
-	background: ${(p): string => p.theme.global.header.options.languages.background};
+	color: ${getThemeVariable('global.color')};
+	background: ${getThemeVariable('global.header.options.languages.background')};
 	cursor: pointer;
 
-	${(p): string => p.active ? 
-        `background: ${p.theme.colors.primary};
-		 color: ${p.theme.global.header.options.languages.activeColor};` 
+	${(p): string => p.active ?
+        `background: ${getThemeVariable('colors.primary')};
+		 color: ${getThemeVariable('global.header.options.languages.activeColor')};` 
 		 : ''}
 `;
 

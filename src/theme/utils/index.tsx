@@ -1,3 +1,4 @@
+import { RecursiveThemeKeyOf } from 'src/theme/types/RecursiveThemeKeyOf';
 import { ITheme } from 'src/theme/interfaces/ITheme';
 import { MyTheme } from 'src/theme/types/MyTheme';
 import { configuration } from 'src/configuration';
@@ -85,7 +86,16 @@ const getGlobalThemes = (themes: {}): string => {
 	return html;
 }
 
+/**
+ * Returns the theme variable.
+ * @param {RecursiveThemeKeyOf<ITheme>} theme - The theme. 
+ */
+const getThemeVariable = (theme: RecursiveThemeKeyOf<ITheme>): string => {
+	return `var(--${theme.replace(/\./g, '-')})`;
+}
+
 export {
+	getThemeVariable,
 	getGlobalThemes,
 	getGlobalTheme,
     getThemeName,

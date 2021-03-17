@@ -1,8 +1,9 @@
 import styled from 'styled-components';
+import { getThemeVariable } from 'src/theme/utils';
 import { Section } from 'src/components/section';
 
 const StyledSection = styled(Section)`
-	background: ${(p): string => p.theme.global.footer.background};
+	background: ${getThemeVariable('global.footer.background')};
 	text-align: center;
 `;
 
@@ -14,7 +15,7 @@ const StyledCopyright = styled.div`
 `;
 
 const StyledName = styled.div`
-	background: ${(p): string => p.theme.colors.primary};
+	background: ${getThemeVariable('colors.primary')};
 	display: inline-block;
 	margin-bottom: 20px;
 	user-select: none;
@@ -25,7 +26,7 @@ const StyledName = styled.div`
 `;
 
 const StyledMailLink = styled.a`
-	color: ${(p): string => p.theme.colors.primary};
+	color: ${getThemeVariable('colors.primary')};
 	text-decoration: none;
 
 	&:hover {
@@ -38,7 +39,7 @@ const StyledMenu = styled.div`
 	user-select: none;
 
 	a {
-		color: ${(p): string => p.theme.global.footer.menuColor};
+		color: ${getThemeVariable('global.footer.menuColor')};
 		display: inline-block;
 		padding: 2px 7.5px;
 	}
@@ -49,11 +50,11 @@ const StyledIcons = styled.div`
 
 	a {
 		display: inline-block;
-		background: ${(p): string => p.theme.global.footer.icon.background};
+		background: ${getThemeVariable('global.footer.icon.background')};
 		height: 40px;
 		width: 40px;
 		margin: 0px 7.5px;
-		border-radius: ${(p): string => p.theme.global.borderRadius};
+		border-radius: ${getThemeVariable('global.borderRadius')};
 
 		div {
 			display: flex;
@@ -65,7 +66,7 @@ const StyledIcons = styled.div`
 
 		svg {
 			font-size: 1.5em;
-			color: ${(p): string => p.theme.global.footer.icon.color};
+			color: ${getThemeVariable('global.footer.icon.color')};
 		}
 	}
 `;

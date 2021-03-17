@@ -1,7 +1,8 @@
 import styled from 'styled-components';
+import { getThemeVariable } from 'src/theme/utils';
 
 const StyledSideMenuItemContainer = styled.div`
-	border-bottom: 1px solid ${(p): string => p.theme.global.borderColor};
+	border-bottom: 1px solid ${getThemeVariable('global.borderColor')};
 
 	a, div {
 		display: block;
@@ -9,11 +10,11 @@ const StyledSideMenuItemContainer = styled.div`
 		text-decoration: none;
 		cursor: pointer;
 		position: relative;
-		color: ${(p): string => p.theme.global.color};
+		color: ${getThemeVariable('global.color')};
 
 		@media (hover: hover) and (pointer: fine) {
 			&:hover {
-				color: ${(p): string => p.theme.colors.primary};
+				color: ${getThemeVariable('colors.primary')};
 			}
 		}
 

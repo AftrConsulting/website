@@ -1,7 +1,8 @@
 import styled from 'styled-components';
+import { getThemeVariable } from 'src/theme/utils';
 
 const StyledLogoContainer = styled.div`
-	border-bottom: 1px solid ${(p): string => p.theme.global.borderColor};
+	border-bottom: 1px solid ${getThemeVariable('global.borderColor')};
 	padding: 10px;
 
 	& > div {

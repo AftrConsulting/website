@@ -1,7 +1,8 @@
 import styled from 'styled-components';
+import { getThemeVariable } from 'src/theme/utils';
 
 const StyledSliderContainer = styled.div<{ rightDirection?: boolean, open: boolean }>`
-    background: ${(p): string => p.theme.global.background};
+    background: ${getThemeVariable('global.background')};
     transition: transform .15s ease-out;
     will-change: transform;
     animation-fill-mode: forwards;
@@ -24,7 +25,7 @@ const StyledSliderContainer = styled.div<{ rightDirection?: boolean, open: boole
         return `
 			transform: translate3d(${x}, 0, 0);
 			${p.rightDirection ? 'right' : 'left'}: 0;
-			border-${p.rightDirection ? 'left' : 'right'}: 1px solid ${p.theme.global.header.sideMenu.borderColor};
+			border-${p.rightDirection ? 'left' : 'right'}: 1px solid ${getThemeVariable('global.header.sideMenu.borderColor')};
 		`;
     }
 }
@@ -39,7 +40,7 @@ const StyledSliderOpacity = styled.div<{ open: boolean }>`
 	top: 0;
 	width: 100%;
 	left: 0;
-    background: ${(p): string => p.theme.global.header.sideMenu.background};
+    background: ${getThemeVariable('global.header.sideMenu.background')};
     z-index: 10;
 	cursor: pointer;
 	visibility: hidden;

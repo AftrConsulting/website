@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 import { Paragraph } from 'src/componentsByPage/home/paragraph';
+import { getThemeVariable } from 'src/theme/utils';
 import { Section } from 'src/components/section';
 import { Icon } from 'src/components/icon';
 import { devices } from 'src/theme';
 
 const StyledSection = styled(Section)`
-	border-top: 1px solid ${(p): string => p.theme.global.borderColor};
+	border-top: 1px solid ${getThemeVariable('global.borderColor')};
 `;
 
 const StyledQuotesContainer = styled.div`
@@ -38,7 +39,7 @@ const StyledDescription = styled(Paragraph)`
 `;
 
 const StyledIcon = styled(Icon)`
-	color: ${(p): string => p.theme.pages.home.quotes.background}; 
+	color: ${getThemeVariable('pages.home.quotes.background')}; 
 	position: absolute;
 	font-size: 4em;
 	margin-top: -15px;

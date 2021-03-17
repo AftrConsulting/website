@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 import { Paragraph } from 'src/componentsByPage/home/paragraph';
+import { getThemeVariable } from 'src/theme/utils';
 import { CTA } from 'src/components/cta';
 import { devices } from 'src/theme';
 
 const StyledContainer = styled.div`
-	border-radius: ${(p): string => p.theme.global.borderRadius};
-	border: 4px solid ${(p): string => p.theme.colors.primary};
+	border-radius: ${getThemeVariable('global.borderRadius')};
+	border: 4px solid ${getThemeVariable('colors.primary')};
 	padding: 40px;
 	margin-top: 80px;
 	display: flex;

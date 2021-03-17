@@ -4,7 +4,8 @@ import { ITheme } from 'src/theme/interfaces/ITheme';
 const colors = {
     background: '#181e1f',
     color: '#f6fbfc',
-    primary: '' // Set by the store.
+    primary: '#d64541',
+    primaryHovered: darken(.1, '#d64541')
 };
 
 /**

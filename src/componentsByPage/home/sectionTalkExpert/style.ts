@@ -1,10 +1,11 @@
 import styled from 'styled-components';
+import { getThemeVariable } from 'src/theme/utils';
 import { Section } from 'src/components/section';
 import { Row } from 'src/components/row';
 import { devices } from 'src/theme';
 
 const StyledSection = styled(Section)`
-	border-top: 1px solid ${(p): string => p.theme.global.borderColor};
+	border-top: 1px solid ${getThemeVariable('global.borderColor')};
 `;
 
 const StyledCenter = styled(Row)`
@@ -38,9 +39,9 @@ const StyledCenter = styled(Row)`
 
 const StyledButton = styled.button`
 	background: transparent;
-	border: 4px solid ${(p): string => p.theme.colors.primary};
-	border-radius: ${(p): string => p.theme.global.borderRadius};
-	color: ${(p): string => p.theme.colors.primary};
+	border: 4px solid ${getThemeVariable('colors.primary')};
+	border-radius: ${getThemeVariable('global.borderRadius')};
+	color: ${getThemeVariable('colors.primary')};
 	font-size: 1.4em;
 	padding: 10px 25px;
 	cursor: pointer;

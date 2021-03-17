@@ -1,11 +1,12 @@
 import styled from 'styled-components';
+import { getThemeVariable } from 'src/theme/utils';
 import { devices } from 'src/theme';
 
 const StyledMarkdownContainer = styled.div`
 	margin-bottom: 40px;
 
 	a {
-		color: ${(p): string => p.theme.colors.primary};
+		color: ${getThemeVariable('colors.primary')};
 		text-decoration: none;
 
 		&:hover {

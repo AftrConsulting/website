@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { getThemeVariable } from 'src/theme/utils';
 import { devices } from 'src/theme';
 
 const StyledLogoContainer = styled.div`
@@ -7,7 +8,7 @@ const StyledLogoContainer = styled.div`
 `;
 
 const StyledName = styled.div`
-	background: ${(p): string => p.theme.colors.primary};
+	background: ${getThemeVariable('colors.primary')};
 	display: inline-block;
 
 	img {
@@ -21,9 +22,9 @@ const StyledName = styled.div`
 `;
 
 const StyledLanguage = styled.button`
-	background: ${(p): string => p.theme.global.header.logo.language.background};
-	color: ${(p): string => p.theme.global.header.logo.language.color};
-	border-radius: ${(p): string => p.theme.global.borderRadius};
+	background: ${getThemeVariable('global.header.logo.language.background')};
+	color: ${getThemeVariable('global.header.logo.language.color')};
+	border-radius: ${getThemeVariable('global.borderRadius')};
 	display: inline-block;
 	padding: 2px 5px;
 	vertical-align: bottom;
@@ -35,7 +36,7 @@ const StyledLanguage = styled.button`
 	text-align: center;
 	
 	&:hover {
-		background: ${(p): string => p.theme.global.header.logo.language.backgroundHover};
+		background: ${getThemeVariable('global.header.logo.language.backgroundHover')};
 	}
 `;
 

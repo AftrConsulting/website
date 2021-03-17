@@ -1,10 +1,11 @@
 import styled from 'styled-components';
+import { getThemeVariable } from 'src/theme/utils';
 import { Row } from 'src/components/row';
 import { devices } from 'src/theme';
 
 const StyledHeader = styled.div`
-	border-bottom: 1px solid ${(p): string => p.theme.global.borderColor};
-	background: ${(p): string => p.theme.global.background};
+	border-bottom: 1px solid ${getThemeVariable('global.borderColor')};
+	background: ${getThemeVariable('global.background')};
 	width: 100%;
 	height: 61px;
 	position: fixed;
@@ -36,9 +37,9 @@ const StyledButton = styled.button<{ open: boolean; }>`
 	padding: 0px 1em;
 	cursor: pointer;
 	font-size: 20px;
-	border-left: 1px solid ${(p): string => p.theme.global.borderColor};
-	border-right: 1px solid ${(p): string => p.theme.global.borderColor};
-	color: ${(p): string => p.theme.global.header.iconColor};
+	border-left: 1px solid ${getThemeVariable('global.borderColor')};
+	border-right: 1px solid ${getThemeVariable('global.borderColor')};
+	color: ${getThemeVariable('global.header.iconColor')};
 
 	svg {
 		animation-fill-mode: forwards;

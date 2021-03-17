@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Icon } from 'src/components/icon';
+import { getThemeVariable } from 'src/theme/utils';
 
 const SwitchContainerAll = styled.div`
 	display: inline-block;
@@ -13,12 +14,12 @@ const SwitchContainer = styled.div`
 const SwitchTrack = styled.div<{ checked: boolean }>`
 	width: 60px;
 	height: 30px;
-	background: ${(p): string => p.theme.global.darkModeSwitch.background};
+	background: ${getThemeVariable('global.darkModeSwitch.background')};
 	border-radius: 15px;
 	transition: all 150ms;
 
 	${(p): string => p.checked ? `
-		background: ${p.theme.colors.primary};
+		background: ${getThemeVariable('colors.primary')};
 	` : ''}
 `;
 
@@ -45,7 +46,7 @@ const SwitchButton = styled.div<{ checked: boolean }>`
 	width: 23px;
 	height: 23px;
 	border-radius: 50%;
-	background: ${(p): string => p.theme.global.color};
+	background: ${getThemeVariable('global.color')};
 	position: absolute;
 	top: 3px;
 	left: 3px;

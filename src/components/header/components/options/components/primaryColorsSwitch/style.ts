@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { getThemeVariable } from 'src/theme/utils';
 
 const StyledPrimaryColor = styled.div<{ primaryColor: string, active: boolean }>`
 	width: 35px;
@@ -8,7 +9,7 @@ const StyledPrimaryColor = styled.div<{ primaryColor: string, active: boolean }>
 	display: inline-block;
 	margin-right: 10px;
 	cursor: pointer;
-	color: ${(p): string => p.theme.global.primaryColors.color};
+	color: ${getThemeVariable('global.primaryColors.color')};
 	text-align: center;
 	vertical-align: top;
 
