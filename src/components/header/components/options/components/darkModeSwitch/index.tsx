@@ -1,16 +1,12 @@
-import React, { ReactElement } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React, { ReactElement, useState } from 'react';
 import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 import { SwitchContainerAll, SwitchContainer, SwitchTrack, SwitchInput, SwitchButton, SwitchIcon } from './style';
-import { IState } from 'src/context/interfaces/IState';
-import { setTheme } from 'src/context/actions/theme';
 
 /**
  * The DarkModeSwitch component.
  */
 const DarkModeSwitch = (): ReactElement => {
-    const { themeName } = useSelector((state: IState) => state.theme);
-    const dispatch = useDispatch();
+    const [ themeName ] = useState('light');
 	
     const checked = themeName === 'dark';
     const icon = checked ? faMoon : faSun;
@@ -18,8 +14,6 @@ const DarkModeSwitch = (): ReactElement => {
     const toggleTheme = (): void => {
         const newTheme = themeName === 'light' ? 
             'dark' : 'light';
-        const action = setTheme(newTheme);
-        dispatch(action);
     };
 	
     return (

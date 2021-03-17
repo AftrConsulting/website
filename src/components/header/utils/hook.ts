@@ -7,11 +7,9 @@ import { context } from "src/context";
  */
 const useSaveStateBeforeLanguageChange = (): [() => void, () => void] => {
 	const header = useSelector((state: IState) => state.header);
-	const theme = useSelector((state: IState) => state.theme);
 	
 	const save = () => {
 		context.header = header;
-    	context.theme = theme;
 	}
 
 	return [
@@ -25,7 +23,6 @@ const useSaveStateBeforeLanguageChange = (): [() => void, () => void] => {
  */
 const clearSavedState = () => {
 	context.header = null;
-	context.theme = null;
 }
 
 export {
