@@ -1,6 +1,7 @@
 import { RecursiveThemeKeyOf } from 'src/theme/types/RecursiveThemeKeyOf';
 import { ITheme } from 'src/theme/interfaces/ITheme';
 import { configuration } from 'src/configuration';
+import { MyTheme } from 'src/theme/types/MyTheme';
 
 /**
  * Returns the global theme.
@@ -60,11 +61,29 @@ const getThemeHTML = (): string => (
 			theme = '${configuration.defaults.themeName}';
 		}
 
-		document.documentElement.setAttribute('data-theme', theme);
+		document.documentElement.setAttribute('data-${configuration.localStorage.theme}', theme);
 	})();`
 );
 
+/**
+ * Returns the html theme attribute.
+ */
+const getHTMLThemeAttribute = (): string => {
+	return String(document.documentElement.getAttribute(`data-${configuration.localStorage.theme}`));
+}
+
+/**
+ * Sets the html theme attribute.
+ * @param {MyTheme} theme - The theme. 
+ */
+const setHTMLThemeAttribute = (theme: MyTheme): void => {
+	document.documentElement.setAttribute('data-theme', theme);
+	localStorage.setItem(configuration.localStorage.theme, theme);
+}
+
 export {
+	setHTMLThemeAttribute,
+	getHTMLThemeAttribute,
 	getThemeVariable,
 	getGlobalThemes,
 	getGlobalTheme,

@@ -1,7 +1,7 @@
 import React, { ReactElement, useEffect, useState } from 'react';
 import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 import { SwitchContainerAll, SwitchContainer, SwitchTrack, SwitchInput, SwitchButton, SwitchIcon } from './style';
-import { configuration } from 'src/configuration';
+import { getHTMLThemeAttribute, setHTMLThemeAttribute } from 'src/theme/utils';
 
 /**
  * The DarkModeSwitch component.
@@ -10,7 +10,7 @@ const DarkModeSwitch = (): ReactElement => {
     const [ themeName, setThemeName ] = useState('');
 	
     useEffect(() => {
-        setThemeName(String(document.documentElement.getAttribute('data-theme')));
+        setThemeName(getHTMLThemeAttribute());
     }, []);
 	
     const checked = themeName === 'dark';
@@ -18,8 +18,7 @@ const DarkModeSwitch = (): ReactElement => {
 	
     const toggleTheme = (): void => {
         const newTheme = themeName === 'light' ? 'dark' : 'light';
-        document.documentElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem(configuration.localStorage.theme, newTheme);
+        setHTMLThemeAttribute(newTheme);
         setThemeName(newTheme);
     };
 	
