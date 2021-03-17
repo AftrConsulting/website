@@ -5,10 +5,6 @@ import { allColors } from 'src/theme';
  * The configuration file.
  */
 const configuration: IConfiguration = {
-    cookies: {
-        primaryColor: 'primaryColor',
-        theme: 'theme'
-    },
     defaults: {
         primaryColor: allColors[0],
         themeName: 'light'
@@ -23,6 +19,10 @@ const configuration: IConfiguration = {
         github: 'https://github.com/AftrConsulting',
         linkedIn: '',
         logo: '/static/images/headerLogo.png'
+    },
+    localStorage: {
+        primaryColor: 'primaryColor',
+        theme: 'theme'
     }
 };
 

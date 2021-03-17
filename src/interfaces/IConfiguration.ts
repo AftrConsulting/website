@@ -1,23 +1,6 @@
 import { MyTheme } from 'src/theme/types/MyTheme';
 
 interface IConfiguration {
-
-	/**
-	 * The cookies.
-	 */
-	cookies: {
-	
-		/**
-		 * The theme cookie.
-		 */
-		theme: string;
-
-		/**
-		 * The primary color.
-		 */
-		primaryColor: string;
-	
-	}
 	
 	/**
 	 * The defaults.
@@ -83,7 +66,24 @@ interface IConfiguration {
 		 */
 		logo: string;
 
-    }
+	}
+	
+	/**
+	 * The localStorage.
+	 */
+	localStorage: {
+	
+		/**
+		 * The theme cookie.
+		 */
+		theme: string;
+
+		/**
+		 * The primary color.
+		 */
+		primaryColor: string;
+	
+	}
 
 }
 

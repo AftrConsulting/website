@@ -1,5 +1,6 @@
 import { RecursiveThemeKeyOf } from 'src/theme/types/RecursiveThemeKeyOf';
 import { ITheme } from 'src/theme/interfaces/ITheme';
+import { configuration } from 'src/configuration';
 
 /**
  * Returns the global theme.
@@ -48,8 +49,24 @@ const getThemeVariable = (theme: RecursiveThemeKeyOf<ITheme>): string => {
 	return `var(--${theme.replace(/\./g, '-')})`;
 }
 
+/**
+ * Returns the theme HTML.
+ */
+const getThemeHTML = (): string => (
+	`(function() {
+		var theme = localStorage.getItem('${configuration.localStorage.theme}');
+
+		if (theme !== 'dark' && theme !== 'light') {
+			theme = '${configuration.defaults.themeName}';
+		}
+
+		document.documentElement.setAttribute('data-theme', theme);
+	})();`
+);
+
 export {
 	getThemeVariable,
 	getGlobalThemes,
-	getGlobalTheme
+	getGlobalTheme,
+	getThemeHTML
 };
