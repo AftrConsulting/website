@@ -3,9 +3,7 @@ import { ITheme } from 'src/theme/interfaces/ITheme';
 
 const colors = {
     background: '#181e1f',
-    color: '#f6fbfc',
-    primary: '#d64541',
-    primaryHovered: darken(.1, '#d64541')
+    color: '#f6fbfc'
 };
 
 /**

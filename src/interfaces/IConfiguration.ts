@@ -8,9 +8,9 @@ interface IConfiguration {
 	defaults: {
 		
 		/**
-		 * The primary colors.
+		 * The primary.
 		 */
-		primaryColor: string;
+		primary: string;
 
 		/**
 		 * The theme name.
@@ -79,9 +79,9 @@ interface IConfiguration {
 		theme: string;
 
 		/**
-		 * The primary color.
+		 * The primary.
 		 */
-		primaryColor: string;
+		primary: string;
 	
 	}
 

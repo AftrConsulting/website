@@ -1,26 +1,32 @@
-import React, { ReactElement, useState } from 'react';
+import React, { ReactElement, useEffect, useState } from 'react';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { StyledPrimaryColor } from './style';
+import { getHTMLPrimaryAttribute, setHTMLPrimaryAttribute } from 'src/theme/utils';
 import { Icon } from 'src/components/icon';
-import { allColors } from 'src/theme';
+import { primaryColors } from 'src/theme';
 
 /**
  * The primary colors switch component.
  */
 const PrimaryColorsSwitch = (): ReactElement => {
-    const [ primaryColor ] = useState('');
+    const [ primary, setPrimaryState ] = useState('');
 
-    const changeColor = (newPrimaryColor: string) => (): void => {
-        console.log(newPrimaryColor);
+    useEffect(() => {
+        setPrimaryState(getHTMLPrimaryAttribute());
+    }, []);
+	
+    const changeColor = (color: string) => (): void => {
+        setHTMLPrimaryAttribute(color);
+        setPrimaryState(color);
     };
 
     return (
         <div>
-            {allColors.map((color, key) => (
+            {primaryColors.map((color, key) => (
                 <StyledPrimaryColor
                     onClick={changeColor(color)}
-                    active={color === primaryColor}
-                    primaryColor={color} 
+                    active={color === primary}
+                    primary={color} 
                     key={key}>
                     <Icon icon={faCheck} />
                 </StyledPrimaryColor>

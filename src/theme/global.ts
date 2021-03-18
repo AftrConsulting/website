@@ -1,11 +1,12 @@
-import { getGlobalThemes, getThemeVariable } from 'src/theme/utils';
-import { themes } from 'src/theme';
+import { getGlobalThemes, getThemeVariable, getGlobalColors } from 'src/theme/utils';
+import { primaryColors, themes } from 'src/theme';
 
 /**
  * The global styles.
  */
 const globalStyles = `
 	${getGlobalThemes(themes)}
+	${getGlobalColors(primaryColors)}
 
 	html, body {
 		font-family: -apple-system, system-ui, BlinkMacSystemFont, 

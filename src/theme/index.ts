@@ -10,6 +10,14 @@ const themes = {
 };
 
 /**
+ * The themes name.
+ */
+const themesName = [
+    'dark',
+    'light'
+];
+
+/**
  * The devices.
  */
 const devices = {
@@ -20,9 +28,9 @@ const devices = {
 };
 
 /**
- * All colors.
+ * All primary colors.
  */
-const allColors = [ 
+const primaryColors = [ 
     '#d64541',
     '#794bc4',
     '#f45d22',
@@ -33,5 +41,6 @@ const allColors = [
 export {
     themes,
     devices,
-    allColors
+    primaryColors,
+    themesName
 };

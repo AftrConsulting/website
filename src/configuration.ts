@@ -1,12 +1,12 @@
 import { IConfiguration } from 'src/interfaces/IConfiguration';
-import { allColors } from 'src/theme';
+import { primaryColors } from 'src/theme';
 
 /**
  * The configuration file.
  */
 const configuration: IConfiguration = {
     defaults: {
-        primaryColor: allColors[0],
+        primary: primaryColors[0],
         themeName: 'light'
     },
     env: {
@@ -21,7 +21,7 @@ const configuration: IConfiguration = {
         logo: '/static/images/headerLogo.png'
     },
     localStorage: {
-        primaryColor: 'primaryColor',
+        primary: 'primary',
         theme: 'theme'
     }
 };

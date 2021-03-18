@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import { getThemeVariable } from 'src/theme/utils';
 
-const StyledPrimaryColor = styled.div<{ primaryColor: string, active: boolean }>`
+const StyledPrimaryColor = styled.div<{ primary: string, active: boolean }>`
 	width: 35px;
 	height: 35px;
 	border-radius: 50%;
-	background: ${(p): string => p.primaryColor};
+	background: ${(p): string => p.primary};
 	display: inline-block;
 	margin-right: 10px;
 	cursor: pointer;
