@@ -13,6 +13,11 @@ declare namespace JSX {
 			height?: string;
 			width?: string;
 			alt?: string;
-		}
+		};
+		'amp-analytics': {
+			children: {};
+			type: string;
+			'data-credentials': string;
+		};
 	}
 }

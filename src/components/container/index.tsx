@@ -1,4 +1,5 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, useEffect } from 'react';
+import { useRouter } from 'next/router';
 import { StyledContainer } from './style';
 import { Analytics } from 'src/components/container/components/analytics';
 import { Chat } from 'src/components/container/components/chat';
@@ -15,6 +16,22 @@ interface IContainerProps {
  * @param {IContainerProps} props - The props. 
  */
 const Container = (props: IContainerProps): ReactElement => {
+    const router = useRouter();
+	
+    useEffect(() => {
+        const handleRouteChange = (): void => {
+            if (!window['gtag']) return;
+			
+            window['gtag']('event', 'page_view');
+        };
+		
+        router.events.on('routeChangeComplete', handleRouteChange);
+		  
+        return (): void => {
+            router.events.off('routeChangeComplete', handleRouteChange);
+        };
+    }, []);
+	
     const externals = getExternals();
 	
     return (

@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react';
 import Document, { Html, Head, Main, NextScript, DocumentContext, DocumentInitialProps } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
+import { AMPAnalyticsScript } from 'src/components/container/components/analytics';
 import { globalStyles } from 'src/theme/global';
 import { getThemeHTML } from 'src/theme/utils';
 
@@ -39,7 +40,8 @@ class MyDocument extends Document<IMyDocumentProps> {
             <Head>
                 <script dangerouslySetInnerHTML={{ __html: getThemeHTML() }} />
                 <style amp-custom={''} dangerouslySetInnerHTML={{ __html: this.props.styleHTML }} />
-                <link rel="shortcut icon" href="/static/images/logo.png" />
+                <link rel={'shortcut icon'} href={'/static/images/logo.png'} />
+                <AMPAnalyticsScript />
             </Head>
             <body>
                 <Main />
