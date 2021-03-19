@@ -52,9 +52,16 @@ interface IConfiguration {
 		github: string;
 
 		/**
-		 * The google ID.
+		 * The google.
 		 */
-		googleID: string;
+		google: {
+
+			/**
+			 * The universal google.
+			 */
+			universal: string;
+
+		}
 
 		/**
 		 * The facebook.

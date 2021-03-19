@@ -27,6 +27,15 @@ declare global {
 
 		}
 
+		ma?: {
+
+			/**
+			 * The track function.
+			 */
+			track: () => void;
+
+		}
+
 	}
 
 }

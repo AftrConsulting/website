@@ -17,7 +17,9 @@ const configuration: IConfiguration = {
         email: 'info@aftrconsulting.com',
         facebook: '',
         github: 'https://github.com/AftrConsulting',
-        googleID: 'G-X3M5NKS954',
+        google: {
+            universal: 'UA-192636657-1' 
+        },
         linkedIn: '',
         logo: '/static/images/headerLogo.png'
     },

@@ -20,9 +20,9 @@ const Container = (props: IContainerProps): ReactElement => {
 	
     useEffect(() => {
         const handleRouteChange = (): void => {
-            if (!window['gtag']) return;
-			
-            window['gtag']('event', 'page_view');
+            if (!window.ma) return;
+
+            window.ma.track();
         };
 		
         router.events.on('routeChangeComplete', handleRouteChange);
