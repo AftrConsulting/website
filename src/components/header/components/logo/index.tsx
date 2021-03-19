@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useRouter } from 'next/router';
 import { StyledName, StyledLanguage, StyledLogoContainer } from './style';
 import { useSaveStateBeforeLanguageChange } from 'src/components/header/utils/hook';
+import { CustomImage } from 'src/components/customImage';
 import { setLanguage } from 'src/context/actions/locale';
 import { IState } from 'src/context/interfaces/IState';
 import { setHeader } from 'src/context/actions/header';
@@ -34,7 +35,7 @@ const Logo = (): ReactElement => {
         <StyledLogoContainer>
             <MyLink href={'/'} onClick={close}>
                 <StyledName>
-                    <img src={configuration.general.logo} height={'40px'} width={'100px'} />
+                    <CustomImage src={configuration.general.logo} height={'40px'} width={'100px'} />
                 </StyledName>
             </MyLink>
             <StyledLanguage onClick={toggleLanguage}>

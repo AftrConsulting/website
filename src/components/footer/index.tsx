@@ -5,6 +5,7 @@ import { iconLinkedIn } from 'src/componentsImg/footerLinkedIn';
 import { iconFacebook } from 'src/componentsImg/footerFacebook';
 import { IMenuLinkItem } from 'src/interfaces/IMenuLinkItem';
 import { iconGithub } from 'src/componentsImg/footerGithub';
+import { CustomImage } from 'src/components/customImage';
 import { configuration } from 'src/configuration';
 import { useLocale } from 'src/localizations';
 import { MyLink } from 'src/components/link';
@@ -23,7 +24,7 @@ const Footer = (): ReactElement => {
             <StyledSection>
                 <Row>
                     <StyledName>
-                        <img src={configuration.general.logo} height={'40px'} width={'100px'} />
+                        <CustomImage src={configuration.general.logo} height={'40px'} width={'100px'} />
                     </StyledName>
                     <StyledQuote>{locale.global.footer.quote}</StyledQuote>
                     {getMenu(locale.global.footer.menu)}

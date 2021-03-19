@@ -52,10 +52,10 @@ const getRewrites = (sitemap) => {
 
 	for (let lang in newSitemap) {
 		for (let i in newSitemap[lang]) {
-			if (newSitemap[lang][i] !== enSitemap[i]) {
+			if (newSitemap[lang][i].href !== enSitemap[i].href) {
 				rewrites.push({
-					source: `/${lang}${newSitemap[lang][i]}`,
-					destination: `/${lang}${enSitemap[i]}`,
+					source: `/${lang}${newSitemap[lang][i].href}`,
+					destination: `/${lang}${enSitemap[i].href}`,
 					locale: false
 				});
 			}

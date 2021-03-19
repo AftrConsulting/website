@@ -3,7 +3,6 @@ import { Provider } from 'react-redux';
 import { useRouter } from 'next/router';
 import { SideMenu } from 'src/components/header/components/sideMenu';
 import { LoadingBar } from 'src/components/loadingBar';
-import { globalStyles } from 'src/theme/global';
 import { getStore } from 'src/context';
 
 interface IAppProps {
@@ -23,7 +22,6 @@ const MyApp = (props: IAppProps): ReactElement => {
 
     return (
         <Provider store={store}>
-            <style dangerouslySetInnerHTML={{ __html: globalStyles }} />
             <LoadingBar />
             <SideMenu />
             <props.Component {...props.pageProps} />
