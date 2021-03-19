@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import { useAmp } from 'next/amp';
 import { configuration } from 'src/configuration';
-import { isProduction } from 'src/utils';
+
 /**
  * The Analytics component.
  */
@@ -46,20 +46,6 @@ const getAMPAnalytics = (): ReactElement => (
     </>
 );
 
-/**
- * The AMPAnalyticsScript component. 
- */
-const AMPAnalyticsScript = (): ReactElement | null => {
-    const amp = useAmp();
-
-    if (!amp || !isProduction()) return null;
-
-    return (
-        <script async custom-element={'amp-analytics'} src={'https://cdn.ampproject.org/v0/amp-analytics-0.1.js'} />
-    );
-};
-
 export {
-    Analytics,
-    AMPAnalyticsScript
+    Analytics
 };

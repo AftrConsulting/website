@@ -1,9 +1,10 @@
 import React, { ReactElement } from 'react';
 import Document, { Html, Head, Main, NextScript, DocumentContext, DocumentInitialProps } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
-import { AMPAnalyticsScript } from 'src/components/container/components/analytics';
+import { AMPAnalyticsScript } from 'src/componentsByPage/document/ampAnalyticsScript';
+import { ThemeScript } from 'src/componentsByPage/document/themeScript';
+import { configuration } from 'src/configuration';
 import { globalStyles } from 'src/theme/global';
-import { getThemeHTML } from 'src/theme/utils';
 
 interface IMyDocumentProps {
     styleHTML: string;
@@ -36,9 +37,9 @@ class MyDocument extends Document<IMyDocumentProps> {
      * The render method.
      */
     public render = (): ReactElement => (
-        <Html>
+        <Html data-theme={configuration.defaults.themeName} data-primary={configuration.defaults.primary}>
             <Head>
-                <script dangerouslySetInnerHTML={{ __html: getThemeHTML() }} />
+                <ThemeScript />
                 <style amp-custom={''} dangerouslySetInnerHTML={{ __html: this.props.styleHTML }} />
                 <link rel={'shortcut icon'} href={'/static/images/logo.png'} />
                 <AMPAnalyticsScript />
