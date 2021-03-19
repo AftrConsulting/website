@@ -5,8 +5,6 @@ import markdown from 'src/docs/pages/privacyPolicy.md';
 import { Container } from 'src/components/container';
 import { Row } from 'src/components/row';
 
-export const config = { amp: 'hybrid' };
-
 /**
  * The PrivacyPolicy component. 
  */
