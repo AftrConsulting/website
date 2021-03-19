@@ -39,6 +39,12 @@ const getAMPAnalytics = (): ReactElement => (
 						"config" : {
 							"${configuration.general.googleID}": { "groups": "default" }
 						}
+					},
+					"triggers": {
+						"trackPageview": {
+							"on": "visible",
+							"request": "pageview"
+						}
 					}
 				}` 
             }} />
