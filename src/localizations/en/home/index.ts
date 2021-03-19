@@ -29,7 +29,7 @@ const enHomeLocale = {
             },
             {
                 description: 'We\'ll optimize your site to 100% in PageSpeed Insights and fix other performance issues.',
-                title: 'Web Performance/Optimization'
+                title: 'Web Performance & Optimization'
             },
             {
                 description: 'We\'ll help you improve your code quality by implementing various tools and standards.',

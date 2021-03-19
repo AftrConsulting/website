@@ -24,7 +24,15 @@ const StyledExpertiseContainer = styled.div`
 	}
 
 	@media screen and (max-width: ${devices.mobile}) {
-		grid-template-columns: 1fr;
+		display: block;
+
+		> div {
+			margin-top: 20px;
+
+			&:first-of-type {
+				margin-top: 0px;
+			}
+		}
 	}
 `;
 
