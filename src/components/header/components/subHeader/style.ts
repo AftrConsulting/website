@@ -13,8 +13,8 @@ const StyledSubHeaderContainer = styled.div`
 	}
 `;
 
-const StyledButtonContainer = styled.div`
-	padding: 0px 10px;
+const StyledButtonContainer = styled.div<{ amp?: boolean }>`
+	padding: 0px ${(p): string => p.amp ? '0px' : '10px'};
 
 	a {
 		@media screen and (max-width: ${devices.mobile}) {

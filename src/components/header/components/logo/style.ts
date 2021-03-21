@@ -2,9 +2,9 @@ import styled from 'styled-components';
 import { getThemeVariable } from 'src/theme/utils';
 import { devices } from 'src/theme';
 
-const StyledLogoContainer = styled.div`
+const StyledLogoContainer = styled.div<{ hideLanguage?: boolean; }>`
 	text-align: center;
-	padding: 0px 10px;
+	padding: 0px ${(p): string => p.hideLanguage ? '0px' : '10px'};
 `;
 
 const StyledName = styled.div`

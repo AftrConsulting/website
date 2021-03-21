@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react';
 import { faBars, faCog } from '@fortawesome/free-solid-svg-icons';
 import { useDispatch, useSelector } from 'react-redux';
+import { useAmp } from 'next/amp';
 import { StyledHeader, StyledButton, StyledHeaderRow } from './style';
 import { SubHeader } from 'src/components/header//components/subHeader';
 import { Options } from 'src/components/header/components/options';
@@ -14,6 +15,7 @@ import { Icon } from 'src/components/icon';
 const Header = (): ReactElement => {
     const { options, sideMenu } = useSelector((state: IState) => state.header);
     const dispatch = useDispatch();
+    const amp = useAmp();
 	
     const onSideMenuOpen = (): void => {
         dispatch(setHeader(true, 'sideMenu'));
@@ -27,13 +29,13 @@ const Header = (): ReactElement => {
         <>
             <StyledHeader>
                 <StyledHeaderRow>
-                    <StyledButton onClick={onSideMenuOpen} open={sideMenu}>
+                    {!amp && <StyledButton onClick={onSideMenuOpen} open={sideMenu}>
                         <Icon icon={faBars} />
-                    </StyledButton>
+                    </StyledButton>}
                     <SubHeader />
-                    <StyledButton onClick={onOptionsOpen} open={options}>
+                    {!amp && <StyledButton onClick={onOptionsOpen} open={options}>
                         <Icon icon={faCog} />
-                    </StyledButton>
+                    </StyledButton>}
                 </StyledHeaderRow>
             </StyledHeader>
             <Options />

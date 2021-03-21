@@ -10,10 +10,15 @@ import { setHeader } from 'src/context/actions/header';
 import { configuration } from 'src/configuration';
 import { MyLink } from 'src/components/link';
 
+interface ILogoProps {
+	hideLanguage?: boolean;
+}
+
 /**
  * The logo component.
+ * @param {ILogoProps} props - The props.
  */
-const Logo = (): ReactElement => {
+const Logo = (props: ILogoProps): ReactElement => {
     const router = useRouter();
     const dispatch = useDispatch();
     const { language } = useSelector((state: IState) => state.locale);
@@ -32,7 +37,7 @@ const Logo = (): ReactElement => {
     };
 	
     return (
-        <StyledLogoContainer>
+        <StyledLogoContainer hideLanguage={props.hideLanguage}>
             <MyLink href={'/'} onClick={close}>
                 <StyledName>
                     <CustomImage 
@@ -43,9 +48,9 @@ const Logo = (): ReactElement => {
                         heights={'(max-width: 700px) 30px'} />
                 </StyledName>
             </MyLink>
-            <StyledLanguage onClick={toggleLanguage}>
+            {!props.hideLanguage && <StyledLanguage onClick={toggleLanguage}>
                 {language}
-            </StyledLanguage>
+            </StyledLanguage>}
         </StyledLogoContainer>
     );
 };
