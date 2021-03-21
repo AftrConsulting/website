@@ -11,8 +11,9 @@ const StyledName = styled.div`
 	background: ${getThemeVariable('colors.primary')};
 	display: inline-block;
 
-	img {
+	img, amp-img {
 		height: 40px;
+		width: 100px;
 
 		@media screen and (max-width: ${devices.mobile}) {
 			height: 30px;

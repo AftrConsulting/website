@@ -35,7 +35,12 @@ const Logo = (): ReactElement => {
         <StyledLogoContainer>
             <MyLink href={'/'} onClick={close}>
                 <StyledName>
-                    <CustomImage src={configuration.general.logo} height={'40px'} width={'100px'} />
+                    <CustomImage 
+                        src={configuration.general.logo} 
+                        height={'40px'} 
+                        width={'100px'}
+                        layout={'responsive'}
+                        heights={'(max-width: 700px) 30px'} />
                 </StyledName>
             </MyLink>
             <StyledLanguage onClick={toggleLanguage}>

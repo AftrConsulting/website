@@ -13,7 +13,7 @@ declare global {
 		insights: {
 			init: (id: string) => void;
 			trackPages: () => void;
-		}
+		};
 
 		/**
 		 * The tawk.to api object.
@@ -25,16 +25,7 @@ declare global {
 			 */
 			maximize: () => void;
 
-		}
-
-		ma?: {
-
-			/**
-			 * The track function.
-			 */
-			track: () => void;
-
-		}
+		};
 
 	}
 
