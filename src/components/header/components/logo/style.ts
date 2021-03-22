@@ -5,6 +5,11 @@ import { devices } from 'src/theme';
 const StyledLogoContainer = styled.div<{ hideLanguage?: boolean; }>`
 	text-align: center;
 	padding: 0px ${(p): string => p.hideLanguage ? '0px' : '10px'};
+
+	${(p): string => p.hideLanguage ? 
+        `@media screen and (max-width: ${devices.tablet}) {
+			padding-left: 1em;
+		}` : ''}
 `;
 
 const StyledName = styled.div`

@@ -24,9 +24,11 @@ const StyledButtonContainer = styled.div<{ amp?: boolean }>`
 		}
 	}
 
-	@media screen and (max-width: ${devices.smallMobile}) {
-		display: none;
-	}
+	${(p): string => p.amp ? 
+        'padding-right: 1em;' :
+        `@media screen and (max-width: ${devices.smallMobile}) {
+			display: none;
+		}`}
 `;
 
 export {
