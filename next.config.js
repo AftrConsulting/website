@@ -27,6 +27,5 @@ module.exports = {
 		return config;
 	},
 	poweredByHeader: false,
-	compress: process.env.NODE_ENV !== 'production',
 	reactStrictMode: true
 };
