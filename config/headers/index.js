@@ -20,7 +20,7 @@ const headers = [
             },
             {
                 key: 'Permissions-Policy',
-                value: 'microphone "none"; geolocation "none"'
+                value: 'fullscreen=self'
             }
         ]
     }

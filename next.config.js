@@ -26,5 +26,6 @@ module.exports = {
 	
 		return config;
 	},
-	poweredByHeader: false
+	poweredByHeader: false,
+	compress: process.env.NODE_ENV !== 'production'
 };
