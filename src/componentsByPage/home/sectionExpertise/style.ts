@@ -55,7 +55,7 @@ const StyledSeparator = styled.div`
 `;
 
 const StyledParagraph = styled(Paragraph)`
-	font-size: .95em !important;
+	font-size: .95em;
 `;
 
 const StyledPS = styled.div`

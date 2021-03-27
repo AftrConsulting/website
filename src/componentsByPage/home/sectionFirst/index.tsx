@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react';
 import { StyledButton, StyledH1, StyledH1Span, StyledRow, StyleImgContainer, StyledSection } from './style';
 import { FirstSectionSVG } from 'src/componentsImg/firstSectionSVG';
+import { SpanText } from 'src/components/spanText';
 import { useLocale } from 'src/localizations';
 
 /**
@@ -14,7 +15,7 @@ const SectionFirst = (): ReactElement => {
             <StyledRow>
                 <div>
                     <StyledH1>
-                        {locale.pages.home.first.text1}
+                        <SpanText html={locale.pages.home.first.text1} />
                         <StyledH1Span>{locale.pages.home.first.text2}</StyledH1Span>
                     </StyledH1>
                     <StyledButton withIcon={true} />

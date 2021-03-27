@@ -1,5 +1,4 @@
 import React, { ReactElement } from 'react';
-import { useAmp } from 'next/amp';
 import { StyledSection, StyledCopyright, StyledName, StyledMailLink, StyledMenu, StyledIcons, StyledQuote } from './style';
 import { IIconDefinition } from 'src/components/icon/interfaces/IIconDefinition';
 import { iconLinkedIn } from 'src/componentsImg/footerLinkedIn';
@@ -17,7 +16,6 @@ import { Row } from 'src/components/row';
  * The Footer component.
  */
 const Footer = (): ReactElement => {
-    const amp = useAmp();
     const locale = useLocale();
     const year = String(new Date().getFullYear());
 	
@@ -29,21 +27,19 @@ const Footer = (): ReactElement => {
                         <CustomImage src={configuration.general.logo} height={'40px'} width={'100px'} />
                     </StyledName>
                     <StyledQuote>{locale.global.footer.quote}</StyledQuote>
-                    {!amp && (
-                        <>
-                            {getMenu(locale.global.footer.menu)}
-                            <div>
-                                <StyledMailLink href={`mailto:${configuration.general.email}`}>
-                                    {configuration.general.email}
-                                </StyledMailLink>
-                            </div>
-                            {getIcons([
-                                { href: configuration.general.github, icon: iconGithub },
-                                { href: configuration.general.linkedIn, icon: iconLinkedIn },
-                                { href: configuration.general.facebook, icon: iconFacebook }
-                            ])}
-                        </>
-                    )}
+                    <>
+                        {getMenu(locale.global.footer.menu)}
+                        <div>
+                            <StyledMailLink href={`mailto:${configuration.general.email}`}>
+                                {configuration.general.email}
+                            </StyledMailLink>
+                        </div>
+                        {getIcons([
+                            { href: configuration.general.github, icon: iconGithub },
+                            { href: configuration.general.linkedIn, icon: iconLinkedIn },
+                            { href: configuration.general.facebook, icon: iconFacebook }
+                        ])}
+                    </>
                 </Row>
             </StyledSection>
             <StyledCopyright>

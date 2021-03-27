@@ -3,7 +3,12 @@ const frSitemap = {
         href: '/',
         title: 'Home',
         exclude: true,
-        home: true
+        home: true,
+        seo: {
+            title: 'Développement et Consultations Applications Web - {COMPANY}',
+            description: `Nous transformons vos idées en applications Web modernes et performantes.
+			              Nous fournissons du développement et des consultations en React, TypeScript, PHP, Node.js.`
+        }
     },
     about: { 
         href: '/about',

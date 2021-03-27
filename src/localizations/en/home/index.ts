@@ -73,7 +73,8 @@ const enHomeLocale = {
         title: 'We have all the skills for building great modern web apps and sites.\u00A0🙏'
     },
     first: {
-        text1: 'Hello 👋, do you want to transform your ideas into high performance modern web apps? ',
+        text1: `Hello 👋, do you want to transform your ideas into <span style="text-decoration: underline;">high performance</span>
+		        modern web apps? `,
         text2: 'We will help you.'
     },
     quotes: {

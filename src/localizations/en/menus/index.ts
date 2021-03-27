@@ -2,15 +2,15 @@ import { IMenuItem } from 'src/interfaces/IMenuItem';
 import { enSitemap } from 'config/sitemap/en';
 
 const enMenuTop: IMenuItem[] = [ 
-    { 
-        subItems: [
-            enSitemap.services.service1,
-            enSitemap.services.service2,
-            enSitemap.services.service3,
-            enSitemap.services.service4
-        ],
-        title: 'Services'
-    },
+    // { 
+    //     subItems: [
+    //         enSitemap.services.service1,
+    //         enSitemap.services.service2,
+    //         enSitemap.services.service3,
+    //         enSitemap.services.service4
+    //     ],
+    //     title: 'Services'
+    // },
     enSitemap.portfolio,
     enSitemap.about,
     enSitemap.blog
