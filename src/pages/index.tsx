@@ -9,8 +9,6 @@ import { Container } from 'src/components/container';
 import { useLocale } from 'src/localizations';
 import { Seo } from 'src/components/seo';
 
-export const config = { amp: 'hybrid' };
-
 /**
  * The Home component.
  */
@@ -19,7 +17,7 @@ const Home = (): ReactElement => {
 	
     return (
         <Container>
-            <Seo {...locale.sitemap.home.seo} hasAmp={true} />
+            <Seo {...locale.sitemap.home.seo} />
             <SectionFirst />
             <SectionDescription />
             <SectionServices />
