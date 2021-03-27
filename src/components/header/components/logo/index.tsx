@@ -41,7 +41,8 @@ const Logo = (props: ILogoProps): ReactElement => {
             <MyLink href={'/'} onClick={close}>
                 <StyledName>
                     <CustomImage 
-                        src={configuration.general.logo} 
+                        src={configuration.general.logo}
+                        alt={'logo'}
                         height={'40px'} 
                         width={'100px'}
                         layout={'responsive'}

@@ -58,6 +58,10 @@ const globalStyles = `
 	[data-slider] {
 		display: none;
 	}
+
+	.underline {
+		text-decoration: underline;
+	}
 `;
 
 export {
