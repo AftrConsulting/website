@@ -19,7 +19,11 @@ const enSitemap = {
     },
     privacyPolicy: {
         href: '/privacy-policy',
-        title: 'Privacy Policy'
+        title: 'Privacy Policy',
+        seo: {
+            title: 'Privacy Policy - {COMPANY}',
+            description: 'Privacy Policy of AftrConsulting.'
+        }
     },
     services: {
         service1: {
@@ -42,7 +46,11 @@ const enSitemap = {
     },
     termsOfUse: {
         href: '/terms-of-use',
-        title: 'Terms of Use'
+        title: 'Terms of Use',
+        seo: {
+            title: 'Terms of Use - {COMPANY}',
+            description: 'Terms of Use of AftrConsulting.'
+        }
     }
 };
 

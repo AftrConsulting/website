@@ -3,6 +3,7 @@ import { frNotFoundLocale } from 'src/localizations/fr/notFound';
 import { frSitemapLocale } from 'src/localizations/fr/sitemap';
 import { frHomeLocale } from 'src/localizations/fr/home';
 import { enLocale } from 'src/localizations/en';
+import { frSitemap } from 'config/sitemap/fr';
 
 const frLocale: typeof enLocale = {
     global: {
@@ -29,7 +30,8 @@ const frLocale: typeof enLocale = {
         home: frHomeLocale,
         notFound: frNotFoundLocale,
         sitemap: frSitemapLocale
-    }
+    },
+    sitemap: frSitemap
 };
 
 export {

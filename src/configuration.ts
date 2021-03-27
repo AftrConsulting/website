@@ -1,10 +1,9 @@
-import { IConfiguration } from 'src/interfaces/IConfiguration';
 import { primaryColors } from 'src/theme';
 
 /**
  * The configuration file.
  */
-const configuration: IConfiguration = {
+const configuration = {
     defaults: {
         primary: primaryColors[0],
         themeName: 'light'
@@ -13,6 +12,7 @@ const configuration: IConfiguration = {
         name: process.env.NODE_ENV
     },
     general: {
+        baseUrl: 'https://aftrconsulting.com',
         consultation: 'https://calendly.com/t-mouskhelichvili/30min',
         email: 'info@aftrconsulting.com',
         facebook: '',

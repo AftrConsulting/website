@@ -19,7 +19,11 @@ const frSitemap = {
     },
     privacyPolicy: {
         href: '/politique-de-confidentialite',
-        title: 'Politique de confidentialité'
+        title: 'Politique de confidentialité',
+        seo: {
+            title: 'Politique de confidentialité - {COMPANY}',
+            description: 'La polique de confidentialité de AftrConsulting.'
+        }
     },
     services: {
         service1: {
@@ -42,7 +46,11 @@ const frSitemap = {
     },
     termsOfUse: {
         href: '/conditions-dutilisation',
-        title: 'Conditions d’utilisation'
+        title: 'Conditions d’utilisation',
+        seo: {
+            title: 'Conditions d’utilisation - {COMPANY}',
+            description: 'Les Conditions d’utilisation de AftrConsulting.'
+        }
     }
 };
 
