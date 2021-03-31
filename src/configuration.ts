@@ -20,7 +20,7 @@ const configuration = {
         google: {
             universal: 'UA-192636657-1' 
         },
-        linkedIn: '',
+        linkedIn: 'https://www.linkedin.com/company/aftrconsulting',
         logo: '/static/images/headerLogo.png'
     },
     localStorage: {
