@@ -13,8 +13,7 @@ const enHomeLocale = {
     expertises: {
         bookConsultation: {
             description: `Schedule a free call to discuss what we can do for your project.
-						  We'll be able to share ideas, challenges, and questions.
-						  We'll get back to you within two business days.`,
+						  We'll be able to share ideas, answer your questions and provide you a quote adjusted to your budget.`,
             title: 'AFTRConsulting makes it happen.\u00A0🤝'
         },
         list: [
@@ -116,7 +115,7 @@ const enHomeLocale = {
     services: {
         step1: {
             description: `Everything starts here. Together, we will create a custom-tailored flexible plan that will take
-			              all your requirements and questions into account. Also, you will get a quote (adjusted to your budget).`,
+			              all your requirements and questions into account. Also, you will get a quote adjusted to your budget.`,
             subTitle: '1. Consultation',
             title: 'We will evaluate your needs and create the best plan for YOU.\u00A0🥳'
         },
