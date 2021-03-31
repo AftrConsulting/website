@@ -6,7 +6,7 @@ const enSitemap = {
         home: true,
         seo: {
             title: 'Web Apps Development And Consultations - {COMPANY}',
-            description: `We transform your ideas into high performance modern web apps. 
+            description: `We transform your ideas into high-performance modern web apps. 
 			              We provide React, TypeScript, PHP, Node.js development and consultations.`
         }
     },

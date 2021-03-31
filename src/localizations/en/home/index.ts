@@ -7,13 +7,13 @@ const enHomeLocale = {
 				We provide a vast collection of services in the web sphere, from development to consulting. 
 				Our team is dedicated to providing the best and <span class="underline">most affordable web services</span> 
 				for our clients.`,
-        text2: '“We don\'t just sell web apps, we create web apps that SELL.”',
+        text2: 'We don\'t just sell web apps, we create web apps that SELL.',
         title: 'We help businesses transform themselves.'
     },
     expertises: {
         bookConsultation: {
             description: `Schedule a free call to discuss what we can do for your project.
-						  We'll be able to share ideas, challenges and questions.
+						  We'll be able to share ideas, challenges, and questions.
 						  We'll get back to you within two business days.`,
             title: 'AFTRConsulting makes it happen.\u00A0🤝'
         },
@@ -115,19 +115,19 @@ const enHomeLocale = {
     },
     services: {
         step1: {
-            description: `Everything starts here. We will together, create a custom-tailored flexible plan that will take
+            description: `Everything starts here. Together, we will create a custom-tailored flexible plan that will take
 			              all your requirements and questions into account. Also, you will get a quote (adjusted to your budget).`,
             subTitle: '1. Consultation',
             title: 'We will evaluate your needs and create the best plan for YOU.\u00A0🥳'
         },
         step2: {
-            description: `We develop using the agile methodology, so you will be able to observe the progress in real-time. If needed, 
-			              we can make adjustments on the fly so the final product better reflects your vision.`,
+            description: `We develop using the agile methodology, so you will be able to observe the progress in real-time. 
+						  If needed, we can make adjustments on the fly therefore, the final product better reflects your vision.`,
             subTitle: '2. Development',
             title: 'We will develop the best modern web app for YOU.\u00A0😎'
         },
         step3: {
-            description: `Once the web app is up and running, we will make various optimizations to improve the website speed
+            description: `When the web app is deployed, we will make various optimizations to improve the website speed
 			              and conversion rate. Also, we will provide maintenance for your website.`,
             subTitle: '3. Optimizations & Maintenance',
             title: 'We will provide maintenance and optimizations for YOUR website.\u00A0😊'
