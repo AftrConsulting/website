@@ -13,7 +13,7 @@ const configuration = {
     },
     general: {
         baseUrl: 'https://aftrconsulting.com',
-        consultation: 'https://calendly.com/t-mouskhelichvili/30min',
+        consultation: 'https://calendly.com/aftrconsulting/30min',
         email: 'info@aftrconsulting.com',
         facebook: '',
         github: 'https://github.com/AftrConsulting',
