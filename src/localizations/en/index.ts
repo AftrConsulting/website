@@ -13,6 +13,13 @@ const enLocale = {
             quote: 'We transform your ideas into high performance modern web apps.'
         },
         goBack: 'Go Back',
+        hrefs: {
+            email: 'Send us an email',
+            facebook: 'Go to Facebook',
+            github: 'Go to Github',
+            linkedIn: 'Go to LinkedIn',
+            logo: 'Go to main page'
+        },
         options: {
             color: 'Colors',
             darkMode: 'Dark Mode',

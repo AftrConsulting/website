@@ -17,7 +17,7 @@ const SubHeaderItem = (props: ISubHeaderItemProps): ReactElement => {
         <StyledSubHeaderItemContainer>
             {props.element.subItems ? 
                 <SubHeaderItemWithSubMenu {...props} /> : 
-                <MyLink href={props.element.href as string}>
+                <MyLink href={props.element.href as string} title={props.element.title}>
                     {props.element.title}
                 </MyLink>}
         </StyledSubHeaderItemContainer>

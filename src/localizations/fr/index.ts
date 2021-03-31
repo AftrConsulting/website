@@ -14,6 +14,13 @@ const frLocale: typeof enLocale = {
             quote: 'Nous transformons vos idées en applications web modernes et performantes.'
         },
         goBack: 'Retourner',
+        hrefs: {
+            email: 'Envoyez-nous un e-mail',
+            facebook: 'Aller à Facebook',
+            github: 'Aller à Github',
+            linkedIn: 'Aller à LinkedIn',
+            logo: 'Aller à la page principale'
+        },
         options: {
             color: 'Couleurs',
             darkMode: 'Mode Sombre',

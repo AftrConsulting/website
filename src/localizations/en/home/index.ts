@@ -1,15 +1,14 @@
 const enHomeLocale = {
     description: {
         subTitle: 'Who We Are',
-        text1: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-				Donec rhoncus sodales purus, vitae mollis dui interdum vitae. Donec rhoncus sodales purus, vitae 
-				mollis dui interdum vitae.  Donec rhoncus sodales purus, vitae mollis dui interdum vitae. 
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus sodales purus, vitae mollis dui interdum vitae. 
-				Ut viverra turpis non tortor sollicitudin convallis.`,
-        text2: `Duis suscipit risus ut justo iaculis tempus. Quisque luctus metus lacus, 
-				ultrices consequat turpis dignissim id. Nulla justo nisl, blandit ut posuere 
-				ac, pulvinar eget mi.`,
-        title: 'In hac habitasse platea dictumst. Ut posuere ante in est dapibus lacinia.'
+        text1: `We are AftrConsulting, a team with a passion for helping clients transform their businesses. 
+				We create the <span class="underline">best web apps</span> that will help you grow your business, 
+				attract new customers, and increase your profits.
+				We provide a vast collection of services in the web sphere, from development to consulting. 
+				Our team is dedicated to providing the best and <span class="underline">most affordable web services</span> 
+				for our clients.`,
+        text2: '“We don\'t just sell web apps, we create web apps that SELL.”',
+        title: 'We help businesses transform themselves.'
     },
     expertises: {
         bookConsultation: {
@@ -117,7 +116,7 @@ const enHomeLocale = {
     services: {
         step1: {
             description: `Everything starts here. We will together, create a custom-tailored flexible plan that will take
-			              all your requirements and questions into account. Also, you will get a quote adjusted to your budget.`,
+			              all your requirements and questions into account. Also, you will get a quote (adjusted to your budget).`,
             subTitle: '1. Consultation',
             title: 'We will evaluate your needs and create the best plan for YOU.\u00A0🥳'
         },
@@ -125,10 +124,10 @@ const enHomeLocale = {
             description: `We develop using the agile methodology, so you will be able to observe the progress in real-time. If needed, 
 			              we can make adjustments on the fly so the final product better reflects your vision.`,
             subTitle: '2. Development',
-            title: 'We will develop the best modern web app or site for YOU.\u00A0😎'
+            title: 'We will develop the best modern web app for YOU.\u00A0😎'
         },
         step3: {
-            description: `Once the web app or site is up and running, we will make various optimizations to improve the website speed
+            description: `Once the web app is up and running, we will make various optimizations to improve the website speed
 			              and conversion rate. Also, we will provide maintenance for your website.`,
             subTitle: '3. Optimizations & Maintenance',
             title: 'We will provide maintenance and optimizations for YOUR website.\u00A0😊'

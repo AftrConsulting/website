@@ -8,6 +8,7 @@ import { SideBySide } from 'src/componentsByPage/home/sideBySide';
 import { Paragraph } from 'src/componentsByPage/home/paragraph';
 import { SubTitle } from 'src/componentsByPage/home/subTitle';
 import { Title } from 'src/componentsByPage/home/title';
+import { SpanText } from 'src/components/spanText';
 import { useLocale } from 'src/localizations';
 
 /**
@@ -30,7 +31,9 @@ const SectionDescription = (): ReactElement => {
                     </StyledIconAllContainer>
                 </div>
                 <Paragraph>
-                    <div>{locale.pages.home.description.text1}</div>
+                    <div>
+                        <SpanText html={locale.pages.home.description.text1} />
+                    </div>
                     <StyledSeparator />
                     <StyledItalicText>{locale.pages.home.description.text2}</StyledItalicText>
                 </Paragraph>

@@ -9,6 +9,7 @@ import { IState } from 'src/context/interfaces/IState';
 import { setHeader } from 'src/context/actions/header';
 import { configuration } from 'src/configuration';
 import { MyLink } from 'src/components/link';
+import { useLocale } from 'src/localizations';
 
 interface ILogoProps {
 	hideLanguage?: boolean;
@@ -21,6 +22,8 @@ interface ILogoProps {
 const Logo = (props: ILogoProps): ReactElement => {
     const router = useRouter();
     const dispatch = useDispatch();
+    const locale = useLocale();
+	
     const { language } = useSelector((state: IState) => state.locale);
     const [ saveState ] = useSaveStateBeforeLanguageChange();
 	
@@ -38,7 +41,7 @@ const Logo = (props: ILogoProps): ReactElement => {
 	
     return (
         <StyledLogoContainer hideLanguage={props.hideLanguage}>
-            <MyLink href={'/'} onClick={close}>
+            <MyLink href={'/'} onClick={close} title={locale.global.hrefs.logo}>
                 <StyledName>
                     <CustomImage 
                         src={configuration.general.logo}

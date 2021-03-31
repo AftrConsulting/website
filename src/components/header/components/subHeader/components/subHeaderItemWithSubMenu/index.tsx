@@ -26,7 +26,7 @@ const SubHeaderItemWithSubMenu = (props: ISubHeaderItemWithSubMenuProps): ReactE
             {open &&
 				<SubHeaderItemWithSubMenuContainer>
 				    {props.element.subItems?.map((x, key) => (
-				        <MyLink href={x.href} key={key} onClick={onClose}>
+				        <MyLink href={x.href} key={key} onClick={onClose} title={x.title}>
 				            {x.title}
 				        </MyLink>
 				    ))}

@@ -9,6 +9,7 @@ const StyledSection = styled(Section)`
 
 const StyledItalicText = styled.div`
 	font-style: italic;
+	text-align: center;
 `;
 
 const StyledSeparator = styled.div`

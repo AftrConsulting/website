@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import { StyledSection, StyledCopyright, StyledName, StyledMailLink, StyledMenu, StyledIcons, StyledQuote } from './style';
-import { IIconDefinition } from 'src/components/icon/interfaces/IIconDefinition';
+import { IFooterIcon } from 'src/components/footer/interfaces/IFooterIcon';
 import { iconLinkedIn } from 'src/componentsImg/footerLinkedIn';
 import { iconFacebook } from 'src/componentsImg/footerFacebook';
 import { IMenuLinkItem } from 'src/interfaces/IMenuLinkItem';
@@ -30,14 +30,14 @@ const Footer = (): ReactElement => {
                     <>
                         {getMenu(locale.global.footer.menu)}
                         <div>
-                            <StyledMailLink href={`mailto:${configuration.general.email}`}>
+                            <StyledMailLink href={`mailto:${configuration.general.email}`} title={locale.global.hrefs.email}>
                                 {configuration.general.email}
                             </StyledMailLink>
                         </div>
                         {getIcons([
-                            { href: configuration.general.github, icon: iconGithub },
-                            { href: configuration.general.linkedIn, icon: iconLinkedIn },
-                            { href: configuration.general.facebook, icon: iconFacebook }
+                            { href: configuration.general.github, icon: iconGithub, title: locale.global.hrefs.github },
+                            { href: configuration.general.linkedIn, icon: iconLinkedIn, title: locale.global.hrefs.linkedIn },
+                            { href: configuration.general.facebook, icon: iconFacebook, title: locale.global.hrefs.facebook }
                         ])}
                     </>
                 </Row>
@@ -51,12 +51,12 @@ const Footer = (): ReactElement => {
 
 /**
  * Returns the icons.
- * @param {{ icon: IIconDefinition, href: string }[]} icons - The icons. 
+ * @param {IFooterIcon[]} icons - The icons. 
  */
-const getIcons = (icons: { icon: IIconDefinition, href: string }[]): ReactElement => (
+const getIcons = (icons: IFooterIcon[]): ReactElement => (
     <StyledIcons>
         {icons.map((x, key): ReactElement => (
-            <a href={x.href} target={'_blank'} rel={'noreferrer'} key={key}>
+            <a href={x.href} target={'_blank'} rel={'noreferrer'} key={key} title={x.title}>
                 <div>
                     <Icon icon={x.icon} />
                 </div>
@@ -72,7 +72,7 @@ const getIcons = (icons: { icon: IIconDefinition, href: string }[]): ReactElemen
 const getMenu = (menu: IMenuLinkItem[]): ReactElement => (
     <StyledMenu>
         {menu.map((x, key): ReactElement => (
-            <MyLink href={x.href} key={key}>
+            <MyLink href={x.href} key={key} title={x.title}>
                 {x.title}
             </MyLink>
         ))}

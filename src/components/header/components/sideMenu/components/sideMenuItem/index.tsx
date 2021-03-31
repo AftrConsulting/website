@@ -51,7 +51,7 @@ const getItem = (props: ISideMenuProps, close: () => void): ReactElement => {
 
     if (props.element.href) {
         return (
-            <MyLink href={props.element.href} onClick={close}>
+            <MyLink href={props.element.href} onClick={close} title={props.element.title}>
                 {props.element.title}
             </MyLink>
         );
