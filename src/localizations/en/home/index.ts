@@ -72,7 +72,7 @@ const enHomeLocale = {
         title: 'We have all the skills for building great modern web apps and sites.\u00A0🙏'
     },
     first: {
-        text1: `Hello 👋, do you want to transform your ideas into <span class="underline">high performance</span>
+        text1: `Hello 👋, do you want to transform your ideas into <span class="underline">high-performance</span>
 		        modern web apps? `,
         text2: 'We will help you.'
     },

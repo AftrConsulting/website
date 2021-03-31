@@ -10,7 +10,7 @@ const enLocale = {
         footer: {
             copyright: 'All rights reserved. © {0}',
             menu: enMenuFooter,
-            quote: 'We transform your ideas into high performance modern web apps.'
+            quote: 'We transform your ideas into high-performance modern web apps.'
         },
         goBack: 'Go Back',
         hrefs: {
