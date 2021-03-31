@@ -22,7 +22,8 @@ const enLocale = {
         seo: {
             description: 'A short description goes here.',
             title: 'Simple Usage Example'
-        }
+        },
+        tawkTo: 'https://embed.tawk.to/601b625fa9a34e36b973a092/1etlfghc8'
     },
     menu: enMenuTop,
     pages: {
