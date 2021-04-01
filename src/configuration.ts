@@ -15,7 +15,7 @@ const configuration = {
         baseUrl: 'https://aftrconsulting.com',
         consultation: 'https://calendly.com/aftrconsulting/30min',
         email: 'info@aftrconsulting.com',
-        facebook: '',
+        facebook: 'https://www.facebook.com/aftrconsulting/',
         github: 'https://github.com/AftrConsulting',
         google: {
             universal: 'UA-192636657-1' 
