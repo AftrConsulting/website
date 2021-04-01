@@ -25,7 +25,7 @@
 		"react-markdown": "^5.0.3",
 		"react-redux": "^7.2.2",
 		"redux": "^4.0.5",
-		"styled-components": "5.2.1",
+		"styled-components": "5.2.3",
 		"xml-beautify": "^1.1.1",
 		"xmldom": "^0.5.0"
 	},
