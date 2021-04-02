@@ -112,6 +112,7 @@ const StyledUnderStars = styled.div`
 `;
 
 const StyledParagraph = styled(Paragraph)`
+	font-size: 1.1em;
 	width: 80%;
 
 	@media screen and (max-width: ${devices.mobile}) {
