@@ -44,6 +44,7 @@ class MyDocument extends Document<IMyDocumentProps> {
                 <link rel={'shortcut icon'} href={'/static/images/logo.png'} />
                 <link rel={'apple-touch-icon'} href={'/static/images/logo.png'} />
                 <link rel={'manifest'} href={'/manifest.json'} />
+                <meta name={'theme-color'} content={'#fafafa'} />
                 <meta name={'mobile-web-app-capable'} content={'yes'} />
                 <meta name={'apple-touch-fullscreen'} content={'yes'} />
                 <meta name={'apple-mobile-web-app-title'} content={'AftrConsulting'} />
