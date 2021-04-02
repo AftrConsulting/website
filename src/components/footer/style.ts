@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { getThemeVariable } from 'src/theme/utils';
 import { Section } from 'src/components/section';
+import { devices } from 'src/theme';
 
 const StyledSection = styled(Section)`
 	background: ${getThemeVariable('global.footer.background')};
@@ -42,6 +43,10 @@ const StyledMenu = styled.div`
 		color: ${getThemeVariable('global.footer.menuColor')};
 		display: inline-block;
 		padding: 2px 7.5px;
+
+		@media screen and (max-width: ${devices.mobile}) {
+			padding: 15px 7.5px;
+		}
 	}
 `;
 

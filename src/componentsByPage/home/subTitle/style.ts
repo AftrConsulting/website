@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledSubTitle = styled.h3`
+const StyledSubTitle = styled.div`
 	margin-top: 0px;
 	margin-bottom: 10px;
 	font-weight: 300;

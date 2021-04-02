@@ -18,7 +18,9 @@ const enLocale = {
             facebook: 'Go to Facebook',
             github: 'Go to Github',
             linkedIn: 'Go to LinkedIn',
-            logo: 'Go to main page'
+            logo: 'Go to main page',
+            options: 'Open options menu',
+            sideMenu: 'Open side menu'
         },
         options: {
             color: 'Colors',

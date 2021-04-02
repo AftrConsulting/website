@@ -1,0 +1,21 @@
+{
+	"name": "AftrConsulting",
+	"short_name": "AftrConsulting",
+	"description": "We transform your ideas into high-performance modern web apps.",
+	"icons": [
+		{
+			"src": "/static/images/logo_192px.png",
+			"type": "image/png",
+			"sizes": "192x192"
+		},
+		{
+			"src": "/static/images/logo.png",
+			"type": "image/png",
+			"sizes": "512x512"
+		}
+	],
+	"start_url": "/?source=pwa",
+	"background_color": "#fafafa",
+	"display": "fullscreen",
+	"scope": "/"
+}

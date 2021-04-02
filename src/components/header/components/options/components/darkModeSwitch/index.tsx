@@ -31,6 +31,7 @@ const DarkModeSwitch = (): ReactElement => {
                 <SwitchTrack checked={checked} />
                 <SwitchButton checked={checked} />
                 <SwitchInput
+                    id={'darkMode'}
                     checked={checked}
                     type={'checkbox'}
                     onChange={toggleTheme} />

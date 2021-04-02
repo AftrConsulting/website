@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useRouter } from 'next/router';
-import { StyledTitle, StyledContainer, StyledSubTitle, StyledButton } from './style';
+import { StyledTitle, StyledContainer, StyledSubTitle, StyledButton, StyledLabel } from './style';
 import { PrimaryColorsSwitch } from 'src/components/header/components/options/components/primaryColorsSwitch';
 import { DarkModeSwitch } from 'src/components/header/components/options/components/darkModeSwitch';
 import { useSaveStateBeforeLanguageChange } from 'src/components/header/utils/hook';
@@ -29,7 +29,7 @@ const Options = (): ReactElement => {
         <Slider header={'options'} rightDirection onClose={removeState}>
             <StyledTitle>{locale.global.options.title}</StyledTitle>
             <StyledContainer>
-                <StyledSubTitle>{locale.global.options.darkMode}</StyledSubTitle>
+                <StyledLabel htmlFor={'darkMode'}>{locale.global.options.darkMode}</StyledLabel>
                 <DarkModeSwitch />
                 <StyledSubTitle>{locale.global.options.color}</StyledSubTitle>
                 <PrimaryColorsSwitch />

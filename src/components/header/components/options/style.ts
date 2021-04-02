@@ -18,6 +18,13 @@ const StyledSubTitle = styled.div`
 	margin-bottom: 10px;
 `;
 
+const StyledLabel = styled.label`
+	text-decoration: underline;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	display: block;
+`;
+
 const StyledButton = styled.button<{ active: boolean; }>`
 	border: none;
 	display: inline-block;
@@ -35,6 +42,7 @@ const StyledButton = styled.button<{ active: boolean; }>`
 `;
 
 export {
+    StyledLabel,
     StyledSubTitle,
     StyledContainer,
     StyledTitle,

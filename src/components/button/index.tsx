@@ -7,6 +7,7 @@ interface IButtonProps {
 	target?: '_blank';
 	className?: string;
 	children?: {};
+	rel?: string;
 }
 
 /**
@@ -19,7 +20,8 @@ const Button = (props: IButtonProps): ReactElement => {
             <StyledLink 
                 className={props.className}	
                 href={props.href} 
-                title={props.title} 
+                title={props.title}
+                rel={props.rel}
                 target={props.target}>
                 {props.children}
             </StyledLink>

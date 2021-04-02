@@ -22,7 +22,8 @@ const CTA = (props: ICTAProps): ReactElement => {
             href={configuration.general.consultation}
             target={'_blank'}
             className={props.className}
-            title={locale.global.bookConsultation}>
+            title={locale.global.bookConsultation}
+            rel={'noreferrer'}>
             <span>{locale.global.bookConsultation}</span>
             {props.withIcon && 
 				<StyledIcon icon={faArrowRight} />}
