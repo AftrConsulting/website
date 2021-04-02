@@ -75,8 +75,15 @@ const frHomeLocale: typeof enHomeLocale = {
         title: 'Quisque suscipit tincidunt elit, ut ornare tortor.'
     },
     first: {
-        text1: 'Lorem 3 ipsum dolor sit amet, consectetur adipiscing elit, consectetur adipiscing elit,',
-        text2: ' adipiscing elit dolor sit amet.'
+        heading: '#1 web apps development',
+        perks: [
+            'Lorem ipsum dolor sit amet',
+            'Lorem ipsum dolor sit amet',
+            'Lorem ipsum dolor sit amet',
+            'Lorem ipsum dolor sit amet'
+        ],
+        text1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae mauris ac lacus volutpat eleifend eu quis mi.',
+        text2: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae mauris.'
     },
     quotes: {
         from: ', de ',

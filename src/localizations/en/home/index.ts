@@ -71,9 +71,15 @@ const enHomeLocale = {
         title: 'We have all the skills for building great modern web apps and sites.\u00A0🙏'
     },
     first: {
-        text1: `Hello 👋, do you want to transform your ideas into <span class="underline">high-performance</span>
-		        modern web apps? `,
-        text2: 'We will help you.'
+        heading: '#1 web apps development',
+        perks: [
+            'Lorem ipsum dolor sit amet',
+            'Lorem ipsum dolor sit amet',
+            'Lorem ipsum dolor sit amet',
+            'Lorem ipsum dolor sit amet'
+        ],
+        text1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae mauris ac lacus volutpat eleifend eu quis mi.',
+        text2: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae mauris.'
     },
     quotes: {
         from: ', of ',

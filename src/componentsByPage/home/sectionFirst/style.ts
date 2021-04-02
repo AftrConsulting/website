@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Paragraph } from 'src/componentsByPage/home/paragraph';
 import { getThemeVariable } from 'src/theme/utils';
 import { Section } from 'src/components/section';
 import { CTA } from 'src/components/cta';
@@ -40,8 +41,10 @@ const StyleImgContainer = styled.div`
 `;
 
 const StyledH1 = styled.h1`
-	font-size: 2.7em;
+	font-size: 2.4em;
 	margin: 0px;
+	text-transform: uppercase;
+	margin-bottom: 10px;
 
 	@media screen and (max-width: ${devices.smallTablet}) {
 		font-size: 2.4em;
@@ -53,10 +56,6 @@ const StyledH1 = styled.h1`
 	}
 `;
 
-const StyledH1Span = styled.span`
-	color: ${getThemeVariable('colors.primary')};
-`;
-
 const StyledButton = styled(CTA)`
 	border: 4px solid ${getThemeVariable('colors.primary')};
 	color: ${getThemeVariable('colors.primary')};
@@ -66,7 +65,7 @@ const StyledButton = styled(CTA)`
 	padding: 5px 25px;
 	background: transparent;
 	user-select: none;
-	margin-top: 60px;
+	margin-top: 30px;
 
 	&:hover {
 		text-decoration: underline;
@@ -84,11 +83,46 @@ const StyledButton = styled(CTA)`
 	}
 `;
 
+const StyledStarsContainer = styled.div`
+	margin-bottom: 15px;
+
+	svg {
+		color: ${getThemeVariable('colors.primary')};
+		margin-right: 2px;
+	}
+`;
+
+const StyledPerksContainer = styled.div`
+	list-style: none;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	
+	li {
+		padding: 5px 0px;
+
+		svg {
+			margin-right: 7.5px;
+			color: ${getThemeVariable('colors.primary')};
+		}
+	}
+`;
+
+const StyledUnderStars = styled.div`
+	font-style: italic;
+`;
+
+const StyledParagraph = styled(Paragraph)`
+	width: 80%;
+`;
+
 export {
     StyledSection,
     StyleImgContainer,
     StyledRow,
-    StyledH1Span,
     StyledButton,
-    StyledH1
+    StyledH1,
+    StyledStarsContainer,
+    StyledPerksContainer,
+    StyledUnderStars,
+    StyledParagraph
 };
