@@ -19,7 +19,9 @@ const frLocale: typeof enLocale = {
             facebook: 'Aller à Facebook',
             github: 'Aller à Github',
             linkedIn: 'Aller à LinkedIn',
-            logo: 'Aller à la page principale'
+            logo: 'Aller à la page principale',
+            options: 'Ouvrir le menu d\'options',
+            sideMenu: 'Ouvrir le menu'
         },
         options: {
             color: 'Couleurs',
