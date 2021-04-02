@@ -73,7 +73,7 @@ const enHomeLocale = {
     first: {
         heading: '#1 web apps development',
         perks: [
-            'Really Fast Web Development\u00A0💪',
+            'Lightning Fast Web Development\u00A0💪',
             'Affordable Pricing\u00A0💸',
             'Great Customer Support\u00A0🎧',
             'Top Results\u00A0🏆'
