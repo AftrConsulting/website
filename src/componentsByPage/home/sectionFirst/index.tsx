@@ -5,6 +5,7 @@ import {
     StyledPerksContainer, StyledUnderStars, StyledParagraph
 } from './style';
 import { FirstSectionSVG } from 'src/componentsImg/firstSectionSVG';
+import { SpanText } from 'src/components/spanText';
 import { useLocale } from 'src/localizations';
 import { Icon } from 'src/components/icon';
 
@@ -19,7 +20,9 @@ const SectionFirst = (): ReactElement => {
             <StyledRow>
                 <div>
                     <StyledH1>{locale.pages.home.first.heading}</StyledH1>
-                    <StyledParagraph>{locale.pages.home.first.text1}</StyledParagraph>
+                    <StyledParagraph>
+                        <SpanText html={locale.pages.home.first.text1} />
+                    </StyledParagraph>
                     {getPerks(locale.pages.home.first.perks)}
                     {getFiveStars()}
                     <StyledUnderStars>{locale.pages.home.first.text2}</StyledUnderStars>

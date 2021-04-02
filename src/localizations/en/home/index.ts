@@ -73,13 +73,14 @@ const enHomeLocale = {
     first: {
         heading: '#1 web apps development',
         perks: [
-            'Lorem ipsum dolor sit amet',
-            'Lorem ipsum dolor sit amet',
-            'Lorem ipsum dolor sit amet',
-            'Lorem ipsum dolor sit amet'
+            'Really Fast Web Development\u00A0💪',
+            'Affordable Pricing\u00A0💸',
+            'Great Customer Support\u00A0🎧',
+            'Top Results\u00A0🏆'
         ],
-        text1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae mauris ac lacus volutpat eleifend eu quis mi.',
-        text2: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae mauris.'
+        text1: `We create the best web apps that will grow your business, attract new customers, and 
+				<span class="underline">increase your profits</span>.`,
+        text2: 'We guarantee 100% satisfaction to our clients.'
     },
     quotes: {
         from: ', of ',

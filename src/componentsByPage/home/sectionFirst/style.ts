@@ -41,18 +41,18 @@ const StyleImgContainer = styled.div`
 `;
 
 const StyledH1 = styled.h1`
-	font-size: 2.4em;
+	font-size: 2.2em;
 	margin: 0px;
 	text-transform: uppercase;
 	margin-bottom: 10px;
 
 	@media screen and (max-width: ${devices.smallTablet}) {
-		font-size: 2.4em;
+		font-size: 2.2em;
 	}
 
 	@media screen and (max-width: ${devices.mobile}) {
 		line-height: 30px;
-		font-size: 1.6em;
+		font-size: 1.4em;
 	}
 `;
 
@@ -113,6 +113,10 @@ const StyledUnderStars = styled.div`
 
 const StyledParagraph = styled(Paragraph)`
 	width: 80%;
+
+	@media screen and (max-width: ${devices.mobile}) {
+		width: 100%;
+	}
 `;
 
 export {
