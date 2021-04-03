@@ -92,10 +92,11 @@ const StyledStarsContainer = styled.div`
 	}
 `;
 
-const StyledPerksContainer = styled.div`
+const StyledPerksContainer = styled.ul`
 	list-style: none;
 	margin-top: 15px;
 	margin-bottom: 15px;
+	padding: 0px;
 	
 	li {
 		padding: 5px 0px;

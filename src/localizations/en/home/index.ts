@@ -1,12 +1,10 @@
 const enHomeLocale = {
     description: {
         subTitle: 'Who We Are',
-        text1: `We are AftrConsulting, a team with a passion for helping clients transform their businesses. 
-				We create the <span class="underline">best web apps</span> that will help you grow your business, 
-				attract new customers, and increase your profits.
-				We provide a vast collection of services in the web sphere, from development to consulting. 
-				Our team is dedicated to providing the best and <span class="underline">most affordable web services</span> 
-				for our clients.`,
+        text1: `We are AftrConsulting, a team with a passion for helping clients transform their businesses by building 
+				great web applications. We provide a vast collection of services in the web sphere, from web development to consulting 
+				and coaching. Our team is dedicated to providing the fastest, best, 
+				and <span class="underline">most affordable web services</span> for our clients.`,
         text2: 'We don\'t just sell web apps, we create web apps that SELL.',
         title: 'We help businesses transform themselves.'
     },
@@ -73,7 +71,7 @@ const enHomeLocale = {
     first: {
         heading: 'Best <span class="primary">Web Development</span> Services',
         perks: [
-            'Lightning-Fast Web Development\u00A0💪',
+            'Really Fast Web Development\u00A0💪',
             'Affordable Pricing\u00A0💸',
             'On-Time Delivery\u00A0⌛',
             'Top Results\u00A0🏆'
