@@ -19,9 +19,13 @@ const configuration = {
         github: 'https://github.com/AftrConsulting',
         google: {
             universal: 'UA-192636657-1' 
+        },		
+        imgs: {
+            headerLogo: '/static/images/headerLogo.png',
+            logo: '/static/images/logo.png'
         },
         linkedIn: 'https://www.linkedin.com/company/aftrconsulting',
-        logo: '/static/images/headerLogo.png'
+        name: 'AftrConsulting'
     },
     localStorage: {
         primary: 'primary',

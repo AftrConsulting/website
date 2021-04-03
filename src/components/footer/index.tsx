@@ -26,7 +26,7 @@ const Footer = (): ReactElement => {
             <StyledSection>
                 <Row>
                     <StyledName>
-                        <CustomImage src={configuration.general.logo} height={'40px'} width={'100px'} alt={'logo'} />
+                        <CustomImage src={configuration.general.imgs.headerLogo} height={'40px'} width={'100px'} alt={'logo'} />
                     </StyledName>
                     <StyledQuote>{locale.global.footer.quote}</StyledQuote>
                     <>

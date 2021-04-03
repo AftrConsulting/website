@@ -5,6 +5,7 @@ import { AMPAnalyticsScript } from 'src/componentsByPage/document/ampAnalyticsSc
 import { ThemeScript } from 'src/componentsByPage/document/themeScript';
 import { configuration } from 'src/configuration';
 import { globalStyles } from 'src/theme/global';
+import { getStructuredData } from 'src/utils';
 
 interface IMyDocumentProps {
     styleHTML: string;
@@ -41,15 +42,16 @@ class MyDocument extends Document<IMyDocumentProps> {
             <Head>
                 <ThemeScript />
                 <style amp-custom={''} dangerouslySetInnerHTML={{ __html: this.props.styleHTML }} />
-                <link rel={'shortcut icon'} href={'/static/images/logo.png'} />
-                <link rel={'apple-touch-icon'} href={'/static/images/logo.png'} />
+                <link rel={'shortcut icon'} href={configuration.general.imgs.logo} />
+                <link rel={'apple-touch-icon'} href={configuration.general.imgs.logo} />
                 <link rel={'manifest'} href={'/manifest.json'} />
                 <meta name={'theme-color'} content={'#fafafa'} />
                 <meta name={'mobile-web-app-capable'} content={'yes'} />
                 <meta name={'apple-touch-fullscreen'} content={'yes'} />
-                <meta name={'apple-mobile-web-app-title'} content={'AftrConsulting'} />
+                <meta name={'apple-mobile-web-app-title'} content={configuration.general.name} />
                 <meta name={'apple-mobile-web-app-capable'} content={'yes'} />
                 <meta name={'apple-mobile-web-app-status-bar-style'} content={'default'} />
+                <script type={'application/ld+json'} dangerouslySetInnerHTML={{ __html: getStructuredData() }} />
                 <AMPAnalyticsScript />
             </Head>
             <body>
