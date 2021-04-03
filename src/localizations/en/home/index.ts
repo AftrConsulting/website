@@ -77,8 +77,8 @@ const enHomeLocale = {
             'Top Results\u00A0🏆'
         ],
         subHeading: 'we deliver the',
-        text1: `We create the best web apps that will grow your business, attract new customers, and 
-				<span class="underline">increase your profits</span>.`,
+        text1: `We create web apps that will grow your business, attract new customers, and 
+				<span class="underline bold">increase your profits</span>.`,
         text2: 'We guarantee 100% satisfaction to our clients.'
     },
     quotes: {

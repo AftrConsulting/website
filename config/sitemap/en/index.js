@@ -5,8 +5,8 @@ const enSitemap = {
         exclude: true,
         home: true,
         seo: {
-            title: 'Best Web Development Services And Web Consultations - {COMPANY}',
-            description: `We transform your ideas into high-performance modern web apps. 
+            title: 'Best Web Development Services - {COMPANY}',
+            description: `We deliver the best web development services that will increase your profits. 
 			              We provide React, TypeScript, PHP, Node.js development and consultations.`
         }
     },

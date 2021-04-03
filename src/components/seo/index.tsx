@@ -1,4 +1,5 @@
 import { NextSeo } from 'next-seo';
+import { OpenGraphImages } from 'next-seo/lib/types';
 import { useAmp } from 'next/amp';
 import { useRouter } from 'next/router';
 import React, { ReactElement } from 'react';
@@ -30,14 +31,37 @@ const Seo = (props: ISeoProps): ReactElement => {
         });
     }
 	
+    const title = replaceSEOTags(props.title);
+    const description = props.description.replace(/\s+/g, ' ');
+	
     return (
         <NextSeo
             title={replaceSEOTags(props.title)}
-            description={props.description}
+            description={props.description.replace(/\s+/g, ' ')}
             additionalLinkTags={additionalLinkTags}
+            openGraph={{
+                description,
+                images: getOpenGraphImages(),
+                locale: router.locale,
+                site_name: configuration.general.name,
+                title,
+                type: 'website'
+            }}
         />
     );
 };
+
+/**
+ * Returns the open graph images.
+ */
+const getOpenGraphImages = (): OpenGraphImages[] => ([
+    {
+        alt: 'Logo',
+        height: 630,
+        url: `${configuration.general.baseUrl}${configuration.general.imgs.openGraphImage}`,
+        width: 1200
+    }
+]);
 
 /**
  * Replaces SEO tags.

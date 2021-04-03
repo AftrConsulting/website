@@ -63,6 +63,10 @@ const globalStyles = `
 		text-decoration: underline;
 	}
 
+	.bold {
+		font-weight: bold;
+	}
+
 	.primary {
 		color: ${getThemeVariable('colors.primary')};
 	}

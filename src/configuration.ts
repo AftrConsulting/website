@@ -22,7 +22,8 @@ const configuration = {
         },		
         imgs: {
             headerLogo: '/static/images/headerLogo.png',
-            logo: '/static/images/logo.png'
+            logo: '/static/images/logo.png',
+            openGraphImage: '/static/images/openGraphImage.png'
         },
         linkedIn: 'https://www.linkedin.com/company/aftrconsulting',
         name: 'AftrConsulting'
