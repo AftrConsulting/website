@@ -82,6 +82,7 @@ const frHomeLocale: typeof enHomeLocale = {
             'Lorem ipsum dolor sit amet',
             'Lorem ipsum dolor sit amet'
         ],
+        subHeading: 'we deliver the',
         text1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae mauris ac lacus volutpat eleifend eu quis mi.',
         text2: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae mauris.'
     },
