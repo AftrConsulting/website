@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react';
 import { faCheck, faStar } from '@fortawesome/free-solid-svg-icons';
 import { 
     StyledButton, StyledH1, StyledRow, StyleImgContainer, StyledSection, StyledStarsContainer, 
-    StyledPerksContainer, StyledUnderStars, StyledParagraph
+    StyledPerksContainer, StyledUnderStars, StyledParagraph, StyledSubH1
 } from './style';
 import { FirstSectionSVG } from 'src/componentsImg/firstSectionSVG';
 import { SpanText } from 'src/components/spanText';
@@ -19,6 +19,7 @@ const SectionFirst = (): ReactElement => {
         <StyledSection>
             <StyledRow>
                 <div>
+                    <StyledSubH1>{locale.pages.home.first.subHeading}</StyledSubH1>
                     <StyledH1>
                         <SpanText html={locale.pages.home.first.heading} />
                     </StyledH1>

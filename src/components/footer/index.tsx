@@ -1,4 +1,5 @@
 import React, { ReactElement } from 'react';
+import { useAmp } from 'next/amp';
 import { StyledSection, StyledCopyright, StyledName, StyledMailLink, StyledMenu, StyledIcons, StyledQuote } from './style';
 import { IFooterIcon } from 'src/components/footer/interfaces/IFooterIcon';
 import { iconLinkedIn } from 'src/componentsImg/footerLinkedIn';
@@ -16,6 +17,7 @@ import { Row } from 'src/components/row';
  * The Footer component.
  */
 const Footer = (): ReactElement => {
+    const amp = useAmp();
     const locale = useLocale();
     const year = String(new Date().getFullYear());
 	
@@ -28,13 +30,13 @@ const Footer = (): ReactElement => {
                     </StyledName>
                     <StyledQuote>{locale.global.footer.quote}</StyledQuote>
                     <>
-                        {getMenu(locale.global.footer.menu)}
+                        {!amp && getMenu(locale.global.footer.menu)}
                         <div>
                             <StyledMailLink href={`mailto:${configuration.general.email}`} title={locale.global.hrefs.email}>
                                 {configuration.general.email}
                             </StyledMailLink>
                         </div>
-                        {getIcons([
+                        {!amp && getIcons([
                             { href: configuration.general.github, icon: iconGithub, title: locale.global.hrefs.github },
                             { href: configuration.general.linkedIn, icon: iconLinkedIn, title: locale.global.hrefs.linkedIn },
                             { href: configuration.general.facebook, icon: iconFacebook, title: locale.global.hrefs.facebook }

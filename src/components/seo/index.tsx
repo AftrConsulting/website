@@ -24,8 +24,9 @@ const Seo = (props: ISeoProps): ReactElement => {
             '' : `/${router.locale}`;
 
         additionalLinkTags.push({
-            href: `${configuration.general.baseUrl}${locale}${router.route}${!amp ? '?amp=1' : ''}`,
-            rel: amp ? 'canonical' : 'amphtml'
+            rel: amp ? 'canonical' : 'amphtml',
+            // eslint-disable-next-line sort-keys
+            href: `${configuration.general.baseUrl}${locale}${router.route}${!amp ? '?amp=1' : ''}`
         });
     }
 	

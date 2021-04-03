@@ -50,7 +50,8 @@ const StyledH1 = styled.h1`
 	}
 
 	@media screen and (max-width: ${devices.mobile}) {
-		line-height: 30px;
+		margin-top: 2px;
+		line-height: 26px;
 		font-size: 1.4em;
 	}
 `;
@@ -119,7 +120,15 @@ const StyledParagraph = styled(Paragraph)`
 	}
 `;
 
+const StyledSubH1 = styled.div`
+	text-transform: uppercase;
+	font-weight: 300;
+    font-size: 1.1em;
+`;
+
+
 export {
+    StyledSubH1,
     StyledSection,
     StyleImgContainer,
     StyledRow,

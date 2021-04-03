@@ -75,9 +75,10 @@ const enHomeLocale = {
         perks: [
             'Lightning-Fast Web Development\u00A0💪',
             'Affordable Pricing\u00A0💸',
-            'Great Customer Support\u00A0🎧',
+            'On-Time Delivery\u00A0⌛',
             'Top Results\u00A0🏆'
         ],
+        subHeading: 'we deliver the',
         text1: `We create the best web apps that will grow your business, attract new customers, and 
 				<span class="underline">increase your profits</span>.`,
         text2: 'We guarantee 100% satisfaction to our clients.'
