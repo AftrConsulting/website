@@ -5,7 +5,7 @@ const enSitemap = {
         exclude: true,
         home: true,
         seo: {
-            title: 'Web Apps Development And Consultations - {COMPANY}',
+            title: 'Best Web Development Services And Web Consultations - {COMPANY}',
             description: `We transform your ideas into high-performance modern web apps. 
 			              We provide React, TypeScript, PHP, Node.js development and consultations.`
         }
@@ -47,7 +47,11 @@ const enSitemap = {
     sitemap: {
         href: '/sitemap',
         title: 'Sitemap',
-        exclude: true
+        exclude: true,
+        seo: {
+            title: 'Sitemap - {COMPANY}',
+            description: 'Sitemap of AftrConsulting.'
+        }
     },
     termsOfUse: {
         href: '/terms-of-use',

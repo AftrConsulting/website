@@ -47,7 +47,11 @@ const frSitemap = {
     sitemap: {
         href: '/sitemap',
         title: 'Sitemap',
-        exclude: true
+        exclude: true,
+        seo: {
+            title: 'Sitemap - {COMPANY}',
+            description: 'Sitemap de AftrConsulting.'
+        }
     },
     termsOfUse: {
         href: '/conditions-dutilisation',

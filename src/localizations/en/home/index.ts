@@ -71,7 +71,7 @@ const enHomeLocale = {
         title: 'We have all the skills for building great modern web apps and sites.\u00A0🙏'
     },
     first: {
-        heading: '#1 web apps development',
+        heading: 'Best <span class="primary">Web Development</span> Services',
         perks: [
             'Lightning-Fast Web Development\u00A0💪',
             'Affordable Pricing\u00A0💸',

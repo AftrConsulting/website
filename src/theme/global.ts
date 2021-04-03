@@ -62,6 +62,10 @@ const globalStyles = `
 	.underline {
 		text-decoration: underline;
 	}
+
+	.primary {
+		color: ${getThemeVariable('colors.primary')};
+	}
 `;
 
 export {

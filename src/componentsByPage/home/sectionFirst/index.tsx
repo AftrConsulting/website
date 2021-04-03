@@ -19,7 +19,9 @@ const SectionFirst = (): ReactElement => {
         <StyledSection>
             <StyledRow>
                 <div>
-                    <StyledH1>{locale.pages.home.first.heading}</StyledH1>
+                    <StyledH1>
+                        <SpanText html={locale.pages.home.first.heading} />
+                    </StyledH1>
                     <StyledParagraph>
                         <SpanText html={locale.pages.home.first.text1} />
                     </StyledParagraph>

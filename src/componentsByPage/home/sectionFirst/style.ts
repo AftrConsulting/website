@@ -43,7 +43,6 @@ const StyleImgContainer = styled.div`
 const StyledH1 = styled.h1`
 	font-size: 2.2em;
 	margin: 0px;
-	text-transform: uppercase;
 	margin-bottom: 10px;
 
 	@media screen and (max-width: ${devices.smallTablet}) {
