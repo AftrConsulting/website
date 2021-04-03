@@ -13,6 +13,7 @@ const configuration = {
     },
     general: {
         baseUrl: 'https://aftrconsulting.com',
+        company: 'AftrConsulting',
         consultation: 'https://calendly.com/aftrconsulting/30min',
         email: 'info@aftrconsulting.com',
         facebook: 'https://www.facebook.com/aftrconsulting/',
@@ -25,8 +26,7 @@ const configuration = {
             logo: '/static/images/logo.png',
             openGraphImage: '/static/images/openGraphImage.png'
         },
-        linkedIn: 'https://www.linkedin.com/company/aftrconsulting',
-        name: 'AftrConsulting'
+        linkedIn: 'https://www.linkedin.com/company/aftrconsulting'
     },
     localStorage: {
         primary: 'primary',

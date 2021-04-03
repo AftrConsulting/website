@@ -43,7 +43,7 @@ const Seo = (props: ISeoProps): ReactElement => {
                 description,
                 images: getOpenGraphImages(),
                 locale: router.locale,
-                site_name: configuration.general.name,
+                site_name: configuration.general.company,
                 title,
                 type: 'website'
             }}
@@ -70,7 +70,7 @@ const getOpenGraphImages = (): OpenGraphImages[] => ([
 const replaceSEOTags = (str: string): string => {
     if (!str) return '';
 
-    return str.replace('{COMPANY}', 'AftrConsulting');
+    return str.replace('{COMPANY}', configuration.general.company);
 };
 
 export {

@@ -18,7 +18,7 @@ const getStructuredData = (): string => JSON.stringify({
 		'email': configuration.general.email
 	},
 	'logo': `${configuration.general.baseUrl}${configuration.general.imgs.logo}`,
-	'name': configuration.general.name,
+	'name': configuration.general.company,
 	'sameAs': [
 		configuration.general.github,
 		configuration.general.facebook,
