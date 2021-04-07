@@ -1,8 +1,8 @@
 import React, { ReactElement } from 'react';
 import ReactMarkdown from 'react-markdown';
+import markdown from 'docs/pages/termsOfUse/en.md';
 import { MarkdownContainer } from 'src/components/markdownContainer';
 import { Container } from 'src/components/container';
-import markdown from 'src/docs/pages/termsOfUse.md';
 import { useLocale } from 'src/localizations';
 import { Row } from 'src/components/row';
 import { Seo } from 'src/components/seo';

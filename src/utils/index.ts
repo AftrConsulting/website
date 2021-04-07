@@ -11,7 +11,6 @@ const isProduction = (): boolean => process.env.NODE_ENV === 'production';
 const getStructuredData = (): string => JSON.stringify({
 	'@context': 'https://schema.org',
 	'@type': 'Organization',
-	
 	'contactPoint': {
 		'@type': 'ContactPoint',
 		'contactType': 'customer support',

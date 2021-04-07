@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import ReactMarkdown from 'react-markdown';
+import markdown from 'docs/pages/privacyPolicy/en.md';
 import { MarkdownContainer } from 'src/components/markdownContainer';
-import markdown from 'src/docs/pages/privacyPolicy.md';
 import { Container } from 'src/components/container';
 import { useLocale } from 'src/localizations';
 import { Row } from 'src/components/row';
