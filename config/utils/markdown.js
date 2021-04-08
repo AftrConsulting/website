@@ -2,17 +2,50 @@ const { readdirSync, readFileSync } = require('fs');
 const path = require('path');
 
 /**
- * Returns the pages.
+ * Returns the Markdown pages.
  */
-const getPages = () => {
+const getMarkdownPages = () => {
 	const articles = getFiles(path.join(__dirname, '../../docs/blog'), {}, 'blog');
 	const pages = getFiles(path.join(__dirname, '../../docs/pages'));
 
-	return { 
-		articles, 
+	return {
+		articles,
+		pages,
+	};
+};
+
+/**
+ * Returns the Markdown pages paths.
+ */
+const getMarkdownPagesPaths = (obj) => {
+	const articles = getPaths(obj.articles);
+	const pages = getPaths(obj.pages);
+
+	return {
+		articles,
 		pages
 	};
 };
+
+/**
+ * Returns the paths.
+ * @param {{}} pages 
+ */
+const getPaths = (pages) => {
+	const hrefs = [];
+
+	for (let i in pages) {
+		for (let lang in pages[i]) {
+			if (!pages[i][lang].href) continue;
+
+			hrefs.push(
+				pages[i][lang].href
+			);
+		}
+	}
+
+	return hrefs;
+} 
 
 /**
  * Go files.
@@ -91,5 +124,6 @@ const getAttributes = (source) => {
 
 
 module.exports = {
-	getPages
+	getMarkdownPages,
+	getMarkdownPagesPaths
 };

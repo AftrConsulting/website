@@ -1,12 +1,17 @@
+const { getMarkdownPages, getMarkdownPagesPaths } = require('./config/utils/markdown');
 const { generateSiteMap } = require('./config/utils/generateSiteMap');
 const { sitemapLocales } = require('./config/sitemap/index');
 const { getRewrites } = require('./config/utils/sitemap');
 const { headers } = require('./config/headers/index');
-const { getPages } = require('./config/utils/pages');
+
+const markdownPages = getMarkdownPages();
 
 module.exports = {
 	env: {
-		pages: getPages(),
+		markdown: {
+			pages: markdownPages,
+			paths: getMarkdownPagesPaths(markdownPages)
+		},
 		sitemapLocales
 	},
     i18n: {
