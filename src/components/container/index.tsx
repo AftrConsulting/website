@@ -7,7 +7,8 @@ import { Footer } from 'src/components/footer';
 import { isProduction } from 'src/utils';
 
 interface IContainerProps {
-	children: ReactElement | ReactElement[]
+	children: ReactElement | ReactElement[];
+	redirectLanguageToIndex?: boolean;
 }
 
 /**

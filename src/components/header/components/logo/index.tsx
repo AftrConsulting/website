@@ -8,8 +8,8 @@ import { setLanguage } from 'src/context/actions/locale';
 import { IState } from 'src/context/interfaces/IState';
 import { setHeader } from 'src/context/actions/header';
 import { configuration } from 'src/configuration';
-import { MyLink } from 'src/components/link';
 import { useLocale } from 'src/localizations';
+import { MyLink } from 'src/components/link';
 
 interface ILogoProps {
 	hideLanguage?: boolean;
@@ -32,7 +32,7 @@ const Logo = (props: ILogoProps): ReactElement => {
         const newLanguage = language === 'en' ? 'fr' : 'en' as never; 
         dispatch(setLanguage(newLanguage));
 
-        router.push(router.route, router.route, { locale: newLanguage, shallow: true });
+        router.push(router.asPath, router.asPath, { locale: newLanguage, shallow: true });
     };
 	
     const close = (): void => {
