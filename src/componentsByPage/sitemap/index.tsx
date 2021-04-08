@@ -1,28 +1,46 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
 import { StyledLink, StyledContainer } from './style';
-import { getSitemapRoutes } from 'config/utils/sitemap';
-import { sitemapLocales } from 'config/sitemap';
-
-const routes = getSitemapRoutes(sitemapLocales);
+import { getSitemapRoutesForLanguage } from 'config/utils/sitemap';
+import { IProcess } from 'src/interfaces/IProcess';
 
 /**
  * The Sitemap routes.
  */
-const SitemapRoutes = (): ReactElement => (
-    <StyledContainer>
-        {routes.map((x, key) => {
-            if (x.exclude) return null;
+const SitemapRoutes = (): ReactElement => {
+    const router = useRouter();
+    const [ routes, setRoutes ] = useState(getRoutes(router.locale));
+
+    useEffect(() => {
+        setRoutes(getRoutes(router.locale));
+    }, [ router.locale ]);
+	
+    return (
+        <StyledContainer>
+            {routes.map((x, key) => {
+                if (x.exclude) return null;
 					
-            return (
-                <div key={key}>
-                    <StyledLink href={x.href}>
-                        {x.title}
-                    </StyledLink>
-                </div>
-            );
-        })}
-    </StyledContainer>
-);
+                return (
+                    <div key={key}>
+                        <StyledLink href={x.href}>
+                            {x.title}
+                        </StyledLink>
+                    </div>
+                );
+            })}
+        </StyledContainer>
+    );
+};
+
+/**
+ * Returns the routes.
+ * @param {string} locale - The locale. 
+ */
+const getRoutes = (locale?: string): { href: string, title: string, exclude: boolean }[] => {
+    const sitemapLocales = (process.env as {} as IProcess).sitemapLocales;
+	
+    return getSitemapRoutesForLanguage(sitemapLocales, locale as string);
+};
 
 export {
     SitemapRoutes

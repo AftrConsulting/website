@@ -4,6 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import { readFileSync } from 'fs';
 import { MarkdownContainer } from 'src/components/markdownContainer';
 import { IStaticProps } from 'src/interfaces/IStaticProps';
+import { getArticlesPaths } from 'config/utils/sitemap';
 import { Container } from 'src/components/container';
 import { IProcess } from 'src/interfaces/IProcess';
 import { Row } from 'src/components/row';
@@ -42,7 +43,7 @@ const Article = (props: IArticleProps): ReactElement => {
  */
 export const getStaticPaths = (): {} => ({
     fallback: false,  
-    paths: getPaths()
+    paths: getArticlesPaths(getArticles())
 });
 
 /**
@@ -76,23 +77,6 @@ export const getStaticProps = async (context: IStaticProps): Promise<{}> => {
  */
 const getArticles = (): {} => {
     return (process.env as {} as IProcess).pages.articles;
-};
-
-/**
- * Returns the paths.
- */
-const getPaths = (): string[] => {
-    const articles = getArticles();
-    const paths = [];
-	
-    for (const article in articles) {
-        for (const language in articles[article]) {
-            const part = language === 'en' ? '' : `${language}/`;
-            paths.push(`/${part}blog/${article}`);
-        }
-    }
-
-    return paths;
 };
 
 export default Article;

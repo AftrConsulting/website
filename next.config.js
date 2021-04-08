@@ -7,6 +7,7 @@ const { getPages } = require('./config/utils/pages');
 module.exports = {
 	env: {
 		pages: getPages(),
+		sitemapLocales
 	},
     i18n: {
 		locales: [ 'en', 'fr' ],

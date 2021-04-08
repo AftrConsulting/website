@@ -12,7 +12,8 @@ interface IProcess {
 				fr?: string;
 			}
 		};
-	}
+	};
+	sitemapLocales: {};
 }
 
 export type {

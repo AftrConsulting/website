@@ -23,22 +23,39 @@ const getSitemap = (sitemap, obj = {}) => {
  * @param {{}} sitemap - The sitemap.
  */
 const getSitemapRoutes = (sitemap) => {
-    const routes = [];
+    let routes = [];
 	
-    for (const lang in sitemap) {
-        for (const i in sitemap[lang]) {
-			const language = lang === 'en' ?  '' : `/${lang}`;
-			const href = language + sitemap[lang][i].href;
-
-			routes.push({
-				...sitemap[lang][i],
-				href
-			});
-        }
+    for (const language in sitemap) {
+        routes = [
+			...routes,
+			...getSitemapRoutesForLanguage(sitemap, language)
+		]
     }
 	
     return routes;
 };
+
+/**
+ * Returns the sitemap routes for a language.
+ * @param {{}} sitemap - The sitemap.
+ * @param {string} language - The language.
+ */
+const getSitemapRoutesForLanguage = (sitemap, language) => {
+    const routes = [];
+	
+    for (const i in sitemap[language]) {
+		const part = language === 'en' ?  '' : `/${language}`;
+		const href = part + sitemap[language][i].href;
+
+		routes.push({
+			...sitemap[language][i],
+			href
+		});
+	}
+	
+    return routes;
+};
+
 
 /**
  * Returns the rewrites.
@@ -68,5 +85,6 @@ const getRewrites = (sitemap) => {
 module.exports = {
 	getSitemap,
 	getSitemapRoutes,
-	getRewrites
+	getRewrites,
+	getSitemapRoutesForLanguage
 };
