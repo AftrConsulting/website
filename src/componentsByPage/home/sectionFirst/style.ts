@@ -31,8 +31,7 @@ const StyleImgContainer = styled.div`
 
 	svg {
 		display: inline-block;
-		height: 400px;
-		width: 400px;
+		width: 100%;
 	}
 
 	@media screen and (max-width: ${devices.smallTablet}) {
