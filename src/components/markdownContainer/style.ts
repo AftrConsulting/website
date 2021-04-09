@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { getThemeVariable } from 'src/theme/utils';
-import { devices } from 'src/theme';
 
 const StyledMarkdownContainer = styled.div`
 	margin-bottom: 40px;
@@ -24,14 +23,17 @@ const StyledMarkdownContainer = styled.div`
 	}
 
 	h1 {
-		font-size: 2em;
-
-		@media screen and (max-width: ${devices.mobile}) {
-			font-size: 1.5em;
-		}
+		margin-bottom: 10px;
 	}
 `;
 
+const StyledMetaData = styled.div`
+	font-size: .9em;
+	margin-bottom: 20px;
+	color: ${getThemeVariable('global.markdown.metaDataColor')};
+`;
+
 export {
-    StyledMarkdownContainer
+    StyledMarkdownContainer,
+    StyledMetaData
 };

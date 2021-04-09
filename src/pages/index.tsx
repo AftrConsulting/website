@@ -17,7 +17,7 @@ const Home = (): ReactElement => {
 	
     return (
         <Container>
-            <Seo {...locale.sitemap.home.seo} />
+            <Seo {...locale.sitemap.home} />
             <SectionFirst />
             <SectionDescription />
             <SectionServices />

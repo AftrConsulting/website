@@ -1,8 +1,8 @@
 import { RecursiveThemeKeyOf } from 'src/theme/types/RecursiveThemeKeyOf';
 import { primaryColors, themesName } from 'src/theme';
-import { ITheme } from 'src/theme/interfaces/ITheme';
 import { configuration } from 'src/configuration';
 import { MyTheme } from 'src/theme/types/MyTheme';
+import { darkTheme } from 'src/theme/themes/dark';
 import { darken } from 'polished';
 
 /**
@@ -63,9 +63,9 @@ const getGlobalColors = (colors: string[]): string => {
 
 /**
  * Returns the theme variable.
- * @param {RecursiveThemeKeyOf<ITheme>} theme - The theme. 
+ * @param {RecursiveThemeKeyOf<typeof darkTheme>} theme - The theme. 
  */
-const getThemeVariable = (theme: RecursiveThemeKeyOf<ITheme>): string => {
+const getThemeVariable = (theme: RecursiveThemeKeyOf<typeof darkTheme>): string => {
 	return `var(--${theme.replace(/\./g, '-')})`;
 }
 

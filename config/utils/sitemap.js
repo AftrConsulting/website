@@ -23,50 +23,41 @@ const getSitemap = (sitemap, obj = {}) => {
  * @param {{}} sitemap - The sitemap.
  */
 const getSitemapRoutes = (sitemap) => {
-    const routes = [];
+    let routes = [];
 	
-    for (const lang in sitemap) {
-        for (const i in sitemap[lang]) {
-			const language = lang === 'en' ?  '' : `/${lang}`;
-			const href = language + sitemap[lang][i].href;
-
-			routes.push({
-				...sitemap[lang][i],
-				href
-			});
-        }
+    for (const language in sitemap) {
+        routes = [
+			...routes,
+			...getSitemapRoutesForLanguage(sitemap, language)
+		]
     }
 	
     return routes;
 };
 
 /**
- * Returns the rewrites.
+ * Returns the sitemap routes for a language.
  * @param {{}} sitemap - The sitemap.
+ * @param {string} language - The language.
  */
-const getRewrites = (sitemap) => {
-	const newSitemap = { ...sitemap };
-	const enSitemap = { ...newSitemap.en };
-	delete newSitemap.en;
-	const rewrites = [];
+const getSitemapRoutesForLanguage = (sitemap, language) => {
+    const routes = [];
+	
+    for (const i in sitemap[language]) {
+		const part = language === 'en' ?  '' : `/${language}`;
+		const href = part + sitemap[language][i].href;
 
-	for (let lang in newSitemap) {
-		for (let i in newSitemap[lang]) {
-			if (newSitemap[lang][i].href !== enSitemap[i].href) {
-				rewrites.push({
-					source: `/${lang}${newSitemap[lang][i].href}`,
-					destination: `/${lang}${enSitemap[i].href}`,
-					locale: false
-				});
-			}
-		}
+		routes.push({
+			...sitemap[language][i],
+			href
+		});
 	}
 	
-	return rewrites;
-}
+    return routes;
+};
 
 module.exports = {
 	getSitemap,
 	getSitemapRoutes,
-	getRewrites
+	getSitemapRoutesForLanguage
 };

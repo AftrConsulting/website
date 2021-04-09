@@ -1,4 +1,9 @@
-# Terms of Use
+---
+title: Terms of Use
+seoTitle: Terms of Use - {COMPANY}
+date: 2021-04-09
+description: Terms of Use of AftrConsulting.
+---
 
 The AFTRConsulting website located at [aftrconsulting.com](https://aftrconsulting.com) is a copyrighted work belonging to AFTRConsulting. Certain features of the Site may be subject to additional guidelines, terms, or rules, which will be posted on the Site in connection with such features.
 

@@ -29,10 +29,6 @@ const frLocale: typeof enLocale = {
             languages: 'Langues',
             title: 'Options'
         },
-        seo: {
-            description: 'Le Français - A short description goes here.',
-            title: 'Le Français - Simple Usage Example'
-        },
         tawkTo: 'https://embed.tawk.to/6063ba9c067c2605c0bdd9d5/1f22p1sqj'
     },
     menu: frMenuTop,
