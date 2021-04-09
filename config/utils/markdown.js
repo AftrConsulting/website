@@ -38,9 +38,9 @@ const getPaths = (pages) => {
 		for (let lang in pages[i]) {
 			if (!pages[i][lang].href) continue;
 
-			hrefs.push(
-				pages[i][lang].href
-			);
+			const part = lang === 'en' ? '' : `/${lang}`;
+
+			hrefs.push(`${part}${pages[i][lang].href}`);
 		}
 	}
 
@@ -62,10 +62,8 @@ const getFiles = (directory, files = {}, part = '') => {
 			const obj = getSourceAndAttributes(languagePath);
 
 			const completeLanguage = language.replace('.md', '');
-			const languagePart = completeLanguage === 'en' ? 
-				'' : `${completeLanguage}/`;
 
-			obj.href = `/${languagePart}${part}${file}`;
+			obj.href = `/${part}${file}`;
 
 			languages[completeLanguage] = obj;
 		});

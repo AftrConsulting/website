@@ -32,7 +32,7 @@ const SectionFirst = (): ReactElement => {
                     <StyledButton withIcon={true} />
                 </div>
                 <StyleImgContainer>
-                    <FirstSectionSVG />
+                    <img src={'/static/images/first.svg'} />
                 </StyleImgContainer>
             </StyledRow>
         </StyledSection>
