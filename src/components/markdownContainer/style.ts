@@ -30,6 +30,7 @@ const StyledMarkdownContainer = styled.div`
 const StyledMetaData = styled.div`
 	font-size: .9em;
 	margin-bottom: 20px;
+	color: ${getThemeVariable('global.markdown.metaDataColor')};
 `;
 
 export {

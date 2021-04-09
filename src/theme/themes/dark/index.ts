@@ -1,7 +1,7 @@
 import { lighten, darken } from 'polished';
-import { ITheme } from 'src/theme/interfaces/ITheme';
+import { IColors } from 'src/theme/interfaces/IColors';
 
-const colors = {
+const colors: IColors = {
     background: '#181e1f',
     color: '#f6fbfc'
 };
@@ -9,7 +9,7 @@ const colors = {
 /**
  * The darkTheme.
  */
-const darkTheme: ITheme = {
+const darkTheme = {
     colors,
     global: {
         background: colors.background,
@@ -48,6 +48,9 @@ const darkTheme: ITheme = {
                 borderColor: lighten(.1, colors.background),
                 goBackBackground: darken(.05, colors.background)
             }
+        },
+        markdown: {
+            metaDataColor: lighten(.5, colors.background)
         },
         primaryColors: {
             color: '#fafafa'

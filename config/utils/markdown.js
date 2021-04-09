@@ -5,7 +5,7 @@ const path = require('path');
  * Returns the Markdown pages.
  */
 const getMarkdownPages = () => {
-	const articles = getFiles(path.join(__dirname, '../../public/static/blog'), {}, 'blog');
+	const articles = getFiles(path.join(__dirname, '../../public/static/blog'), {}, 'blog/');
 	const pages = getFiles(path.join(__dirname, '../../public/static/pages'));
 
 	return {
@@ -65,7 +65,7 @@ const getFiles = (directory, files = {}, part = '') => {
 			const languagePart = completeLanguage === 'en' ? 
 				'' : `${completeLanguage}/`;
 
-			obj.href = `/${languagePart}${part}/${file}`;
+			obj.href = `/${languagePart}${part}${file}`;
 
 			languages[completeLanguage] = obj;
 		});

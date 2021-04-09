@@ -1,4 +1,9 @@
-# Privacy Policy
+---
+title: Privacy Policy
+seoTitle: Privacy Policy - {COMPANY}
+date: 2021-04-09
+description: Privacy Policy of AftrConsulting.
+---
 
 At AFTRConsulting, accessible from [aftrconsulting.com](https://aftrconsulting.com), one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by AFTRConsulting and how we use it.
 
