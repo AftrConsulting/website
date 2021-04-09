@@ -2,6 +2,7 @@ import React, { ReactElement } from 'react';
 import { SitemapRoutes } from 'src/componentsByPage/sitemap';
 import { Container } from 'src/components/container';
 import { useLocale } from 'src/localizations';
+import { Title } from 'src/components/title';
 import { Row } from 'src/components/row';
 import { Seo } from 'src/components/seo';
 
@@ -16,8 +17,8 @@ const Sitemap = (): ReactElement => {
     return (
         <Container>
             <Row>
-                <Seo {...locale.sitemap.sitemap.seo} hasAmp={true} />
-                <h1>{locale.pages.sitemap.title}</h1>
+                <Seo {...locale.sitemap.sitemap} hasAmp={true} />
+                <Title title={locale.pages.sitemap.title} />
                 <SitemapRoutes />
             </Row>
         </Container>

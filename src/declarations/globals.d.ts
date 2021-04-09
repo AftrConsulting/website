@@ -1,5 +1,3 @@
-import { IProcess } from 'src/interfaces/IProcess';
-
 /**
  * Adds markdown.
  */
@@ -23,33 +21,5 @@ declare namespace JSX {
 			type: string;
 			'data-credentials': string;
 		};
-	}
-}
-
-declare global {
-	namespace NodeJS {
-		interface ProcessEnv {
-			markdown: {
-				pages: {
-					articles: {
-						[key in string]: {
-							en?: string;
-							fr?: string;
-						}
-					};
-					pages: {
-						[key in string]: {
-							en?: string;
-							fr?: string;
-						}
-					};
-				};
-				paths: {
-					articles: string[];
-					pages: string[];
-				};
-			};
-			sitemapLocales: {};
-		}
 	}
 }

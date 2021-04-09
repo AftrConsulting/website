@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import ReactMarkdown from 'react-markdown';
-import markdown from 'docs/pages/termsOfUse/en.md';
+import markdown from 'public/static/pages/terms-of-use/en.md';
 import { MarkdownContainer } from 'src/components/markdownContainer';
 import { Container } from 'src/components/container';
 import { useLocale } from 'src/localizations';

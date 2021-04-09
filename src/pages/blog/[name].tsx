@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import { useRouter } from 'next/router';
-import ReactMarkdown from 'react-markdown';
+import { IMarkdownArticleProps } from 'src/interfaces/IMarkdownArticleProps';
 import { MarkdownContainer } from 'src/components/markdownContainer';
 import { IStaticProps } from 'src/interfaces/IStaticProps';
 import { Container } from 'src/components/container';
@@ -8,9 +8,7 @@ import { Row } from 'src/components/row';
 
 interface IArticleProps {
 	articles: {
-		[key in string]: {
-			source: string;
-		}
+		[key in string]: IMarkdownArticleProps;
 	};
 	name: string;
 	redirectLanguageToIndex: boolean;
@@ -22,18 +20,12 @@ interface IArticleProps {
  */
 const Article = (props: IArticleProps): ReactElement => {
     const router = useRouter();
-
-    let article = null;
-    if (props.articles) {
-        article = props.articles[router.locale as string];
-    }
+    const article = props.articles?.[router.locale as string];
 
     return (
         <Container redirectLanguageToIndex={props.redirectLanguageToIndex}>
             <Row>
-                <MarkdownContainer>
-                    <ReactMarkdown source={article?.source} />
-                </MarkdownContainer>
+                <MarkdownContainer {...article} />
             </Row>
         </Container>
     );

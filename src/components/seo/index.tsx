@@ -8,7 +8,8 @@ import { configuration } from 'src/configuration';
 
 interface ISeoProps {
 	title: string;
-	description: string;
+	seoTitle?: string;
+	description?: string;
 	hasAmp?: boolean;
 	openGraphImage?: string;
 }
@@ -23,13 +24,13 @@ const Seo = (props: ISeoProps): ReactElement => {
 	
     const image = props.openGraphImage || `${configuration.general.baseUrl}${configuration.general.imgs.openGraphImage}`;
     const additionalLinkTags = getAdditionalLinkTags(router, amp, props.hasAmp);
-    const title = replaceSEOTags(props.title);
-    const description = props.description.replace(/\s+/g, ' ');
+    const title = replaceSEOTags(props.seoTitle || props.title);
+    const description = props.description?.replace(/\s+/g, ' ') || '';
 	
     return (
         <NextSeo
-            title={replaceSEOTags(props.title)}
-            description={props.description.replace(/\s+/g, ' ')}
+            title={title}
+            description={description}
             additionalLinkTags={additionalLinkTags}
             openGraph={{
                 description,

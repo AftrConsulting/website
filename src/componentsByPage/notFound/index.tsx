@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react';
 import { StyledLink } from './style';
 import { useLocale } from 'src/localizations';
+import { Title } from 'src/components/title';
 
 /**
  * The NotFoundContainer component.
@@ -10,7 +11,7 @@ const NotFoundContainer = (): ReactElement => {
 	
     return (
         <>
-            <h1>{locale.pages.notFound.title}</h1>
+            <Title title={locale.pages.notFound.title} />
             <div>{locale.pages.notFound.subTitle}</div>
             <StyledLink href={'/'}>
                 {locale.pages.notFound.button}

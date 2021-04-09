@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react';
 import { Container } from 'src/components/container';
+import { Title } from 'src/components/title';
 import { Row } from 'src/components/row';
 
 /**
@@ -8,7 +9,7 @@ import { Row } from 'src/components/row';
 const Blog = (): ReactElement => (
     <Container>
         <Row>
-            <h1>Blog</h1>
+            <Title title={'Blog'} />
         </Row>
     </Container>
 );

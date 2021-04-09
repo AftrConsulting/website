@@ -4,11 +4,9 @@ const enSitemap = {
         title: 'Accueil',
         exclude: true,
         home: true,
-        seo: {
-            title: 'Best Web Development Services - {COMPANY}',
-            description: `We deliver the best web development services that will increase your profits. 
-			              We provide React, TypeScript, PHP, Node.js development and consultations.`
-        }
+        seoTitle: 'Best Web Development Services - {COMPANY}',
+        description: `We deliver the best web development services that will increase your profits. 
+					  We provide React, TypeScript, PHP, Node.js development and consultations.`
     },
     about: { 
         href: '/about',
@@ -25,10 +23,8 @@ const enSitemap = {
     privacyPolicy: {
         href: '/privacy-policy',
         title: 'Privacy Policy',
-        seo: {
-            title: 'Privacy Policy - {COMPANY}',
-            description: 'Privacy Policy of AftrConsulting.'
-        }
+        seoTitle: 'Privacy Policy - {COMPANY}',
+        description: 'Privacy Policy of AftrConsulting.'
     },
     services: {
         service1: {
@@ -48,18 +44,14 @@ const enSitemap = {
         href: '/sitemap',
         title: 'Sitemap',
         exclude: true,
-        seo: {
-            title: 'Sitemap - {COMPANY}',
-            description: 'Sitemap of AftrConsulting.'
-        }
+        seoTitle: 'Sitemap - {COMPANY}',
+        description: 'Sitemap of AftrConsulting.'
     },
     termsOfUse: {
         href: '/terms-of-use',
         title: 'Terms of Use',
-        seo: {
-            title: 'Terms of Use - {COMPANY}',
-            description: 'Terms of Use of AftrConsulting.'
-        }
+        seoTitle: 'Terms of Use - {COMPANY}',
+        description: 'Terms of Use of AftrConsulting.'
     }
 };
 

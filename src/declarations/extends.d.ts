@@ -29,6 +29,70 @@ declare global {
 
 	}
 
+	namespace NodeJS {
+
+		interface ProcessEnv {
+
+			/**
+			 * The markdown articles.
+			 */
+			markdown: {
+
+				/**
+				 * The pages.
+				 */
+				pages: {
+
+					/**
+					 * The articles.
+					 */
+					articles: {
+						[key in string]: {
+							en?: string;
+							fr?: string;
+						}
+					};
+
+					/**
+					 * The pages.
+					 */
+					pages: {
+						[key in string]: {
+							en?: string;
+							fr?: string;
+						}
+					};
+
+				};
+
+				/**
+				 * The paths.
+				 */
+				paths: {
+
+					/**
+					 * The articles.
+					 */
+					articles: string[];
+
+					/**
+					 * The pages.
+					 */
+					pages: string[];
+				
+				};
+
+			};
+
+			/**
+			 * The sitemap locales.
+			 */
+			sitemapLocales: {};
+
+		}
+
+	}
+
 }
 
 export { };

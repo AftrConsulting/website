@@ -2,7 +2,6 @@ import React, { ReactElement, useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { StyledLink, StyledContainer } from './style';
 import { getSitemapRoutesForLanguage } from 'config/utils/sitemap';
-import { IProcess } from 'src/interfaces/IProcess';
 
 /**
  * The Sitemap routes.
@@ -37,7 +36,7 @@ const SitemapRoutes = (): ReactElement => {
  * @param {string} locale - The locale. 
  */
 const getRoutes = (locale?: string): { href: string, title: string, exclude: boolean }[] => {
-    const sitemapLocales = (process.env as {} as IProcess).sitemapLocales;
+    const sitemapLocales = process.env.sitemapLocales;
 	
     return getSitemapRoutesForLanguage(sitemapLocales, locale as string);
 };

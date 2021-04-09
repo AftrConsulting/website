@@ -1,5 +1,4 @@
 import { configuration } from "src/configuration";
-import { IProcess } from "src/interfaces/IProcess";
 
 /**
  * Returns if is production.
