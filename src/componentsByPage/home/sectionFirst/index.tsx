@@ -32,7 +32,9 @@ const SectionFirst = (): ReactElement => {
                     <StyledButton withIcon={true} />
                 </div>
                 <StyleImgContainer>
-                    <object data="/static/images/first.svg" />
+                    <svg>
+                        <use href={'/static/images/first.svg#main'} viewBox="0 0 200 454.21" />
+                    </svg>
                 </StyleImgContainer>
             </StyledRow>
         </StyledSection>

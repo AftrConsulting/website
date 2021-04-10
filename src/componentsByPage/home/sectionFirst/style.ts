@@ -34,6 +34,10 @@ const StyleImgContainer = styled.div`
 		width: 100%;
 	}
 
+	.cls-1 {
+		fill: red;
+	}
+
 	@media screen and (max-width: ${devices.smallTablet}) {
 		display: none;
 	}
