@@ -5,7 +5,7 @@ import React, { ReactElement } from 'react';
  */
 const FirstSectionSVG = (): ReactElement => (
     <svg viewBox="0 0 738.25 454.21">
-        <use href={'/static/pages/home/first.svg#main'} />
+        <use href={'/static/images/home/first.svg#main'} />
     </svg>
 );
 
