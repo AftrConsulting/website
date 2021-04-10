@@ -7,7 +7,7 @@ const StyleImgContainer = styled.div`
 
 	svg {
 		display: inline-block;
-		height: 300px;
+		height: 190px;
 		width: 300px;
 	}
 
@@ -17,26 +17,62 @@ const StyleImgContainer = styled.div`
 
 	@media screen and (max-width: ${devices.mobile}) {
 		svg {
-			height: 250px;
+			height: 190px;
 			width: 250px;
 		}
 	}
 `;
 
 const StyledSideBySide = styled(SideBySide)`
-	padding-bottom: 40px;
+	padding-bottom: 80px;
 
+	> div {
+		&:last-of-type {
+			padding: 0px;
+		}
+
+		&:first-of-type {
+			padding-right: 60px;
+			padding-left: 0px;
+		}
+	}
+	
 	&:last-of-type {
 		padding-bottom: 0px;
 	}
 
 	&:nth-child(odd) {
 		flex-direction: row-reverse;
+
+		> div {
+			&:last-of-type {
+				padding: 0px;
+			}
+	
+			&:first-of-type {
+				padding-left: 60px;
+				padding-right: 0px;
+			}
+		}
 	}
 
 	@media screen and (max-width: ${devices.smallTablet}) {
+		padding-bottom: 40px;
+
+		> div {
+			&:first-of-type {
+				padding: 0px;
+			}
+		}
+
 		&:nth-child(odd) {
 			flex-direction: row;
+
+			> div {
+				&:first-of-type {
+					padding: 0px;
+				}
+			}
 		}
 	}
 `;

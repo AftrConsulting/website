@@ -65,7 +65,7 @@ const darkTheme = {
                 cardBackground: lighten(.05, colors.background)
             },
             images: {
-                firstBackground: lighten(.05, colors.background)
+                firstBackground: lighten(.15, colors.background)
             },
             quotes: {
                 background: lighten(.2, colors.background)
