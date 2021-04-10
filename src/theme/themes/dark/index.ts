@@ -1,56 +1,52 @@
 import { lighten, darken } from 'polished';
-import { IColors } from 'src/theme/interfaces/IColors';
-
-const colors: IColors = {
-    background: '#181e1f',
-    color: '#f6fbfc'
-};
+import { darkFirstSectionImages } from 'src/theme/themes/dark/images/firstSection';
+import { darkColors } from 'src/theme/themes/dark/colors';
 
 /**
  * The darkTheme.
  */
 const darkTheme = {
-    colors,
+    colors: darkColors,
     global: {
-        background: colors.background,
-        borderColor: lighten(.1, colors.background),
+        background: darkColors.background,
+        borderColor: lighten(.1, darkColors.background),
         borderRadius: '7px',
-        color: colors.color,
+        color: darkColors.color,
         darkModeSwitch: {
             background: darken(.1, '#fafafa')
         },
         footer: {
-            background: lighten(.05, colors.background),
+            background: lighten(.05, darkColors.background),
             icon: {
-                background: colors.background,
+                background: darkColors.background,
                 color: 'white'
             },
-            menuColor: lighten(.8, colors.background)
+            menuColor: lighten(.8, darkColors.background)
         },
         header: {
-            iconColor: lighten(.6, colors.background),
+            iconColor: lighten(.6, darkColors.background),
             logo: {
-                background: lighten(.2, colors.background),
+                background: lighten(.2, darkColors.background),
                 language: {
-                    background: lighten(.3, colors.background),
-                    backgroundHover: lighten(.4, colors.background),
-                    color: colors.color
+                    background: lighten(.3, darkColors.background),
+                    backgroundHover: lighten(.4, darkColors.background),
+                    color: darkColors.color
                 }
             },
             options: {
                 languages: {
-                    activeColor: colors.color,
-                    background: lighten(.1, colors.background)
+                    activeColor: darkColors.color,
+                    background: lighten(.1, darkColors.background)
                 }
             },
             sideMenu: {
                 background: 'rgba(0,0,0,.5)',
-                borderColor: lighten(.1, colors.background),
-                goBackBackground: darken(.05, colors.background)
+                borderColor: lighten(.1, darkColors.background),
+                goBackBackground: darken(.05, darkColors.background)
             }
         },
         markdown: {
-            metaDataColor: lighten(.5, colors.background)
+            metaDataColor: lighten(.5, darkColors.background)
         },
         primaryColors: {
             color: '#fafafa'
@@ -59,13 +55,16 @@ const darkTheme = {
     pages: {
         home: {
             description: {
-                background: lighten(.05, colors.background)
+                background: lighten(.05, darkColors.background)
             },
             expertises: {
-                cardBackground: lighten(.05, colors.background)
+                cardBackground: lighten(.05, darkColors.background)
+            },
+            images: {
+                first: darkFirstSectionImages
             },
             quotes: {
-                background: lighten(.2, colors.background)
+                background: lighten(.2, darkColors.background)
             }
         }
     }
