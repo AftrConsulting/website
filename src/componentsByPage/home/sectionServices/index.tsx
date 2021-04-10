@@ -17,9 +17,9 @@ const SectionServices = (): ReactElement => {
 
     return (
         <Section>
-            {getSection(step1, <svg><use href={'/static/images/first.svg#main'} viewBox="0 0 200 454.21" /></svg>)}
-            {getSection(step2, <svg><use href={'/static/images/first.svg#main'} viewBox="0 0 200 454.21" /></svg>)}
-            {getSection(step3, <svg><use href={'/static/images/first.svg#main'} viewBox="0 0 200 454.21" /></svg>)}
+            {getSection(step1, <FirstSectionSVG />)}
+            {getSection(step2, <FirstSectionSVG />)}
+            {getSection(step3, <FirstSectionSVG />)}
         </Section>
     );
 };
