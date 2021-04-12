@@ -27,7 +27,7 @@ const StyledIconContainer = styled.div<{ size: string; }>`
 	margin-right: 20px;
 
 	div {
-		background: ${getThemeVariable('colors.primary')};
+		background: ${getThemeVariable('pages.home.description.icon.background')};
 		height: 60px;
 		width: 60px;
 		border-radius: ${getThemeVariable('global.borderRadius')};

@@ -21,10 +21,8 @@ const frSitemap = {
         title: 'Portfolio' 
     },
     privacyPolicy: {
-        href: '/politique-de-confidentialite',
-        title: 'Politique de confidentialité',
-        seoTitle: 'Politique de confidentialité - {COMPANY}',
-        description: 'La polique de confidentialité de AftrConsulting.'
+        href: '/privacy-policy',
+        title: 'Politique de confidentialité'
     },
     services: {
         service1: {
@@ -48,10 +46,8 @@ const frSitemap = {
         description: 'Sitemap de AftrConsulting.'
     },
     termsOfUse: {
-        href: '/conditions-dutilisation',
-        title: 'Conditions d’utilisation',
-        seoTitle: 'Conditions d’utilisation - {COMPANY}',
-        description: 'Les Conditions d’utilisation de AftrConsulting.'
+        href: '/terms-of-use',
+        title: 'Conditions d’utilisation'
     }
 };
 

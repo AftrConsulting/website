@@ -60,7 +60,10 @@ const lightTheme: typeof darkTheme = {
     pages: {
         home: {
             description: {
-                background: darken(.05, colors.background)
+                background: darken(.05, colors.background),
+                icon: {
+                    background: colors.color
+                }
             },
             expertises: {
                 cardBackground: darken(.05, colors.background)

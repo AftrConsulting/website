@@ -59,7 +59,10 @@ const darkTheme = {
     pages: {
         home: {
             description: {
-                background: lighten(.05, colors.background)
+                background: lighten(.05, colors.background),
+                icon: {
+                    background: colors.background
+                }
             },
             expertises: {
                 cardBackground: lighten(.05, colors.background)

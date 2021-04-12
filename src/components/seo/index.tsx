@@ -5,6 +5,7 @@ import React, { ReactElement } from 'react';
 import { OpenGraphImages } from 'next-seo/lib/types';
 import { NextRouter, useRouter } from 'next/router';
 import { configuration } from 'src/configuration';
+import { getSitemapRoutesForLanguage } from 'config/utils/sitemap';
 
 interface ISeoProps {
 	title: string;
@@ -60,7 +61,7 @@ const Seo = (props: ISeoProps): ReactElement => {
  */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const getAdditionalLinkTags = (router: NextRouter, amp: boolean, hasAmp?: boolean): any[] => {
-    const additionalLinkTags = [];
+    const additionalLinkTags = getAlternateLanguages(router);
 	
     if (hasAmp) {
         const locale = router.locale === 'en' ? 
@@ -73,6 +74,47 @@ const getAdditionalLinkTags = (router: NextRouter, amp: boolean, hasAmp?: boolea
     }
 	
     return additionalLinkTags;
+};
+
+/**
+ * Returns the alternate languages.
+ * @param {NextRouter} router - The router. 
+ */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const getAlternateLanguages = (router: NextRouter): any[] => {
+    const additionalLinkTags = [];
+    const path = getPath(router.asPath);
+	
+    const enSitemap = getSitemapRoutesForLanguage(process.env.sitemapLocales, 'en');
+    const frSitemap = getSitemapRoutesForLanguage(process.env.sitemapLocales, 'fr');
+	
+    if (enSitemap.find(x => x.href === path)) {
+        additionalLinkTags.push({
+            rel: 'alternate',
+            href: `${configuration.general.baseUrl}${path}`,
+            hreflang: 'en'
+        });
+    }
+
+    if (frSitemap.find(x => x.href === `/fr${path}`)) {
+        additionalLinkTags.push({
+            rel: 'alternate',
+            href: `${configuration.general.baseUrl}/fr${path}`,
+            hreflang: 'fr'
+        });
+    }
+	
+    return additionalLinkTags;
+};
+
+/**
+ * Returns the path.
+ * @param {string} asPath - The as path. 
+ */
+const getPath = (asPath: string): string => {
+    if (asPath.indexOf('?') === -1) return asPath;
+
+    return asPath.substr(0, asPath.indexOf('?'));
 };
 
 /**
