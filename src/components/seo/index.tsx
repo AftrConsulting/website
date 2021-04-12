@@ -4,8 +4,9 @@ import { NextSeo } from 'next-seo';
 import React, { ReactElement } from 'react';
 import { OpenGraphImages } from 'next-seo/lib/types';
 import { NextRouter, useRouter } from 'next/router';
-import { configuration } from 'src/configuration';
+import { IAlternateLinkProps } from 'src/components/seo/interfaces/IAlternateLinkProps';
 import { getSitemapRoutesForLanguage } from 'config/utils/sitemap';
+import { configuration } from 'src/configuration';
 
 interface ISeoProps {
 	title: string;
@@ -59,8 +60,7 @@ const Seo = (props: ISeoProps): ReactElement => {
  * @param {boolean} amp - The amp. 
  * @param {boolean} hasAmp - If has amp. 
  */
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const getAdditionalLinkTags = (router: NextRouter, amp: boolean, hasAmp?: boolean): any[] => {
+const getAdditionalLinkTags = (router: NextRouter, amp: boolean, hasAmp?: boolean): IAlternateLinkProps[] => {
     const additionalLinkTags = getAlternateLanguages(router);
 	
     if (hasAmp) {
@@ -80,8 +80,7 @@ const getAdditionalLinkTags = (router: NextRouter, amp: boolean, hasAmp?: boolea
  * Returns the alternate languages.
  * @param {NextRouter} router - The router. 
  */
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const getAlternateLanguages = (router: NextRouter): any[] => {
+const getAlternateLanguages = (router: NextRouter): IAlternateLinkProps[] => {
     const additionalLinkTags = [];
     const path = getPath(router.asPath);
 	
