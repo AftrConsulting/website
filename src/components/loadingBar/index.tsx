@@ -40,10 +40,13 @@ const changeWidthLoadingBar = (loadingBar: HTMLDivElement, width: string, speed:
     if (!loadingBar) return;
 	
     loadingBar.style.transition = `width ${speed} ease`;
-    loadingBar.style.width = width;
 	
     loadingBar.removeEventListener('transitionend', onLoadingBarTransitionEnd);
     loadingBar.addEventListener('transitionend', onLoadingBarTransitionEnd);
+	
+    setTimeout(() => {
+        loadingBar.style.width = width;
+    }, 10);
 };
 
 /**
