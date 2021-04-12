@@ -62,7 +62,7 @@ const lightTheme: typeof darkTheme = {
             description: {
                 background: darken(.05, colors.background),
                 icon: {
-                    background: colors.color
+                    background: darken(.7, colors.background)
                 }
             },
             expertises: {

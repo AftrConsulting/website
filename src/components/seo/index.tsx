@@ -92,7 +92,7 @@ const getAlternateLanguages = (router: NextRouter): any[] => {
         additionalLinkTags.push({
             rel: 'alternate',
             href: `${configuration.general.baseUrl}${path}`,
-            hreflang: 'en'
+            hrefLang: 'en'
         });
     }
 
@@ -100,7 +100,7 @@ const getAlternateLanguages = (router: NextRouter): any[] => {
         additionalLinkTags.push({
             rel: 'alternate',
             href: `${configuration.general.baseUrl}/fr${path}`,
-            hreflang: 'fr'
+            hrefLang: 'fr'
         });
     }
 	
