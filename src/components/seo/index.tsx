@@ -62,14 +62,15 @@ const Seo = (props: ISeoProps): ReactElement => {
  */
 const getAdditionalLinkTags = (router: NextRouter, amp: boolean, hasAmp?: boolean): IAlternateLinkProps[] => {
     const additionalLinkTags = getAlternateLanguages(router);
-	
+    const path = getPath(router.asPath);
+
     if (hasAmp) {
         const locale = router.locale === 'en' ? 
             '' : `/${router.locale}`;
 
         additionalLinkTags.push({
             rel: amp ? 'canonical' : 'amphtml',
-            href: `${configuration.general.baseUrl}${locale}${router.route}${!amp ? '?amp=1' : ''}`
+            href: `${configuration.general.baseUrl}${locale}${path}${!amp ? '?amp=1' : ''}`
         });
     }
 	
