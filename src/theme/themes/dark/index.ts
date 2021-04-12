@@ -61,7 +61,8 @@ const darkTheme = {
             description: {
                 background: lighten(.05, colors.background),
                 icon: {
-                    background: colors.background
+                    background: colors.background,
+                    color: 'white'
                 }
             },
             expertises: {

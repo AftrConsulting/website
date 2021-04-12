@@ -14,6 +14,8 @@ interface IArticleProps {
 	redirectLanguageToIndex: boolean;
 }
 
+export const config = { amp: 'hybrid' };
+
 /**
  * The Article component.
  * @param {IArticleProps} props - The props.
@@ -25,7 +27,7 @@ const Page = (props: IArticleProps): ReactElement => {
     return (
         <Container redirectLanguageToIndex={props.redirectLanguageToIndex}>
             <Row>
-                <MarkdownContainer {...page} />
+                <MarkdownContainer {...page} hasAmp={true} />
             </Row>
         </Container>
     );
