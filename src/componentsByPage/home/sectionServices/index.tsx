@@ -1,9 +1,9 @@
 import React, { ReactElement } from 'react';
 import { StyleImgContainer, StyledSideBySide } from './style';
 import { ISectionStep } from 'src/componentsByPage/home/sectionServices/interfaces/ISectionStep';
-import { FirstSectionSVG } from 'src/componentsImg/firstSectionSVG';
 import { Paragraph } from 'src/componentsByPage/home/paragraph';
 import { SubTitle } from 'src/componentsByPage/home/subTitle';
+import { SVGImage } from 'src/componentsByPage/home/svgImage';
 import { Title } from 'src/componentsByPage/home/title';
 import { Section } from 'src/components/section';
 import { useLocale } from 'src/localizations';
@@ -17,9 +17,9 @@ const SectionServices = (): ReactElement => {
 
     return (
         <Section>
-            {getSection(step1, <FirstSectionSVG />)}
-            {getSection(step2, <FirstSectionSVG />)}
-            {getSection(step3, <FirstSectionSVG />)}
+            {getSection(step1, <SVGImage viewBox={'0 0 735.29 486.55'} href={'/static/images/home/consultations.svg#main'} />)}
+            {getSection(step2, <SVGImage viewBox={'0 0 738.25 454.21'} href={'/static/images/home/first.svg#main'} />)}
+            {getSection(step3, <SVGImage viewBox={'0 0 745.23 571.72'} href={'/static/images/home/optimizations.svg#main'} />)}
         </Section>
     );
 };

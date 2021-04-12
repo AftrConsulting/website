@@ -4,7 +4,7 @@ import {
     StyledButton, StyledH1, StyledRow, StyleImgContainer, StyledSection, StyledStarsContainer, 
     StyledPerksContainer, StyledUnderStars, StyledParagraph, StyledSubH1
 } from './style';
-import { FirstSectionSVG } from 'src/componentsImg/firstSectionSVG';
+import { SVGImage } from 'src/componentsByPage/home/svgImage';
 import { SpanText } from 'src/components/spanText';
 import { useLocale } from 'src/localizations';
 import { Icon } from 'src/components/icon';
@@ -32,7 +32,7 @@ const SectionFirst = (): ReactElement => {
                     <StyledButton withIcon={true} />
                 </div>
                 <StyleImgContainer>
-                    <FirstSectionSVG />
+                    <SVGImage viewBox={'0 0 738.25 454.21'} href={'/static/images/home/first.svg#main'} />
                 </StyleImgContainer>
             </StyledRow>
         </StyledSection>

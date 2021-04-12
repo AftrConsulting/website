@@ -1,11 +1,11 @@
 import React, { ReactElement } from 'react';
 import { useAmp } from 'next/amp';
 import { StyledSection, StyledCopyright, StyledName, StyledMailLink, StyledMenu, StyledIcons, StyledQuote } from './style';
+import { iconLinkedIn } from 'src/componentsByPage/home/images/footerLinkedIn';
+import { iconFacebook } from 'src/componentsByPage/home/images/footerFacebook';
+import { iconGithub } from 'src/componentsByPage/home/images/footerGithub';
 import { IFooterIcon } from 'src/components/footer/interfaces/IFooterIcon';
-import { iconLinkedIn } from 'src/componentsImg/footerLinkedIn';
-import { iconFacebook } from 'src/componentsImg/footerFacebook';
 import { IMenuLinkItem } from 'src/interfaces/IMenuLinkItem';
-import { iconGithub } from 'src/componentsImg/footerGithub';
 import { CustomImage } from 'src/components/customImage';
 import { configuration } from 'src/configuration';
 import { useLocale } from 'src/localizations';

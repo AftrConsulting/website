@@ -1,9 +1,9 @@
 import React, { ReactElement } from 'react';
 import { StyledSeparator, StyledIconContainer, StyledSection, StyledItalicText, StyledIconAllContainer } from './style';
-import { DescriptionTypeScript } from 'src/componentsImg/descriptionTypeScript';
-import { DescriptionNodeJS } from 'src/componentsImg/descriptionNodeJS';
-import { DescriptionDocker } from 'src/componentsImg/descriptionDocker';
-import { DescriptionReact } from 'src/componentsImg/descriptionReact';
+import { DescriptionTypeScript } from 'src/componentsByPage/home/images/descriptionTypeScript';
+import { DescriptionNodeJS } from 'src/componentsByPage/home/images/descriptionNodeJS';
+import { DescriptionDocker } from 'src/componentsByPage/home/images/descriptionDocker';
+import { DescriptionReact } from 'src/componentsByPage/home/images/descriptionReact';
 import { SideBySide } from 'src/componentsByPage/home/sideBySide';
 import { Paragraph } from 'src/componentsByPage/home/paragraph';
 import { SubTitle } from 'src/componentsByPage/home/subTitle';
