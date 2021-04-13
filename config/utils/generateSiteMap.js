@@ -14,12 +14,20 @@ const generateSiteMap = async (sitemap) => {
 	let sitemapXML = `
 		<?xml version="1.0" encoding="UTF-8"?>
 		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-			${routes.map(route => `
-				<url>
-					<loc>${`${ENV}${route.href}`}</loc>
-					<priority>${route.home ? 1 : .8}</priority>
-				</url>
-			`).join('')}
+			${routes.map(route => {
+				let href = route.href;
+
+				if (href[href.length - 1] === '/') {
+					href = href.substring(0, href.length - 1);
+				}
+
+				return `
+					<url>
+						<loc>${`${ENV}${href}`}</loc>
+						<priority>${route.home ? 1 : .8}</priority>
+					</url>
+				`;
+			}).join('')}
 		</urlset>
 	`;
 
