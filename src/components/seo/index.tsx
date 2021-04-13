@@ -66,16 +66,16 @@ const getAdditionalLinkTags = (router: NextRouter, amp: boolean, hasAmp?: boolea
     const locale = router.locale === 'en' ? 
         '' : `/${router.locale}`;
 	
-    if (hasAmp && amp) {
+    if (hasAmp && !amp) {
         additionalLinkTags.push({
             rel: 'amphtml',
-            href: `${configuration.general.baseUrl}${locale}${path}?amp=1`
+            href: getLinkHref(locale, path, true)
         });
     }
 	
     additionalLinkTags.push({
         rel: 'canonical',
-        href: `${configuration.general.baseUrl}${locale}${path}`
+        href: getLinkHref(locale, path)
     });
 	
     return additionalLinkTags;
@@ -95,7 +95,7 @@ const getAlternateLanguages = (router: NextRouter): IAlternateLinkProps[] => {
     if (enSupported) {
         additionalLinkTags.push({
             rel: 'alternate',
-            href: `${configuration.general.baseUrl}${path}`,
+            href: getLinkHref('', path),
             hrefLang: 'en'
         });
     }
@@ -103,21 +103,40 @@ const getAlternateLanguages = (router: NextRouter): IAlternateLinkProps[] => {
     if (frSupported) {
         additionalLinkTags.push({
             rel: 'alternate',
-            href: `${configuration.general.baseUrl}/fr${path}`,
+            href: getLinkHref('/fr', path),
             hrefLang: 'fr'
         });
     }
 	
-    const locale = router.locale === 'en' ? 
-        '' : `/${router.locale}`;
+    const locale = enSupported ? '' : '/fr';
 	
     additionalLinkTags.push({
         rel: 'alternate',
-        href: `${configuration.general.baseUrl}${locale}${path}`,
+        href: getLinkHref(locale, path),
         hrefLang: 'x-default'
     });
 	
     return additionalLinkTags;
+};
+
+/**
+ * Returns the link href.
+ * @param {string} locale - The locale. 
+ * @param {string} path - The path. 
+ * @param {boolean} amp - The amp. 
+ */
+const getLinkHref = (locale = '', path = '', amp = false): string => {
+    let href = `${configuration.general.baseUrl}${locale}${path}`;
+
+    if (href[href.length - 1] === '/') {
+        href = href.substring(0, href.length - 1);
+    }
+	
+    if (amp) {
+        href += '?amp=1';
+    }
+	
+    return href;
 };
 
 /**
