@@ -63,16 +63,20 @@ const Seo = (props: ISeoProps): ReactElement => {
 const getAdditionalLinkTags = (router: NextRouter, amp: boolean, hasAmp?: boolean): IAlternateLinkProps[] => {
     const additionalLinkTags = getAlternateLanguages(router);
     const path = getPath(router.asPath);
-
-    if (hasAmp) {
-        const locale = router.locale === 'en' ? 
-            '' : `/${router.locale}`;
-
+    const locale = router.locale === 'en' ? 
+        '' : `/${router.locale}`;
+	
+    if (hasAmp && amp) {
         additionalLinkTags.push({
-            rel: amp ? 'canonical' : 'amphtml',
-            href: `${configuration.general.baseUrl}${locale}${path}${!amp ? '?amp=1' : ''}`
+            rel: 'amphtml',
+            href: `${configuration.general.baseUrl}${locale}${path}?amp=1`
         });
     }
+	
+    additionalLinkTags.push({
+        rel: 'canonical',
+        href: `${configuration.general.baseUrl}${locale}${path}`
+    });
 	
     return additionalLinkTags;
 };
@@ -85,10 +89,10 @@ const getAlternateLanguages = (router: NextRouter): IAlternateLinkProps[] => {
     const additionalLinkTags = [];
     const path = getPath(router.asPath);
 	
-    const enSitemap = getSitemapRoutesForLanguage(process.env.sitemapLocales, 'en');
-    const frSitemap = getSitemapRoutesForLanguage(process.env.sitemapLocales, 'fr');
+    const enSupported = getSitemapRoutesForLanguage(process.env.sitemapLocales, 'en').find(x => x.href === path);
+    const frSupported = getSitemapRoutesForLanguage(process.env.sitemapLocales, 'fr').find(x => x.href === `/fr${path}`);
 	
-    if (enSitemap.find(x => x.href === path)) {
+    if (enSupported) {
         additionalLinkTags.push({
             rel: 'alternate',
             href: `${configuration.general.baseUrl}${path}`,
@@ -96,13 +100,22 @@ const getAlternateLanguages = (router: NextRouter): IAlternateLinkProps[] => {
         });
     }
 
-    if (frSitemap.find(x => x.href === `/fr${path}`)) {
+    if (frSupported) {
         additionalLinkTags.push({
             rel: 'alternate',
             href: `${configuration.general.baseUrl}/fr${path}`,
             hrefLang: 'fr'
         });
     }
+	
+    const locale = router.locale === 'en' ? 
+        '' : `/${router.locale}`;
+	
+    additionalLinkTags.push({
+        rel: 'alternate',
+        href: `${configuration.general.baseUrl}${locale}${path}`,
+        hrefLang: 'x-default'
+    });
 	
     return additionalLinkTags;
 };
