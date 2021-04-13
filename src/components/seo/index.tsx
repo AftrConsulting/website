@@ -27,6 +27,9 @@ const Seo = (props: ISeoProps): ReactElement => {
     const additionalLinkTags = getAdditionalLinkTags(router, amp, props.hasAmp);
     const title = replaceSEOTags(props.seoTitle || props.title);
     const description = props.description?.replace(/\s+/g, ' ') || '';
+	
+    const path = getPath(router.asPath);
+    const locale = router.locale === 'en' ? '' : `/${router.locale}`;
 
     return (
         <SeoHead
@@ -36,6 +39,7 @@ const Seo = (props: ISeoProps): ReactElement => {
             additionalMetaTags={[
                 { property: 'og:type', content: 'website' },
                 { property: 'og:title', content: title },
+                { property: 'og:url', content: getLinkHref(locale, path) },
                 { property: 'og:description', content: description },
                 { property: 'og:image', content: image },
                 { property: 'og:image:alt', content: 'logo' },
@@ -46,7 +50,8 @@ const Seo = (props: ISeoProps): ReactElement => {
                 { name: 'twitter:card', content: 'summary_large_image' },
                 { name: 'twitter:title', content: title },
                 { name: 'twitter:description', content: description },
-                { name: 'twitter:image', content: image }
+                { name: 'twitter:image', content: image },
+                { name: 'twitter:site', content: configuration.general.twitter.account }
             ]}
         />
     );

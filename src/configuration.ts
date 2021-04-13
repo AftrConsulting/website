@@ -26,7 +26,10 @@ const configuration = {
             logo: '/static/images/logo.png',
             openGraphImage: '/static/images/openGraphImage.png'
         },
-        linkedIn: 'https://www.linkedin.com/company/aftrconsulting'
+        linkedIn: 'https://www.linkedin.com/company/aftrconsulting',
+        twitter: {
+            account: '@aftrconsulting'
+        }
     },
     localStorage: {
         primary: 'primary',
