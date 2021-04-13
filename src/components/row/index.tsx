@@ -10,13 +10,11 @@ interface IRowProps {
  * The row component.
  * @param {IRowProps} props - The props.
  */
-const Row = (props: IRowProps): ReactElement => {
-    return (
-        <StyledRow className={props.className}>
-            {props.children}
-        </StyledRow>
-    );
-};
+const Row = (props: IRowProps): ReactElement => (
+    <StyledRow className={props.className}>
+        {props.children}
+    </StyledRow>
+);
 
 export {
     Row

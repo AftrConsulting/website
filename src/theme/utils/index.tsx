@@ -3,7 +3,7 @@ import { primaryColors, themesName } from 'src/theme';
 import { configuration } from 'src/configuration';
 import { MyTheme } from 'src/theme/types/MyTheme';
 import { darkTheme } from 'src/theme/themes/dark';
-import { darken } from 'polished';
+import { darken, lighten } from 'polished';
 
 /**
  * Returns the global theme.
@@ -55,6 +55,7 @@ const getGlobalColors = (colors: string[]): string => {
 		html += `[data-${configuration.localStorage.primary}="${colors[i]}"] {
 				  	--colors-primary: ${colors[i]};
 					--colors-primaryHovered: ${darken(.1, colors[i])};
+					--colors-primaryLighten: ${lighten(.1, colors[i])};
 		         }\n`;
 	}
 
