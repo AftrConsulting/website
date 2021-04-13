@@ -45,7 +45,11 @@ const getSitemapRoutesForLanguage = (sitemap, language) => {
 	
     for (const i in sitemap[language]) {
 		const part = language === 'en' ?  '' : `/${language}`;
-		const href = part + sitemap[language][i].href;
+		let href = part + sitemap[language][i].href;
+
+		if (href[href.length - 1] === '/') {
+			href = href.substring(0, href.length - 1);
+		}
 
 		routes.push({
 			...sitemap[language][i],
