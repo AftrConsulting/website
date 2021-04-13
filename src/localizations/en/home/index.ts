@@ -65,13 +65,13 @@ const enHomeLocale = {
             }
         ],
         ps: 'This list is not exhaustive, contact us if you need something special. We\'ll help you.',
-        subTitle: 'Our Expertise',
+        subTitle: 'Our Services',
         title: 'We have all the skills for building great modern web apps and sites.\u00A0🙏'
     },
     first: {
         heading: 'Best <span class="primary">Web Development</span> Services',
         perks: [
-            'Really Fast Web Development\u00A0💪',
+            'Very Fast Web Development\u00A0💪',
             'Affordable Pricing\u00A0💸',
             'On-Time Delivery\u00A0⌛',
             'Top Results\u00A0🏆'
