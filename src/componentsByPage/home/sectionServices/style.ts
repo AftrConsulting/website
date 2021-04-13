@@ -7,19 +7,12 @@ const StyleImgContainer = styled.div`
 
 	svg {
 		display: inline-block;
-		height: 190px;
+		height: 205px;
 		width: 300px;
 	}
 
 	@media screen and (max-width: ${devices.smallTablet}) {
 		margin-top: 40px;
-	}
-
-	@media screen and (max-width: ${devices.mobile}) {
-		svg {
-			height: 190px;
-			width: 250px;
-		}
 	}
 `;
 
