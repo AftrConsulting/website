@@ -96,7 +96,8 @@ const getAlternateLanguages = (router: NextRouter): IAlternateLinkProps[] => {
         additionalLinkTags.push({
             rel: 'alternate',
             href: getLinkHref('', path),
-            hrefLang: 'en'
+            hrefLang: 'en',
+            keyOverride: 'en'
         });
     }
 
