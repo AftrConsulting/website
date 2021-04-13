@@ -1,11 +1,10 @@
 /* eslint-disable sort-keys */
 import { useAmp } from 'next/amp';
-import { NextSeo } from 'next-seo';
 import React, { ReactElement } from 'react';
-import { OpenGraphImages } from 'next-seo/lib/types';
 import { NextRouter, useRouter } from 'next/router';
 import { IAlternateLinkProps } from 'src/components/seo/interfaces/IAlternateLinkProps';
 import { getSitemapRoutesForLanguage } from 'config/utils/sitemap';
+import { SeoHead } from 'src/components/seo/component/seoHead';
 import { configuration } from 'src/configuration';
 
 interface ISeoProps {
@@ -17,7 +16,7 @@ interface ISeoProps {
 }
 
 /**
- * The seo component.
+ * The Seo component.
  * @param {ISeoProps} props - The props.
  */
 const Seo = (props: ISeoProps): ReactElement => {
@@ -28,24 +27,23 @@ const Seo = (props: ISeoProps): ReactElement => {
     const additionalLinkTags = getAdditionalLinkTags(router, amp, props.hasAmp);
     const title = replaceSEOTags(props.seoTitle || props.title);
     const description = props.description?.replace(/\s+/g, ' ') || '';
-	
+
     return (
-        <NextSeo
+        <SeoHead
             title={title}
             description={description}
             additionalLinkTags={additionalLinkTags}
-            openGraph={{
-                description,
-                images: getOpenGraphImages(image),
-                locale: router.locale,
-                site_name: configuration.general.company,
-                title,
-                type: 'website'
-            }}
-            twitter={{
-                cardType: 'summary_large_image'
-            }}
             additionalMetaTags={[
+                { property: 'og:type', content: 'website' },
+                { property: 'og:title', content: title },
+                { property: 'og:description', content: description },
+                { property: 'og:image', content: image },
+                { property: 'og:image:alt', content: 'logo' },
+                { property: 'og:image:width', content: '1200' },
+                { property: 'og:image:height', content: '630' },
+                { property: 'og:locale', content: router.locale },
+                { property: 'og:site_name', content: configuration.general.company },
+                { name: 'twitter:card', content: 'summary_large_image' },
                 { name: 'twitter:title', content: title },
                 { name: 'twitter:description', content: description },
                 { name: 'twitter:image', content: image }
@@ -96,8 +94,7 @@ const getAlternateLanguages = (router: NextRouter): IAlternateLinkProps[] => {
         additionalLinkTags.push({
             rel: 'alternate',
             href: getLinkHref('', path),
-            hrefLang: 'en',
-            keyOverride: 'en'
+            hrefLang: 'en'
         });
     }
 
@@ -149,19 +146,6 @@ const getPath = (asPath: string): string => {
 
     return asPath.substr(0, asPath.indexOf('?'));
 };
-
-/**
- * Returns the open graph images.
- * @param {string} url - The url.
- */
-const getOpenGraphImages = (url: string): OpenGraphImages[] => ([
-    {
-        alt: 'Logo',
-        height: 630,
-        url,
-        width: 1200
-    }
-]);
 
 /**
  * Replaces SEO tags.
