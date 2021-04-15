@@ -5,6 +5,7 @@ import { Paragraph } from 'src/components/elements/paragraph';
 import { SubTitle } from 'src/components/landing/subTitle';
 import { Title } from 'src/components/landing/title';
 import { Icon } from 'src/components/elements/icon';
+import { configuration } from 'src/configuration';
 import { useLocale } from 'src/localizations';
 
 /**
@@ -12,10 +13,6 @@ import { useLocale } from 'src/localizations';
  */
 const SectionTalkExpert = (): ReactElement => {
     const locale = useLocale();
-
-    const openWidget = (): void => {
-        window.Tawk_API?.maximize();
-    };
 	
     return (
         <StyledSection>
@@ -26,7 +23,7 @@ const SectionTalkExpert = (): ReactElement => {
                     <Paragraph>{locale.pages.home.talkExpert.description}</Paragraph>
                 </div>
                 <div>
-                    <StyledButton onClick={openWidget}>
+                    <StyledButton className={configuration.classes.triggerTAWK}>
                         {locale.pages.home.talkExpert.button}
                         <Icon icon={faArrowRight} />
                     </StyledButton>

@@ -4,6 +4,9 @@ import { primaryColors } from 'src/theme';
  * The configuration file.
  */
 const configuration = {
+    classes: {
+        triggerTAWK: 'triggerTAWK'
+    },
     defaults: {
         primary: primaryColors[0],
         themeName: 'light'

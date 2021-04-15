@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react';
 import Document, { Html, Head, Main, NextScript, DocumentContext, DocumentInitialProps } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 import { AMPAnalyticsScript } from 'src/componentsByPage/document/ampAnalyticsScript';
-import { ThemeScript } from 'src/componentsByPage/document/themeScript';
+import { AdditionalScripts } from 'src/componentsByPage/document/additionalScripts';
 import { configuration } from 'src/configuration';
 import { globalStyles } from 'src/theme/global';
 import { getStructuredData } from 'src/utils';
@@ -45,7 +45,7 @@ class MyDocument extends Document<IMyDocumentProps> {
     public render = (): ReactElement => (
         <Html data-theme={configuration.defaults.themeName} data-primary={configuration.defaults.primary}>
             <Head>
-                <ThemeScript />
+                <AdditionalScripts />
                 <style amp-custom={''} dangerouslySetInnerHTML={{ __html: this.props.styleHTML }} />
                 <link rel={'shortcut icon'} href={configuration.general.imgs.logo} />
                 <link rel={'apple-touch-icon'} href={configuration.general.imgs.logo} />
