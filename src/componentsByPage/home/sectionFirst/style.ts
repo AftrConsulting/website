@@ -29,6 +29,12 @@ const StyledRow = styled(Row)`
 const StyleImgContainer = styled.div`
 	text-align: center;
 
+	> div {
+		alignItems: center;
+		display: flex;
+		height: 100%;
+	}
+
 	svg {
 		display: inline-block;
 		width: 100%;
@@ -67,6 +73,7 @@ const StyledButton = styled(CTA)`
 	line-height: auto;
 	padding: 5px 25px;
 	background: transparent;
+	text-transform: uppercase;
 	user-select: none;
 	margin-top: 20px;
 
@@ -122,10 +129,11 @@ const StyledSubH1 = styled.div`
 `;
 
 const StyledSealsContainer = styled.div`
-	margin-top: 25px;
+	margin-top: 15px;
 
 	> div {
 		vertical-align: middle;
+		margin-top: 10px;
 
 		&:first-of-type {
 			margin-right: 20px;
@@ -138,6 +146,12 @@ const StyledSealsContainer = styled.div`
 
 	@media screen and (max-width: ${devices.mediumMobile}) {
 		> div:last-of-type {
+			display: none;
+		}
+	}
+
+	@media screen and (max-width: ${devices.verySmallMobile}) {
+		> div:nth-child(2) {
 			display: none;
 		}
 	}

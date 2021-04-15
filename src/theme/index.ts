@@ -25,7 +25,8 @@ const devices = {
     mobile: '700px',
     smallMobile: '480px',
     smallTablet: '1000px',
-    tablet: '1200px'
+    tablet: '1200px',
+    verySmallMobile: '370px'
 };
 
 /**

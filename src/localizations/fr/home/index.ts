@@ -97,6 +97,7 @@ const frHomeLocale: typeof enHomeLocale = {
 							  Suspendisse mauris odio, commodo vitae sagittis a, feugiat quis quam.
 							  Donec orci metus, tempor vitae varius in, porttitor 
 							  sed ex. Proin et interdum nisl. Nullam ut lorem ut mauris dictum finibus.`,
+                href: '',
                 name: 'Alex Alexson'
             },            
             {
@@ -107,6 +108,7 @@ const frHomeLocale: typeof enHomeLocale = {
 							  Suspendisse mauris odio, commodo vitae sagittis a, feugiat quis quam.
 							  Donec orci metus, tempor vitae varius in, porttitor 
 							  sed ex. Proin et interdum nisl. Nullam ut lorem ut mauris dictum finibus.`,
+                href: '',
                 name: 'Alex Alexson'
             },
             {
@@ -117,6 +119,7 @@ const frHomeLocale: typeof enHomeLocale = {
 							  Suspendisse mauris odio, commodo vitae sagittis a, feugiat quis quam.
 							  Donec orci metus, tempor vitae varius in, porttitor 
 							  sed ex. Proin et interdum nisl. Nullam ut lorem ut mauris dictum finibus.`,
+                href: '',
                 name: 'Alex Alexson'
             }
         ],

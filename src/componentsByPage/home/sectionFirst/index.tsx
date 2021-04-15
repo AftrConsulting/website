@@ -35,7 +35,9 @@ const SectionFirst = (): ReactElement => {
                     {getSeals()}
                 </div>
                 <StyleImgContainer>
-                    <SVGImage viewBox={'0 0 738.25 454.21'} href={'/static/images/home/first.svg#main'} />
+                    <div>
+                        <SVGImage viewBox={'0 0 738.25 454.21'} href={'/static/images/home/first.svg#main'} />
+                    </div>
                 </StyleImgContainer>
             </StyledRow>
         </StyledSection>
