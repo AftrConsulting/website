@@ -104,6 +104,10 @@ const StyledQuote = styled.div`
 const StyledSeparator = styled.span`
 	display: inline-block;
 	margin: 0px 10px;
+
+	@media screen and (max-width: ${devices.verySmallMobile}) {
+		display: none;
+	}
 `;
 
 const StyledPrivacyLink = styled.a`
@@ -112,6 +116,11 @@ const StyledPrivacyLink = styled.a`
 
 	&:hover {
 		text-decoration: underline;
+	}
+
+	@media screen and (max-width: ${devices.verySmallMobile}) {
+		margin-top: 10px;
+		display: block;
 	}
 `;
 
