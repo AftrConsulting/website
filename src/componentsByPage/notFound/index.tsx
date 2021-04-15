@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import { StyledLink } from './style';
-import { Title } from 'src/components/elements/title';
+import { Title } from 'src/components/global/title';
 import { useLocale } from 'src/localizations';
 
 /**

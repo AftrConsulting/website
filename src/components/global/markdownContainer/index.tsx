@@ -6,7 +6,7 @@ import dayjs, { extend, locale } from 'dayjs';
 import localizedFormat from 'dayjs/plugin/localizedFormat';
 import { StyledMarkdownContainer, StyledMetaData } from './style';
 import { IMarkdownArticleProps } from 'src/interfaces/IMarkdownArticleProps';
-import { Title } from 'src/components/elements/title';
+import { Title } from 'src/components/global/title';
 import { Seo } from 'src/components/global/seo';
 
 interface IMarkdownContainerProps extends IMarkdownArticleProps {
