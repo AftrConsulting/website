@@ -21,6 +21,7 @@ const frLocale: typeof enLocale = {
             linkedIn: 'Aller à LinkedIn',
             logo: 'Aller à la page principale',
             options: 'Ouvrir le menu d\'options',
+            phone: 'Nous appeler',
             sideMenu: 'Ouvrir le menu'
         },
         options: {

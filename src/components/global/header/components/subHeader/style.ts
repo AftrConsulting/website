@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { getThemeVariable } from 'src/theme/utils';
 import { devices } from 'src/theme';
 
 const StyledSubHeaderContainer = styled.div`
@@ -31,7 +32,27 @@ const StyledButtonContainer = styled.div<{ amp?: boolean }>`
 		}`}
 `;
 
+const StyledTelephone = styled.div`
+	display: inline-block;
+	margin-right: 20px;
+	color: ${getThemeVariable('colors.color')};
+
+	a {
+		text-decoration: none;
+		color: ${getThemeVariable('colors.color')};
+	}
+
+	svg {
+		margin-right: 7px;
+	}
+
+	@media screen and (max-width: ${devices.mobile}) {
+		display: none;
+	}
+`;
+
 export {
     StyledSubHeaderContainer,
-    StyledButtonContainer
+    StyledButtonContainer,
+    StyledTelephone
 };

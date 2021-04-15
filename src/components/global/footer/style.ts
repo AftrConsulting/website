@@ -33,6 +33,25 @@ const StyledMailLink = styled.a`
 	&:hover {
 		text-decoration: underline;
 	}
+
+	svg {
+		margin-right: 5px;
+	}
+`;
+
+const StyledPhoneLink = styled.a`
+	color: ${getThemeVariable('colors.primary')};
+	text-decoration: none;
+	margin-top: 10px;
+	display: inline-block;
+
+	&:hover {
+		text-decoration: underline;
+	}
+
+	svg {
+		margin-right: 5px;
+	}
 `;
 
 const StyledMenu = styled.div`
@@ -82,6 +101,20 @@ const StyledQuote = styled.div`
 	user-select: none;
 `;
 
+const StyledSeparator = styled.span`
+	display: inline-block;
+	margin: 0px 10px;
+`;
+
+const StyledPrivacyLink = styled.a`
+	color: ${getThemeVariable('colors.color')};
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+`;
+
 export {
     StyledCopyright,
     StyledSection,
@@ -89,5 +122,8 @@ export {
     StyledMailLink,
     StyledMenu,
     StyledIcons,
-    StyledQuote
+    StyledQuote,
+    StyledPhoneLink,
+    StyledSeparator,
+    StyledPrivacyLink
 };

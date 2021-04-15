@@ -32,6 +32,7 @@ const configuration = {
             openGraphImage: '/static/images/openGraphImage.png'
         },
         linkedIn: 'https://www.linkedin.com/company/aftrconsulting',
+        phone: '+1 (438) 994-2296',
         trustpilot: 'https://www.trustpilot.com/review/aftrconsulting.com',
         twitter: {
             account: '@aftrconsulting'

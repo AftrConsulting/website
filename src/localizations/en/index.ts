@@ -20,6 +20,7 @@ const enLocale = {
             linkedIn: 'Go to LinkedIn',
             logo: 'Go to main page',
             options: 'Open options menu',
+            phone: 'Call us',
             sideMenu: 'Open side menu'
         },
         options: {

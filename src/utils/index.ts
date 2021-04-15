@@ -35,8 +35,21 @@ const isLandingPage = (router: NextRouter): boolean => {
 	return router.route.indexOf('/landing/') !== -1;
 }
 
+/**
+ * Returns the phone link.
+ */
+const getPhoneLink = (): string => {
+    return configuration.general.phone
+        .replace('(', '')
+        .replace(')', '')
+        .replace('+', '')
+        .replace('-', '')
+        .replace(/ /g, '');
+};
+
 export {
 	getStructuredData,
 	isProduction,
-	isLandingPage
+	isLandingPage,
+	getPhoneLink
 }
