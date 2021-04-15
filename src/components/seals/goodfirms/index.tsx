@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import { StyledContainer } from './style';
-import { OutsideLink } from 'src/components/outsideLink';
-import { SVGImage } from 'src/components/svgImage';
+import { OutsideLink } from 'src/components/elements/outsideLink';
+import { SVGImage } from 'src/components/elements/svgImage';
 import { configuration } from 'src/configuration';
 
 interface IGoodFirmsProps {

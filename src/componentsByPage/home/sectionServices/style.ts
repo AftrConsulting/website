@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { SideBySide } from 'src/componentsByPage/home/sideBySide';
+import { SideBySide } from 'src/components/landing/sideBySide';
 import { devices } from 'src/theme';
 
 const StyleImgContainer = styled.div`

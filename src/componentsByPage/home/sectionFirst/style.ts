@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import { Paragraph } from 'src/componentsByPage/home/paragraph';
+import { Paragraph } from 'src/components/elements/paragraph';
+import { Section } from 'src/components/elements/section';
 import { getThemeVariable } from 'src/theme/utils';
-import { Section } from 'src/components/section';
-import { CTA } from 'src/components/cta';
-import { Row } from 'src/components/row';
+import { Row } from 'src/components/elements/row';
+import { CTA } from 'src/components/special/cta';
 import { devices } from 'src/theme';
 
 const StyledSection = styled(Section)`

@@ -1,11 +1,11 @@
 import React, { ReactElement } from 'react';
 import { StyleImgContainer, StyledSideBySide } from './style';
 import { ISectionStep } from 'src/componentsByPage/home/sectionServices/interfaces/ISectionStep';
-import { Paragraph } from 'src/componentsByPage/home/paragraph';
-import { SubTitle } from 'src/componentsByPage/home/subTitle';
-import { Title } from 'src/componentsByPage/home/title';
-import { SVGImage } from 'src/components/svgImage';
-import { Section } from 'src/components/section';
+import { Paragraph } from 'src/components/elements/paragraph';
+import { SVGImage } from 'src/components/elements/svgImage';
+import { Section } from 'src/components/elements/section';
+import { SubTitle } from 'src/components/landing/subTitle';
+import { Title } from 'src/components/landing/title';
 import { useLocale } from 'src/localizations';
 
 /**

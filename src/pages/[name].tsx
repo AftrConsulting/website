@@ -1,10 +1,10 @@
 import React, { ReactElement } from 'react';
 import { useRouter } from 'next/router';
 import { IMarkdownArticleProps } from 'src/interfaces/IMarkdownArticleProps';
-import { MarkdownContainer } from 'src/components/markdownContainer';
+import { MarkdownContainer } from 'src/components/global/markdownContainer';
+import { Container } from 'src/components/global/container';
 import { IStaticProps } from 'src/interfaces/IStaticProps';
-import { Container } from 'src/components/container';
-import { Row } from 'src/components/row';
+import { Row } from 'src/components/elements/row';
 
 interface IArticleProps {
 	pages: {

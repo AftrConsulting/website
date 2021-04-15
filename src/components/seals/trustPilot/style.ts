@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { SVGImage } from 'src/components/svgImage';
+import { SVGImage } from 'src/components/elements/svgImage';
 import { getThemeVariable } from 'src/theme/utils';
 
 const StyledContainer = styled.div`

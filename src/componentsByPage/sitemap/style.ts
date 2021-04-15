@@ -1,6 +1,6 @@
 import styled from 'styled-components';
+import { MyLink } from 'src/components/elements/link';
 import { getThemeVariable } from 'src/theme/utils';
-import { MyLink } from 'src/components/link';
 
 const StyledLink = styled(MyLink)`
 	color: ${getThemeVariable('colors.primary')};

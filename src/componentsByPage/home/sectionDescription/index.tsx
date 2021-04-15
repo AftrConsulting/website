@@ -4,11 +4,11 @@ import { DescriptionTypeScript } from 'src/componentsByPage/home/images/descript
 import { DescriptionNodeJS } from 'src/componentsByPage/home/images/descriptionNodeJS';
 import { DescriptionDocker } from 'src/componentsByPage/home/images/descriptionDocker';
 import { DescriptionReact } from 'src/componentsByPage/home/images/descriptionReact';
-import { SideBySide } from 'src/componentsByPage/home/sideBySide';
-import { Paragraph } from 'src/componentsByPage/home/paragraph';
-import { SubTitle } from 'src/componentsByPage/home/subTitle';
-import { Title } from 'src/componentsByPage/home/title';
-import { SpanText } from 'src/components/spanText';
+import { SideBySide } from 'src/components/landing/sideBySide';
+import { Paragraph } from 'src/components/elements/paragraph';
+import { SpanText } from 'src/components/elements/spanText';
+import { SubTitle } from 'src/components/landing/subTitle';
+import { Title } from 'src/components/landing/title';
 import { useLocale } from 'src/localizations';
 
 /**

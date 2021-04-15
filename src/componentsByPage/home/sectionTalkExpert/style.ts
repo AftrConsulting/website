@@ -1,7 +1,7 @@
 import styled from 'styled-components';
+import { Section } from 'src/components/elements/section';
+import { Row } from 'src/components/elements/row';
 import { getThemeVariable } from 'src/theme/utils';
-import { Section } from 'src/components/section';
-import { Row } from 'src/components/row';
 import { devices } from 'src/theme';
 
 const StyledSection = styled(Section)`

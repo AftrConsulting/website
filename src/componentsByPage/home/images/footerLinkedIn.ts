@@ -1,4 +1,4 @@
-import { IIconDefinition } from 'src/components/icon/interfaces/IIconDefinition';
+import { IIconDefinition } from 'src/components/elements/icon/interfaces/IIconDefinition';
 
 const iconLinkedIn: IIconDefinition = {
     icon: [

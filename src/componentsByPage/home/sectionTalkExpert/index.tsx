@@ -1,11 +1,11 @@
 import React, { ReactElement } from 'react';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { StyledSection, StyledCenter, StyledButton } from './style';
-import { Paragraph } from 'src/componentsByPage/home/paragraph';
-import { SubTitle } from 'src/componentsByPage/home/subTitle';
-import { Title } from 'src/componentsByPage/home/title';
+import { Paragraph } from 'src/components/elements/paragraph';
+import { SubTitle } from 'src/components/landing/subTitle';
+import { Title } from 'src/components/landing/title';
+import { Icon } from 'src/components/elements/icon';
 import { useLocale } from 'src/localizations';
-import { Icon } from 'src/components/icon';
 
 /**
  * The SectionTalkExpert component.

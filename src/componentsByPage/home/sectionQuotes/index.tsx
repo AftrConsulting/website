@@ -1,10 +1,10 @@
 import React, { ReactElement } from 'react';
 import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons';
 import { StyledSection, StyledQuotesContainer, StyledDescription, StyledIcon, StyledName, StyledLink } from './style';
-import { SubTitle } from 'src/componentsByPage/home/subTitle';
-import { Title } from 'src/componentsByPage/home/title';
+import { SubTitle } from 'src/components/landing/subTitle';
+import { Title } from 'src/components/landing/title';
+import { Row } from 'src/components/elements/row';
 import { useLocale } from 'src/localizations';
-import { Row } from 'src/components/row';
 
 /**
  * The SectionQuotes component.

@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import { StyledLink } from './style';
+import { Title } from 'src/components/elements/title';
 import { useLocale } from 'src/localizations';
-import { Title } from 'src/components/title';
 
 /**
  * The NotFoundContainer component.

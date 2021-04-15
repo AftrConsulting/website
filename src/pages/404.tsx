@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import { NotFoundContainer } from 'src/componentsByPage/notFound';
-import { Container } from 'src/components/container';
-import { Row } from 'src/components/row';
+import { Container } from 'src/components/global/container';
+import { Row } from 'src/components/elements/row';
 
 /**
  * The NotFound component. 

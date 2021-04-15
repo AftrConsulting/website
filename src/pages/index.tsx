@@ -5,9 +5,9 @@ import { SectionExpertise } from 'src/componentsByPage/home/sectionExpertise';
 import { SectionServices } from 'src/componentsByPage/home/sectionServices';
 import { SectionQuotes } from 'src/componentsByPage/home/sectionQuotes';
 import { SectionFirst } from 'src/componentsByPage/home/sectionFirst';
-import { Container } from 'src/components/container';
+import { Container } from 'src/components/global/container';
+import { Seo } from 'src/components/global/seo';
 import { useLocale } from 'src/localizations';
-import { Seo } from 'src/components/seo';
 
 /**
  * The Home component.

@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import { StyledContainer, StyledTitle, StyledBold, StyledLogo, StyledFiveStars } from './style';
-import { OutsideLink } from 'src/components/outsideLink';
+import { OutsideLink } from 'src/components/elements/outsideLink';
 import { configuration } from 'src/configuration';
 
 interface ITrustPilotProps {

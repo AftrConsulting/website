@@ -5,12 +5,12 @@ import {
     StyledPerksContainer, StyledUnderStars, StyledParagraph, StyledSubH1
 } from './style';
 import { TrustPilot } from 'src/components/seals/trustPilot';
+import { SpanText } from 'src/components/elements/spanText';
+import { SVGImage } from 'src/components/elements/svgImage';
 import { GoodFirms } from 'src/components/seals/goodfirms';
 import { Clutch } from 'src/components/seals/clutch';
-import { SpanText } from 'src/components/spanText';
-import { SVGImage } from 'src/components/svgImage';
+import { Icon } from 'src/components/elements/icon';
 import { useLocale } from 'src/localizations';
-import { Icon } from 'src/components/icon';
 
 /**
  * The SectionFirst component.

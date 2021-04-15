@@ -1,8 +1,8 @@
 import React, { ReactElement } from 'react';
 import { Provider } from 'react-redux';
 import { useRouter } from 'next/router';
-import { SideMenu } from 'src/components/header/components/sideMenu';
-import { LoadingBar } from 'src/components/loadingBar';
+import { SideMenu } from 'src/components/global/header/components/sideMenu';
+import { LoadingBar } from 'src/components/global/loadingBar';
 import { getStore } from 'src/context';
 
 interface IAppProps {

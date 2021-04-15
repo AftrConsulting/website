@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { Paragraph } from 'src/componentsByPage/home/paragraph';
+import { Paragraph } from 'src/components/elements/paragraph';
 import { getThemeVariable } from 'src/theme/utils';
-import { CTA } from 'src/components/cta';
+import { CTA } from 'src/components/special/cta';
 import { devices } from 'src/theme';
 
 const StyledContainer = styled.div`

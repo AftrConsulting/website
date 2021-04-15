@@ -1,10 +1,10 @@
 import React, { ReactElement } from 'react';
 import { StyledSection, StyledExpertiseContainer, StyledTitle, StyledParagraph, StyledSeparator, StyledPS } from './style';
 import { SectionBookConsultation } from 'src/componentsByPage/home/sectionBookConsultation';
-import { SubTitle } from 'src/componentsByPage/home/subTitle';
-import { Title } from 'src/componentsByPage/home/title';
+import { SubTitle } from 'src/components/landing/subTitle';
+import { Title } from 'src/components/landing/title';
+import { Row } from 'src/components/elements/row';
 import { useLocale } from 'src/localizations';
-import { Row } from 'src/components/row';
 
 /**
  * The SectionExpertise component.
