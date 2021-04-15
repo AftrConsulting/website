@@ -85,24 +85,23 @@ const enHomeLocale = {
         from: ', of ',
         reviews: [
             {
-                company: 'Company A',
-                description: `Suspendisse mauris odio, commodo vitae sagittis a, feugiat quis quam.
-							  Donec orci metus, tempor vitae varius in, porttitor 
-							  sed ex. Proin et interdum nisl. Nullam ut lorem ut mauris dictum finibus.
-							  Suspendisse mauris odio, commodo vitae sagittis a, feugiat quis quam.
-							  Donec orci metus, tempor vitae varius in, porttitor 
-							  sed ex. Proin et interdum nisl. Nullam ut lorem ut mauris dictum finibus.`,
-                name: 'Alex Alexson'
+                company: 'Les Finances',
+                description: `We hired AFTRConsulting to redesign the back-end of our site,
+							  and we literally couldn't be happier with the results! 
+							  They are open to feedback, patient, communicative, and can adhere to a tight timeline. 
+							  We will definitely continue working with them in the future!`,
+                href: 'https://www.lesfinances.ca/',
+                name: 'Matt M.'
             },            
             {
-                company: 'Company B',
+                company: 'Psyhelp',
                 description: `Suspendisse mauris odio, commodo vitae sagittis a, feugiat quis quam.
 							  Donec orci metus, tempor vitae varius in, porttitor 
 							  sed ex. Proin et interdum nisl. Nullam ut lorem ut mauris dictum finibus.
 							  Suspendisse mauris odio, commodo vitae sagittis a, feugiat quis quam.
-							  Donec orci metus, tempor vitae varius in, porttitor 
-							  sed ex. Proin et interdum nisl. Nullam ut lorem ut mauris dictum finibus.`,
-                name: 'Alex Alexson'
+							  Donec orci metus.`,
+                href: 'https://www.psyhelp.ca',
+                name: 'Georges M.'
             },
             {
                 company: 'Company C',
@@ -110,8 +109,8 @@ const enHomeLocale = {
 							  Donec orci metus, tempor vitae varius in, porttitor 
 							  sed ex. Proin et interdum nisl. Nullam ut lorem ut mauris dictum finibus.
 							  Suspendisse mauris odio, commodo vitae sagittis a, feugiat quis quam.
-							  Donec orci metus, tempor vitae varius in, porttitor 
-							  sed ex. Proin et interdum nisl. Nullam ut lorem ut mauris dictum finibus.`,
+							  Donec orci metus.`,
+                href: '',
                 name: 'Alex Alexson'
             }
         ],

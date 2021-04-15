@@ -7,7 +7,7 @@ import { Row } from 'src/components/row';
 import { devices } from 'src/theme';
 
 const StyledSection = styled(Section)`
-	padding: 140px 0px;
+	padding: 100px 0px;
 
 	@media screen and (max-width: ${devices.smallTablet}) {
 		padding: 80px 0px;
@@ -68,7 +68,7 @@ const StyledButton = styled(CTA)`
 	padding: 5px 25px;
 	background: transparent;
 	user-select: none;
-	margin-top: 30px;
+	margin-top: 20px;
 
 	&:hover {
 		text-decoration: underline;
@@ -83,15 +83,6 @@ const StyledButton = styled(CTA)`
 	@media screen and (max-width: ${devices.mobile}) {
 		padding: 2.5px 15px;
 		margin-top: 30px;
-	}
-`;
-
-const StyledStarsContainer = styled.div`
-	margin-bottom: 15px;
-
-	svg {
-		color: ${getThemeVariable('colors.primary')};
-		margin-right: 2px;
 	}
 `;
 
@@ -130,6 +121,9 @@ const StyledSubH1 = styled.div`
     font-size: 1.1em;
 `;
 
+const StyledSealsContainer = styled.div`
+	margin-top: 25px;
+`;
 
 export {
     StyledSubH1,
@@ -138,8 +132,8 @@ export {
     StyledRow,
     StyledButton,
     StyledH1,
-    StyledStarsContainer,
     StyledPerksContainer,
     StyledUnderStars,
-    StyledParagraph
+    StyledParagraph,
+    StyledSealsContainer
 };

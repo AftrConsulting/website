@@ -3,6 +3,7 @@ import React, { ReactElement } from 'react';
 interface ISVGImageProps {
 	viewBox: string;
 	href: string;
+	className?: string;
 }
 
 /**
@@ -10,7 +11,7 @@ interface ISVGImageProps {
  * @param {ISVGImageProps} props - The props.
  */
 const SVGImage = (props: ISVGImageProps): ReactElement => (
-    <svg viewBox={props.viewBox}>
+    <svg viewBox={props.viewBox} className={props.className}>
         <use href={props.href} />
     </svg>
 );

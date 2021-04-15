@@ -3,8 +3,8 @@ import { StyleImgContainer, StyledSideBySide } from './style';
 import { ISectionStep } from 'src/componentsByPage/home/sectionServices/interfaces/ISectionStep';
 import { Paragraph } from 'src/componentsByPage/home/paragraph';
 import { SubTitle } from 'src/componentsByPage/home/subTitle';
-import { SVGImage } from 'src/componentsByPage/home/svgImage';
 import { Title } from 'src/componentsByPage/home/title';
+import { SVGImage } from 'src/components/svgImage';
 import { Section } from 'src/components/section';
 import { useLocale } from 'src/localizations';
 

@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons';
-import { StyledSection, StyledQuotesContainer, StyledDescription, StyledIcon, StyledName } from './style';
+import { StyledSection, StyledQuotesContainer, StyledDescription, StyledIcon, StyledName, StyledLink } from './style';
 import { SubTitle } from 'src/componentsByPage/home/subTitle';
 import { Title } from 'src/componentsByPage/home/title';
 import { useLocale } from 'src/localizations';
@@ -26,7 +26,11 @@ const SectionQuotes = (): ReactElement => {
                                 <StyledName>{x.name}</StyledName>
                                 <span>
                                     {locale.pages.home.quotes.from}
-                                    {x.company}
+                                    {x.href ? (
+                                        <StyledLink href={x.href} target={'_blank'} rel={'noreferrer'}>
+                                        	{x.company}
+                                        </StyledLink>
+                                    ) : x.company}
                                 </span>
                             </div>
                         </div>

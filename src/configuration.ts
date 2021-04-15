@@ -27,6 +27,7 @@ const configuration = {
             openGraphImage: '/static/images/openGraphImage.png'
         },
         linkedIn: 'https://www.linkedin.com/company/aftrconsulting',
+        trustpilot: 'https://www.trustpilot.com/review/aftrconsulting.com',
         twitter: {
             account: '@aftrconsulting'
         }

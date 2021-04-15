@@ -52,10 +52,20 @@ const StyledName = styled.span`
 	font-size: 1.1em;
 `;
 
+const StyledLink = styled.a`
+	color: ${getThemeVariable('colors.primary')};
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+`;
+
 export {
     StyledDescription,
     StyledQuotesContainer,
     StyledSection,
     StyledIcon,
-    StyledName
+    StyledName,
+    StyledLink
 };

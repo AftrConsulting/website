@@ -1,11 +1,12 @@
 import React, { ReactElement } from 'react';
-import { faCheck, faStar } from '@fortawesome/free-solid-svg-icons';
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { 
-    StyledButton, StyledH1, StyledRow, StyleImgContainer, StyledSection, StyledStarsContainer, 
+    StyledButton, StyledH1, StyledRow, StyleImgContainer, StyledSection, StyledSealsContainer,
     StyledPerksContainer, StyledUnderStars, StyledParagraph, StyledSubH1
 } from './style';
-import { SVGImage } from 'src/componentsByPage/home/svgImage';
+import { TrustPilot } from 'src/components/trustPilot';
 import { SpanText } from 'src/components/spanText';
+import { SVGImage } from 'src/components/svgImage';
 import { useLocale } from 'src/localizations';
 import { Icon } from 'src/components/icon';
 
@@ -27,9 +28,9 @@ const SectionFirst = (): ReactElement => {
                         <SpanText html={locale.pages.home.first.text1} />
                     </StyledParagraph>
                     {getPerks(locale.pages.home.first.perks)}
-                    {getFiveStars()}
                     <StyledUnderStars>{locale.pages.home.first.text2}</StyledUnderStars>
                     <StyledButton withIcon={true} />
+                    {getSeals()}
                 </div>
                 <StyleImgContainer>
                     <SVGImage viewBox={'0 0 738.25 454.21'} href={'/static/images/home/first.svg#main'} />
@@ -54,16 +55,12 @@ const getPerks = (perks: string[]): ReactElement => (
 );
 
 /**
- * Returns the five stars.
+ * Returns the seals.
  */
-const getFiveStars = (): ReactElement => (
-    <StyledStarsContainer>
-        <Icon icon={faStar} />
-        <Icon icon={faStar} />
-        <Icon icon={faStar} />
-        <Icon icon={faStar} />
-        <Icon icon={faStar} />
-    </StyledStarsContainer>
+const getSeals = (): ReactElement => (
+    <StyledSealsContainer>
+        <TrustPilot disabled={true} />
+    </StyledSealsContainer>
 );
 
 export {
