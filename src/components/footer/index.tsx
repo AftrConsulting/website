@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react';
 import { useAmp } from 'next/amp';
+import { useRouter } from 'next/router';
 import { StyledSection, StyledCopyright, StyledName, StyledMailLink, StyledMenu, StyledIcons, StyledQuote } from './style';
 import { iconLinkedIn } from 'src/componentsByPage/home/images/footerLinkedIn';
 import { iconFacebook } from 'src/componentsByPage/home/images/footerFacebook';
@@ -11,13 +12,15 @@ import { configuration } from 'src/configuration';
 import { useLocale } from 'src/localizations';
 import { MyLink } from 'src/components/link';
 import { Icon } from 'src/components/icon';
+import { isLandingPage } from 'src/utils';
 import { Row } from 'src/components/row';
 
 /**
  * The Footer component.
  */
 const Footer = (): ReactElement => {
-    const amp = useAmp();
+    const router = useRouter();
+    const amp = useAmp() || isLandingPage(router);
     const locale = useLocale();
     const year = String(new Date().getFullYear());
 	

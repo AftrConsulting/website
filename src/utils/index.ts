@@ -1,4 +1,5 @@
 import { configuration } from "src/configuration";
+import { NextRouter } from 'next/router';
 
 /**
  * Returns if is production.
@@ -26,7 +27,16 @@ const getStructuredData = (): string => JSON.stringify({
 	'url': configuration.general.baseUrl
 });
 
+/**
+ * Returns if page is landing page.
+ * @param {NextRouter} router - The router. 
+ */
+const isLandingPage = (router: NextRouter): boolean => {
+	return router.route.indexOf('/landing/') !== -1;
+}
+
 export {
 	getStructuredData,
-	isProduction
+	isProduction,
+	isLandingPage
 }

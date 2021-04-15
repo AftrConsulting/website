@@ -1,4 +1,5 @@
 import { useAmp } from 'next/amp';
+import { useRouter } from 'next/router';
 import React, { ReactElement } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { faBars, faCog } from '@fortawesome/free-solid-svg-icons';
@@ -9,15 +10,17 @@ import { IState } from 'src/context/interfaces/IState';
 import { setHeader } from 'src/context/actions/header';
 import { useLocale } from 'src/localizations';
 import { Icon } from 'src/components/icon';
+import { isLandingPage } from 'src/utils';
 
 /**
  * The Header component.
  */
 const Header = (): ReactElement => {
     const { options, sideMenu } = useSelector((state: IState) => state.header);
+    const router = useRouter();
     const locale = useLocale();
     const dispatch = useDispatch();
-    const amp = useAmp();
+    const amp = useAmp() || isLandingPage(router);
 	
     const sideMenuTitle = locale.global.hrefs.sideMenu;
     const sideOptionsTitle = locale.global.hrefs.options;
