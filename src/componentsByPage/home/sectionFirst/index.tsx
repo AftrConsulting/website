@@ -4,7 +4,9 @@ import {
     StyledButton, StyledH1, StyledRow, StyleImgContainer, StyledSection, StyledSealsContainer,
     StyledPerksContainer, StyledUnderStars, StyledParagraph, StyledSubH1
 } from './style';
-import { TrustPilot } from 'src/components/trustPilot';
+import { TrustPilot } from 'src/components/seals/trustPilot';
+import { GoodFirms } from 'src/components/seals/goodfirms';
+import { Clutch } from 'src/components/seals/clutch';
 import { SpanText } from 'src/components/spanText';
 import { SVGImage } from 'src/components/svgImage';
 import { useLocale } from 'src/localizations';
@@ -60,6 +62,8 @@ const getPerks = (perks: string[]): ReactElement => (
 const getSeals = (): ReactElement => (
     <StyledSealsContainer>
         <TrustPilot disabled={true} />
+        <Clutch disabled={true} />
+        <GoodFirms disabled={true} />
     </StyledSealsContainer>
 );
 

@@ -123,6 +123,24 @@ const StyledSubH1 = styled.div`
 
 const StyledSealsContainer = styled.div`
 	margin-top: 25px;
+
+	> div {
+		vertical-align: middle;
+
+		&:first-of-type {
+			margin-right: 20px;
+		}
+
+		&:last-of-type {
+			margin-left: 20px;
+		}
+	}
+
+	@media screen and (max-width: ${devices.mediumMobile}) {
+		> div:last-of-type {
+			display: none;
+		}
+	}
 `;
 
 export {

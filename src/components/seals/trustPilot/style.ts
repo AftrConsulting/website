@@ -5,6 +5,7 @@ import { getThemeVariable } from 'src/theme/utils';
 const StyledContainer = styled.div`
 	display: inline-block;
 	text-align: center;
+	user-select: none;
 
 	a {
 		text-decoration: none;
@@ -14,7 +15,7 @@ const StyledContainer = styled.div`
 
 const StyledTitle = styled.div`
 	margin-top: 5px;
-	font-size: 1em;
+	font-size: 16px;
 `;
 
 const StyledBold = styled.span`

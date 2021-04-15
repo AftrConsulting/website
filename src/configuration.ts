@@ -13,14 +13,16 @@ const configuration = {
     },
     general: {
         baseUrl: 'https://aftrconsulting.com',
+        clutch: '',
         company: 'AftrConsulting',
         consultation: 'https://calendly.com/aftrconsulting/30min',
         email: 'info@aftrconsulting.com',
         facebook: 'https://www.facebook.com/aftrconsulting/',
         github: 'https://github.com/AftrConsulting',
+        goodfirms: '',
         google: {
             universal: 'UA-192636657-1' 
-        },		
+        },	
         imgs: {
             headerLogo: '/static/images/headerLogo.png',
             logo: '/static/images/logo.png',
