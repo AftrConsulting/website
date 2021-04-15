@@ -14,6 +14,13 @@ const StyleImgContainer = styled.div`
 	@media screen and (max-width: ${devices.smallTablet}) {
 		margin-top: 40px;
 	}
+
+	@media screen and (max-width: ${devices.verySmallMobile}) {
+		svg {
+			height: 160px;
+			width: 250px;
+		}
+	}
 `;
 
 const StyledSideBySide = styled(SideBySide)`
