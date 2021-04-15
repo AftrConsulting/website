@@ -6,6 +6,7 @@ import { IFooterIcon } from 'src/components/global/footer/interfaces/IFooterIcon
 import { iconLinkedIn } from 'src/componentsByPage/home/images/footerLinkedIn';
 import { iconFacebook } from 'src/componentsByPage/home/images/footerFacebook';
 import { iconGithub } from 'src/componentsByPage/home/images/footerGithub';
+import { OutsideLink } from 'src/components/elements/outsideLink';
 import { CustomImage } from 'src/components/elements/customImage';
 import { IMenuLinkItem } from 'src/interfaces/IMenuLinkItem';
 import { MyLink } from 'src/components/elements/link';
@@ -61,11 +62,11 @@ const Footer = (): ReactElement => {
 const getIcons = (icons: IFooterIcon[]): ReactElement => (
     <StyledIcons>
         {icons.map((x, key): ReactElement => (
-            <a href={x.href} target={'_blank'} rel={'noreferrer'} key={key} title={x.title}>
+            <OutsideLink href={x.href} key={key} title={x.title}>
                 <div>
                     <Icon icon={x.icon} />
                 </div>
-            </a>
+            </OutsideLink>
         ))}
     </StyledIcons>
 );

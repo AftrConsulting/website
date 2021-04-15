@@ -27,7 +27,7 @@ const SectionQuotes = (): ReactElement => {
                                 <span>
                                     {locale.pages.home.quotes.from}
                                     {x.href ? (
-                                        <StyledLink href={x.href} target={'_blank'} rel={'noreferrer'}>
+                                        <StyledLink href={x.href} title={x.company}>
                                         	{x.company}
                                         </StyledLink>
                                     ) : x.company}

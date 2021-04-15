@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { OutsideLink } from 'src/components/elements/outsideLink';
 import { Paragraph } from 'src/components/elements/paragraph';
 import { Section } from 'src/components/elements/section';
 import { Icon } from 'src/components/elements/icon';
@@ -52,7 +53,7 @@ const StyledName = styled.span`
 	font-size: 1.1em;
 `;
 
-const StyledLink = styled.a`
+const StyledLink = styled(OutsideLink)`
 	color: ${getThemeVariable('colors.primary')};
 	text-decoration: none;
 
