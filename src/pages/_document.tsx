@@ -8,7 +8,8 @@ import { globalStyles } from 'src/theme/global';
 import { getStructuredData } from 'src/utils';
 
 interface IMyDocumentProps {
-    styleHTML: string;
+	styleHTML: string;
+	removeScripts: boolean;
 }
 
 class MyDocument extends Document<IMyDocumentProps> {
@@ -24,12 +25,16 @@ class MyDocument extends Document<IMyDocumentProps> {
             sheet.collectStyles(<App {...props} />)
         );
 		
+        const removeScripts = ctx.pathname.indexOf('/landing/') !== -1 
+						   && process.env.NODE_ENV !== 'development';
+
         const styleTag = sheet.getStyleElement();
         // @ts-ignore
         const styleHTML = `${styleTag[0].props.dangerouslySetInnerHTML.__html} ${globalStyles}`;
 
         return { 
-            ...page, 
+            ...page,
+            removeScripts,
             styleHTML
         } as unknown as Promise<DocumentInitialProps>;
     }
@@ -56,7 +61,8 @@ class MyDocument extends Document<IMyDocumentProps> {
             </Head>
             <body>
                 <Main />
-                <NextScript />
+                {!this.props.removeScripts 
+					&& <NextScript />}
             </body>
         </Html>
     );

@@ -26,7 +26,7 @@ const MarkdownContainer = (props: IMarkdownContainerProps): ReactElement => {
             <Title title={props.title} />
             <StyledMetaData>{author} • {date}</StyledMetaData>
             <Seo {...props} />
-            <ReactMarkdown source={props.source || ''} />
+            <ReactMarkdown>{props.source || ''}</ReactMarkdown>
         </StyledMarkdownContainer>
     );
 };

@@ -10,6 +10,7 @@ import { setHeader } from 'src/context/actions/header';
 import { configuration } from 'src/configuration';
 import { useLocale } from 'src/localizations';
 import { MyLink } from 'src/components/link';
+import { isLandingPage } from 'src/utils';
 
 interface ILogoProps {
 	hideLanguage?: boolean;
@@ -23,6 +24,7 @@ const Logo = (props: ILogoProps): ReactElement => {
     const router = useRouter();
     const dispatch = useDispatch();
     const locale = useLocale();
+    const isLanding = isLandingPage(router);
 	
     const { language } = useSelector((state: IState) => state.locale);
     const [ saveState ] = useSaveStateBeforeLanguageChange();
@@ -41,7 +43,7 @@ const Logo = (props: ILogoProps): ReactElement => {
 	
     return (
         <StyledLogoContainer hideLanguage={props.hideLanguage}>
-            <MyLink href={'/'} onClick={close} title={locale.global.hrefs.logo}>
+            <MyLink href={'/'} onClick={close} title={locale.global.hrefs.logo} disabled={isLanding}>
                 <StyledName>
                     <CustomImage 
                         src={configuration.general.imgs.headerLogo}

@@ -10,6 +10,7 @@ interface IMyLinkProps {
 	className?: string;
 	onClick?: () => void;
 	title?: string;
+	disabled?: boolean;
 }
 
 /**
@@ -28,6 +29,8 @@ const MyLink = (props: IMyLinkProps): ReactElement => {
     const onClick = (): void => {
         props.onClick?.();
     };
+	
+    if (props.disabled) return <>{props.children}</>;
 	
     if (!props.href) {
         return <a className={className} onClick={onClick} title={props.title}>{props.children}</a>;
