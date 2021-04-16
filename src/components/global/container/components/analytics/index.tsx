@@ -15,7 +15,7 @@ const Analytics = (): ReactElement | null => {
     if (amp) return getAMPAnalytics();
     if (isLanding) return getGTAGScript();
 	
-    return <script dangerouslySetInnerHTML={{ __html: getAnalytics() }} />;
+    return getGTAGScript();
 };
 
 /**
