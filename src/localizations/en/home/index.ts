@@ -16,16 +16,28 @@ const enHomeLocale = {
         },
         list: [
             {
-                description: 'Some tools that we use: React, TypeScript, Webpack, JavaScript, GraphQL.',
-                title: 'Front-End Development'
-            },
-            {
-                description: 'Our skills include: Mobile-First Design, Responsive Design, Branding, HTML/CSS.',
-                title: 'UX/UI Design'
+                description: 'We\'ll develop a great modern web application for your business.',
+                title: 'Web Development'
             },
             {
                 description: 'We\'ll optimize your site to 100% in PageSpeed Insights and fix other performance issues.',
                 title: 'Web Performance & Optimization'
+            },
+            {
+                description: 'We\'ll help you generate more leads and customers from your website.',
+                title: 'Conversion Rate Optimization'
+            },
+            {
+                description: 'We\'ll help you improve the quantity and quality of your website traffic from Google.',
+                title: 'Search Engine Optimization'
+            },
+            {
+                description: 'Do you have a nasty bug that you cannot fix? We\'ll help you find the cause and solve it.',
+                title: 'Debugging'
+            },
+            {
+                description: 'We\'ll create an optimized landing page that will generate more leads/profits.',
+                title: 'Landing Page Creation'
             },
             {
                 description: 'We\'ll help you improve your code quality by implementing various tools and standards.',
@@ -40,24 +52,12 @@ const enHomeLocale = {
                 title: 'Unit Tests'
             },
             {
-                description: 'Do you have a nasty bug that you cannot fix? We\'ll help you find the cause and solve it.',
-                title: 'Debugging'
-            },
-            {
-                description: 'We\'ll help you improve the quantity and quality of your website traffic from Google.',
-                title: 'Search Engine Optimization'
-            },
-            {
                 description: 'We\'ll help develop, improve and maintain a WordPress website.',
                 title: 'WordPress'
             },
             {
-                description: 'We\'ll help you generate more leads and customers from your website.',
-                title: 'Conversion Rate Optimization'
-            },
-            {
-                description: 'Our skills include: data modeling, database design, schema creation, MySQL',
-                title: 'Databases'
+                description: 'Some tools that we use: React, TypeScript, Webpack, JavaScript, GraphQL.',
+                title: 'Front-End Development'
             },
             {
                 description: 'Some tools and languages that we use: PHP, Node.js, Nginx, Docker, Kubernetes.',
