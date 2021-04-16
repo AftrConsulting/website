@@ -32,7 +32,7 @@ const StyledQuotesContainer = styled.div`
 
 const StyledDescription = styled(Paragraph)`
 	font-style: italic;
-	margin-bottom: 30px;
+	margin-bottom: 10px;
 
 	@media screen and (max-width: ${devices.smallTablet}) {
 		margin-bottom: 20px;
@@ -42,7 +42,7 @@ const StyledDescription = styled(Paragraph)`
 const StyledIcon = styled(Icon)`
 	color: ${getThemeVariable('pages.home.quotes.background')}; 
 	position: absolute;
-	font-size: 4em;
+	font-size: 3em;
 	margin-top: -15px;
 	margin-left: -5px;
 	z-index: -1;
@@ -54,7 +54,7 @@ const StyledName = styled.span`
 `;
 
 const StyledLink = styled(OutsideLink)`
-	color: ${getThemeVariable('colors.primary')};
+	color: ${getThemeVariable('colors.color')};
 	text-decoration: none;
 
 	&:hover {
@@ -62,7 +62,16 @@ const StyledLink = styled(OutsideLink)`
 	}
 `;
 
+const StyledFiveStarsContainer = styled.div`
+	margin-bottom: 15px;
+	text-align: center;
+	svg {
+		margin-right: 2px;
+	}
+`;
+
 export {
+    StyledFiveStarsContainer,
     StyledDescription,
     StyledQuotesContainer,
     StyledSection,

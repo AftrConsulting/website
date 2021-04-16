@@ -95,23 +95,19 @@ const enHomeLocale = {
             },            
             {
                 company: 'Psyhelp',
-                description: `Suspendisse mauris odio, commodo vitae sagittis a, feugiat quis quam.
-							  Donec orci metus, tempor vitae varius in, porttitor 
-							  sed ex. Proin et interdum nisl. Nullam ut lorem ut mauris dictum finibus.
-							  Suspendisse mauris odio, commodo vitae sagittis a, feugiat quis quam.
-							  Donec orci metus.`,
+                description: `When we started working with AFTRConsulting we never expected such great results. 
+							  Their customer service is top-notch and if we had a problem they were there to fix it quickly. 
+							  We recommend them to everyone that is looking for great web development services.`,
                 href: 'https://www.psyhelp.ca',
                 name: 'Georges M.'
             },
             {
-                company: 'Company C',
-                description: `Suspendisse mauris odio, commodo vitae sagittis a, feugiat quis quam.
-							  Donec orci metus, tempor vitae varius in, porttitor 
-							  sed ex. Proin et interdum nisl. Nullam ut lorem ut mauris dictum finibus.
-							  Suspendisse mauris odio, commodo vitae sagittis a, feugiat quis quam.
-							  Donec orci metus.`,
+                company: 'GoldenMTL',
+                description: `Thank you AFTRConsulting! Very good web development services! They helped me build a modern 
+							  website for my business that increased my visibility in Google, helped me attract new customers, 
+							  and increase my profits. I recommend it to everybody.`,
                 href: '',
-                name: 'Alex Alexson'
+                name: 'Jacky T.'
             }
         ],
         subTitle: 'what our clients are saying',
