@@ -1,14 +1,19 @@
 import React, { ReactElement } from 'react';
 import { useAmp } from 'next/amp';
+import { useRouter } from 'next/router';
 import { configuration } from 'src/configuration';
+import { isLandingPage } from 'src/utils';
 
 /**
  * The Analytics component.
  */
 const Analytics = (): ReactElement | null => {
     const amp = useAmp();
+    const router = useRouter();
+    const isLanding = isLandingPage(router);
 	
     if (amp) return getAMPAnalytics();
+    if (isLanding) return getGTAGScript();
 	
     return <script dangerouslySetInnerHTML={{ __html: getAnalytics() }} />;
 };
@@ -62,6 +67,26 @@ const getAnalytics = (): string => {
 		trackException:function q(r,s){return n("exception",null,null,null,null,r,s)}}})
 		(window,"${universal}",{anonymizeIp:true,colorDepth:true,characterSet:true,screenSize:true,language:true});
 	`;
+};
+
+/**
+ * Returns the GTAG script.
+ */
+const getGTAGScript = (): ReactElement => {
+    const universal = configuration.general.google.universal;
+	
+    return (
+        <>
+            <script async src={`https://www.googletagmanager.com/gtag/js?id=${universal}`}></script>
+            <script dangerouslySetInnerHTML={{ __html: `
+				window.dataLayer = window.dataLayer || [];
+				function gtag(){dataLayer.push(arguments);}
+				gtag('js', new Date());
+
+				gtag('config', '${universal}');
+			` }} />
+        </>
+    );
 };
 
 export {
