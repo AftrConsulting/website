@@ -27,7 +27,7 @@
 		"redux": "^4.0.5",
 		"styled-components": "^5.2.3",
 		"xml-beautify": "^1.1.1",
-		"xmldom": "^0.5.0"
+		"xmldom": "^0.6.0"
 	},
 	"devDependencies": {
 		"@types/node": "^14.14.35",
