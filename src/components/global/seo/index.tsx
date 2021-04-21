@@ -163,5 +163,6 @@ const replaceSEOTags = (str: string): string => {
 };
 
 export {
+    getAlternateLanguages,
     Seo
 };

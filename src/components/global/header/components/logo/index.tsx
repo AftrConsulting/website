@@ -4,13 +4,13 @@ import { useRouter } from 'next/router';
 import { StyledName, StyledLanguage, StyledLogoContainer } from './style';
 import { useSaveStateBeforeLanguageChange } from 'src/components/global/header/utils/hook';
 import { CustomImage } from 'src/components/elements/customImage';
+import { isLandingPage, redirectToLanguage } from 'src/utils';
 import { setLanguage } from 'src/context/actions/locale';
 import { IState } from 'src/context/interfaces/IState';
 import { setHeader } from 'src/context/actions/header';
 import { MyLink } from 'src/components/elements/link';
 import { configuration } from 'src/configuration';
 import { useLocale } from 'src/localizations';
-import { isLandingPage } from 'src/utils';
 
 interface ILogoProps {
 	hideLanguage?: boolean;
@@ -33,8 +33,7 @@ const Logo = (props: ILogoProps): ReactElement => {
         saveState();
         const newLanguage = language === 'en' ? 'fr' : 'en' as never; 
         dispatch(setLanguage(newLanguage));
-
-        router.push(router.asPath, router.asPath, { locale: newLanguage, shallow: true });
+        redirectToLanguage(router, newLanguage);
     };
 	
     const close = (): void => {

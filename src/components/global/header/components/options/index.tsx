@@ -8,6 +8,7 @@ import { useSaveStateBeforeLanguageChange } from 'src/components/global/header/u
 import { Slider } from 'src/components/global/header/components/slider';
 import { setLanguage } from 'src/context/actions/locale';
 import { IState } from 'src/context/interfaces/IState';
+import { redirectToLanguage } from 'src/utils';
 import { locales } from 'src/localizations';
 
 /**
@@ -22,7 +23,7 @@ const Options = (): ReactElement => {
     const toggleLanguage = (newLanguage: string) => (): void => {
         saveState();
         dispatch(setLanguage(newLanguage as never));
-        router.push(router.route, router.route, { locale: newLanguage, shallow: true });
+        redirectToLanguage(router, newLanguage);
     };
 	
     return (

@@ -1,3 +1,4 @@
+import { getAlternateLanguages } from "src/components/global/seo";
 import { configuration } from "src/configuration";
 import { NextRouter } from 'next/router';
 
@@ -47,9 +48,22 @@ const getPhoneLink = (): string => {
         .replace(/ /g, '');
 };
 
+/**
+ * If page has only one language.
+ * @param {NextRouter} router - The router.
+ * @param {string} locale - The locale. 
+ */
+const redirectToLanguage = (router: NextRouter, locale: string): void => {
+	const path = getAlternateLanguages(router).length === 2 ? 
+		'/' : router.asPath;
+	
+	router.push(path, path, { locale, shallow: true });
+}
+
 export {
 	getStructuredData,
 	isProduction,
 	isLandingPage,
-	getPhoneLink
+	getPhoneLink,
+	redirectToLanguage
 }
