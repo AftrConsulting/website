@@ -10,15 +10,24 @@ const frSitemap = {
     },
     about: { 
         href: '/about',
-        title: 'À propos'
+        title: 'À propos',
+        seoTitle: 'À Propos - {COMPANY}',
+        description: `La page à propos sur laquelle nous partageons des informations sur notre entreprise. Nous sommes AftrConsulting.
+		              Nous fournissons du développement et des consultations en React, TypeScript, PHP, Node.js.`
     }, 
     blog: { 
         href: '/blog',
-        title: 'Blog'
+        title: 'Blog',
+        seoTitle: 'Notre Blog - {COMPANY}',
+        description: `La page blog où nous partageons des articles sur le développement web. Nous sommes AftrConsulting.
+		              Nous fournissons du développement et des consultations en React, TypeScript, PHP, Node.js.`
     },
     portfolio: {
         href: '/portfolio',
-        title: 'Portfolio' 
+        title: 'Portfolio',
+        seoTitle: 'Notre Portfolio - {COMPANY}',
+        description: `La page portfolio où vous pouvez voir tous nos projets. Nous sommes AftrConsulting. 
+		              Nous fournissons du développement et des consultations en React, TypeScript, PHP, Node.js.`
     },
     privacyPolicy: {
         href: '/privacy-policy',

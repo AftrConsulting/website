@@ -1,7 +1,7 @@
 const enSitemap = {
     home: {
         href: '/',
-        title: 'Accueil',
+        title: 'Home',
         exclude: true,
         home: true,
         seoTitle: 'Best Web Development Services - {COMPANY}',
@@ -10,15 +10,24 @@ const enSitemap = {
     },
     about: { 
         href: '/about',
-        title: 'About'
+        title: 'About',
+        seoTitle: 'About - {COMPANY}',
+        description: `The about page where we share information about our company. 
+					  We are AftrConsulting. We provide React, TypeScript, PHP, Node.js development and consultations.`
     }, 
     blog: { 
         href: '/blog',
-        title: 'Blog'
+        title: 'Blog',
+        seoTitle: 'Our Blog - {COMPANY}',
+        description: `The blog page where we share articles on web development themes.
+					  We are AftrConsulting. We provide React, TypeScript, PHP, Node.js development and consultations.`
     },
     portfolio: {
         href: '/portfolio',
-        title: 'Portfolio' 
+        title: 'Portfolio',
+        seoTitle: 'Our Portfolio - {COMPANY}',
+        description: `The portfolio page where you can see all of our projects.
+					  We are AftrConsulting. We provide React, TypeScript, PHP, Node.js development and consultations.`
     },
     privacyPolicy: {
         href: '/privacy-policy',
