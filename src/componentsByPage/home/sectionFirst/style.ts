@@ -66,20 +66,19 @@ const StyledH1 = styled.h1`
 `;
 
 const StyledButton = styled(CTA)`
-	border: 4px solid ${getThemeVariable('colors.primary')};
-	color: ${getThemeVariable('colors.primary')};
-	font-size: 1.4em;
+	background: ${getThemeVariable('colors.primary')};
+	font-size: 1.6em;
+	font-weight: bold;
 	height: auto;
 	line-height: auto;
-	padding: 5px 25px;
-	background: transparent;
+	padding: 7.5px 30px;
 	text-transform: uppercase;
 	user-select: none;
 	margin-top: 20px;
 
 	&:hover {
 		text-decoration: underline;
-		background: transparent;
+		background: ${getThemeVariable('colors.primaryHovered')};
 	}
 
 	@media screen and (max-width: ${devices.smallTablet}) {
@@ -104,7 +103,6 @@ const StyledPerksContainer = styled.ul`
 
 		svg {
 			margin-right: 7.5px;
-			color: ${getThemeVariable('colors.primary')};
 		}
 	}
 `;

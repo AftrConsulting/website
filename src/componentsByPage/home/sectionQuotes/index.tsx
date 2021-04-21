@@ -1,11 +1,11 @@
 import React, { ReactElement } from 'react';
-import { faQuoteLeft, faStar } from '@fortawesome/free-solid-svg-icons';
+import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons';
 import { 
-    StyledSection, StyledQuotesContainer, StyledDescription, StyledIcon, StyledName, StyledLink, StyledFiveStarsContainer 
+    StyledSection, StyledQuotesContainer, StyledDescription, StyledIcon, StyledName, StyledLink, 
+    StyledImgContainer, StyledNameContainer, StyledCompany, StyledFooter
 } from './style';
 import { SubTitle } from 'src/components/landing/subTitle';
 import { Title } from 'src/components/landing/title';
-import { Icon } from 'src/components/elements/icon';
 import { Row } from 'src/components/elements/row';
 import { useLocale } from 'src/localizations';
 
@@ -25,18 +25,21 @@ const SectionQuotes = (): ReactElement => {
                         <div key={key}>
                             <StyledIcon icon={faQuoteLeft} />
                             <StyledDescription>{x.description}</StyledDescription>
-                            {getFiveStars()}
-                            <div>
-                                <StyledName>{x.name}</StyledName>
-                                <span>
-                                    {locale.pages.home.quotes.from}
-                                    {x.href ? (
-                                        <StyledLink href={x.href} title={x.company}>
-                                        	{x.company}
-                                        </StyledLink>
-                                    ) : x.company}
-                                </span>
-                            </div>
+                            <StyledFooter>
+                                <StyledImgContainer>
+                                    <img src={`/static/images/home/reviews/${x.img}`} alt={x.name} loading={'lazy'} />
+                                </StyledImgContainer>
+                                <StyledNameContainer>
+                                    <StyledName>{x.name}</StyledName>
+                                    <StyledCompany>
+                                        {x.href ? (
+                                            <StyledLink href={x.href} title={x.company}>
+                                        		{x.company}
+                                            </StyledLink>
+                                        ) : x.company}
+                                    </StyledCompany>
+                                </StyledNameContainer>
+                            </StyledFooter>
                         </div>
                     ))}
                 </StyledQuotesContainer>
@@ -44,19 +47,6 @@ const SectionQuotes = (): ReactElement => {
         </StyledSection>
     );
 };
-
-/**
- * Returns the five stars.
- */
-const getFiveStars = (): ReactElement => (
-    <StyledFiveStarsContainer>
-        <Icon icon={faStar} />
-        <Icon icon={faStar} />
-        <Icon icon={faStar} />
-        <Icon icon={faStar} />
-        <Icon icon={faStar} />
-    </StyledFiveStarsContainer>
-);
 
 export {
     SectionQuotes

@@ -87,7 +87,6 @@ const frHomeLocale: typeof enHomeLocale = {
         text2: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae mauris.'
     },
     quotes: {
-        from: ', de ',
         reviews: [
             {
                 company: 'Company A',
@@ -97,8 +96,9 @@ const frHomeLocale: typeof enHomeLocale = {
 							  Suspendisse mauris odio, commodo vitae sagittis a, feugiat quis quam.
 							  Donec orci metus, tempor vitae varius in, porttitor 
 							  sed ex. Proin et interdum nisl. Nullam ut lorem ut mauris dictum finibus.`,
-                href: '',
-                name: 'Alex Alexson'
+                href: 'https://www.lesfinances.ca/',
+                img: 'matt.jpg',
+                name: 'Matt M.'
             },            
             {
                 company: 'Company B',
@@ -108,8 +108,9 @@ const frHomeLocale: typeof enHomeLocale = {
 							  Suspendisse mauris odio, commodo vitae sagittis a, feugiat quis quam.
 							  Donec orci metus, tempor vitae varius in, porttitor 
 							  sed ex. Proin et interdum nisl. Nullam ut lorem ut mauris dictum finibus.`,
-                href: '',
-                name: 'Alex Alexson'
+                href: 'https://www.psyhelp.ca',
+                img: 'georges.jpg',
+                name: 'Georges M.'
             },
             {
                 company: 'Company C',
@@ -120,7 +121,8 @@ const frHomeLocale: typeof enHomeLocale = {
 							  Donec orci metus, tempor vitae varius in, porttitor 
 							  sed ex. Proin et interdum nisl. Nullam ut lorem ut mauris dictum finibus.`,
                 href: '',
-                name: 'Alex Alexson'
+                img: 'jacky.jpg',
+                name: 'Jacky T.'
             }
         ],
         subTitle: 'what our clients are saying',

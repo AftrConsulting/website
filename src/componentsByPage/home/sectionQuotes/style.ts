@@ -32,7 +32,7 @@ const StyledQuotesContainer = styled.div`
 
 const StyledDescription = styled(Paragraph)`
 	font-style: italic;
-	margin-bottom: 10px;
+	margin-bottom: 15px;
 
 	@media screen and (max-width: ${devices.smallTablet}) {
 		margin-bottom: 20px;
@@ -48,9 +48,10 @@ const StyledIcon = styled(Icon)`
 	z-index: -1;
 `;
 
-const StyledName = styled.span`
+const StyledName = styled.div`
 	font-weight: bold;
 	font-size: 1.1em;
+	margin-bottom: 2px;
 `;
 
 const StyledLink = styled(OutsideLink)`
@@ -62,20 +63,47 @@ const StyledLink = styled(OutsideLink)`
 	}
 `;
 
-const StyledFiveStarsContainer = styled.div`
-	margin-bottom: 15px;
-	text-align: center;
-	svg {
-		margin-right: 2px;
+const StyledImgContainer = styled.div`
+	background: ${getThemeVariable('pages.home.quotes.background')}; 
+	display: inline-block;
+	height: 70px;
+	width: 70px;
+	border-radius: 50%;
+
+	img {
+		width: 65px;
+		height: 65px;
+		margin-top: 2.5px;
+		margin-left: 2.5px;
+		border-radius: 50%;
 	}
 `;
 
+const StyledNameContainer = styled.div`
+	display: inline-block;
+	text-align: left;
+	margin-left: 15px;
+	vertical-align: top;
+	margin-top: 15px;
+`;
+
+const StyledCompany = styled.div`
+	font-size: 1em;
+`;
+
+const StyledFooter = styled.div`
+	text-align: center;
+`;
+
 export {
-    StyledFiveStarsContainer,
     StyledDescription,
     StyledQuotesContainer,
+    StyledImgContainer,
+    StyledNameContainer,
     StyledSection,
     StyledIcon,
     StyledName,
-    StyledLink
+    StyledLink,
+    StyledCompany,
+    StyledFooter
 };

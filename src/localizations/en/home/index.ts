@@ -82,7 +82,6 @@ const enHomeLocale = {
         text2: 'We guarantee 100% satisfaction to our clients.'
     },
     quotes: {
-        from: ', of ',
         reviews: [
             {
                 company: 'Les Finances',
@@ -91,6 +90,7 @@ const enHomeLocale = {
 							  They are open to feedback, patient, communicative, and can adhere to a tight timeline. 
 							  We will definitely continue working with them in the future!`,
                 href: 'https://www.lesfinances.ca/',
+                img: 'matt.jpg',
                 name: 'Matt M.'
             },            
             {
@@ -99,6 +99,7 @@ const enHomeLocale = {
 							  Their customer service is top-notch and if we had a problem they were there to fix it quickly. 
 							  We recommend them to everyone that is looking for great web development services.`,
                 href: 'https://www.psyhelp.ca',
+                img: 'georges.jpg',
                 name: 'Georges M.'
             },
             {
@@ -107,6 +108,7 @@ const enHomeLocale = {
 							  website for my business that increased my visibility in Google, helped me attract new customers, 
 							  and increase my profits. I recommend it to everybody.`,
                 href: '',
+                img: 'jacky.jpg',
                 name: 'Jacky T.'
             }
         ],
