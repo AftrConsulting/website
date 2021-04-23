@@ -54,10 +54,18 @@ const getPhoneLink = (): string => {
  * @param {string} locale - The locale. 
  */
 const redirectToLanguage = (router: NextRouter, locale: string): void => {
-	const path = getAlternateLanguages(router).length === 2 ? 
+	const path = hasOnlyOneLanguage(router) ? 
 		'/' : router.asPath;
 	
 	router.push(path, path, { locale, shallow: true });
+}
+
+/**
+ * If has only one language.
+ * @param {NextRouter} router - The router.
+ */
+const hasOnlyOneLanguage = (router: NextRouter): boolean => {
+	return getAlternateLanguages(router).length === 2
 }
 
 export {
@@ -65,5 +73,6 @@ export {
 	isProduction,
 	isLandingPage,
 	getPhoneLink,
-	redirectToLanguage
+	redirectToLanguage,
+	hasOnlyOneLanguage
 }

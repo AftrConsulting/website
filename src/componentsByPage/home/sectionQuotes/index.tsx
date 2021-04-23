@@ -4,6 +4,7 @@ import {
     StyledSection, StyledQuotesContainer, StyledDescription, StyledIcon, StyledName, StyledLink, 
     StyledImgContainer, StyledNameContainer, StyledCompany, StyledFooter
 } from './style';
+import { CustomImage } from 'src/components/elements/customImage';
 import { SubTitle } from 'src/components/landing/subTitle';
 import { Title } from 'src/components/landing/title';
 import { Row } from 'src/components/elements/row';
@@ -26,9 +27,7 @@ const SectionQuotes = (): ReactElement => {
                             <StyledIcon icon={faQuoteLeft} />
                             <StyledDescription>{x.description}</StyledDescription>
                             <StyledFooter>
-                                <StyledImgContainer>
-                                    <img src={`/static/images/home/reviews/${x.img}`} alt={x.name} loading={'lazy'} />
-                                </StyledImgContainer>
+                                {getImgContainer(x.img, x.name)}
                                 <StyledNameContainer>
                                     <StyledName>{x.name}</StyledName>
                                     <StyledCompany>
@@ -47,6 +46,22 @@ const SectionQuotes = (): ReactElement => {
         </StyledSection>
     );
 };
+
+/**
+ * Returns the img container.
+ * @param {string} img - The img. 
+ * @param {string} alt - The alt. 
+ */
+const getImgContainer = (img: string, alt: string): ReactElement => (
+    <StyledImgContainer>
+        <CustomImage 
+            src={`/static/images/home/reviews/${img}`} 
+            alt={alt} 
+            loading={'lazy'} 
+            width={'65px'} 
+            height={'65px'} />
+    </StyledImgContainer>
+);
 
 export {
     SectionQuotes

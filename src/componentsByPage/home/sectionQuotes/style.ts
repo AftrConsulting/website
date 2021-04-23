@@ -66,15 +66,12 @@ const StyledLink = styled(OutsideLink)`
 const StyledImgContainer = styled.div`
 	background: ${getThemeVariable('pages.home.quotes.background')}; 
 	display: inline-block;
-	height: 70px;
-	width: 70px;
+	height: 75px;
+	width: 75px;
 	border-radius: 50%;
+	padding: 5px;
 
-	img {
-		width: 65px;
-		height: 65px;
-		margin-top: 2.5px;
-		margin-left: 2.5px;
+	> img, > amp-img {
 		border-radius: 50%;
 	}
 `;

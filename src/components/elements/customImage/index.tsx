@@ -8,6 +8,7 @@ interface ICustomImageProps {
 	layout?: string;
 	width?: string;
 	alt?: string;
+	loading?: string;
 }
 
 /**
@@ -25,7 +26,13 @@ const CustomImage = (props: ICustomImageProps): ReactElement => {
             width={props.width} 
             alt={props.alt}
             heights={props.heights} /> :
-        <img src={props.src} height={props.height} width={props.width} alt={props.alt} />;
+        <img 
+            src={props.src} 
+            height={props.height} 
+            width={props.width} 
+            alt={props.alt} 
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            loading={props.loading as any} />;
 };
 
 export {

@@ -3,8 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useRouter } from 'next/router';
 import { StyledName, StyledLanguage, StyledLogoContainer } from './style';
 import { useSaveStateBeforeLanguageChange } from 'src/components/global/header/utils/hook';
+import { hasOnlyOneLanguage, isLandingPage, redirectToLanguage } from 'src/utils';
 import { CustomImage } from 'src/components/elements/customImage';
-import { isLandingPage, redirectToLanguage } from 'src/utils';
 import { setLanguage } from 'src/context/actions/locale';
 import { IState } from 'src/context/interfaces/IState';
 import { setHeader } from 'src/context/actions/header';
@@ -25,12 +25,13 @@ const Logo = (props: ILogoProps): ReactElement => {
     const dispatch = useDispatch();
     const locale = useLocale();
     const isLanding = isLandingPage(router);
-	
     const { language } = useSelector((state: IState) => state.locale);
     const [ saveState ] = useSaveStateBeforeLanguageChange();
 	
     const toggleLanguage = (): void => {
-        saveState();
+        if (!hasOnlyOneLanguage(router)) {
+            saveState();
+        }
         const newLanguage = language === 'en' ? 'fr' : 'en' as never; 
         dispatch(setLanguage(newLanguage));
         redirectToLanguage(router, newLanguage);

@@ -6,9 +6,9 @@ import { PrimaryColorsSwitch } from 'src/components/global/header/components/opt
 import { DarkModeSwitch } from 'src/components/global/header/components/options/components/darkModeSwitch';
 import { useSaveStateBeforeLanguageChange } from 'src/components/global/header/utils/hook';
 import { Slider } from 'src/components/global/header/components/slider';
+import { hasOnlyOneLanguage, redirectToLanguage } from 'src/utils';
 import { setLanguage } from 'src/context/actions/locale';
 import { IState } from 'src/context/interfaces/IState';
-import { redirectToLanguage } from 'src/utils';
 import { locales } from 'src/localizations';
 
 /**
@@ -21,7 +21,9 @@ const Options = (): ReactElement => {
     const dispatch = useDispatch();
 	
     const toggleLanguage = (newLanguage: string) => (): void => {
-        saveState();
+        if (!hasOnlyOneLanguage(router)) {
+            saveState();
+        }
         dispatch(setLanguage(newLanguage as never));
         redirectToLanguage(router, newLanguage);
     };
