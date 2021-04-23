@@ -1,3 +1,6 @@
+import fr from 'dayjs/locale/fr';
+import dayjs, { extend, locale } from 'dayjs';
+import localizedFormat from 'dayjs/plugin/localizedFormat';
 import { getAlternateLanguages } from "src/components/global/seo";
 import { configuration } from "src/configuration";
 import { NextRouter } from 'next/router';
@@ -68,11 +71,33 @@ const hasOnlyOneLanguage = (router: NextRouter): boolean => {
 	return getAlternateLanguages(router).length === 2
 }
 
+/**
+ * Returns the localized date.
+ * @param {string} date - The date.
+ * @param {string} language - The language.
+ */
+const getDate = (date?: string, language?: string): string => {
+    if (!date) return '';
+	
+    locale(fr);
+    extend(localizedFormat);
+	
+    return dayjs(date).locale(language as string).format('LL');
+};
+
+/**
+ * Returns the author.
+ * @param {string} author - The author. 
+ */
+const getAuthor = (author?: string) => author || 'admin';
+
 export {
 	getStructuredData,
 	isProduction,
 	isLandingPage,
 	getPhoneLink,
 	redirectToLanguage,
-	hasOnlyOneLanguage
+	hasOnlyOneLanguage,
+	getDate,
+	getAuthor
 }
