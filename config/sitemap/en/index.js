@@ -5,8 +5,8 @@ const enSitemap = {
         exclude: true,
         home: true,
         seoTitle: 'Best Web Development Services - {COMPANY}',
-        description: `We deliver the best web development services that will increase your profits. 
-					  We provide React, TypeScript, PHP, Node.js development and consultations.`
+        description: `Very Fast Web Development. React, PHP, Node.js. Consultations. 
+					  Affordable Pricing. Top Results. On-Time Delivery.`
     },
     about: { 
         href: '/about',
