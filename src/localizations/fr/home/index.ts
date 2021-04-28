@@ -2,10 +2,10 @@ const frHomeLocale = {
     description: {
         subTitle: 'Qui Sommes Nous',
         text1: `Nous sommes AftrConsulting, une équipe avec une passion pour aider nos clients à transformer leurs entreprises 
-				en créant d'excellentes applications Web. Nous proposons une vaste gamme de services dans le domaine du Web, 
-				du développement Web aux consultations et au coaching. Notre équipe se consacre à fournir 
-				les meilleurs services Web, toujours rapides et abordables.`,
-        text2: 'Nous ne vendons pas seulement des applications Web, nous créons des applications Web qui vendent.',
+				en créant d'excellentes applications web. Nous proposons une vaste gamme de services dans le domaine du Web, 
+				du développement web aux consultations et au coaching. Notre équipe se consacre à fournir 
+				les meilleurs services web, toujours rapides et abordables.`,
+        text2: 'Nous ne vendons pas seulement des applications web, nous créons des applications web qui vendent.',
         title: 'Nous aidons les entreprises à se réinventer.'
     },
     expertises: {
@@ -16,52 +16,52 @@ const frHomeLocale = {
         },
         list: [
             {
-                description: 'We\'ll develop a great modern web application for your business.',
-                title: 'Web Development'
+                description: 'Nous développerons une excellente application web moderne pour votre entreprise.',
+                title: 'Développement Web'
             },
             {
-                description: 'We\'ll optimize your site to 100% in PageSpeed Insights and fix other performance issues.',
-                title: 'Web Performance & Optimization'
+                description: 'Nous optimiserons votre site sur PageSpeed Insights à 100%.',
+                title: 'Performances & Optimisation'
             },
             {
-                description: 'We\'ll help you generate more leads and customers from your website.',
-                title: 'Conversion Rate Optimization'
+                description: 'Nous vous aiderons à générer plus de profits et de clients à partir de votre site.',
+                title: 'Optimisation Taux de Conversion'
             },
             {
-                description: 'We\'ll help you improve the quantity and quality of your website traffic from Google.',
+                description: 'Nous vous aiderons à améliorer la quantité et la qualité du trafic sur votre site à partir de Google.',
                 title: 'Search Engine Optimization'
             },
             {
-                description: 'Do you have a nasty bug that you cannot fix? We\'ll help you find the cause and solve it.',
-                title: 'Debugging'
+                description: 'Avez-vous un bogue que vous ne pouvez pas corriger? Nous vous aiderons à le résoudre.',
+                title: 'Débogage'
             },
             {
-                description: 'We\'ll create an optimized landing page that will generate more leads/profits.',
-                title: 'Landing Page Creation'
+                description: 'Nous allons créer une landing page optimisée qui générera plus de profits.',
+                title: 'Création De Landing Page'
             },
             {
-                description: 'We\'ll help you improve your code quality by implementing various tools and standards.',
-                title: 'Code Standards'
+                description: 'Nous vous aiderons à améliorer la qualité de votre code en implémentant des standards.',
+                title: 'Standards de Code'
             },
             {
-                description: 'Spaghetti code is hard to read and hard to maintain. We\'ll help you clean it up.',
-                title: 'Code Refactoring'
+                description: 'Le code spaghetti est difficile à lire et à maintenir. Nous vous aiderons à le nettoyer.',
+                title: 'Refactoring de Code'
             },
             {
-                description: 'We\'ll help you find bugs earlier and save time and money by implementing unit tests.',
-                title: 'Unit Tests'
+                description: 'Nous vous aiderons à trouver les bogues plus tôt en implémentant des tests unitaires.',
+                title: 'Tests Unitaires'
             },
             {
-                description: 'We\'ll help develop, improve and maintain a WordPress website.',
+                description: 'Nous vous aiderons à développer, améliorer et maintenir un site web WordPress.',
                 title: 'WordPress'
             },
             {
-                description: 'Some tools that we use: React, TypeScript, Webpack, JavaScript, GraphQL.',
-                title: 'Front-End Development'
+                description: 'Quelques outils que nous utilisons: React, TypeScript, Webpack, JavaScript, GraphQL.',
+                title: 'Développement Front-End'
             },
             {
-                description: 'Some tools and languages that we use: PHP, Node.js, Nginx, Docker, Kubernetes.',
-                title: 'Back-End Development'
+                description: 'Quelques outils et langages que nous utilisons: PHP, Node.js, Nginx, Docker, Kubernetes.',
+                title: 'Développement Back-End'
             }
         ],
         ps: 'Cette liste n\'est pas exhaustive, contactez-nous si vous avez besoin de quelque chose de spécial. Nous vous aiderons.',
@@ -85,28 +85,30 @@ const frHomeLocale = {
         reviews: [
             {
                 company: 'Les Finances',
-                description: `We hired AFTRConsulting to redesign the back-end of our site,
-							  and we literally couldn't be happier with the results! 
-							  They are open to feedback, patient, communicative, and can adhere to a tight timeline. 
-							  We will definitely continue working with them in the future!`,
+                description: `Nous avons embauché AFTRConsulting pour refaire le back-end de notre site, et nous ne pourrions
+							  pas être plus satisfaits des résultats! Ils sont ouverts aux commentaires, patients, 
+							  communicatifs et peuvent adhérer à un calendrier serré. Nous continuerons certainement 
+							  à travailler avec eux à l'avenir!`,
                 href: 'https://www.lesfinances.ca/',
                 img: 'matt.jpg',
                 name: 'Matt M.'
             },            
             {
                 company: 'Psyhelp',
-                description: `When we started working with AFTRConsulting we never expected such great results. 
-							  Their customer service is top-notch and if we had a problem they were there to fix it quickly. 
-							  We recommend them to everyone that is looking for great web development services.`,
+                description: `Lorsque nous avons commencé à travailler avec AFTRConsulting, nous ne nous attendions jamais à 
+							  d'aussi bons résultats. Leur service client est très bon et si nous avions un problème, 
+							  ils étaient là pour le résoudre rapidement. Nous les recommandons à tous ceux qui recherchent 
+							  d'excellents services de développement web.`,
                 href: 'https://www.psyhelp.ca',
                 img: 'georges.jpg',
                 name: 'Georges M.'
             },
             {
                 company: 'GoldenMTL',
-                description: `Thank you AFTRConsulting! Very good web development services! They helped me build a modern 
-							  website for my business that increased my visibility in Google, helped me attract new customers, 
-							  and increase my profits. I recommend it to everybody.`,
+                description: `Merci AFTRConsulting! Très bons services de développement web! Ils m'ont aidé à créer 
+							  un site web moderne pour mon entreprise qui a augmenté ma visibilité sur Google, m'a aidé 
+							  à attirer de nouveaux clients et à augmenter mes bénéfices. Je les recommande à tout le monde 
+							  et je retravaillerai avec eux.`,
                 href: '',
                 img: 'jacky.jpg',
                 name: 'Jacky T.'
@@ -117,22 +119,24 @@ const frHomeLocale = {
     },
     services: {
         step1: {
-            description: `Everything starts here. Together, we will create a custom-tailored flexible plan that will take
-			              all your requirements and questions into account. Also, you will get a quote adjusted to your budget.`,
+            description: `Tout commence ici. Ensemble, nous créerons un plan flexible sur mesure qui tiendra compte de toutes 
+			              vos exigences et questions. De plus, vous obtiendrez une estimation de prix ajusté à votre budget.`,
             subTitle: '1. Consultation',
-            title: 'We will evaluate your needs and create the best plan for YOU.\u00A0🥳'
+            title: 'Nous évaluerons vos besoins et créerons le bon plan pour VOUS.\u00A0🥳'
         },
         step2: {
-            description: `We develop using the agile methodology, so you will be able to observe the progress in real-time. 
-						  If needed, we can make adjustments on the fly therefore, the final product better reflects your vision.`,
-            subTitle: '2. Development',
-            title: 'We will develop the best modern web app for YOU.\u00A0😎'
+            description: `Nous développons en utilisant la méthodologie Agile, ainsi vous pourrez observer les progrès en temps réel. 
+						  Si nécessaire, nous pouvons rapidement faire des ajustements pour que le produit final 
+						  reflète mieux votre vision.`,
+            subTitle: '2. Développement',
+            title: 'Nous développerons la meilleure application web pour VOUS.\u00A0😎'
         },
         step3: {
-            description: `When the web app is deployed, we will make various optimizations to improve the website speed
-			              and conversion rate. Also, we will provide maintenance for your website.`,
-            subTitle: '3. Optimizations & Maintenance',
-            title: 'We will provide maintenance and optimizations for YOUR website.\u00A0😊'
+            description: `Lorsque l'application web sera déployée, nous effectuerons diverses optimisations pour 
+						  améliorer la vitesse du site web et son taux de conversion. De plus, nous assurerons 
+						  la maintenance de votre site web.`,
+            subTitle: '3. Optimisations & Maintenance',
+            title: 'Nous assurerons la maintenance et les optimisations de VOTRE site web.\u00A0😊'
         }
     },
     talkExpert: {

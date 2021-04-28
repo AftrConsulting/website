@@ -1,6 +1,6 @@
 {
 	"name": "personal",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"description": "",
 	"main": "index.js",
 	"scripts": {
@@ -30,8 +30,8 @@
 		"xmldom": "^0.6.0"
 	},
 	"devDependencies": {
-		"@types/node": "^14.14.35",
-		"@types/react": "17.0.3",
+		"@types/node": "^15.0.1",
+		"@types/react": "^17.0.4",
 		"@types/react-dom": "^17.0.3",
 		"@types/react-redux": "7.1.16",
 		"@types/styled-components": "^5.1.9",
