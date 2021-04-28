@@ -4,9 +4,9 @@ const frSitemap = {
         title: 'Home',
         exclude: true,
         home: true,
-        seoTitle: 'Développement et Consultations Applications Web - {COMPANY}',
-        description: `Nous transformons vos idées en applications Web modernes et performantes.
-					  Nous fournissons du développement et des consultations en React, TypeScript, PHP, Node.js.`
+        seoTitle: 'Développement et Consultations Applications Sites Web - {COMPANY}',
+        description: `Développement Web Très Rapide. React, PHP, Node.js. Consultations. 
+		              Prix Compétitifs. Meilleurs Résultats. Délais Respectés.`
     },
     about: { 
         href: '/about',

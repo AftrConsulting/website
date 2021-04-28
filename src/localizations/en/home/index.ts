@@ -5,7 +5,7 @@ const enHomeLocale = {
 				great web applications. We provide a vast collection of services in the web sphere, from web development to consulting 
 				and coaching. Our team is dedicated to providing the fastest, best, 
 				and <span class="underline">most affordable web services</span> for our clients.`,
-        text2: 'We don\'t just sell web apps, we create web apps that SELL.',
+        text2: 'We don\'t just sell websites, we create websites that SELL.',
         title: 'We help businesses transform themselves.'
     },
     expertises: {
@@ -77,8 +77,6 @@ const enHomeLocale = {
             'Top Results\u00A0🏆'
         ],
         subHeading: 'we deliver the',
-        text1: `We create web apps that will grow your business, attract new customers, and 
-				<span class="underline bold">increase your profits</span>.`,
         text2: 'We guarantee 100% satisfaction to our clients.'
     },
     quotes: {

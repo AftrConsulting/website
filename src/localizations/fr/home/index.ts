@@ -5,7 +5,7 @@ const frHomeLocale = {
 				en créant d'excellentes applications web. Nous proposons une vaste gamme de services dans le domaine du Web, 
 				du développement web aux consultations et au coaching. Notre équipe se consacre à fournir 
 				les meilleurs services web, toujours rapides et abordables.`,
-        text2: 'Nous ne vendons pas seulement des applications web, nous créons des applications web qui vendent.',
+        text2: 'Nous créons des sites web qui VENDENT.',
         title: 'Nous aidons les entreprises à se réinventer.'
     },
     expertises: {
@@ -69,16 +69,14 @@ const frHomeLocale = {
         title: 'Nous avons toutes les compétences nécessaires pour créer de superbes applications et sites web modernes.\u00A0🙏'
     },
     first: {
-        heading: 'Services Développement Web',
+        heading: 'Services de Développement Web',
         perks: [
             'Développement Web Très Rapide\u00A0💪',
-            'Prix Abordable\u00A0💸',
+            'Prix Compétitifs\u00A0💸',
             'Délais Respectés\u00A0⌛',
             'Meilleurs Résultats\u00A0🏆'
         ],
         subHeading: 'nous offront les meilleurs',
-        text1: `Nous créons des applications web qui vous permettront 
-				d'attirer de nouveaux clients et <span class="underline bold">d'augmenter vos profits</span>.`,
         text2: 'Nous garantissons une satisfaction de 100% à nos clients.'
     },
     quotes: {

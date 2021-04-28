@@ -2,10 +2,9 @@ import React, { ReactElement } from 'react';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { 
     StyledButton, StyledH1, StyledRow, StyleImgContainer, StyledSection, StyledSealsContainer,
-    StyledPerksContainer, StyledUnderStars, StyledParagraph, StyledSubH1
+    StyledPerksContainer, StyledUnderStars, StyledSubH1
 } from './style';
 import { TrustPilot } from 'src/components/seals/trustPilot';
-import { SpanText } from 'src/components/elements/spanText';
 import { SVGImage } from 'src/components/elements/svgImage';
 import { GoodFirms } from 'src/components/seals/goodfirms';
 import { Clutch } from 'src/components/seals/clutch';
@@ -24,9 +23,6 @@ const SectionFirst = (): ReactElement => {
                 <div>
                     <StyledSubH1>{locale.pages.home.first.subHeading}</StyledSubH1>
                     <StyledH1>{locale.pages.home.first.heading}</StyledH1>
-                    <StyledParagraph>
-                        <SpanText html={locale.pages.home.first.text1} />
-                    </StyledParagraph>
                     {getPerks(locale.pages.home.first.perks)}
                     <StyledUnderStars>{locale.pages.home.first.text2}</StyledUnderStars>
                     <StyledButton withIcon={true} />

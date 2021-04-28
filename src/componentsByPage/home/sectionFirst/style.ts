@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Paragraph } from 'src/components/elements/paragraph';
 import { Section } from 'src/components/elements/section';
 import { getThemeVariable } from 'src/theme/utils';
 import { Row } from 'src/components/elements/row';
@@ -111,15 +110,6 @@ const StyledUnderStars = styled.div`
 	font-style: italic;
 `;
 
-const StyledParagraph = styled(Paragraph)`
-	font-size: 1.1em;
-	width: 80%;
-
-	@media screen and (max-width: ${devices.mobile}) {
-		width: 100%;
-	}
-`;
-
 const StyledSubH1 = styled.div`
 	text-transform: uppercase;
 	font-weight: 300;
@@ -164,6 +154,5 @@ export {
     StyledH1,
     StyledPerksContainer,
     StyledUnderStars,
-    StyledParagraph,
     StyledSealsContainer
 };
