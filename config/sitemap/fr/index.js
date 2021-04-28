@@ -4,7 +4,7 @@ const frSitemap = {
         title: 'Home',
         exclude: true,
         home: true,
-        seoTitle: 'Développement et Consultations Applications Sites Web - {COMPANY}',
+        seoTitle: 'Les Meilleurs Services de Développement Web - {COMPANY}',
         description: `Développement Web Très Rapide. React, PHP, Node.js. Consultations. 
 		              Prix Compétitifs. Meilleurs Résultats. Délais Respectés.`
     },
