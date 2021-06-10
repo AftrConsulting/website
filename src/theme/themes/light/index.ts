@@ -75,6 +75,11 @@ const lightTheme: typeof darkTheme = {
             quotes: {
                 background: lighten(.75, colors.color)
             }
+        },
+        porfolio: {
+            image: {
+                background: darken(.05, colors.background)
+            }
         }
     }
 };

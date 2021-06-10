@@ -74,6 +74,11 @@ const darkTheme = {
             quotes: {
                 background: lighten(.2, colors.background)
             }
+        },
+        porfolio: {
+            image: {
+                background: lighten(.05, colors.background)
+            }
         }
     }
 };

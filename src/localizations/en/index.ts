@@ -1,4 +1,5 @@
 import { enMenuTop, enMenuFooter } from 'src/localizations/en/menus';
+import { enPortfolioLocale } from 'src/localizations/en/portfolio';
 import { enNotFoundLocale } from 'src/localizations/en/notFound';
 import { enSitemapLocale } from 'src/localizations/en/sitemap';
 import { enHomeLocale } from 'src/localizations/en/home';
@@ -35,6 +36,7 @@ const enLocale = {
     pages: {
         home: enHomeLocale,
         notFound: enNotFoundLocale,
+        portfolio: enPortfolioLocale,
         sitemap: enSitemapLocale
     },
     sitemap: enSitemap
