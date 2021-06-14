@@ -1,34 +1,50 @@
 import React, { ReactElement } from 'react';
-import { StyledImgContainer, StyledSideBySide } from './style';
+import { StyledImgContainer, StyledSideBySide, StyledSubTitle, StyledOutsideLink, StyledParagraph } from './style';
+import { ISectionProject } from 'src/componentsByPage/portfolio/sectionProjects/interfaces/ISectionProject';
 import { CustomImage } from 'src/components/elements/customImage';
-import { SubTitle } from 'src/components/landing/subTitle';
 import { Paragraph } from 'src/components/elements/paragraph';
 import { Title } from 'src/components/landing/title';
+import { useLocale } from 'src/localizations';
 
 /**
  * The SectionProjects component.
  */
 const SectionProjects = (): ReactElement => {
+    const locale = useLocale();
+    const { portfolio } = locale.pages;
+
     return (
-        <StyledSideBySide>
-            <div>
-                <StyledImgContainer>
-                    <CustomImage 
-                        alt={'psyhelp'} 
-                        src={'/static/images/portfolio/psyhelp.png'} />
-                </StyledImgContainer> 
-            </div>
-            <div>
-                <SubTitle>website design</SubTitle>
-                <Title marginBottom={'20px'}>Centre de services psychologiques</Title>
-                <Paragraph>
-					Everything starts here. Together, we will create a custom-tailored flexible plan that will 
-					take all your requirements and questions into account. Also, you will get a quote adjusted to your budget.
-                </Paragraph>
-            </div>
-        </StyledSideBySide>
+        <>
+            <StyledParagraph>{portfolio.body}</StyledParagraph>
+            {portfolio.projects.map(x => getProject(x, portfolio.link))}
+        </>
     );
 };
+
+/**
+ * Returns the project.
+ * @param {ISectionProject} project - The project.
+ * @param {string} link - The link.
+ */
+const getProject = (project: ISectionProject, link: string): ReactElement => (
+    <StyledSideBySide>
+        <div>
+            <StyledImgContainer>
+                <CustomImage 
+                    alt={project.title}
+                    title={project.title}
+                    src={`/static/images/portfolio/${project.project}.png`} />
+            </StyledImgContainer> 
+        </div>
+        <div>
+            <StyledSubTitle>{project.subTitle}</StyledSubTitle>
+            <Title marginBottom={'20px'}>{project.title}</Title>
+            <Paragraph>{project.description}</Paragraph>
+            {project.href && 
+				<StyledOutsideLink href={project.href} >{link}</StyledOutsideLink>}
+        </div>
+    </StyledSideBySide>
+);
 
 export {
     SectionProjects
