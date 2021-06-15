@@ -1,18 +1,24 @@
 const frPortfolioLocale = {
-    body: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat turpis et est egestas, 
-			sit amet tristique arcu egestas. Praesent at nibh elit. Fusce in arcu vel tortor pretium volutpat tincidunt 
-			a diam. Proin pulvinar dui at fringilla tincidunt. Duis tincidunt purus sed arcu eleifend convallis. Cras 
-			semper commodo arcu a fringilla. Aenean vel consectetur eros.`,
+    body: 'Voici quelques-uns de nos projets sélectionnés. Bonne découverte! 🥳',
     link: '[Voir Site Web]',
     projects: [
         {
-            description: `Everything starts here. Together, we will create a custom-tailored flexible plan that will 
-						  take all your requirements and questions into account. Also, you will get a quote adjusted 
-						  to your budget.`,
+            description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquet eget purus nec dictum. 
+			              Quisque non purus pharetra, pulvinar diam in, euismod nulla. Vestibulum ante ipsum primis in 
+						  faucibus orci luctus et ultrices posuere cubilia curae;`,
             href: 'https://www.psyhelp.ca',
             project: 'psyhelp',
-            subTitle: 'website design',
+            subTitle: 'Lorem ipsum dolor sit amet',
             title: 'Centre de services psychologiques'
+        },
+        {
+            description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquet eget purus nec dictum. 
+			              Quisque non purus pharetra, pulvinar diam in, euismod nulla. Vestibulum ante ipsum primis in 
+						  faucibus orci luctus et ultrices posuere cubilia curae;`,
+            href: 'https://lesfinances.ca/',
+            project: 'lesfinances',
+            subTitle: 'Lorem ipsum dolor sit amet',
+            title: 'Les Finances.'
         }
     ],
     title: 'Notre Portfolio'

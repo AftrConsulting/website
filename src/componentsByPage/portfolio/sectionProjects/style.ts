@@ -10,6 +10,32 @@ const StyledSideBySide = styled(SideBySide)`
 	padding-left: 0px;
 	padding-right: 0px;
 	margin-bottom: 50px;
+
+	&:nth-child(even) {
+		flex-direction: row-reverse;
+
+		> div {
+			&:last-of-type {
+				padding-right: 40px;
+				padding-left: 0px;
+
+				@media screen and (max-width: ${devices.smallTablet}) {
+					padding-right: 0px;
+					padding-left: 0px;
+				}
+			}
+	
+			&:first-of-type {
+				padding-right: 0px;
+				padding-left: 40px;
+
+				@media screen and (max-width: ${devices.smallTablet}) {
+					padding-right: 0px;
+					padding-left: 0px;
+				}
+			}
+		}	
+	}
 `;
 
 const StyledImgContainer = styled.div`
@@ -20,6 +46,11 @@ const StyledImgContainer = styled.div`
 	img {
 		border-radius: ${getThemeVariable('global.borderRadius')};
 		width: 100%;
+	}
+
+	@media screen and (max-width: ${devices.smallTablet}) {
+		width: 70%;
+		margin: 0px auto;
 	}
 `;
 
