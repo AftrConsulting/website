@@ -27,7 +27,7 @@ const SectionProjects = (): ReactElement => {
  * @param {string} link - The link.
  */
 const getProject = (project: ISectionProject, link: string): ReactElement => (
-    <StyledSideBySide>
+    <StyledSideBySide key={project.title}>
         <div>
             <StyledImgContainer>
                 <CustomImage 

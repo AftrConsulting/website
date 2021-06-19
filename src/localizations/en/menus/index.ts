@@ -12,12 +12,12 @@ const enMenuTop: IMenuItem[] = [
     //     title: 'Services'
     // },
     enSitemap.portfolio,
-    enSitemap.about,
-    enSitemap.blog
+    enSitemap.about
+    //enSitemap.blog
 ];
 
 const enMenuFooter = [
-    enSitemap.blog,
+    //enSitemap.blog,
     enSitemap.about,
     enSitemap.privacyPolicy,
     enSitemap.termsOfUse,
