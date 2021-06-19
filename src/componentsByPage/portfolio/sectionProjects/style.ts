@@ -57,15 +57,12 @@ const StyledImgContainer = styled.div`
 	@media screen and (max-width: ${devices.smallTablet}) {
 		width: 70%;
 		margin: 0px auto;
-		padding-top: 0px;
-
-		img {
-			position: relative;
-		}
+		padding-top: 42%;
 	}
 
 	@media screen and (max-width: ${devices.mobile}) {
 		width: 100%;
+		padding-top: 62%;
 	}
 `;
 
