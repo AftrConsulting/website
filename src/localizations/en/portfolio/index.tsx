@@ -11,8 +11,8 @@ const enPortfolioLocale = {
             title: 'Centre de services psychologiques'
         },
         {
-            description: `We've optimized the performance of their pages which greatly improved user experience and PageSpeed score.
-						  We also provided some general consulting that helped with user retention.`,
+            description: `We've optimized the performance of their pages which greatly improved user experience and PageSpeed Insights 
+						  score. We also provided some general consulting that helped with user retention.`,
             href: 'https://lesfinances.ca/',
             project: 'lesfinances',
             subTitle: 'Consulting & Optimizations',

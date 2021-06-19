@@ -13,7 +13,7 @@ const frPortfolioLocale = {
         },
         {
             description: `Nous avons optimisé les performances de leurs pages web, ce qui a considérablement amélioré 
-						  l'expérience utilisateur et le score PageSpeed. Nous avons également fourni des conseils 
+						  l'expérience utilisateur et le score PageSpeed Insights. Nous avons également fourni des conseils 
 						  généraux qui ont contribué à l'augmentation de la rétention des utilisateurs sur leur site web.`,
             href: 'https://lesfinances.ca/',
             project: 'lesfinances',
