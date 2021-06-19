@@ -41,16 +41,31 @@ const StyledSideBySide = styled(SideBySide)`
 const StyledImgContainer = styled.div`
 	background: ${getThemeVariable('pages.porfolio.image.background')};
 	border-radius: ${getThemeVariable('global.borderRadius')};
-	padding: 1px;
+	position: relative;
+	padding-top: 62%;
 
 	img {
 		border-radius: ${getThemeVariable('global.borderRadius')};
+		border: 1px solid ${getThemeVariable('pages.porfolio.image.background')};
+		position: absolute;
+		left: 0;
+		top: 0;
 		width: 100%;
+		height: auto;
 	}
 
 	@media screen and (max-width: ${devices.smallTablet}) {
 		width: 70%;
 		margin: 0px auto;
+		padding-top: 0px;
+
+		img {
+			position: relative;
+		}
+	}
+
+	@media screen and (max-width: ${devices.mobile}) {
+		width: 100%;
 	}
 `;
 
@@ -68,6 +83,10 @@ const StyledOutsideLink = styled(OutsideLink)`
 
 const StyledParagraph = styled(Paragraph)`
 	margin-bottom: 50px;
+
+	@media screen and (max-width: ${devices.smallTablet}) {
+		margin-bottom: 20px;
+	}
 `;
 
 export {
