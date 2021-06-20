@@ -31,7 +31,7 @@ const CustomImage = (props: ICustomImageProps): ReactElement => {
                 title={props.title}
                 heights={props.heights}>
                 <amp-img
-                    fallback
+                    fallback={''}
                     src={props.src}
                     layout={props.layout}
                     height={props.height} 

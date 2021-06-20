@@ -16,7 +16,7 @@ declare namespace JSX {
 			width?: string;
 			alt?: string;
 			title?: string;
-			fallback?: boolean;
+			fallback?: '';
 			children?: {};
 		};
 		'amp-analytics': {
