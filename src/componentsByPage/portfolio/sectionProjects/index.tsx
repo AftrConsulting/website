@@ -30,7 +30,9 @@ const getProject = (project: ISectionProject, link: string): ReactElement => (
     <StyledSideBySide key={project.title}>
         <div>
             <StyledImgContainer>
-                <CustomImage 
+                <CustomImage
+                    height={'100%'}
+                    width={'100%'}
                     alt={project.title}
                     title={project.title}
                     src={`/static/images/portfolio/${project.project}.png`} />
