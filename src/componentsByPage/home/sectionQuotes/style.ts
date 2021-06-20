@@ -71,7 +71,7 @@ const StyledImgContainer = styled.div`
 	border-radius: 50%;
 	padding: 5px;
 
-	> img, > amp-img {
+	picture > img, > amp-img {
 		border-radius: 50%;
 	}
 `;

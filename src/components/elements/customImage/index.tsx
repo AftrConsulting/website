@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import { useAmp } from 'next/amp';
-  
+
 interface ICustomImageProps {
 	src: string;
 	height?: string;
@@ -8,7 +8,7 @@ interface ICustomImageProps {
 	layout?: string;
 	width?: string;
 	alt?: string;
-	loading?: string;
+	loading?: 'eager' | 'lazy';
 	title?: string;
 }
 
@@ -17,25 +17,44 @@ interface ICustomImageProps {
  * @param {ICustomImageProps} props - The props.
  */
 const CustomImage = (props: ICustomImageProps): ReactElement => {
+    const webpSrc = `${props.src.substr(0, props.src.lastIndexOf('.')) }.webp`;
     const isAmp = useAmp();
-	
-    return isAmp ? 
-        <amp-img 
-            src={props.src}
-            layout={props.layout}
-            height={props.height} 
-            width={props.width} 
-            alt={props.alt}
-            title={props.title}
-            heights={props.heights} /> :
-        <img 
-            src={props.src} 
-            height={props.height} 
-            width={props.width} 
-            alt={props.alt}
-            title={props.title}
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            loading={props.loading as any} />;
+
+    if (isAmp) {
+        return (
+            <amp-img 
+                src={webpSrc}
+                layout={props.layout}
+                height={props.height} 
+                width={props.width} 
+                alt={props.alt}
+                title={props.title}
+                heights={props.heights}>
+                <amp-img
+                    fallback
+                    src={props.src}
+                    layout={props.layout}
+                    height={props.height} 
+                    width={props.width} 
+                    alt={props.alt}
+                    title={props.title}
+                    heights={props.heights} />
+            </amp-img>
+        );
+    }
+
+    return (
+        <picture>
+            <source srcSet={webpSrc} type={'image/webp'} />
+            <img 
+                src={props.src}
+                height={props.height} 
+                width={props.width} 
+                alt={props.alt}
+                title={props.title}
+                loading={props.loading} />
+        </picture>
+    );
 };
 
 export {
