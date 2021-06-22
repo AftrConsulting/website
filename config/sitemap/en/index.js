@@ -34,17 +34,21 @@ const enSitemap = {
         title: 'Privacy Policy'
     },
     services: {
-        service1: {
-            title: 'Service 1'
+        frontEndConsulting: {
+            href: '/services/front-end-consulting',
+            title: 'Front-End Consulting'
         },
-        service2: {
-            title: 'Service 2'
+        reactConsulting: {
+            href: '/services/react-consulting',
+            title: 'React Consulting'
         },
-        service3: {
-            title: 'Service 3'
+        webApplicationDevelopment: {
+            href: '/services/web-application-development',
+            title: 'Web Application Development'
         },
-        service4: {
-            title: 'Service 4'
+        webApplicationConsulting: {
+            href: '/services/web-application-consulting',
+            title: 'Web Application Consulting'
         }
     },
     sitemap: {

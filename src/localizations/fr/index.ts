@@ -31,7 +31,8 @@ const frLocale: typeof enLocale = {
             languages: 'Langues',
             title: 'Options'
         },
-        tawkTo: 'https://embed.tawk.to/6063ba9c067c2605c0bdd9d5/1f22p1sqj'
+        tawkTo: 'https://embed.tawk.to/6063ba9c067c2605c0bdd9d5/1f22p1sqj',
+        underConstruction: 'Cette page est en cours de construction.'
     },
     menu: frMenuTop,
     pages: {

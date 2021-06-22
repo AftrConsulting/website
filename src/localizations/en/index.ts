@@ -30,7 +30,8 @@ const enLocale = {
             languages: 'Languages',
             title: 'Options'
         },
-        tawkTo: 'https://embed.tawk.to/601b625fa9a34e36b973a092/1etlfghc8'
+        tawkTo: 'https://embed.tawk.to/601b625fa9a34e36b973a092/1etlfghc8',
+        underConstruction: 'This page is under construction.'
     },
     menu: enMenuTop,
     pages: {
