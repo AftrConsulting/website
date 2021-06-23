@@ -15,7 +15,7 @@ const WebApplicationDevelopment = (): ReactElement => {
         <Container>
             <Row>
                 <Seo {...locale.sitemap.services.webApplicationDevelopment} />
-                <Title title={locale.sitemap.services.webApplicationDevelopment.title} />
+                <Title title={locale.pages.services.webApplicationDevelopment.title} />
                 <div>{locale.global.underConstruction}</div>
             </Row>
         </Container>

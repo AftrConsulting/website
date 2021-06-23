@@ -36,19 +36,23 @@ const enSitemap = {
     services: {
         frontEndConsulting: {
             href: '/services/front-end-consulting',
-            title: 'Front-End Consulting'
+            title: 'Front-End Consulting',
+            seoTitle: 'Front-End Consulting - {COMPANY}'
         },
         reactConsulting: {
             href: '/services/react-consulting',
-            title: 'React Consulting'
+            title: 'React Consulting',
+            seoTitle: 'React Consulting - {COMPANY}'
         },
         webApplicationDevelopment: {
             href: '/services/web-application-development',
-            title: 'Web Application Development'
+            title: 'Web Application Development',
+            seoTitle: 'Web Application Development - {COMPANY}'
         },
         webApplicationConsulting: {
             href: '/services/web-application-consulting',
-            title: 'Web Application Consulting'
+            title: 'Web Application Consulting',
+            seoTitle: 'Web Application Consulting - {COMPANY}'
         }
     },
     sitemap: {

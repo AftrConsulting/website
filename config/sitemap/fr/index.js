@@ -36,19 +36,23 @@ const frSitemap = {
     services: {
         frontEndConsulting: {
             href: '/services/front-end-consulting',
-            title: 'Consultation Front-End'
+            title: 'Consultation Front-End',
+            seoTitle: 'Consultation Front-End - {COMPANY}'
         },
         reactConsulting: {
             href: '/services/react-consulting',
-            title: 'Consultation React'
+            title: 'Consultation React',
+            seoTitle: 'Consultation React - {COMPANY}'
         },
         webApplicationDevelopment: {
             href: '/services/web-application-development',
-            title: 'Développement Applications Web'
+            title: 'Développement Applications Web',
+            seoTitle: 'Développement Applications Web - {COMPANY}'
         },
         webApplicationConsulting: {
             href: '/services/web-application-consulting',
-            title: 'Consultation Application Web'
+            title: 'Consultation Application Web',
+            seoTitle: 'Consultation Application Web - {COMPANY}'
         }
     },
     sitemap: {

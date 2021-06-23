@@ -1,3 +1,7 @@
+import { enWebApplicationDevelopmentLocale } from 'src/localizations/en/services/webApplicationDevelopment';
+import { enWebApplicationConsultingLocale } from 'src/localizations/en/services/webApplicationConsulting';
+import { enFrontEndConsultingLocale } from 'src/localizations/en/services/frontEndConsulting';
+import { enReactConsultingLocale } from 'src/localizations/en/services/reactConsulting';
 import { enMenuTop, enMenuFooter } from 'src/localizations/en/menus';
 import { enPortfolioLocale } from 'src/localizations/en/portfolio';
 import { enNotFoundLocale } from 'src/localizations/en/notFound';
@@ -38,6 +42,12 @@ const enLocale = {
         home: enHomeLocale,
         notFound: enNotFoundLocale,
         portfolio: enPortfolioLocale,
+        services: {
+            frontEndConsulting: enFrontEndConsultingLocale,
+            reactConsulting: enReactConsultingLocale,
+            webApplicationConsulting: enWebApplicationConsultingLocale,
+            webApplicationDevelopment: enWebApplicationDevelopmentLocale
+        },
         sitemap: enSitemapLocale
     },
     sitemap: enSitemap

@@ -15,7 +15,7 @@ const FrontEndConsulting = (): ReactElement => {
         <Container>
             <Row>
                 <Seo {...locale.sitemap.services.frontEndConsulting} />
-                <Title title={locale.sitemap.services.frontEndConsulting.title} />
+                <Title title={locale.pages.services.frontEndConsulting.title} />
                 <div>{locale.global.underConstruction}</div>
             </Row>
         </Container>
