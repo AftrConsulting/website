@@ -31,7 +31,11 @@ const SectionFirst = (): ReactElement => {
                 </div>
                 <StyleImgContainer>
                     <div>
-                        <CustomImage src={'/static/images/home/first.jpg'} />
+                        <CustomImage
+                            width={'450px'}
+                            height={'400px'}
+                            alt={locale.pages.home.first.heading}
+                            src={'/static/images/home/first.jpg'} />
                     </div>
                 </StyleImgContainer>
             </StyledRow>

@@ -35,8 +35,6 @@ const StyleImgContainer = styled.div`
 	}
 
 	img {
-		width: 450px;
-		height: 400px;
 		display: inline-block;
 		border-radius: ${getThemeVariable('global.borderRadius')};
 		object-fit: cover;
