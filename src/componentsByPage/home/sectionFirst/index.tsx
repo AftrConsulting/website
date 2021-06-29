@@ -4,13 +4,12 @@ import {
     StyledButton, StyledH1, StyledRow, StyleImgContainer, StyledSection, StyledSealsContainer,
     StyledPerksContainer, StyledUnderStars, StyledSubH1
 } from './style';
+import { CustomImage } from 'src/components/elements/customImage';
 import { TrustPilot } from 'src/components/seals/trustPilot';
-import { SVGImage } from 'src/components/elements/svgImage';
 import { GoodFirms } from 'src/components/seals/goodfirms';
 import { Clutch } from 'src/components/seals/clutch';
 import { Icon } from 'src/components/elements/icon';
 import { useLocale } from 'src/localizations';
-import { CustomImage } from 'src/components/elements/customImage';
 
 /**
  * The SectionFirst component.
