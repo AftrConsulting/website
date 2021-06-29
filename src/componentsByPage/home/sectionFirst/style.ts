@@ -28,19 +28,18 @@ const StyledRow = styled(Row)`
 const StyleImgContainer = styled.div`
 	text-align: center;
 
-	> div {
+	> picture {
 		alignItems: center;
 		display: flex;
 		height: 100%;
 	}
 
-	svg {
+	img {
+		width: 450px;
+		height: 400px;
 		display: inline-block;
-		width: 100%;
-	}
-
-	.cls-1 {
-		fill: red;
+		border-radius: ${getThemeVariable('global.borderRadius')};
+		object-fit: cover;
 	}
 
 	@media screen and (max-width: ${devices.smallTablet}) {

@@ -10,6 +10,7 @@ import { GoodFirms } from 'src/components/seals/goodfirms';
 import { Clutch } from 'src/components/seals/clutch';
 import { Icon } from 'src/components/elements/icon';
 import { useLocale } from 'src/localizations';
+import { CustomImage } from 'src/components/elements/customImage';
 
 /**
  * The SectionFirst component.
@@ -30,7 +31,7 @@ const SectionFirst = (): ReactElement => {
                 </div>
                 <StyleImgContainer>
                     <div>
-                        <SVGImage viewBox={'0 0 738.25 454.21'} href={'/static/images/home/first.svg#main'} />
+                        <CustomImage src={'/static/images/home/first.jpg'} />
                     </div>
                 </StyleImgContainer>
             </StyledRow>

@@ -45,7 +45,6 @@ const CustomImage = (props: ICustomImageProps): ReactElement => {
 
     return (
         <picture>
-            <source srcSet={webpSrc} type={'image/webp'} />
             <img 
                 src={props.src}
                 height={props.height} 
