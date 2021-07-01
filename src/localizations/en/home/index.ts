@@ -69,15 +69,7 @@ const enHomeLocale = {
         title: 'We have all the skills for building great modern web apps and sites.\u00A0🙏'
     },
     first: {
-        heading: 'Best Web Development Services',
-        perks: [
-            'Very Fast Web Development\u00A0💪',
-            'Affordable Pricing\u00A0💸',
-            'On-Time Delivery\u00A0⌛',
-            'Top Results\u00A0🏆'
-        ],
-        subHeading: 'free quote',
-        text2: 'We guarantee 100% satisfaction to our clients.'
+        heading: 'Best Web Development Services'
     },
     quotes: {
         reviews: [

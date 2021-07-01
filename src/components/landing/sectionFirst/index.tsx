@@ -11,20 +11,25 @@ import { Clutch } from 'src/components/seals/clutch';
 import { Icon } from 'src/components/elements/icon';
 import { useLocale } from 'src/localizations';
 
+interface ISectionFirstProps {
+	heading: string;
+}
+
 /**
  * The SectionFirst component.
+ * @param {ISectionFirstProps} props - The props.
  */
-const SectionFirst = (): ReactElement => {
+const SectionFirst = (props: ISectionFirstProps): ReactElement => {
     const locale = useLocale();
 
     return (
         <StyledSection>
             <StyledRow>
                 <div>
-                    <StyledSubH1>{locale.pages.home.first.subHeading}</StyledSubH1>
-                    <StyledH1>{locale.pages.home.first.heading}</StyledH1>
-                    {getPerks(locale.pages.home.first.perks)}
-                    <StyledUnderStars>{locale.pages.home.first.text2}</StyledUnderStars>
+                    <StyledSubH1>{locale.global.landing.first.subHeading}</StyledSubH1>
+                    <StyledH1>{props.heading}</StyledH1>
+                    {getPerks(locale.global.landing.first.perks)}
+                    <StyledUnderStars>{locale.global.landing.first.text2}</StyledUnderStars>
                     <StyledButton withIcon={true} />
                     {getSeals()}
                 </div>
@@ -33,7 +38,7 @@ const SectionFirst = (): ReactElement => {
                         <CustomImage
                             width={'450px'}
                             height={'400px'}
-                            alt={locale.pages.home.first.heading}
+                            alt={props.heading}
                             src={'/static/images/home/first.jpg'} />
                     </div>
                 </StyleImgContainer>

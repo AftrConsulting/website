@@ -69,15 +69,7 @@ const frHomeLocale = {
         title: 'Nous avons toutes les compétences nécessaires pour créer de superbes applications et sites web modernes.\u00A0🙏'
     },
     first: {
-        heading: 'Services de Développement Web',
-        perks: [
-            'Développement Web Très Rapide\u00A0💪',
-            'Prix Compétitifs\u00A0💸',
-            'Délais Respectés\u00A0⌛',
-            'Meilleurs Résultats\u00A0🏆'
-        ],
-        subHeading: 'estimation de prix gratuite',
-        text2: 'Nous garantissons une satisfaction de 100% à nos clients.'
+        heading: 'Services de Développement Web'
     },
     quotes: {
         reviews: [
