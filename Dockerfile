@@ -7,7 +7,7 @@ ENV PORT 3000
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 COPY package*.json /usr/src/app/
-RUN npm ci --only=production --ignore-scripts
+RUN npm ci --ignore-scripts
 COPY . /usr/src/app
 
 RUN npm run webp
