@@ -13,6 +13,7 @@ import { useLocale } from 'src/localizations';
 
 interface ISectionFirstProps {
 	heading: string;
+	image?: string;
 }
 
 /**
@@ -39,7 +40,7 @@ const SectionFirst = (props: ISectionFirstProps): ReactElement => {
                             width={'450px'}
                             height={'400px'}
                             alt={props.heading}
-                            src={'/static/images/home/first.jpg'} />
+                            src={`/static/images/first/${props.image || '1'}.jpg`} />
                     </div>
                 </StyleImgContainer>
             </StyledRow>

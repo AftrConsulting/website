@@ -41,8 +41,8 @@ const frSitemap = {
         },
         reactConsulting: {
             href: '/services/react-consulting',
-            title: 'Consultation React',
-            seoTitle: 'Consultation React - {COMPANY}'
+            title: 'Consultation React.js',
+            seoTitle: 'Consultation React.js - {COMPANY}'
         },
         webApplicationDevelopment: {
             href: '/services/web-application-development',

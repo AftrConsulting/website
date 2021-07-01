@@ -41,8 +41,8 @@ const enSitemap = {
         },
         reactConsulting: {
             href: '/services/react-consulting',
-            title: 'React Consulting',
-            seoTitle: 'React Consulting - {COMPANY}'
+            title: 'React.js Consulting',
+            seoTitle: 'React.js Consulting - {COMPANY}'
         },
         webApplicationDevelopment: {
             href: '/services/web-application-development',

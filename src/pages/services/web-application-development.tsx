@@ -16,7 +16,8 @@ const WebApplicationDevelopment = (): ReactElement => {
             <Row>
                 <Seo {...locale.sitemap.services.webApplicationDevelopment} />
                 <SectionFirst 
-                    heading={locale.pages.services.webApplicationDevelopment.title} />
+                    heading={locale.pages.services.webApplicationDevelopment.title}
+                    image={'4'} />
             </Row>
         </Container>
     );

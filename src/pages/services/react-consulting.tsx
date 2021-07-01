@@ -16,7 +16,8 @@ const ReactConsulting = (): ReactElement => {
             <Row>
                 <Seo {...locale.sitemap.services.reactConsulting} />
                 <SectionFirst 
-                    heading={locale.pages.services.reactConsulting.title} />
+                    heading={locale.pages.services.reactConsulting.title}
+                    image={'5'} />
             </Row>
         </Container>
     );
