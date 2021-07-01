@@ -32,6 +32,7 @@ const lightTheme: typeof darkTheme = {
             iconColor: darken(.5, colors.background),
             logo: {
                 background: darken(.1, colors.background),
+                landingSmallBackground: lighten(.1, colors.color),
                 language: {
                     background: darken(.05, colors.background),
                     backgroundHover: darken(.08, colors.background),

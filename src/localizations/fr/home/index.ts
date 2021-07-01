@@ -76,7 +76,7 @@ const frHomeLocale = {
             'Délais Respectés\u00A0⌛',
             'Meilleurs Résultats\u00A0🏆'
         ],
-        subHeading: 'nous offront les meilleurs',
+        subHeading: 'estimation de prix gratuite',
         text2: 'Nous garantissons une satisfaction de 100% à nos clients.'
     },
     quotes: {

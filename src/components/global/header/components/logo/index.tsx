@@ -14,6 +14,7 @@ import { useLocale } from 'src/localizations';
 
 interface ILogoProps {
 	hideLanguage?: boolean;
+	isLanding?: boolean;
 }
 
 /**
@@ -44,7 +45,7 @@ const Logo = (props: ILogoProps): ReactElement => {
     return (
         <StyledLogoContainer hideLanguage={props.hideLanguage}>
             <MyLink href={'/'} onClick={close} title={locale.global.hrefs.logo} disabled={isLanding}>
-                <StyledName>
+                <StyledName isLanding={props.isLanding}>
                     <CustomImage 
                         src={configuration.general.imgs.headerLogo}
                         alt={'logo'}

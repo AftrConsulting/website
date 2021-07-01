@@ -47,6 +47,10 @@ const StyledTelephone = styled.div`
 	}
 
 	@media screen and (max-width: ${devices.mobile}) {
+		margin-right: 0px;
+	}
+
+	@media screen and (max-width: ${devices.mediumMobile}) {
 		display: none;
 	}
 `;

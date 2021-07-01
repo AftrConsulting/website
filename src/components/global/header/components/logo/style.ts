@@ -12,7 +12,7 @@ const StyledLogoContainer = styled.div<{ hideLanguage?: boolean; }>`
 		}` : ''}
 `;
 
-const StyledName = styled.div`
+const StyledName = styled.div<{ isLanding?: boolean }>`
 	background: ${getThemeVariable('colors.primary')};
 	display: inline-block;
 
@@ -25,6 +25,11 @@ const StyledName = styled.div`
 			width: 75px;
 		}
 	}
+
+	${(p): string => p.isLanding ? 
+        `@media screen and (max-width: ${devices.mediumMobile}) {
+			background: ${getThemeVariable('global.header.logo.landingSmallBackground')};
+		}` : ''}
 `;
 
 const StyledLanguage = styled.button`

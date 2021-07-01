@@ -86,6 +86,10 @@ const StyledButton = styled(CTA)`
 		padding: 2.5px 15px;
 		margin-top: 30px;
 	}
+
+	@media screen and (max-width: ${devices.mediumMobile}) {
+		font-size: 1em;
+	}
 `;
 
 const StyledPerksContainer = styled.ul`

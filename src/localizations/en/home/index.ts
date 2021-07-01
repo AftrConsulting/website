@@ -76,7 +76,7 @@ const enHomeLocale = {
             'On-Time Delivery\u00A0⌛',
             'Top Results\u00A0🏆'
         ],
-        subHeading: 'we deliver the',
+        subHeading: 'free quote',
         text2: 'We guarantee 100% satisfaction to our clients.'
     },
     quotes: {
