@@ -1,5 +1,8 @@
 const frFrontEndConsultingLocale = {
-    title: 'Consultation Front-End'
+    first: {
+        heading: 'Consultation Front-End',
+        subHeading: 'nos services'
+    }
 };
 
 export {

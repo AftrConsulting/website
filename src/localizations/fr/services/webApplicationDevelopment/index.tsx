@@ -1,5 +1,8 @@
 const frWebApplicationDevelopmentLocale = {
-    title: 'Développement Applications Web'
+    first: {
+        heading: 'Développement Applications Web',
+        subHeading: 'nos services'
+    }
 };
 
 export {

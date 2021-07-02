@@ -1,5 +1,8 @@
 const enReactConsultingLocale = {
-    title: 'React.js Consulting'
+    first: {
+        heading: 'React.js Consulting',
+        subHeading: 'our services'
+    }
 };
 
 export {

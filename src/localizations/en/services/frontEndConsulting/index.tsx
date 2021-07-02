@@ -1,5 +1,8 @@
 const enFrontEndConsultingLocale = {
-    title: 'Front-End Consulting'
+    first: {
+        heading: 'Front-End Consulting',
+        subHeading: 'our services'
+    }
 };
 
 export {

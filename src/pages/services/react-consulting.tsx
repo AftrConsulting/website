@@ -1,7 +1,6 @@
 import React, { ReactElement } from 'react';
 import { SectionFirst } from 'src/components/landing/sectionFirst';
 import { Container } from 'src/components/global/container';
-import { Row } from 'src/components/elements/row';
 import { Seo } from 'src/components/global/seo';
 import { useLocale } from 'src/localizations';
 
@@ -13,12 +12,10 @@ const ReactConsulting = (): ReactElement => {
 	
     return (
         <Container>
-            <Row>
-                <Seo {...locale.sitemap.services.reactConsulting} />
-                <SectionFirst 
-                    heading={locale.pages.services.reactConsulting.title}
-                    image={'5'} />
-            </Row>
+            <Seo {...locale.sitemap.services.reactConsulting} />
+            <SectionFirst 
+                locale={locale.pages.services.reactConsulting.first}
+                image={'5'} />
         </Container>
     );
 };

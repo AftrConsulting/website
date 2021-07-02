@@ -12,7 +12,12 @@ import { Icon } from 'src/components/elements/icon';
 import { useLocale } from 'src/localizations';
 
 interface ISectionFirstProps {
-	heading: string;
+	locale?: {
+		heading?: string;
+		perks?: string[];
+		subHeading?: string;
+		text2?: string;
+	},
 	image?: string;
 }
 
@@ -22,15 +27,17 @@ interface ISectionFirstProps {
  */
 const SectionFirst = (props: ISectionFirstProps): ReactElement => {
     const locale = useLocale();
-
+    const { first } = locale.global.landing;
+    const newLocale = { ...first, ...props.locale };
+    
     return (
         <StyledSection>
             <StyledRow>
                 <div>
-                    <StyledSubH1>{locale.global.landing.first.subHeading}</StyledSubH1>
-                    <StyledH1>{props.heading}</StyledH1>
-                    {getPerks(locale.global.landing.first.perks)}
-                    <StyledUnderStars>{locale.global.landing.first.text2}</StyledUnderStars>
+                    <StyledSubH1>{newLocale.subHeading}</StyledSubH1>
+                    <StyledH1>{newLocale.heading}</StyledH1>
+                    {getPerks(newLocale.perks)}
+                    <StyledUnderStars>{newLocale.text2}</StyledUnderStars>
                     <StyledButton withIcon={true} />
                     {getSeals()}
                 </div>
@@ -39,7 +46,7 @@ const SectionFirst = (props: ISectionFirstProps): ReactElement => {
                         <CustomImage
                             width={'450px'}
                             height={'400px'}
-                            alt={props.heading}
+                            alt={newLocale.heading}
                             src={`/static/images/first/${props.image || '1'}.jpg`} />
                     </div>
                 </StyleImgContainer>

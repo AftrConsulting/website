@@ -1,5 +1,8 @@
 const frReactConsultingLocale = {
-    title: 'Consultation React.js'
+    first: {
+        heading: 'Consultation React.js',
+        subHeading: 'nos services'
+    }
 };
 
 export {

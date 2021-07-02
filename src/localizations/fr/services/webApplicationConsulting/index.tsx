@@ -1,5 +1,8 @@
 const frWebApplicationConsultingLocale = {
-    title: 'Consultation Application Web'
+    first: {
+        heading: 'Consultation Application Web',
+        subHeading: 'nos services'
+    }
 };
 
 export {

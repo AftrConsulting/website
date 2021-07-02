@@ -1,7 +1,6 @@
 import React, { ReactElement } from 'react';
 import { SectionFirst } from 'src/components/landing/sectionFirst';
 import { Container } from 'src/components/global/container';
-import { Row } from 'src/components/elements/row';
 import { Seo } from 'src/components/global/seo';
 import { useLocale } from 'src/localizations';
 
@@ -13,12 +12,10 @@ const WebApplicationDevelopment = (): ReactElement => {
 	
     return (
         <Container>
-            <Row>
-                <Seo {...locale.sitemap.services.webApplicationDevelopment} />
-                <SectionFirst 
-                    heading={locale.pages.services.webApplicationDevelopment.title}
-                    image={'4'} />
-            </Row>
+            <Seo {...locale.sitemap.services.webApplicationDevelopment} />
+            <SectionFirst 
+                locale={locale.pages.services.webApplicationDevelopment.first}
+                image={'4'} />
         </Container>
     );
 };

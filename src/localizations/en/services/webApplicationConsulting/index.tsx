@@ -1,5 +1,8 @@
 const enWebApplicationConsultingLocale = {
-    title: 'Web Application Consulting'
+    first: {
+        heading: 'Web Application Consulting',
+        subHeading: 'our services'
+    }
 };
 
 export {
