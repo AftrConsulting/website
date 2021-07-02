@@ -18,8 +18,7 @@ const Home = (): ReactElement => {
     return (
         <Container>
             <Seo {...locale.sitemap.home} />
-            <SectionFirst 
-                heading={locale.pages.home.first.heading} />
+            <SectionFirst locale={locale.pages.home.first} />
             <SectionDescription />
             <SectionServices />
             <SectionExpertise />
