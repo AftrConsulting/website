@@ -1,7 +1,6 @@
 import React, { ReactElement } from 'react';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { StyledIcon } from './style';
-import { configuration } from 'src/configuration';
 import { Button } from 'src/components/elements/button';
 import { useLocale } from 'src/localizations';
 
