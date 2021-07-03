@@ -6,7 +6,7 @@ import {
 } from './style';
 import { CustomImage } from 'src/components/elements/customImage';
 import { TrustPilot } from 'src/components/seals/trustPilot';
-import { GoodFirms } from 'src/components/seals/goodfirms';
+import { Google } from 'src/components/seals/google';
 import { Clutch } from 'src/components/seals/clutch';
 import { Icon } from 'src/components/elements/icon';
 import { useLocale } from 'src/localizations';
@@ -75,8 +75,8 @@ const getPerks = (perks: string[]): ReactElement => (
 const getSeals = (): ReactElement => (
     <StyledSealsContainer>
         <TrustPilot disabled={true} />
+        <Google disabled={true} />
         <Clutch disabled={true} />
-        <GoodFirms disabled={true} />
     </StyledSealsContainer>
 );
 

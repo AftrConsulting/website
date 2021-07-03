@@ -20,13 +20,14 @@ const enGlobalLocale = {
     },
     landing: {
         first: {
+            googleReview: 'Google review',
             perks: [
                 'Very Fast Web Development\u00A0💪',
                 'Affordable Pricing\u00A0💸',
                 'On-Time Delivery\u00A0⌛',
                 'Top Results\u00A0🏆'
             ],
-            subHeading: 'free quote',
+            subHeading: 'we deliver the',
             text2: 'We guarantee 100% satisfaction to our clients.'
         }
     },
