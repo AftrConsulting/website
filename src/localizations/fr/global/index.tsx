@@ -2,6 +2,7 @@ import { frMenuFooter } from 'src/localizations/fr/menus';
 
 const frGlobalLocale = {
     bookConsultation: 'Prendre un rendez-vous',
+    consultation: 'https://calendly.com/aftrconsulting/consultation-30mins-gratuit',
     footer: {
         copyright: 'Tous droits réservés. © {0}',
         menu: frMenuFooter,

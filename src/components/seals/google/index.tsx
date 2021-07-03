@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { faStar, faStarHalfAlt } from '@fortawesome/free-solid-svg-icons';
 import { StyledContainer, StyledTitle, StyledBold, StyledReviewsContainer } from './style';
 import { OutsideLink } from 'src/components/elements/outsideLink';
 import { SVGImage } from 'src/components/elements/svgImage';
@@ -27,9 +27,11 @@ const Google = (props: IGoogleProps): ReactElement => {
                     <Icon icon={faStar} />
                     <Icon icon={faStar} />
                     <Icon icon={faStar} />
-                    <Icon icon={faStar} />
+                    <Icon icon={faStarHalfAlt} />
                 </StyledReviewsContainer>
-                <StyledTitle><StyledBold>5</StyledBold> {locale.global.landing.first.googleReview}</StyledTitle>
+                <StyledTitle>
+                    <StyledBold>5</StyledBold> {locale.global.landing.first.googleReview}
+                </StyledTitle>
             </OutsideLink>
         </StyledContainer>
     );

@@ -18,7 +18,6 @@ const configuration = {
         baseUrl: 'https://aftrconsulting.com',
         clutch: '',
         company: 'AftrConsulting',
-        consultation: 'https://calendly.com/aftrconsulting/30min',
         email: 'info@aftrconsulting.com',
         facebook: 'https://www.facebook.com/aftrconsulting/',
         github: 'https://github.com/AftrConsulting',

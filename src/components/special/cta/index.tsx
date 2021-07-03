@@ -19,7 +19,7 @@ const CTA = (props: ICTAProps): ReactElement => {
 	
     return (
         <Button
-            href={configuration.general.consultation}
+            href={locale.global.consultation}
             target={'_blank'}
             className={props.className}
             title={locale.global.bookConsultation}
