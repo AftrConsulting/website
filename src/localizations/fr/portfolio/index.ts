@@ -19,6 +19,14 @@ const frPortfolioLocale = {
             project: 'lesfinances',
             subTitle: 'Consultation & Optimisations',
             title: 'Les Finances.'
+        },
+        {
+            description: `Nous avons créé le site de Tim en utilisant le même moteur que notre propre site Web. 
+			              Il fonctionne bien et possède de nombreuses fonctionnalités intéressantes (comme le mode sombre).`,
+            href: 'https://timmouskhelichvili.com/',
+            project: 'timmouskhelichvili',
+            subTitle: 'Website Design, Creation & Maintenance',
+            title: 'Le Site de Tim Mouskhelichvili'
         }
     ],
     title: 'Notre Portfolio'

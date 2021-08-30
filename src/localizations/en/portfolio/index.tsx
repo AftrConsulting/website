@@ -17,6 +17,14 @@ const enPortfolioLocale = {
             project: 'lesfinances',
             subTitle: 'Consulting & Optimizations',
             title: 'Les Finances.'
+        },
+        {
+            description: `We've created Tim's one-page application website using the same engine as our own website. 
+						  It works and feels great and has a lot of cool features (like dark mode).`,
+            href: 'https://timmouskhelichvili.com/',
+            project: 'timmouskhelichvili',
+            subTitle: 'Website Design, Creation & Maintenance',
+            title: 'Tim Mouskhelichvili\'s Website'
         }
     ],
     title: 'Our Portfolio'
