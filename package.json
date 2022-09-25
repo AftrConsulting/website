@@ -31,7 +31,7 @@
 		"xmldom": "^0.6.0"
 	},
 	"devDependencies": {
-		"@types/node": "^16.0.0",
+		"@types/node": "16.11.60",
 		"@types/react": "^17.0.4",
 		"@types/react-dom": "^17.0.3",
 		"@types/react-redux": "^7.1.18",
